@@ -1,0 +1,40 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PayrollMonths"
+    },
+    "designerId": "f6a8fcb6-ffbf-44fe-87df-443d3cc7b395",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID"
+            },
+            "name": "MyField109",
+            "designerId": "c9654658-eb1a-4ddd-ab81-eca7c8300ed0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "month"
+            },
+            "name": "MyField110",
+            "designerId": "e5ce8cc8-f7bd-42b8-b7ce-5a17a69a3f1e"
+        }
+    ]
+}

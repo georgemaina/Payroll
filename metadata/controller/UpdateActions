@@ -1,0 +1,763 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "updateactions",
+        "designer|userClassName": "UpdateActions",
+        "models": [
+            "BlankPayments"
+        ],
+        "stores": [
+            "BlankPaymentsStore"
+        ],
+        "views": [
+            "PayTypesForm",
+            "PayRatesForm",
+            "Banks",
+            "JobGroups",
+            "JobTitles",
+            "Departments",
+            "PayrollBranches",
+            "PostByCode",
+            "PayrollBatchUpdate"
+        ]
+    },
+    "designerId": "7a4a5810-4648-499c-8ca4-3ca267b34a02",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({",
+                    "    '#cmdSavePaytypes':{",
+                    "        click:this.savePayTypes",
+                    "    },",
+                    "    '#cmdSaveRates':{",
+                    "        click:this.saveRates",
+                    "    },",
+                    "    '#cmdSaveTitles':{",
+                    "        click:this.saveTitles",
+                    "    },",
+                    "    '#cmdSaveGroups':{",
+                    "        click:this.saveGroups",
+                    "    },",
+                    "    '#cmdSaveBanks':{",
+                    "        click:this.saveBanks",
+                    "    },",
+                    "    '#cmdSaveDepartments':{",
+                    "        click:this.saveDepartments",
+                    "    },",
+                    "    '#cmdSaveBranches':{",
+                    "        click:this.saveBranches",
+                    "    },",
+                    "    '#cmdSaveBankBranches':{",
+                    "        click:this.saveBankBranches",
+                    "    },",
+                    "    '#cmdSavePaymentsPosting':{",
+                    "        click:this.savePayTypePayments",
+                    "    },",
+                    "    '#cmdBatchPost':{",
+                    "        click:this.processBatches",
+                    "    }",
+                    "});"
+                ]
+            },
+            "name": "init",
+            "designerId": "4f460547-1a75-44d2-bb88-4ee3cf8a2244"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "savePayTypes",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        params:{",
+                    "            tableName:'proll_paytypes',",
+                    "            fieldParam:'PayType',",
+                    "            fieldValue:'ID'",
+                    "        },",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');",
+                    "",
+                    "            //var win = button.up('window');",
+                    "            // win.removeAll();",
+                    "            //win.close();",
+                    "",
+                    "            var paytypes=Ext.data.StoreManager.lookup('PayTypeStore');",
+                    "            paytypes.load({});",
+                    "",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Error updating Items please check your input values');",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "savePayTypes",
+            "designerId": "2aec783b-f73c-48ca-a395-816ac8017530"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "paytypesform",
+                "selector": "paytypesform",
+                "xtype": "paytypesform"
+            },
+            "name": "paytypesform",
+            "designerId": "ce70baf0-aa90-4aab-98e4-0d237d17f35d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveRates",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "\r",
+                    "    if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        params:{\r",
+                    "            tableName:'proll_rates',\r",
+                    "            fieldParam:'RateName',\r",
+                    "            fieldValue:'ID'\r",
+                    "        },\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "            //var win = button.up('window');\r",
+                    "           // win.removeAll();\r",
+                    "            //win.close();\r",
+                    "\r",
+                    "            var payrates=Ext.data.StoreManager.lookup('PayRatesStore');\r",
+                    "            payrates.load({});\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "            if(action.result.errNo==1){\r",
+                    "                Ext.Msg.alert('Error','Sorry Item already Exists');\r",
+                    "            }else{\r",
+                    "                Ext.Msg.alert('Failed', 'Error updating Items please check your input values');\r",
+                    "            }\r",
+                    "                \r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "name": "saveRates",
+            "designerId": "97c9bd4e-61dd-406d-a427-1f9fea95ef09"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "payratesform",
+                "selector": "payratesform",
+                "xtype": "payratesform"
+            },
+            "name": "payratesform",
+            "designerId": "2fa2790d-7e70-4a84-97ac-7205cce7a616"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveTitles",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "\r",
+                    "    if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        params:{\r",
+                    "            tableName:'proll_jobtitles',\r",
+                    "            fieldParam:'JobTitle',\r",
+                    "            fieldValue:'ID'\r",
+                    "        },\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "            //var win = button.up('window');\r",
+                    "           // win.removeAll();\r",
+                    "            //win.close();\r",
+                    "\r",
+                    "            var jobtitles=Ext.data.StoreManager.lookup('JobTitlesStore');\r",
+                    "            jobtitles.load({});\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "                Ext.Msg.alert('Failed', 'Error updating Items please check your input values');\r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "name": "saveTitles",
+            "designerId": "a02e847a-08fc-4f1c-9b42-c2fc95bd8eeb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveGroups",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "\r",
+                    "    if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        params:{\r",
+                    "            tableName:'proll_jobgroups',\r",
+                    "            fieldParam:'groupID',\r",
+                    "            fieldValue:'ID'\r",
+                    "        },\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "            //var win = button.up('window');\r",
+                    "           // win.removeAll();\r",
+                    "            //win.close();\r",
+                    "\r",
+                    "            var jobgroups=Ext.data.StoreManager.lookup('JobGroupStore');\r",
+                    "            jobgroups.load({});\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "                Ext.Msg.alert('Failed', 'Error updating Items please check your input values');\r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "name": "saveGroups",
+            "designerId": "1f5938e7-80c3-4085-b878-f9486baefdc2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveBanks",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "\r",
+                    "    if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        params:{\r",
+                    "            tableName:'proll_banks',\r",
+                    "            fieldParam:'BankCode',\r",
+                    "            fieldValue:'ID'\r",
+                    "        },\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "            //var win = button.up('window');\r",
+                    "           // win.removeAll();\r",
+                    "            //win.close();\r",
+                    "\r",
+                    "            var jobtitles=Ext.data.StoreManager.lookup('JobTitlesStore');\r",
+                    "            jobtitles.load({});\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "                Ext.Msg.alert('Failed', 'Error updating Items please check your input values');\r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "name": "saveBanks",
+            "designerId": "531a236e-1ebe-49d7-9795-a6408e145101"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "banks",
+                "selector": "banks",
+                "xtype": "banks"
+            },
+            "name": "banks",
+            "designerId": "d2912c1e-b0da-4885-8205-895d39123754"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "jobtitles",
+                "selector": "jobtitles",
+                "xtype": "jobtitles"
+            },
+            "name": "jobtitles",
+            "designerId": "0f94a612-41b9-4507-87fd-eb5cf30593b2"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "jobgroups",
+                "selector": "jobgroups",
+                "xtype": "jobgroups"
+            },
+            "name": "jobgroups",
+            "designerId": "47642cb1-4949-4534-a826-8ae37cecdb2f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "departmentsform",
+                "selector": "departmentsform",
+                "xtype": "departmentsform"
+            },
+            "name": "departmentsform",
+            "designerId": "b71fd91a-de40-4961-a326-d2b7ee1fb88c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "payrollbranches",
+                "selector": "payrollbranches",
+                "xtype": "payrollbranches"
+            },
+            "name": "payrollbranches",
+            "designerId": "cb013161-11dd-41ff-91de-19dfd9b3042e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveDepartments",
+                "implHandler": [
+                    "\r",
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "\r",
+                    "    if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        params:{\r",
+                    "            tableName:'proll_departments',\r",
+                    "            fieldParam:'deptName',\r",
+                    "            fieldValue:'ID'\r",
+                    "        },\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "            //var win = button.up('window');\r",
+                    "           // win.removeAll();\r",
+                    "            //win.close();\r",
+                    "\r",
+                    "            var jobtitles=Ext.data.StoreManager.lookup('JobTitlesStore');\r",
+                    "            jobtitles.load({});\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "                Ext.Msg.alert('Failed', 'Error updating Items please check your input values');\r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "name": "saveDepartments",
+            "designerId": "647a5a11-4797-4cc8-b42c-e494c85affdc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveBranches",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "\r",
+                    "    if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        params:{\r",
+                    "            tableName:'proll_paybranch',\r",
+                    "            fieldParam:'branchName',\r",
+                    "            fieldValue:'ID'\r",
+                    "        },\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "            var paybranches=Ext.data.StoreManager.lookup('PayBranchStore');\r",
+                    "            paybranches.load({});\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "                Ext.Msg.alert('Failed', 'Error updating Items please check your input values');\r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "name": "saveBranches",
+            "designerId": "d95c948b-c768-471c-8073-6f2a685ddff2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveBankBranches",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "\r",
+                    "    if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        params:{\r",
+                    "            tableName:'proll_bankbranches',\r",
+                    "            fieldParam:'BankBranch',\r",
+                    "            fieldValue:'ID'\r",
+                    "        },\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "            //var win = button.up('window');\r",
+                    "           // win.removeAll();\r",
+                    "            //win.close();\r",
+                    "\r",
+                    "            var bBranchesStore=Ext.data.StoreManager.lookup('BankBrancheStore');\r",
+                    "            bBranchesStore.load({});\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "                Ext.Msg.alert('Failed', 'Error updating Items please check your input values');\r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "name": "saveBankBranches",
+            "designerId": "1f016630-d199-4719-9a1a-e1fc36124994"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "postbycode",
+                "selector": "postbycode",
+                "xtype": "postbycode"
+            },
+            "name": "postbycode",
+            "designerId": "e5d60c5d-73f2-45e9-8c7e-b06a9167ab21"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "savePayTypePayments",
+                "implHandler": [
+                    "var store=Ext.data.StoreManager.lookup('BlankPaymentStore');",
+                    "",
+                    "var strStore=this.getPostbycode().down('#postByCodeGrid').getStore();",
+                    "var paytype=this.getPostbycode().down('#txtPayTypeID').getValue();",
+                    "var CatID=this.getPostbycode().down('#txtPayCatId').getValue();",
+                    "",
+                    "if(paytype===''){",
+                    "    Ext.Msg.alert('Error','Please select a Pay Type');",
+                    "}else{",
+                    "    strStore.proxy.extraParams = { paytype: paytype,CatID:CatID };",
+                    "    strStore.sync({",
+                    "        success: function()",
+                    "        {",
+                    "            Ext.Msg.alert('Success','Successfully Save the Records');",
+                    "        },",
+                    "        failure: function()",
+                    "        {",
+                    "            Ext.Msg.alert('Failure','Failed to Save the Records, Please check your values');",
+                    "        },",
+                    "        callback: function()",
+                    "        {",
+                    "            console.log(\"calling callback\");",
+                    "        },",
+                    "        scope: this",
+                    "",
+                    "    });",
+                    "}",
+                    "",
+                    ""
+                ]
+            },
+            "name": "savePayTypePayments",
+            "designerId": "62fc1f80-f4de-4a61-89cc-e856e5f0f575"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "processBatches",
+                "implHandler": [
+                    "var payType=this.getPayrollbatchupdate().down('#txtSelectedPaytype').getValue();",
+                    "",
+                    "if(!payType){",
+                    "    Ext.Msg.alert('Error','Please Select a Paytype');",
+                    "}else{",
+                    "     //Ext.Msg.alert('Information','The Selected Paytype is '+payType);",
+                    "",
+                    "    switch(payType){",
+                    "        case '110':",
+                    "            this.postGratuity(payType);",
+                    "            break;",
+                    "        case '014':",
+                    "            this.postPension(payType);",
+                    "            break;",
+                    "        default:",
+                    "            this.postOtherPayments(payType);",
+                    "    }",
+                    "",
+                    "}",
+                    "",
+                    ""
+                ]
+            },
+            "name": "processBatches",
+            "designerId": "2c1ae24a-a6fe-4902-98bd-c1081ef947bc"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "payrollbatchupdate",
+                "selector": "payrollbatchupdate",
+                "xtype": "payrollbatchupdate"
+            },
+            "name": "payrollbatchupdate",
+            "designerId": "c5d8326a-45c9-4863-98c8-e57df8b1a5c7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "Post Gratuity for All Employees",
+                    ""
+                ],
+                "designer|params": [
+                    "paytype"
+                ],
+                "fn": "postGratuity",
+                "implHandler": [
+                    "        var gratuityPostingWindow=Ext.create('Ext.window.Window', {",
+                    "            title: 'Payroll Gratuity Batch Posting',",
+                    "            resizable:false,",
+                    "            animCollapse: true,",
+                    "            collapsible: true,",
+                    "            tools: [",
+                    "            {",
+                    "                xtype: 'tool',",
+                    "                type: 'minimize'",
+                    "            },",
+                    "            {",
+                    "                xtype: 'tool',",
+                    "                type: 'maximize'",
+                    "            }",
+                    "            ]",
+                    "        });",
+                    "",
+                    "gratuityPostingWindow.show();"
+                ]
+            },
+            "name": "postGratuity",
+            "designerId": "efa08f16-ba65-4baf-83f0-78cc6190f932"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "payType"
+                ],
+                "fn": "postPension",
+                "implHandler": [
+                    "        var gratuityPostingWindow=Ext.create('Ext.window.Window', {",
+                    "            title: 'Payroll Gratuity Batch Posting',",
+                    "            resizable:false,",
+                    "            animCollapse: true,",
+                    "            collapsible: true,",
+                    "            tools: [",
+                    "            {",
+                    "                xtype: 'tool',",
+                    "                type: 'minimize'",
+                    "            },",
+                    "            {",
+                    "                xtype: 'tool',",
+                    "                type: 'maximize'",
+                    "            }",
+                    "            ]",
+                    "        });"
+                ]
+            },
+            "name": "postPension",
+            "designerId": "3041137e-d02e-4ad5-bd44-525fc06578d5"
+        }
+    ]
+}

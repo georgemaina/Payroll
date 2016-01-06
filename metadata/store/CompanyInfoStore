@@ -1,0 +1,48 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "designer|userAlias": "companyinfostore",
+        "designer|userClassName": "CompanyInfoStore",
+        "model": "CompanyInfo",
+        "pageSize": 50,
+        "storeId": "CompanyInfoStore"
+    },
+    "designerId": "381872d9-8afe-4a55-ba88-3b66f26416d9",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getCompanyInfo"
+            },
+            "name": "MyAjaxProxy29",
+            "designerId": "38fe6bfa-816f-4147-b3d2-e737a7b06a3c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "companyInfo"
+                    },
+                    "name": "MyJsonReader29",
+                    "designerId": "a66103d7-a245-4e8f-9cc7-7e759631b6f5"
+                }
+            ]
+        }
+    ]
+}

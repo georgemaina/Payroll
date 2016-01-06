@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "prolllocaldata",
+        "designer|userClassName": "ProllLocaldata"
+    },
+    "designerId": "300978e9-091a-498f-989e-d5cfb9222031",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "localid"
+            },
+            "name": "MyField275",
+            "designerId": "52954565-b36d-43d2-b662-43e9a14744d6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "localname"
+            },
+            "name": "MyField276",
+            "designerId": "2710cda8-b0c0-4ee5-8f71-da349b424467"
+        }
+    ]
+}

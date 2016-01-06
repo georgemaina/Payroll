@@ -1,0 +1,49 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "autoSync": true,
+        "designer|userAlias": "paymentssummarystore",
+        "designer|userClassName": "PaymentsSummaryStore",
+        "model": "PaymentsSummaryItems",
+        "pageSize": 50,
+        "storeId": "PaymentsSummaryStore"
+    },
+    "designerId": "e593ae40-4c94-47ea-b877-7cf04f12c73e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPaymentsSummary"
+            },
+            "name": "MyAjaxProxy16",
+            "designerId": "5472ea77-1e00-4e23-90f9-8253a922fd67",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "record": null,
+                        "root": "paymentsSummaryItems"
+                    },
+                    "name": "MyJsonReader16",
+                    "designerId": "11052283-ca9a-42a3-853e-20ccbfa4af9d"
+                }
+            ]
+        }
+    ]
+}

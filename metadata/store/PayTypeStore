@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "paytypestore",
+        "designer|userClassName": "PayTypeStore",
+        "model": "PayTypes",
+        "pageSize": 120,
+        "storeId": "PayTypeStore"
+    },
+    "designerId": "3e8726c8-4e67-4e98-a99f-fbfa60b25a55",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPayTypes"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "1d08ba40-2e74-46ef-8243-3d2f4a3636b2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "payTypes"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "80205f31-390d-450d-a302-8df4026a04a0"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "paydeptstore",
+        "designer|userClassName": "PayDeptStore",
+        "model": "PayDepartments",
+        "pageSize": 100,
+        "storeId": "PayDeptStore"
+    },
+    "designerId": "f833c1cc-5b98-449b-802f-41a87698e4ce",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPayDepts"
+            },
+            "name": "MyAjaxProxy5",
+            "designerId": "8e77bd7d-14d5-45d4-9b4e-6db2c3adcee6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "getDepts"
+                    },
+                    "name": "MyJsonReader5",
+                    "designerId": "c5395609-6739-49ac-a058-8fe44a867443"
+                }
+            ]
+        }
+    ]
+}

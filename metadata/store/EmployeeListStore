@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "employeeliststore",
+        "designer|userClassName": "EmployeeListStore",
+        "model": "EmployeesList",
+        "pageSize": 200,
+        "storeId": "EmployeeListStore"
+    },
+    "designerId": "9d9a7740-1369-41e9-9c18-9b83b2b2360e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getEmployeeRecord"
+            },
+            "name": "MyAjaxProxy14",
+            "designerId": "1dc75d22-cfd7-4925-81f6-cb7c63440da2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "Employees"
+                    },
+                    "name": "MyJsonReader14",
+                    "designerId": "6e61eaf3-39a7-4676-b40f-f631a0a2c771"
+                }
+            ]
+        }
+    ]
+}

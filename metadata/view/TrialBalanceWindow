@@ -1,0 +1,119 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "trialbalancewindow",
+        "designer|userClassName": "TrialBalanceWindow",
+        "frame": true,
+        "height": 216,
+        "layout": "absolute",
+        "title": null,
+        "width": 394
+    },
+    "designerId": "b33d808d-a3ee-4efd-baa2-c9b63e79b027",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "month",
+                "fieldLabel": "Payroll Month",
+                "itemId": "tpayMonth",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 20,
+                "queryMode": "local",
+                "store": "PayMonthStore",
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 320
+            },
+            "name": "MyComboBox29",
+            "designerId": "4f7ea9be-6cc0-437f-90e7-90b2806019c8"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "BranchName",
+                "fieldLabel": "Branch",
+                "itemId": "empBranch",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 50,
+                "store": "PayBranchStore",
+                "valueField": "BranchName",
+                "width": 320
+            },
+            "name": "MyComboBox30",
+            "designerId": "9e61864b-c3b1-4d1b-bbda-68a50b96f922"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPreviewTrialBalance",
+                "layout|x": 20,
+                "layout|y": 100,
+                "text": "<b>Preview Trial Balance",
+                "width": 150
+            },
+            "name": "MyButton62",
+            "designerId": "96b4180b-8375-4790-ac8d-bca0321f89e7"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPrintTrialbalance",
+                "layout|x": 185,
+                "layout|y": 100,
+                "text": "<b>Print Trial Balance",
+                "width": 150
+            },
+            "name": "MyButton63",
+            "designerId": "61cd159e-86c0-4606-9181-a18a3df4fd5c"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdClose",
+                "layout|x": 95,
+                "layout|y": 150,
+                "text": "<b>Close",
+                "width": 150
+            },
+            "name": "MyButton64",
+            "designerId": "7643b3b2-d3fc-497c-82dd-c0a7209f8256"
+        }
+    ]
+}

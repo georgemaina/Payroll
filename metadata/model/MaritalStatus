@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "maritalstatus",
+        "designer|userClassName": "MaritalStatus"
+    },
+    "designerId": "d47375b5-fd0f-42b9-9a19-8ef060bcd6e1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID"
+            },
+            "name": "MyField54",
+            "designerId": "62024610-7731-4d04-a470-743b8a148060"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "maritals"
+            },
+            "name": "MyField55",
+            "designerId": "ac775e70-8724-4e64-a1b4-71dc009b9ce2"
+        }
+    ]
+}

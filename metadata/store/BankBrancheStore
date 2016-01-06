@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "bankbranchstore",
+        "designer|userClassName": "BankBrancheStore",
+        "model": "BankBranches",
+        "storeId": "BankBranchStore"
+    },
+    "designerId": "5426a1d3-d3aa-464b-a31c-8695bc9f9946",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getDataFunctions.php?task=getBankBranch"
+            },
+            "name": "MyAjaxProxy9",
+            "designerId": "02653652-9b04-432e-b9cb-40127c5f624b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "bankbranches"
+                    },
+                    "name": "MyJsonReader9",
+                    "designerId": "6bde4948-6655-4a22-928b-d6fb85ac44c5"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "payrollstatus",
+        "designer|userClassName": "PayrollStatus"
+    },
+    "designerId": "a571682e-40dd-4cbe-83e1-35f1a0238402",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prollStatus"
+            },
+            "name": "MyField186",
+            "designerId": "0e1da9b6-11f5-4d5f-bbaa-6f15280172eb"
+        }
+    ]
+}

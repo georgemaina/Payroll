@@ -1,0 +1,80 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "jobgroups",
+        "designer|userClassName": "JobGroups"
+    },
+    "designerId": "cf7ad619-777f-4a80-836b-da960f2e74a2",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID"
+            },
+            "name": "MyField64",
+            "designerId": "5d06f5dc-477f-4e33-9f77-e9cd86fbf299"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "groupID"
+            },
+            "name": "MyField65",
+            "designerId": "27ae9b20-c5ed-4ba2-a298-cee7f12fba3d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "groupName"
+            },
+            "name": "MyField66",
+            "designerId": "59d0eaad-1e82-4a80-aff2-c448e4edf0d9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "houseAllowance"
+            },
+            "name": "MyField67",
+            "designerId": "a52e716e-69fe-4b8a-8a39-e492c215acf6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "leaveAllowance"
+            },
+            "name": "MyField68",
+            "designerId": "caed0d33-2739-4a05-8238-9bee9eeecbb8"
+        }
+    ]
+}

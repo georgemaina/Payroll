@@ -1,0 +1,69 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "trialbalance",
+        "designer|userClassName": "TrialBalance"
+    },
+    "designerId": "ee8eb624-0fa1-4b64-9b5d-f7a5a87e301e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PayCode"
+            },
+            "name": "MyField267",
+            "designerId": "ec082c7a-cb14-47d2-8b40-b8d0e0649faa"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Pay_Type"
+            },
+            "name": "MyField268",
+            "designerId": "3a112370-127b-4ed5-b2ee-bb5bbda28208"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Debit",
+                "type": "float"
+            },
+            "name": "MyField269",
+            "designerId": "16b2a675-5fac-4227-8b62-42f42d3ae4ac"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Credit",
+                "type": "float"
+            },
+            "name": "MyField270",
+            "designerId": "71217ca7-c264-42a6-ad82-fc92aa8e977e"
+        }
+    ]
+}

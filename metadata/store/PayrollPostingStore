@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "payrollpostingstore",
+        "designer|userClassName": "PayrollPostingStore",
+        "model": "PayrollPostings",
+        "pageSize": 50,
+        "storeId": "PayrollPostingStore"
+    },
+    "designerId": "a276985a-900e-4302-9d05-8a5e9e0a24a9",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPostingDetail"
+            },
+            "name": "MyAjaxProxy21",
+            "designerId": "2a36de1f-70f8-4400-bbe5-c0961786641c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "pstDetail"
+                    },
+                    "name": "MyJsonReader21",
+                    "designerId": "3b2f7b55-8f61-49ee-b2b1-bbae2ab69852"
+                }
+            ]
+        }
+    ]
+}

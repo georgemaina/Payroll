@@ -1,0 +1,206 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "payrollpostingwindow",
+        "designer|userClassName": "PayrollPostingWindow",
+        "frame": true,
+        "height": 273,
+        "layout": "absolute",
+        "title": null,
+        "width": 384
+    },
+    "designerId": "0df6bc60-3a2c-4fb8-abcb-2f653f885c8c",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "month",
+                "fieldLabel": "Payroll Month",
+                "itemId": "payMonth",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 15,
+                "minChars": 2,
+                "queryMode": "local",
+                "store": "PayMonthStore",
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 305
+            },
+            "name": "MyComboBox40",
+            "designerId": "e210b2bb-e6ad-4e1b-a79f-7969e1c18c21"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "PayType",
+                "fieldLabel": "Pay Type",
+                "itemId": "PaymentType",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 105,
+                "minChars": 2,
+                "queryMode": "local",
+                "store": "PayTypeStore",
+                "typeAhead": true,
+                "valueField": "PayType",
+                "width": 305
+            },
+            "name": "MyComboBox41",
+            "designerId": "8ea2d60c-0a15-41bb-bd75-623ade6e3f49"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "displayField": "CatName",
+                "fieldLabel": "Pay Category",
+                "itemId": "CatID",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 75,
+                "minChars": 2,
+                "queryMode": "local",
+                "store": "PayCategoryStore",
+                "typeAhead": true,
+                "valueField": "CatName",
+                "width": 305
+            },
+            "name": "MyComboBox42",
+            "designerId": "367d7d6f-ee3b-4399-9ab8-33a1625272d4"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "BranchName",
+                "fieldLabel": "Employee Branch",
+                "itemId": "empBranch",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 45,
+                "minChars": 2,
+                "queryMode": "local",
+                "store": "PayBranchStore",
+                "typeAhead": true,
+                "valueField": "BranchName",
+                "width": 305
+            },
+            "name": "MyComboBox43",
+            "designerId": "458e4ad8-c992-4cd0-a2d6-823d0002133b"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "From Pid",
+                "itemId": "pid1",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 135
+            },
+            "name": "MyTextField91",
+            "designerId": "03ed17f7-6033-4d91-8786-df321dc04ace"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "To Pid",
+                "itemId": "pid2",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 165
+            },
+            "name": "MyTextField92",
+            "designerId": "7a183c2a-7eee-4e7e-b9fe-fe83bb4c648d"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdPreviewPostings",
+                "layout|x": 5,
+                "layout|y": 210,
+                "text": "<b>Preview</b>",
+                "width": 110
+            },
+            "name": "MyButton84",
+            "designerId": "6c8f2858-d92c-4fb5-b948-3be494d29ab5"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdPrintPostings",
+                "layout|x": 125,
+                "layout|y": 210,
+                "text": "<b>Print</b>",
+                "width": 110
+            },
+            "name": "MyButton85",
+            "designerId": "50b8ecd8-cf80-413b-982b-dc6ceb23c08d"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdClose",
+                "layout|x": 255,
+                "layout|y": 210,
+                "text": "<b>Close</b>",
+                "width": 105
+            },
+            "name": "MyButton86",
+            "designerId": "dfb5cf68-7db3-4560-af6f-5ec5ab29a65a"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": true,
+        "designer|userClassName": "js",
+        "url": "CryptoJS\\rollups\\sha3.js",
+        "x-bootstrap": true,
+        "x-compile": true
+    },
+    "designerId": "8c68bdae-4bb1-4c92-b998-98dfa11d892b"
+}

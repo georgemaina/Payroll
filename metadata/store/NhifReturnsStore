@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "nhifreturnsstore",
+        "designer|userClassName": "NhifReturnsStore",
+        "model": "NHIFReturns",
+        "pageSize": 50,
+        "storeId": "NhifReturnsStore"
+    },
+    "designerId": "a948ef58-9380-4d41-a461-a8fe28d35402",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getNhifReturns"
+            },
+            "name": "MyAjaxProxy18",
+            "designerId": "eb59c140-d47d-431a-b976-10dfafcf4524",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "NhifList"
+                    },
+                    "name": "MyJsonReader18",
+                    "designerId": "f19c8655-b098-468c-90b1-62b0e95f91a3"
+                }
+            ]
+        }
+    ]
+}

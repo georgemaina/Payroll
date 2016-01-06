@@ -1,0 +1,54 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": true,
+        "autoScroll": true,
+        "closable": true,
+        "collapsible": true,
+        "designer|userAlias": "reportsmainview",
+        "designer|userClassName": "ReportsMainView",
+        "height": 720,
+        "html": null,
+        "itemId": "detailPanel",
+        "margin": null,
+        "padding": " 10 10 0 20",
+        "title": "Reports Window",
+        "width": null
+    },
+    "designerId": "9844f169-05b5-4534-a498-0178c697f818",
+    "cn": [
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "minimize",
+                "type": "minimize"
+            },
+            "name": "MyTool",
+            "designerId": "3b4e9da9-0ffd-4df6-b0ae-b041e3330bbd"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "maximize",
+                "type": "maximize"
+            },
+            "name": "MyTool1",
+            "designerId": "2afe78de-7ef0-478b-9b40-a75c6ec15a19"
+        }
+    ]
+}

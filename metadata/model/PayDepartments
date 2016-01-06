@@ -1,0 +1,67 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "paydepartments",
+        "designer|userClassName": "PayDepartments"
+    },
+    "designerId": "87d4c616-3e28-4f81-aaaa-60c4dd783ad8",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID"
+            },
+            "name": "MyField58",
+            "designerId": "c53eb23b-2f9a-4d49-b4e2-ffaff9205929"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "deptName"
+            },
+            "name": "MyField59",
+            "designerId": "3c23a98c-e730-4de3-af25-3d270b362ff0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BranchID"
+            },
+            "name": "MyField60",
+            "designerId": "254c77ae-dae8-49a7-8cdd-3d070f7f8841"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "gl_acc"
+            },
+            "name": "MyField61",
+            "designerId": "ae721858-98d3-4c82-b774-bf6aa48cdc30"
+        }
+    ]
+}

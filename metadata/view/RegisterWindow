@@ -1,0 +1,21 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "registerwindow",
+        "designer|userClassName": "RegisterWindow",
+        "height": 570,
+        "maximizable": true,
+        "minimizable": true,
+        "resizable": [
+            "false"
+        ],
+        "title": "Employee Register",
+        "width": 860
+    },
+    "designerId": "fccbbde8-0cd3-4ee0-88b8-9be937658afa"
+}

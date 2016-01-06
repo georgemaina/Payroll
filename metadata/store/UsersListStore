@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "usersliststore",
+        "designer|userClassName": "UsersListStore",
+        "model": "UsersList",
+        "storeId": "UsersListStore"
+    },
+    "designerId": "e051da3e-d110-4827-a1a4-701ba5ddaef8",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/manageUsers.php?task=getUsersList"
+            },
+            "name": "MyAjaxProxy25",
+            "designerId": "8fc53b8d-eecd-412e-86dd-6630944dd1fe",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "users"
+                    },
+                    "name": "MyJsonReader25",
+                    "designerId": "afceb0df-a037-428e-9141-8437805fcea8"
+                }
+            ]
+        }
+    ]
+}

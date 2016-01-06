@@ -1,0 +1,106 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "nhifreturns",
+        "designer|userClassName": "NHIFReturns"
+    },
+    "designerId": "a99a9567-c853-4bd4-96b2-919759dc663d",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pid"
+            },
+            "name": "MyField111",
+            "designerId": "297d6897-8873-4beb-a88e-4804c4e75360"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "empNames"
+            },
+            "name": "MyField112",
+            "designerId": "3160af28-7fb3-4308-a464-c7fb25e19057"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pay_type"
+            },
+            "name": "MyField113",
+            "designerId": "e30648b9-9497-488e-8a85-cf486c8b15e5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Amount"
+            },
+            "name": "MyField114",
+            "designerId": "25bf5f1f-b792-41c1-b415-978e7719e3bb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID_No"
+            },
+            "name": "MyField115",
+            "designerId": "b8fea35e-0a7f-465a-a1f3-335da612e0d9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "NHIFNo"
+            },
+            "name": "MyField116",
+            "designerId": "c3d5ce00-0843-4654-b2c9-93df5a0ca4ec"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "payMonth"
+            },
+            "name": "MyField117",
+            "designerId": "bf446ac4-9a2f-4eed-a0cb-d278c63dfbbe"
+        }
+    ]
+}

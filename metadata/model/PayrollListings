@@ -1,0 +1,374 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "payrolllistings",
+        "designer|userClassName": "PayrollListings"
+    },
+    "designerId": "77ffd0cb-ae78-45ba-8254-96d5147de749",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Pid"
+            },
+            "name": "MyField160",
+            "designerId": "413ffe02-a48a-462c-9d5a-e0188fa05adc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EmpNames"
+            },
+            "name": "MyField161",
+            "designerId": "5a41128d-246c-4543-9a79-b06d48712b65"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "JobTitle"
+            },
+            "name": "MyField162",
+            "designerId": "f225d613-1829-491b-97a7-ac37766a836d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EmpBranch",
+                "type": "string"
+            },
+            "name": "MyField163",
+            "designerId": "0c2937a1-9f34-4af2-88eb-9dc2b2de527e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PayMonth",
+                "type": "string"
+            },
+            "name": "MyField164",
+            "designerId": "f72fc31b-582a-4d0a-a0b0-d20d9372bc4f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BasicPay",
+                "type": "int"
+            },
+            "name": "MyField165",
+            "designerId": "93785e65-64bd-42c0-b376-429df8d85bd8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "SpecialRisk"
+            },
+            "name": "MyField166",
+            "designerId": "a91498ce-13a5-487f-88de-80156f3dcf4c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RiskAllowance",
+                "type": "int"
+            },
+            "name": "MyField167",
+            "designerId": "605cd375-d11f-4473-8770-21a195d8372b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ResponsibilityAllowance"
+            },
+            "name": "MyField168",
+            "designerId": "fdbf5f4d-4d29-46a4-a1e5-07e22839afc9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LeaveAllowance",
+                "type": "int"
+            },
+            "name": "MyField169",
+            "designerId": "e2e17e98-3ffe-4302-82e5-e169c2d1f4c1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FieldAllowance"
+            },
+            "name": "MyField170",
+            "designerId": "f43c2df5-85ae-47d0-9ed9-f24873ae69f0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "HouseAllowance",
+                "type": "int"
+            },
+            "name": "MyField171",
+            "designerId": "8ec5fe3b-7167-483a-9a32-2dd22c63bd02"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Gratuity",
+                "type": "int"
+            },
+            "name": "MyField172",
+            "designerId": "61fef6dd-c33d-404a-89a9-3969abd74e83"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Medical",
+                "type": "int"
+            },
+            "name": "MyField173",
+            "designerId": "174a0b29-b9a7-42f2-a3e6-344e4763bd60"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "GROSS_PAY",
+                "name": "GrossSalary",
+                "type": "int"
+            },
+            "name": "MyField174",
+            "designerId": "5ee64225-33bc-4b22-aca1-fcc51bfebd6c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PAYE",
+                "type": "int"
+            },
+            "name": "MyField175",
+            "designerId": "7606b245-2bac-4d0f-8f51-3e246a7ac23b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "NSSF",
+                "type": "int"
+            },
+            "name": "MyField176",
+            "designerId": "07530799-04f2-4681-9fa3-797e4aa14602"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "NHIF",
+                "type": "int"
+            },
+            "name": "MyField177",
+            "designerId": "9013e85f-259f-4985-8a99-6384cebe17ac"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "loans"
+            },
+            "name": "MyField178",
+            "designerId": "9a0193d8-8d9b-4363-a9fd-d8b0aba1d201"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Advance"
+            },
+            "name": "MyField179",
+            "designerId": "7528ed68-062b-453c-a344-bb8d07e3f30e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Insurance"
+            },
+            "name": "MyField180",
+            "designerId": "b410453a-73ef-44c3-ba40-010ea51e08b9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "GratuityB",
+                "type": "int"
+            },
+            "name": "MyField181",
+            "designerId": "f0f4f800-f93c-403b-ae70-a15631fcc774"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MedicalB",
+                "type": "int"
+            },
+            "name": "MyField182",
+            "designerId": "d4df3925-039d-42a4-860b-0463b8c59d51"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "Sacco",
+                "name": "Welfare",
+                "type": "int"
+            },
+            "name": "MyField183",
+            "designerId": "aab59b0f-6db5-4527-963f-a5f20302a746"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "Deductions",
+                "name": "Deductions",
+                "type": "int"
+            },
+            "name": "MyField184",
+            "designerId": "1f662bf9-e7ed-4921-b6b2-3a596ffc39b0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "NetPay",
+                "name": "NetPay",
+                "type": "int"
+            },
+            "name": "MyField185",
+            "designerId": "d91374b3-f738-484c-8fb7-884dace95fc4"
+        }
+    ]
+}

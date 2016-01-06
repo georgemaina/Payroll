@@ -1,0 +1,229 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "nhifreturns",
+        "designer|userClassName": "NhifReturns",
+        "height": 577,
+        "itemId": "nhifMonth",
+        "store": "NhifReturnsStore",
+        "title": null,
+        "width": 885
+    },
+    "designerId": "6decd5c5-9512-4d7e-89bf-b131a2b016a1",
+    "cn": [
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyGridView17",
+            "designerId": "a17718a6-f159-440e-a6b9-7b5134606edf"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "NhifReturnsStore",
+                "width": 360
+            },
+            "name": "MyPagingToolbar17",
+            "designerId": "1f706ea5-73f9-45d3-884a-855b782a4312"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "height": 34
+            },
+            "name": "MyToolbar6",
+            "designerId": "1054074b-9684-4704-a7c2-b427d5890e07",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "month",
+                        "fieldLabel": "Payroll Month",
+                        "itemId": "nhifMonth",
+                        "labelAlign": "right",
+                        "layout|flex": null,
+                        "queryMode": "local",
+                        "store": "PayMonthStore",
+                        "typeAhead": true,
+                        "valueField": "ID",
+                        "width": 294
+                    },
+                    "name": "MyComboBox26",
+                    "designerId": "b81a96a2-e824-4a11-80f1-4412ae7490a4"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "name": "MyFill1",
+                    "designerId": "fe662c5b-ce81-45df-9901-579b5aefdb2f"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 31,
+                        "layout|flex": null,
+                        "text": "<b>Print</b>",
+                        "width": 164
+                    },
+                    "name": "MyButton56",
+                    "designerId": "cc76b92d-53ba-4ced-bf9f-45e8cced1500"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 23,
+                        "itemId": "cmdExportNhif",
+                        "layout|flex": null,
+                        "text": "<b>Export</b>",
+                        "width": 118
+                    },
+                    "name": "MyButton57",
+                    "designerId": "9c5515e7-3037-44f8-a615-71da6209758e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "pid",
+                "text": "Pid"
+            },
+            "name": "MyColumn123",
+            "designerId": "141c1cee-90f3-4b04-9e61-3531e3b07245"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "empNames",
+                "text": "EmpNames",
+                "width": 176
+            },
+            "name": "MyColumn124",
+            "designerId": "58e76740-5d0f-425b-8bfc-f6d262f9b241"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "pay_type",
+                "text": "Pay_type"
+            },
+            "name": "MyColumn125",
+            "designerId": "3a7e1bc2-2ce9-4ba4-9bd4-d4ff67247071"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Amount",
+                "text": "Amount"
+            },
+            "name": "MyColumn126",
+            "designerId": "3cdccdcd-a201-4864-947b-8c1dd0681194"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "ID_No",
+                "text": "ID_No"
+            },
+            "name": "MyColumn127",
+            "designerId": "f70858e7-d421-493f-871a-2be874b27183"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "NHIFNo",
+                "text": "NHIFNo"
+            },
+            "name": "MyColumn128",
+            "designerId": "d05ebe47-8758-44d8-bdcd-4336a4c655b0"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "payMonth",
+                "text": "PayMonth"
+            },
+            "name": "MyColumn129",
+            "designerId": "94aff204-fa02-4457-afe2-c6224c35a3e0"
+        }
+    ]
+}

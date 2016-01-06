@@ -1,0 +1,295 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": null,
+        "closable": null,
+        "collapsible": null,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "banks",
+        "designer|userClassName": "Banks",
+        "frame": true,
+        "frameHeader": false,
+        "header": false,
+        "height": 542,
+        "layout": "absolute",
+        "title": null,
+        "url": "data/updateFunctions.php?task=updateItems",
+        "width": 836
+    },
+    "designerId": "d056e0e1-8a0f-4a47-88f8-27e11739aae8",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 414,
+                "itemId": "banksGrid",
+                "layout|x": 0,
+                "layout|y": 125,
+                "store": "BankStore",
+                "title": "Banks"
+            },
+            "name": "MyGridPanel7",
+            "designerId": "e1e58bb1-9e30-4e86-a61e-51e21956230a",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView8",
+                    "designerId": "c2e43676-d262-4982-96e8-189c9fdbe982"
+                },
+                {
+                    "type": "Ext.selection.RowModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.RowModel",
+                    "name": "MyRowSelectionModel",
+                    "designerId": "9f775d9c-0cce-4477-ad28-fec556368386"
+                },
+                {
+                    "type": "Ext.grid.plugin.RowEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.RowEditing",
+                    "name": "MyRowEditingPlugin",
+                    "designerId": "ca14874f-e1a3-413b-aa2c-61395cf42b6a"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ID",
+                        "text": "ID"
+                    },
+                    "name": "MyColumn76",
+                    "designerId": "2a0a608d-228b-4e25-b8f6-bbadcb246c8c"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "BankCode",
+                        "text": "BankCode"
+                    },
+                    "name": "MyColumn77",
+                    "designerId": "44b925e9-8443-4f4c-aff5-ce7d4ab9016b"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "BankName",
+                        "text": "BankName",
+                        "width": 200
+                    },
+                    "name": "MyColumn78",
+                    "designerId": "ae158c56-a8c0-4934-b16c-faa2f984c7d4"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "BankStore",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar8",
+                    "designerId": "202908e8-2578-4262-8982-8bb88ff96245"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "id": "deleteBank",
+                        "text": "Delete",
+                        "width": 56
+                    },
+                    "name": "MyActionColumn5",
+                    "designerId": "958eeecb-0120-476a-805c-1ee6b9ca58fa",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "altText": "Delete",
+                                "icon": "icons/delete1.jpg",
+                                "tooltip": "Delete Bank"
+                            },
+                            "name": "MyActionColumnItem5",
+                            "designerId": "9727d893-4698-4d8d-8f48-14c17c2764d4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Bank Code",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 35,
+                "name": "BankCode",
+                "width": 240
+            },
+            "name": "MyTextField62",
+            "designerId": "bedfdc3e-fabb-4f22-a5c7-af5324cf4584"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "ID",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 10,
+                "name": "ID",
+                "readOnly": true,
+                "width": 160
+            },
+            "name": "MyTextField63",
+            "designerId": "f11c9390-cf14-4696-b5fe-cbebc25e24d5"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Bank Name",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 60,
+                "name": "BankName",
+                "width": 380
+            },
+            "name": "MyTextField64",
+            "designerId": "217844a2-d757-4c9c-b5e4-855186f091de"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdClose",
+                "layout|x": 660,
+                "layout|y": 70,
+                "text": "<b>Close</b>",
+                "width": 105
+            },
+            "name": "MyButton23",
+            "designerId": "53313d0c-4e84-4321-a675-ece1fafd61a6"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdSaveBanks",
+                "layout|x": 540,
+                "layout|y": 70,
+                "text": "<b>Save</b>",
+                "width": 105
+            },
+            "name": "MyButton24",
+            "designerId": "7a827047-5e1b-4cca-adab-cafad4a9aa94"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdNew",
+                "layout|x": 425,
+                "layout|y": 70,
+                "text": "<b>New</b>",
+                "width": 105
+            },
+            "name": "MyButton25",
+            "designerId": "b99df109-c9da-4c74-b7c1-3c9564889384"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "layout|x": 605,
+                "layout|y": 10,
+                "name": "formStatus",
+                "readOnly": true
+            },
+            "name": "MyTextField65",
+            "designerId": "792709ac-9ef9-4b59-8fd7-cc6360f3ea49"
+        }
+    ]
+}

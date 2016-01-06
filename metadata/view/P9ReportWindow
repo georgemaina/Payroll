@@ -1,0 +1,111 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "p9reportwindow",
+        "designer|userClassName": "P9ReportWindow",
+        "frame": true,
+        "height": 216,
+        "layout": "absolute",
+        "title": null,
+        "width": 423
+    },
+    "designerId": "10299d89-8f12-4815-8988-ce8a5f4a5b2c",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "PID",
+                "itemId": "pid",
+                "labelAlign": "right",
+                "layout|x": -31,
+                "layout|y": 30,
+                "width": 320
+            },
+            "name": "MyTextField90",
+            "designerId": "e18ca0d8-926f-4c9d-bbb3-8da3615c287b"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPreviewP9",
+                "layout|x": 20,
+                "layout|y": 100,
+                "text": "<b>Preview Report",
+                "width": 105
+            },
+            "name": "MyButton80",
+            "designerId": "0eb7bf46-64b4-4d14-be1d-093a5f6d6549"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPrintAll",
+                "layout|x": 285,
+                "layout|y": 100,
+                "text": "<b>Print All",
+                "width": 115
+            },
+            "name": "MyButton81",
+            "designerId": "37e06c1f-ab3f-4727-970b-e0b2e45d2094"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPrintP9",
+                "layout|x": 150,
+                "layout|y": 100,
+                "text": "<b>Print Report",
+                "width": 115
+            },
+            "name": "MyButton82",
+            "designerId": "1a07c1f3-15af-4ed2-b2de-eaf75e2065bd"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdClose",
+                "layout|x": 265,
+                "layout|y": 160,
+                "text": "<b>Close",
+                "width": 150
+            },
+            "name": "MyButton83",
+            "designerId": "aaa8719f-717d-4781-846c-f7621c412345"
+        }
+    ]
+}

@@ -1,0 +1,405 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": null,
+        "collapsible": null,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "jobgroups",
+        "designer|userClassName": "JobGroups",
+        "draggable": true,
+        "frame": true,
+        "header": false,
+        "height": 565,
+        "layout": "absolute",
+        "simpleDrag": true,
+        "title": null,
+        "url": "data/updateFunctions.php?task=updateItems",
+        "width": 850
+    },
+    "designerId": "db41ff2d-efd7-4fcb-a0ae-e4b015b3a908",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 414,
+                "itemId": "jobGroupsGrid",
+                "layout|x": 0,
+                "layout|y": 140,
+                "store": "JobGroupStore",
+                "title": "groups list"
+            },
+            "name": "MyGridPanel9",
+            "designerId": "6498666b-7db7-4e75-8a19-d9cececc75ae",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView10",
+                    "designerId": "b0eecb33-e00b-4682-b07b-c97884f7fa0b"
+                },
+                {
+                    "type": "Ext.selection.RowModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.RowModel",
+                    "name": "MyRowSelectionModel2",
+                    "designerId": "65493312-884b-4d70-bde1-51a48d52820b"
+                },
+                {
+                    "type": "Ext.grid.plugin.RowEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.RowEditing",
+                    "name": "MyRowEditingPlugin2",
+                    "designerId": "c99a0541-7e2c-478b-aefe-50e6688c2dbe"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "JobGroupStore",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar10",
+                    "designerId": "109bc121-051a-47d6-bd44-5836fa5d03ac"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ID",
+                        "text": "ID"
+                    },
+                    "name": "MyColumn81",
+                    "designerId": "b9339dbf-1fd6-4d37-81c5-9013df7d8ecb"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "groupID",
+                        "text": "GroupID"
+                    },
+                    "name": "MyColumn82",
+                    "designerId": "5af43e68-c9aa-4657-a5f4-418ae75ad2e8",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTextField69",
+                            "designerId": "818d214e-ccd9-4317-87f2-d8cfb7abbd86"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "groupName",
+                        "text": "GroupName"
+                    },
+                    "name": "MyColumn83",
+                    "designerId": "f9188661-f762-49ec-9711-e686f644bd27",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTextField70",
+                            "designerId": "41501958-1fbc-495f-a3ff-a82844ab92c5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "houseAllowance",
+                        "text": "HouseAllowance"
+                    },
+                    "name": "MyColumn84",
+                    "designerId": "916e1b13-004a-48a9-bc4a-0e8ad96c0cf0",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTextField71",
+                            "designerId": "bc312db2-2b20-4365-95d7-ce3bda881dc7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "leaveAllowance",
+                        "text": "LeaveAllowance"
+                    },
+                    "name": "MyColumn85",
+                    "designerId": "607aedfe-0627-449e-921c-c44716fc6a98",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTextField72",
+                            "designerId": "e4dbfd9a-4fe0-4841-8cd8-fccc244f8e3f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "id": "deleteJobgroup",
+                        "text": "Delete",
+                        "width": 60
+                    },
+                    "name": "MyActionColumn7",
+                    "designerId": "e5158733-7a37-4688-b5f0-a11b0a3d1080",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/delete1.jpg"
+                            },
+                            "name": "MyActionColumnItem7",
+                            "designerId": "c8109ea3-b9c9-47ac-af50-0a9baa127841"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Group ID",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 30,
+                "name": "groupID",
+                "width": 180
+            },
+            "name": "MyTextField73",
+            "designerId": "bedc8156-359b-4d34-a6f1-6689219ad236"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "ID",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 5,
+                "name": "ID",
+                "readOnly": true,
+                "width": 180
+            },
+            "name": "MyTextField74",
+            "designerId": "db740529-d9d1-4666-8012-ecd672e7340f"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Group Name",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 55,
+                "name": "groupName",
+                "width": 265
+            },
+            "name": "MyTextField75",
+            "designerId": "6f6f81cd-b22d-4c97-87fd-7a8220026109"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "House Allowance",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 80,
+                "name": "houseAllowance",
+                "width": 265
+            },
+            "name": "MyTextField76",
+            "designerId": "08052de2-b54b-4775-a969-46433968929c"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Leave Allowance",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 105,
+                "name": "leaveAllowance",
+                "width": 265
+            },
+            "name": "MyTextField77",
+            "designerId": "3fb19114-f573-456d-8ce3-15d543141f8e"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdSaveGroups",
+                "layout|x": 505,
+                "layout|y": 90,
+                "text": "<b>Save</b>",
+                "width": 105
+            },
+            "name": "MyButton29",
+            "designerId": "25251288-1163-4122-890a-ff17f8c8fc6d"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdNew",
+                "layout|x": 380,
+                "layout|y": 90,
+                "text": "<b>New</b>",
+                "width": 105
+            },
+            "name": "MyButton30",
+            "designerId": "8b34cf61-237b-42c1-a99b-208d77bd8df3"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdClose",
+                "layout|x": 700,
+                "layout|y": 90,
+                "text": "<b>Close</b>",
+                "width": 105
+            },
+            "name": "MyButton31",
+            "designerId": "234b257e-747e-4f61-9125-0310a318ee16"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "layout|x": 695,
+                "layout|y": 35,
+                "name": "formStatus",
+                "readOnly": true,
+                "width": 110
+            },
+            "name": "MyTextField78",
+            "designerId": "52a748c1-fc19-41f3-b28b-0fc606803f31"
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "blankpaymentsstore",
+        "designer|userClassName": "BlankPaymentsStore",
+        "model": "BlankPayments",
+        "storeId": "BlankPaymentsStore"
+    },
+    "designerId": "5f4b83ea-169f-4d2f-85f4-db3fde4d0160",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getBlankPayments"
+            },
+            "name": "MyAjaxProxy1",
+            "designerId": "9207ed27-665f-48ee-b1f4-feced947f01a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "blankPayments"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "22c17aef-36f4-4f14-9e4f-aa8c9a328f0d"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "root": "savePostings"
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "c4f5663d-3fd8-4cbc-bcb2-a0cb6d91d909"
+                }
+            ]
+        }
+    ]
+}

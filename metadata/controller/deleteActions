@@ -1,0 +1,700 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "deleteActions",
+        "views": [
+            "Departments",
+            "PayTypesForm",
+            "JobTitles",
+            "Banks",
+            "BankBranches",
+            "JobGroups",
+            "EmpPayments"
+        ]
+    },
+    "designerId": "b5741f98-3acc-4c05-a87c-1c10f1932cc4",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "item",
+                    "e",
+                    "record",
+                    "row"
+                ],
+                "fn": "deleteDepartment",
+                "implHandler": [
+                    "\r",
+                    "var dept=record.get('DeptName');\r",
+                    "\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'Import Payments?',\r",
+                    "        msg: 'Are you sure you want to delete '+dept,\r",
+                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
+                    "        icon: Ext.Msg.QUESTION,\r",
+                    "        fn: function(rec) {\r",
+                    "            if (rec === \"yes\") {\r",
+                    "                Ext.Ajax.request({\r",
+                    "                    url: 'data/deleteFunctions.php?task=deleteDepartment',\r",
+                    "                    params: {\r",
+                    "                        ID:record.get('ID')\r",
+                    "                    },\r",
+                    "                    waitMsg: 'Deleting departments ...',\r",
+                    "                    success: function(response){\r",
+                    "                        var text = response.responseText;\r",
+                    "                        Ext.Msg.alert('Delete','Record Successfully deleted');\r",
+                    "                        var deptsStore=Ext.data.StoreManager.lookup('PayDeptStore');\r",
+                    "                        deptsStore.load({});\r",
+                    "\r",
+                    "                    },\r",
+                    "                    failure:function(response){\r",
+                    "                        var resp = JSON.parseJSON(response);\r",
+                    "                        Ext.Msg.alert('Error','There was a problem deleting the department, Contact System Administrator');\r",
+                    "                    }\r",
+                    "                });\r",
+                    "\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    ""
+                ]
+            },
+            "name": "deleteDepartment",
+            "designerId": "ab5fba23-fcfd-487c-9d09-8d97d760dbf7"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({\r",
+                    "    'departmentsform actioncolumn[id=deleteDept]':{\r",
+                    "       //click:PayrollApp.app.getController('ProllActions').deleteDepartment()\r",
+                    "        click:this.deleteDepartment\r",
+                    "    },\r",
+                    "    'paytypesform actioncolumn[id=deletePaytypes]':{\r",
+                    "        click:this.deletePaytypes\r",
+                    "    },\r",
+                    "    'payratesform actioncolumn[id=deleteRates]':{\r",
+                    "        click:this.deleteRates\r",
+                    "    },\r",
+                    "    'banks actioncolumn[id=deleteBank]':{\r",
+                    "        click:this.deleteBanks\r",
+                    "    },\r",
+                    "    'bankbranches actioncolumn[id=deleteBankBranch]':{\r",
+                    "        click:this.deleteBankBranches\r",
+                    "    },\r",
+                    "    'jobtitles actioncolumn[id=deleteJobtitle]':{\r",
+                    "        click:this.deleteJobtitle\r",
+                    "    },\r",
+                    "    'jobgroups actioncolumn[id=deleteJobgroup]':{\r",
+                    "        click:this.deleteJobgroup\r",
+                    "    },\r",
+                    "    'payrollbranches actioncolumn[id=deleteBranch]':{\r",
+                    "        click:this.deleteBranches\r",
+                    "    },\r",
+                    "    '#paydeductgrid actioncolumn[id=delete]':{\r",
+                    "        click:this.deletePayments\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "name": "init",
+            "designerId": "a3340b69-3c55-4ba5-a7b6-50579f5eabeb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "departmentsform",
+                "selector": "departmentsform",
+                "xtype": "departmentsform"
+            },
+            "name": "departmentsform",
+            "designerId": "6fc14132-a5b7-4966-bc14-51e27cb9cfb9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "paytypesform",
+                "selector": "paytypesform",
+                "xtype": "paytypesform"
+            },
+            "name": "paytypesform",
+            "designerId": "67ad00d4-5ca7-4f7a-937f-b032e5c81128"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "item",
+                    "e",
+                    "record",
+                    "row"
+                ],
+                "fn": "deletePaytypes",
+                "implHandler": [
+                    "",
+                    "var paytype=record.get('PayType');",
+                    "",
+                    "Ext.Msg.show({",
+                    "    title:'Delete Pay Types?',",
+                    "    msg: 'Are you sure you want to delete '+paytype,",
+                    "    buttons: Ext.Msg.YESNOCANCEL,",
+                    "    icon: Ext.Msg.QUESTION,",
+                    "    fn: function(rec) {",
+                    "        if (rec === \"yes\") {",
+                    "            Ext.Ajax.request({",
+                    "                url: 'data/deleteFunctions.php?task=deleteMethod',",
+                    "                params: {",
+                    "                    ID:record.get('ID'),",
+                    "                    tableName:'proll_paytypes'",
+                    "                },",
+                    "                waitMsg: 'Deleting departments ...',",
+                    "                success: function(response){",
+                    "                    var text = response.responseText;",
+                    "                    Ext.Msg.alert('Delete','Record Successfully deleted');",
+                    "                    var ptypesStore=Ext.data.StoreManager.lookup('PayTypeStore');",
+                    "                    ptypesStore.load({});",
+                    "",
+                    "                },",
+                    "                failure:function(response){",
+                    "                    var resp = JSON.parseJSON(response);",
+                    "                    Ext.Msg.alert('Error','There was a problem deleting the Paytype, Contact System Administrator');",
+                    "                }",
+                    "            });",
+                    "",
+                    "        }",
+                    "    }",
+                    "});",
+                    ""
+                ]
+            },
+            "name": "deletePaytypes",
+            "designerId": "94b474db-06cb-41a2-a6de-9c0a61a9f756"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "item",
+                    "e",
+                    "record",
+                    "row"
+                ],
+                "fn": "deleteRates",
+                "implHandler": [
+                    "\r",
+                    "var payrates=record.get('RateName');\r",
+                    "\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'Delete Rates?',\r",
+                    "        msg: 'Are you sure you want to delete '+payrates,\r",
+                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
+                    "        icon: Ext.Msg.QUESTION,\r",
+                    "        fn: function(rec) {\r",
+                    "            if (rec === \"yes\") {\r",
+                    "                Ext.Ajax.request({\r",
+                    "                    url: 'data/deleteFunctions.php?task=deleteMethod',\r",
+                    "                    params: {\r",
+                    "                        ID:record.get('ID'),\r",
+                    "                        tableName:'proll_rates'\r",
+                    "                    },\r",
+                    "                    waitMsg: 'Deleting Rates ...',\r",
+                    "                    success: function(response){\r",
+                    "                        var text = response.responseText;\r",
+                    "                        Ext.Msg.alert('Delete','Record Successfully deleted');\r",
+                    "                        var pratesStore=Ext.data.StoreManager.lookup('PayRatesStore');\r",
+                    "                        pratesStore.load({});\r",
+                    "\r",
+                    "                    },\r",
+                    "                    failure:function(response){\r",
+                    "                        var resp = JSON.parseJSON(response);\r",
+                    "                        Ext.Msg.alert('Error','There was a problem deleting the Rates, Contact System Administrator');\r",
+                    "                    }\r",
+                    "                });\r",
+                    "\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    ""
+                ]
+            },
+            "name": "deleteRates",
+            "designerId": "ec3b9466-206e-4fb3-86dc-6365d81e5532"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "item",
+                    "e",
+                    "record",
+                    "row"
+                ],
+                "fn": "deleteBanks",
+                "implHandler": [
+                    "\r",
+                    "var banks=record.get('BankName');\r",
+                    "\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'Delete Banks?',\r",
+                    "        msg: 'Are you sure you want to delete '+banks,\r",
+                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
+                    "        icon: Ext.Msg.QUESTION,\r",
+                    "        fn: function(rec) {\r",
+                    "            if (rec === \"yes\") {\r",
+                    "                Ext.Ajax.request({\r",
+                    "                    url: 'data/deleteFunctions.php?task=deleteMethod',\r",
+                    "                    params: {\r",
+                    "                        ID:record.get('ID'),\r",
+                    "                        tableName:'proll_banks'\r",
+                    "                    },\r",
+                    "                    waitMsg: 'Deleting Banks ...',\r",
+                    "                    success: function(response){\r",
+                    "                        var text = response.responseText;\r",
+                    "                        Ext.Msg.alert('Delete','Record Successfully deleted');\r",
+                    "                        var bankstore=Ext.data.StoreManager.lookup('BankStore');\r",
+                    "                        bankstore.load({});\r",
+                    "\r",
+                    "                    },\r",
+                    "                    failure:function(response){\r",
+                    "                        var resp = JSON.parseJSON(response);\r",
+                    "                        Ext.Msg.alert('Error','There was a problem deleting the Bank, Contact System Administrator');\r",
+                    "                    }\r",
+                    "                });\r",
+                    "\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    ""
+                ]
+            },
+            "name": "deleteBanks",
+            "designerId": "0a3d259a-0951-46ee-83da-e4902891d603"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "banks",
+                "selector": "banks",
+                "xtype": "banks"
+            },
+            "name": "banks",
+            "designerId": "80d6b58f-c184-498b-9173-1595ec4b1947"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "bankbranches",
+                "selector": "bankbranches",
+                "xtype": "bankbranches"
+            },
+            "name": "bankbranches",
+            "designerId": "c3f320a3-affa-4eea-b1c0-36ef52b0b399"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "item",
+                    "e",
+                    "record",
+                    "row"
+                ],
+                "fn": "deleteBankBranches",
+                "implHandler": [
+                    "\r",
+                    "var bankbranches=record.get('BankBranch');\r",
+                    "\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'Delete Bank Branches?',\r",
+                    "        msg: 'Are you sure you want to delete '+bankbranches,\r",
+                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
+                    "        icon: Ext.Msg.QUESTION,\r",
+                    "        fn: function(rec) {\r",
+                    "            if (rec === \"yes\") {\r",
+                    "                Ext.Ajax.request({\r",
+                    "                    url: 'data/deleteFunctions.php?task=deleteMethod',\r",
+                    "                    params: {\r",
+                    "                        ID:record.get('ID'),\r",
+                    "                        tableName:'proll_bankbranches'\r",
+                    "                    },\r",
+                    "                    waitMsg: 'Deleting Banks ...',\r",
+                    "                    success: function(response){\r",
+                    "                        var text = response.responseText;\r",
+                    "                        Ext.Msg.alert('Delete','Record Successfully deleted');\r",
+                    "                        var bankBranchstore=Ext.data.StoreManager.lookup('BankBrancheStore');\r",
+                    "                        bankBranchstore.load({});\r",
+                    "\r",
+                    "                    },\r",
+                    "                    failure:function(response){\r",
+                    "                        var resp = JSON.parseJSON(response);\r",
+                    "                        Ext.Msg.alert('Error','There was a problem deleting the Bank, Contact System Administrator');\r",
+                    "                    }\r",
+                    "                });\r",
+                    "\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    ""
+                ]
+            },
+            "name": "deleteBankBranches",
+            "designerId": "d20d2a28-b0f3-45fa-a9b1-d6e86efa1a2e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "jobtitles",
+                "selector": "jobtitles",
+                "xtype": "jobtitles"
+            },
+            "name": "jobtitles",
+            "designerId": "e08baa85-337b-4ad4-bed0-a562aa58ec1c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "jobgroups",
+                "selector": "jobgroups",
+                "xtype": "jobgroups"
+            },
+            "name": "jobgroups",
+            "designerId": "2cc7573f-de14-4470-a7e8-686a9572b04d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "item",
+                    "e",
+                    "record",
+                    "row"
+                ],
+                "fn": "deleteJobgroup",
+                "implHandler": [
+                    "\r",
+                    "var jobgroups=record.get('GroupName');\r",
+                    "\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'Delete Bank JobGroups?',\r",
+                    "        msg: 'Are you sure you want to delete '+jobgroups,\r",
+                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
+                    "        icon: Ext.Msg.QUESTION,\r",
+                    "        fn: function(rec) {\r",
+                    "            if (rec === \"yes\") {\r",
+                    "                Ext.Ajax.request({\r",
+                    "                    url: 'data/deleteFunctions.php?task=deleteMethod',\r",
+                    "                    params: {\r",
+                    "                        ID:record.get('ID'),\r",
+                    "                        tableName:'proll_jobgroups'\r",
+                    "                    },\r",
+                    "                    waitMsg: 'Deleting Job Groups ...',\r",
+                    "                    success: function(response){\r",
+                    "                        var text = response.responseText;\r",
+                    "                        Ext.Msg.alert('Delete','Record Successfully deleted');\r",
+                    "                        var jgroupstore=Ext.data.StoreManager.lookup('JobGroupStore');\r",
+                    "                        jgroupstore.load({});\r",
+                    "\r",
+                    "                    },\r",
+                    "                    failure:function(response){\r",
+                    "                        var resp = JSON.parseJSON(response);\r",
+                    "                        Ext.Msg.alert('Error','There was a problem deleting the Job Groups, Contact System Administrator');\r",
+                    "                    }\r",
+                    "                });\r",
+                    "\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    ""
+                ]
+            },
+            "name": "deleteJobgroup",
+            "designerId": "5c55121f-a123-45ab-8b9a-b4ee6b9e0840"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "item",
+                    "e",
+                    "record",
+                    "row"
+                ],
+                "fn": "deleteJobtitle",
+                "implHandler": [
+                    "\r",
+                    "var jobtitles=record.get('JobTitle');\r",
+                    "\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'Delete Job Title?',\r",
+                    "        msg: 'Are you sure you want to delete '+jobtitles,\r",
+                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
+                    "        icon: Ext.Msg.QUESTION,\r",
+                    "        fn: function(rec) {\r",
+                    "            if (rec === \"yes\") {\r",
+                    "                Ext.Ajax.request({\r",
+                    "                    url: 'data/deleteFunctions.php?task=deleteMethod',\r",
+                    "                    params: {\r",
+                    "                        ID:record.get('ID'),\r",
+                    "                        tableName:'proll_jobtitles'\r",
+                    "                    },\r",
+                    "                    waitMsg: 'Deleting Job Title ...',\r",
+                    "                    success: function(response){\r",
+                    "                        var text = response.responseText;\r",
+                    "                        Ext.Msg.alert('Delete','Record Successfully deleted');\r",
+                    "                        var jobtitlesstore=Ext.data.StoreManager.lookup('JobTitlesStore');\r",
+                    "                        jobtitlesstore.load({});\r",
+                    "\r",
+                    "                    },\r",
+                    "                    failure:function(response){\r",
+                    "                        var resp = JSON.parseJSON(response);\r",
+                    "                        Ext.Msg.alert('Error','There was a problem deleting the Job Titles, Contact System Administrator');\r",
+                    "                    }\r",
+                    "                });\r",
+                    "\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    ""
+                ]
+            },
+            "name": "deleteJobtitle",
+            "designerId": "9047023b-e74d-42df-b9fc-6a17042bd218"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view,rowIndex,colIndex,item,e,record,row"
+                ],
+                "fn": "deleteBranches",
+                "implHandler": [
+                    "\r",
+                    "var branches=record.get('branchName');\r",
+                    "\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'Delete Payroll Branch?',\r",
+                    "        msg: 'Are you sure you want to delete '+branches,\r",
+                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
+                    "        icon: Ext.Msg.QUESTION,\r",
+                    "        fn: function(rec) {\r",
+                    "            if (rec === \"yes\") {\r",
+                    "                Ext.Ajax.request({\r",
+                    "                    url: 'data/deleteFunctions.php?task=deleteMethod',\r",
+                    "                    params: {\r",
+                    "                        ID:record.get('ID'),\r",
+                    "                        tableName:'proll_paybranch'\r",
+                    "                    },\r",
+                    "                    waitMsg: 'Deleting Payroll Branches ...',\r",
+                    "                    success: function(response){\r",
+                    "                        var text = response.responseText;\r",
+                    "                        Ext.Msg.alert('Delete','Record Successfully deleted');\r",
+                    "                        var branchesstore=Ext.data.StoreManager.lookup('PayBranchStore');\r",
+                    "                        branchesstore.load({});\r",
+                    "\r",
+                    "                    },\r",
+                    "                    failure:function(response){\r",
+                    "                        var resp = JSON.parseJSON(response);\r",
+                    "                        Ext.Msg.alert('Error','There was a problem deleting the Branches, Contact System Administrator');\r",
+                    "                    }\r",
+                    "                });\r",
+                    "\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    ""
+                ]
+            },
+            "name": "deleteBranches",
+            "designerId": "c7e37a39-8548-4e2c-a9c0-7c79bfff9faf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "rowIndex",
+                    "colIndex",
+                    "item",
+                    "e",
+                    "record",
+                    "row"
+                ],
+                "fn": "deletePayments",
+                "implHandler": [
+                    "//alert(record.get('PID'));\r",
+                    "\r",
+                    "\r",
+                    "Ext.Msg.show({\r",
+                    "    title:'Import Payments?',\r",
+                    "    msg: 'Are you sure you want to Delete this item',\r",
+                    "    buttons: Ext.Msg.YESNOCANCEL,\r",
+                    "    icon: Ext.Msg.QUESTION,\r",
+                    "    fn: function(rec) {\r",
+                    "        if (rec === \"yes\") {\r",
+                    "            Ext.Ajax.request({\r",
+                    "                url: 'data/getDataFunctions.php?task=deletePayment',\r",
+                    "                params: {\r",
+                    "                    pid:record.get('PID'),\r",
+                    "                    Payment:record.get('PayName')\r",
+                    "                },\r",
+                    "                waitMsg: 'Importing Payments ...',\r",
+                    "                success: function(response){\r",
+                    "                    var text = response.responseText;\r",
+                    "                    Ext.Msg.alert('Delete Status',text);\r",
+                    "                    var emppaymentstore=Ext.data.StoreManager.lookup('EmpPaymentStore');\r",
+                    "                    emppaymentstore.load({\r",
+                    "                        params: {\r",
+                    "                            pid: record.get('PID')\r",
+                    "                        },\r",
+                    "                        callback: function(records, operation, success) {\r",
+                    "\r",
+                    "                        },\r",
+                    "                        scope: this\r",
+                    "                    });\r",
+                    "\r",
+                    "\r",
+                    "                },\r",
+                    "                failure:function(response){\r",
+                    "                    var resp = JSON.parseJSON(response);\r",
+                    "                    Ext.Msg.alert(resp.error);\r",
+                    "                }\r",
+                    "            });\r",
+                    "\r",
+                    "        }\r",
+                    "    }\r",
+                    "});\r",
+                    ""
+                ]
+            },
+            "name": "deletePayments",
+            "designerId": "d62289ac-4070-4ecf-8237-c95bed11656f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "emppayments",
+                "selector": "emppayments",
+                "xtype": "emppayments"
+            },
+            "name": "emppayments",
+            "designerId": "248b6cbc-6cb8-4f52-acc3-18b2affdfefd"
+        }
+    ]
+}

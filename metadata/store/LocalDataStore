@@ -1,0 +1,27 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "localdatastore",
+        "designer|userClassName": "LocalDataStore",
+        "model": "ProllLocaldata",
+        "storeId": "LocalDataStore"
+    },
+    "designerId": "cd9aa1ab-92f6-4868-886e-a9200364fa6b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyLocalStorageProxy",
+            "designerId": "ac6de4a5-2adf-46fb-a69e-6dd7c0a7e3bb"
+        }
+    ]
+}

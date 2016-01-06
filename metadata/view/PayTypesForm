@@ -1,0 +1,624 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": null,
+        "closable": null,
+        "collapsible": null,
+        "designer|userAlias": "paytypesform",
+        "designer|userClassName": "PayTypesForm",
+        "draggable": null,
+        "header": false,
+        "height": 597,
+        "title": null,
+        "width": 838
+    },
+    "designerId": "86960ac9-d180-4f91-a7fa-f56c38a734ca",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "designer|snapToGrid": 5,
+                "frame": true,
+                "height": 240,
+                "itemId": "paytypesfrm",
+                "layout": "absolute",
+                "title": null,
+                "url": "data/updateFunctions.php?task=updateItems"
+            },
+            "name": "MyForm",
+            "designerId": "cb947288-f913-444f-82b7-b0bb84a4bc49",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "CatName",
+                        "fieldLabel": "Pay Category",
+                        "layout|x": 15,
+                        "layout|y": 5,
+                        "minChars": 2,
+                        "name": "CatID",
+                        "queryMode": "local",
+                        "store": "PayCategoryStore",
+                        "tabIndex": 1,
+                        "typeAhead": true,
+                        "valueField": "ID"
+                    },
+                    "name": "MyComboBox13",
+                    "designerId": "c0c08001-2d13-4709-8c49-3b2c47891878"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Pay Type",
+                        "labelAlign": "right",
+                        "layout|x": 15,
+                        "layout|y": 60,
+                        "name": "PayType",
+                        "tabIndex": 3,
+                        "width": 295
+                    },
+                    "name": "MyTextField46",
+                    "designerId": "99499a8e-53ab-4698-9cf3-9862b3936e23"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Type ID",
+                        "labelAlign": "right",
+                        "layout|x": 15,
+                        "layout|y": 35,
+                        "name": "ID",
+                        "tabIndex": 2,
+                        "width": 170
+                    },
+                    "name": "MyTextField47",
+                    "designerId": "c079bbfe-2883-43a8-a541-94a8159b7b51"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Interest Name",
+                        "labelAlign": "right",
+                        "layout|x": 480,
+                        "layout|y": 125,
+                        "name": "InterestName",
+                        "tabIndex": 12,
+                        "width": 295
+                    },
+                    "name": "MyTextField48",
+                    "designerId": "d89c1f13-7255-42bf-afa9-2a34f752462c"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "labelAlign": "right",
+                        "layout|x": 585,
+                        "layout|y": 155,
+                        "name": "formStatus",
+                        "readOnly": true,
+                        "tabIndex": 12,
+                        "width": 110
+                    },
+                    "name": "MyTextField49",
+                    "designerId": "67ef6d73-f435-4447-9738-7ff2c5212d54"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Interest Code",
+                        "labelAlign": "right",
+                        "layout|x": 480,
+                        "layout|y": 95,
+                        "name": "InterestCode",
+                        "tabIndex": 11,
+                        "width": 295
+                    },
+                    "name": "MyTextField50",
+                    "designerId": "537f8f5b-6c12-4410-a57f-fbaef2fa2455"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "GL Account Code",
+                        "labelAlign": "right",
+                        "layout|x": 480,
+                        "layout|y": 10,
+                        "name": "Gl_acc",
+                        "tabIndex": 8,
+                        "width": 295
+                    },
+                    "name": "MyTextField51",
+                    "designerId": "73541eff-15d8-4120-887f-9816e5b9009a"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Interest",
+                        "labelAlign": "right",
+                        "layout|x": 480,
+                        "layout|y": 65,
+                        "name": "Interest",
+                        "tabIndex": 10,
+                        "width": 295
+                    },
+                    "name": "MyTextField52",
+                    "designerId": "ac486248-5b48-49c1-b14b-5b44e7564107"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "GL Account Name",
+                        "labelAlign": "right",
+                        "layout|x": 480,
+                        "layout|y": 30,
+                        "name": "Gl_desc",
+                        "tabIndex": 9,
+                        "width": 295
+                    },
+                    "name": "MyTextField53",
+                    "designerId": "870240bb-e1dd-4095-b7e5-4aabd42143d1"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": null,
+                        "fieldLabel": "Fixed",
+                        "labelAlign": "right",
+                        "layout|x": 15,
+                        "layout|y": 90,
+                        "name": "Fixed",
+                        "tabIndex": 4,
+                        "uncheckedValue": "off"
+                    },
+                    "name": "MyCheckbox6",
+                    "designerId": "c567ffa2-45a8-4c1d-8d8e-600cd0eec89d"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": null,
+                        "fieldLabel": "Contribution",
+                        "labelAlign": "right",
+                        "layout|x": 15,
+                        "layout|y": 110,
+                        "name": "Contribution",
+                        "tabIndex": 5,
+                        "uncheckedValue": "off"
+                    },
+                    "name": "MyCheckbox7",
+                    "designerId": "6d242ed0-5ae9-426f-99aa-f0bf01e7f09b"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": null,
+                        "fieldLabel": "Posted",
+                        "labelAlign": "right",
+                        "layout|x": 15,
+                        "layout|y": 130,
+                        "name": "Posted",
+                        "tabIndex": 6,
+                        "uncheckedValue": "off"
+                    },
+                    "name": "MyCheckbox8",
+                    "designerId": "03f2456b-61f7-4f15-aa65-6f3616524bd6"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Notes",
+                        "height": 57,
+                        "labelAlign": "right",
+                        "layout|x": 15,
+                        "layout|y": 155,
+                        "name": "Notes",
+                        "tabIndex": 7,
+                        "width": 400
+                    },
+                    "name": "MyTextArea3",
+                    "designerId": "45a4925e-9e3b-4177-b4ed-a02874487f9b"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "itemId": "cmdNew",
+                        "layout|x": 590,
+                        "layout|y": 190,
+                        "tabIndex": 14,
+                        "text": "<b>New</b>",
+                        "width": 105
+                    },
+                    "name": "MyButton17",
+                    "designerId": "3105d4a6-d3cd-43fb-9936-4c266031c7b6"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "itemId": "cmdSavePaytypes",
+                        "layout|x": 480,
+                        "layout|y": 190,
+                        "tabIndex": 13,
+                        "text": "<b>Save</b>",
+                        "width": 100
+                    },
+                    "name": "MyButton18",
+                    "designerId": "b1e2da15-d51b-4c92-b09f-ef6b96972f23"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "itemId": "cmdClose",
+                        "layout|x": 705,
+                        "layout|y": 190,
+                        "tabIndex": 15,
+                        "text": "<b>Close</b>",
+                        "width": 105
+                    },
+                    "name": "MyButton19",
+                    "designerId": "829e1096-6a4e-4c85-ae1f-448d5b2dca11"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "hidden": true,
+                        "layout|x": 220,
+                        "layout|y": 95,
+                        "name": "formStatus"
+                    },
+                    "name": "MyTextField54",
+                    "designerId": "b542042a-ff6c-404f-8c3c-a69ec1ff3e40"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 357,
+                "itemId": "paytypesgrid",
+                "store": "PayTypeStore",
+                "title": "Pay Types List"
+            },
+            "name": "MyGridPanel5",
+            "designerId": "46946b26-31f6-41f2-8b4e-0aa974578ecf",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView6",
+                    "designerId": "07146473-779a-4b9f-a3d2-84410411cf1d"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ID",
+                        "locked": true,
+                        "text": "ID",
+                        "width": 36
+                    },
+                    "name": "MyColumn62",
+                    "designerId": "478106e4-c70e-462f-a435-9b0611d7c30a"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "CatID",
+                        "locked": true,
+                        "text": "CatID",
+                        "width": 53
+                    },
+                    "name": "MyColumn63",
+                    "designerId": "66c94142-3f2c-49bc-bb9e-f36dff628a14"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "PayType",
+                        "locked": true,
+                        "text": "PayType",
+                        "width": 168
+                    },
+                    "name": "MyColumn64",
+                    "designerId": "beb12d23-853e-4ba9-ae98-4e5141b5589a"
+                },
+                {
+                    "type": "Ext.grid.column.CheckColumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Fixed",
+                        "text": "Fixed",
+                        "width": 53
+                    },
+                    "name": "MyCheckColumn",
+                    "designerId": "fa1a8465-2dc2-4b25-a309-f6737fe38035"
+                },
+                {
+                    "type": "Ext.grid.column.CheckColumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Contribution",
+                        "text": "Contribution"
+                    },
+                    "name": "MyCheckColumn1",
+                    "designerId": "8118a8d6-7e2e-4e8e-adda-d1c17e49947f"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "gl_acc",
+                        "text": "Gl_acc"
+                    },
+                    "name": "MyColumn65",
+                    "designerId": "76e08c15-bab6-4521-b251-e1c85d88c1ca"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "gl_desc",
+                        "text": "Gl_desc"
+                    },
+                    "name": "MyColumn66",
+                    "designerId": "7c27fe9c-8c79-4c31-bbe7-8feb19db0997"
+                },
+                {
+                    "type": "Ext.grid.column.CheckColumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Posted",
+                        "text": "Posted"
+                    },
+                    "name": "MyCheckColumn2",
+                    "designerId": "2615aaa7-2096-4bcd-8416-d2dfbd4dc242"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Interest",
+                        "text": "Interest"
+                    },
+                    "name": "MyColumn67",
+                    "designerId": "ef4d191c-8bd9-4103-9ae3-bb72fd31148f"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "InterestCode",
+                        "text": "InterestCode"
+                    },
+                    "name": "MyColumn68",
+                    "designerId": "65aaba85-80ca-457d-9acf-079492df280b"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "InterestName",
+                        "text": "InterestName"
+                    },
+                    "name": "MyColumn69",
+                    "designerId": "0b3922dc-4d08-497a-bcf4-4873eb6b3197"
+                },
+                {
+                    "type": "Ext.grid.column.CheckColumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Recurrent",
+                        "text": "Recurrent"
+                    },
+                    "name": "MyCheckColumn3",
+                    "designerId": "256d864e-6104-4f24-8242-388586255187"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "PayTypeStore",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar6",
+                    "designerId": "1a44828a-ad71-44b9-af00-9afc42a93c25"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "id": "deletePaytypes",
+                        "text": "Delete"
+                    },
+                    "name": "MyActionColumn3",
+                    "designerId": "7dac4c66-d213-4306-9117-a035448d307a",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/delete1.jpg"
+                            },
+                            "name": "MyActionColumnItem3",
+                            "designerId": "6bcd9d17-448d-4a5d-9cf7-8a911d447c96"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

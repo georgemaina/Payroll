@@ -1,0 +1,95 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "prollpayments",
+        "designer|userClassName": "ProllPayments"
+    },
+    "designerId": "b0d6fe35-62d0-4b92-8e55-ca41639e8986",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID"
+            },
+            "name": "MyField277",
+            "designerId": "f6be7cc1-70e1-4376-8a87-017d788d898e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PID",
+                "sortType": "asInt",
+                "type": "int"
+            },
+            "name": "MyField278",
+            "designerId": "ac43bab8-727d-4f5b-929a-02c175a5e524"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PayType"
+            },
+            "name": "MyField279",
+            "designerId": "c9fd6a54-2281-46b5-a54e-5bc1b83face2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PayName"
+            },
+            "name": "MyField280",
+            "designerId": "ddefb312-a73e-4256-a55c-f32d4edd27b5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Amount"
+            },
+            "name": "MyField281",
+            "designerId": "372f6ae2-eadc-45e1-a97d-0f159f77e680"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Balance"
+            },
+            "name": "MyField282",
+            "designerId": "9124ed9d-76e3-42cc-93cf-e5106b996186"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "earningstore",
+        "designer|userClassName": "EarningStore",
+        "model": "Earnings",
+        "pageSize": 200,
+        "storeId": "EarningStore"
+    },
+    "designerId": "c6f4e03f-2b75-4393-9cb1-3df0ebc02291",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getEarningsDeductions"
+            },
+            "name": "MyAjaxProxy22",
+            "designerId": "50276ed1-1847-41ec-87e7-986db0412172",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "EarningsDeductions"
+                    },
+                    "name": "MyJsonReader22",
+                    "designerId": "5a697395-fb75-4c10-8f27-5446eeaf7ebc"
+                }
+            ]
+        }
+    ]
+}

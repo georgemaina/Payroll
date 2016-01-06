@@ -1,0 +1,158 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "returnsreports",
+        "designer|userClassName": "ReturnsReports",
+        "frame": true,
+        "height": 246,
+        "layout": "absolute",
+        "title": null,
+        "width": 400
+    },
+    "designerId": "547a53e3-ac3d-4f1a-8057-29b4a7f31505",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "month",
+                "fieldLabel": "Payroll Month",
+                "itemId": "payMonth",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 20,
+                "queryMode": "local",
+                "store": "PayMonthStore",
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 320
+            },
+            "name": "MyComboBox33",
+            "designerId": "0e7a2691-f2a8-41bf-9a78-f92ac47f2d5b"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "BranchName",
+                "fieldLabel": "Branch",
+                "itemId": "empBranch",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 50,
+                "store": "PayBranchStore",
+                "valueField": "BranchName",
+                "width": 320
+            },
+            "name": "MyComboBox34",
+            "designerId": "7a715b2b-db45-4c50-8b17-616044ef1020"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "BranchName",
+                "fieldLabel": "Report Type",
+                "itemId": "empBranch1",
+                "labelAlign": "right",
+                "layout|x": -1,
+                "layout|y": 80,
+                "store": "PayBranchStore",
+                "valueField": "BranchName",
+                "width": 320
+            },
+            "name": "MyComboBox35",
+            "designerId": "4fc6338e-418c-469f-ad07-84e27e673ac0"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPreviewListing",
+                "layout|x": 15,
+                "layout|y": 130,
+                "text": "<b>Preview Report",
+                "width": 110
+            },
+            "name": "MyButton69",
+            "designerId": "28821b3d-9d8e-4faa-9c53-7446d74677c1"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPrintTrialbalance",
+                "layout|x": 145,
+                "layout|y": 130,
+                "text": "<b>Print Report",
+                "width": 110
+            },
+            "name": "MyButton70",
+            "designerId": "0b845187-65ce-414c-8533-ca92cf1de41f"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdExportListing",
+                "layout|x": 275,
+                "layout|y": 130,
+                "text": "<b>Export Report",
+                "width": 110
+            },
+            "name": "MyButton71",
+            "designerId": "acd8c386-2f85-4767-bf13-4e3dea61ec00"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdClose",
+                "layout|x": 235,
+                "layout|y": 185,
+                "text": "<b>Close",
+                "width": 150
+            },
+            "name": "MyButton72",
+            "designerId": "dadc3029-4b03-4862-bcb4-7b0804f50a94"
+        }
+    ]
+}

@@ -1,0 +1,881 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "collapsed": false,
+        "collapsible": true,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "emppayments",
+        "designer|userClassName": "EmpPayments",
+        "height": 693,
+        "layout": "absolute",
+        "title": "Employee Payments",
+        "width": null
+    },
+    "designerId": "79bac8db-c202-4131-8098-71447ce86d86",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "columnLines": true,
+                "height": 660,
+                "itemId": "employeelistGrid",
+                "layout|x": 0,
+                "layout|y": 0,
+                "store": "EmployeeListStore",
+                "title": "Employee List",
+                "width": 390
+            },
+            "name": "MyGridPanel10",
+            "designerId": "5bdf7c7c-4edb-4983-961e-b8ef8c6d0c9c",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView11",
+                    "designerId": "1ddb46f9-ecb6-412c-b80b-797dfddf602c"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "EmployeeListStore",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar11",
+                    "designerId": "2252afbd-0e79-428c-93c7-81953e3e819b"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "height": 26
+                    },
+                    "name": "MyToolbar3",
+                    "designerId": "104f8290-6963-4ec3-afd2-1c9a599c4266",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "emptyText": "Search via PID,FirstName,LastName,Surnamr",
+                                "fieldLabel": null,
+                                "itemId": "txtSearch",
+                                "layout|flex": null,
+                                "width": 205
+                            },
+                            "name": "MyTextField79",
+                            "designerId": "0790cfc4-a8ba-4997-a1bd-f5c9e57ae8b1"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "cmdSearchEmpPayments",
+                                "layout|flex": null,
+                                "text": "<b>Search</b>"
+                            },
+                            "name": "MyButton32",
+                            "designerId": "43c55d5c-ca83-42ff-aa9d-a7c0dadff47f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "PID",
+                        "text": "PID",
+                        "width": 61
+                    },
+                    "name": "MyColumn86",
+                    "designerId": "39cac5e9-99d4-421b-827b-06ebcf7ddf3a"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "FirstName",
+                        "text": "FirstName"
+                    },
+                    "name": "MyColumn87",
+                    "designerId": "00b07763-243b-4abd-86ee-c14523458eac"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "LastName",
+                        "text": "LastName"
+                    },
+                    "name": "MyColumn88",
+                    "designerId": "842cb005-e727-4842-9a1d-ac5f68492a7d"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "SurName",
+                        "text": "SurName"
+                    },
+                    "name": "MyColumn89",
+                    "designerId": "f7042da2-7137-4e6c-831d-e49b666f24ed"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Department",
+                        "text": "Department"
+                    },
+                    "name": "MyColumn90",
+                    "designerId": "fd0d6e0a-35c3-4da1-a051-1665f66372ba"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "JobTitle",
+                        "text": "JobTitle"
+                    },
+                    "name": "MyColumn91",
+                    "designerId": "dfe559d5-6c8b-48b2-993c-d7fdf4e813bb"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "JobGroup",
+                        "text": "JobGroup"
+                    },
+                    "name": "MyColumn92",
+                    "designerId": "d9b800a9-a205-40c5-be05-9b47c035381d"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Taxable",
+                        "text": "Taxable"
+                    },
+                    "name": "MyColumn93",
+                    "designerId": "a3cac17f-1dfd-48fd-b02c-f0aff058aa40"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Pensionable",
+                        "text": "Pensionable"
+                    },
+                    "name": "MyColumn94",
+                    "designerId": "f4c1749e-1e72-450a-b1f2-dc29eda24f82"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Unionisable",
+                        "text": "Unionisable"
+                    },
+                    "name": "MyColumn95",
+                    "designerId": "c252d04d-a181-4c04-9dd3-f03bca2b0f2d"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Housed",
+                        "text": "Housed"
+                    },
+                    "name": "MyColumn96",
+                    "designerId": "477fd7c1-a4ec-4c82-95ca-f3cb6dbcc6f8"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "NSSF",
+                        "text": "NSSF"
+                    },
+                    "name": "MyColumn97",
+                    "designerId": "f3852cc6-c4d4-4c64-8113-6a23afa085ae"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "NHIF",
+                        "text": "NHIF"
+                    },
+                    "name": "MyColumn98",
+                    "designerId": "7fdfc2a5-813d-4732-bb51-6f428ed1fdb5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "columnLines": true,
+                "height": 475,
+                "itemId": "paydeductgrid",
+                "layout|x": 400,
+                "layout|y": 185,
+                "store": "EmpPaymentStore",
+                "title": "Employee Payments and Deductions"
+            },
+            "name": "MyGridPanel11",
+            "designerId": "9b6a945d-1ee5-4c9b-9579-4077603a2fae",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView12",
+                    "designerId": "69d81fd3-0b88-467c-839b-6c612ac5f5a4"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "name": "MyToolbar4",
+                    "designerId": "8d5ba10d-50f7-485b-a9b9-0aad0c013a31"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ID",
+                        "text": "ID",
+                        "width": 43
+                    },
+                    "name": "MyColumn99",
+                    "designerId": "226eda6a-f1de-45f9-a3e4-d56611442af6"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "PID",
+                        "text": "PID",
+                        "width": 50
+                    },
+                    "name": "MyColumn100",
+                    "designerId": "ee59edb9-7e63-4616-b70b-f209b08aa11d"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "PayType",
+                        "text": "PayType"
+                    },
+                    "name": "MyColumn101",
+                    "designerId": "a252b48a-acfd-4a51-b3c2-345fbcbf5a43"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "PayName",
+                        "text": "PayName",
+                        "width": 166
+                    },
+                    "name": "MyColumn102",
+                    "designerId": "0c51750a-3ee0-455d-8f09-a70bd3ab0158",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "PayType",
+                                "minChars": 2,
+                                "queryMode": "local",
+                                "store": "PayTypeStore",
+                                "typeAhead": true,
+                                "valueField": "CatID"
+                            },
+                            "name": "MyComboBox14",
+                            "designerId": "73e03501-a459-4261-9ea5-01dd2179010d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Amount",
+                        "text": "Amount"
+                    },
+                    "name": "MyColumn103",
+                    "designerId": "f388ca72-4717-484e-99f6-bb764c274c90",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTextField80",
+                            "designerId": "e3cbdc8d-66af-470d-aac6-8c2b7b50bec6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Balance",
+                        "text": "Balance"
+                    },
+                    "name": "MyColumn104",
+                    "designerId": "5d711373-3c1a-45a5-973c-1da212404764",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTextField81",
+                            "designerId": "c00381fd-faa5-4e5f-ab33-5d5499e3538a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "designer|displayName": "delete",
+                        "icon": "../icons/delete1.jpg",
+                        "id": "delete",
+                        "itemId": "",
+                        "text": "Delete",
+                        "width": 80
+                    },
+                    "name": "MyActionColumn8",
+                    "designerId": "aff7cb1d-511b-4ccb-9955-f1551e6e66eb",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "delete",
+                                "icon": "icons/delete2.jpg",
+                                "iconCls": "text-align: center;"
+                            },
+                            "name": "MyActionColumnItem8",
+                            "designerId": "ecb84277-b3be-4643-a32f-00e79b05df44"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.selection.RowModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.RowModel",
+                    "name": "MyRowSelectionModel3",
+                    "designerId": "5b28ea98-0822-4f83-bbb2-6600a50c0b95"
+                },
+                {
+                    "type": "Ext.grid.plugin.RowEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.RowEditing",
+                    "name": "MyRowEditingPlugin3",
+                    "designerId": "3b44251e-f731-4c64-bc89-4e7296985a78"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "EmpPaymentStore",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar12",
+                    "designerId": "eccf90c8-2e31-4b46-ad5a-5d2b0c87e386"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "designer|snapToGrid": 5,
+                "formBind": false,
+                "frame": false,
+                "height": 180,
+                "layout": "absolute",
+                "layout|x": 400,
+                "layout|y": 0,
+                "title": "<b>Employee Details</b>"
+            },
+            "name": "MyFieldSet4",
+            "designerId": "4af072ca-c20a-479a-974d-4ed22377febb",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "PID",
+                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                        "itemId": "pid",
+                        "labelAlign": "right",
+                        "layout|x": -33,
+                        "layout|y": -1,
+                        "name": "PID",
+                        "value": null
+                    },
+                    "name": "MyDisplayField3",
+                    "designerId": "62d3e70d-4126-46fe-8507-68272ab1e30f"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Job Group",
+                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                        "labelAlign": "right",
+                        "layout|x": -28,
+                        "layout|y": 125,
+                        "name": "JobGroup",
+                        "value": null
+                    },
+                    "name": "MyDisplayField4",
+                    "designerId": "5f35c15a-7b65-4856-813e-06f055aa1ebb"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Job Title",
+                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                        "labelAlign": "right",
+                        "layout|x": -29,
+                        "layout|y": 105,
+                        "name": "JobTitle",
+                        "value": null
+                    },
+                    "name": "MyDisplayField5",
+                    "designerId": "4018118c-624e-4852-a318-759847e0a53a"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Departmant",
+                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                        "labelAlign": "right",
+                        "layout|x": -29,
+                        "layout|y": 85,
+                        "name": "Department",
+                        "value": null
+                    },
+                    "name": "MyDisplayField6",
+                    "designerId": "ea7d0ec9-e54d-4f06-b40f-186428b63a69"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Surname",
+                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                        "labelAlign": "right",
+                        "layout|x": -30,
+                        "layout|y": 65,
+                        "name": "SurName",
+                        "value": null
+                    },
+                    "name": "MyDisplayField7",
+                    "designerId": "05590c6f-7580-4c14-b9f5-ee4a30c760f2"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Last Name",
+                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                        "labelAlign": "right",
+                        "layout|x": -31,
+                        "layout|y": 45,
+                        "name": "LastName",
+                        "value": null
+                    },
+                    "name": "MyDisplayField8",
+                    "designerId": "be5f4fe8-4b62-43a6-8244-88a80c012f60"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "First Name",
+                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                        "labelAlign": "right",
+                        "layout|x": -31,
+                        "layout|y": 20,
+                        "name": "FirstName",
+                        "shadow": true,
+                        "value": null
+                    },
+                    "name": "MyDisplayField9",
+                    "designerId": "951624b3-3c26-400f-8c65-0f6274fba040"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Taxable",
+                        "fieldLabel": null,
+                        "inputValue": "Yes",
+                        "layout|x": 240,
+                        "layout|y": 0,
+                        "name": "Taxable",
+                        "readOnly": true,
+                        "uncheckedValue": "No"
+                    },
+                    "name": "MyCheckbox9",
+                    "designerId": "21270864-71cf-4363-ace0-a994755f82d3"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "NHIF",
+                        "fieldLabel": null,
+                        "inputValue": "Yes",
+                        "layout|x": 240,
+                        "layout|y": 125,
+                        "name": "NHIF",
+                        "readOnly": true,
+                        "uncheckedValue": "No"
+                    },
+                    "name": "MyCheckbox10",
+                    "designerId": "677d5f19-bacc-4e86-8079-db46b200e8d1"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "NSSF",
+                        "fieldLabel": null,
+                        "inputValue": "Yes",
+                        "layout|x": 240,
+                        "layout|y": 100,
+                        "name": "NSSF",
+                        "readOnly": true,
+                        "uncheckedValue": "No"
+                    },
+                    "name": "MyCheckbox11",
+                    "designerId": "5da0717a-17ae-4f44-85fe-2a4d508b7f81"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Housed",
+                        "fieldLabel": null,
+                        "inputValue": "Yes",
+                        "layout|x": 240,
+                        "layout|y": 75,
+                        "name": "Housed",
+                        "readOnly": true,
+                        "uncheckedValue": "No"
+                    },
+                    "name": "MyCheckbox12",
+                    "designerId": "1d07e2f6-c272-4f3d-aa35-0b2ea6508441"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Unionisable",
+                        "fieldLabel": null,
+                        "inputValue": "Yes",
+                        "layout|x": 240,
+                        "layout|y": 50,
+                        "name": "Unionisable",
+                        "readOnly": true,
+                        "uncheckedValue": "No"
+                    },
+                    "name": "MyCheckbox13",
+                    "designerId": "f2f64482-b9cb-4a96-9f75-2eee54ca53a2"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Pensionable",
+                        "fieldLabel": null,
+                        "inputValue": "Yes",
+                        "layout|x": 240,
+                        "layout|y": 25,
+                        "name": "Pensionable",
+                        "readOnly": true,
+                        "uncheckedValue": "No"
+                    },
+                    "name": "MyCheckbox14",
+                    "designerId": "aa2d3f0d-5c11-467e-b3ec-534fbada4ac5"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "itemId": "cmdPostByPid",
+                        "layout|x": 360,
+                        "layout|y": 0,
+                        "text": "<b>Post By PID</b>",
+                        "width": 145
+                    },
+                    "name": "MyButton34",
+                    "designerId": "4824bace-3e72-48c9-a095-86073e1c3d24"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "itemId": "cmdClose",
+                        "layout|x": 360,
+                        "layout|y": 80,
+                        "text": "<b>Close</b>",
+                        "width": 145
+                    },
+                    "name": "MyButton35",
+                    "designerId": "4579b0a4-7a53-4213-a76f-8103da847844"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "itemId": "cmdPostByCode",
+                        "layout|x": 360,
+                        "layout|y": 40,
+                        "text": "<b>Post By Code</b>",
+                        "width": 145
+                    },
+                    "name": "MyButton36",
+                    "designerId": "78421f90-725c-400e-81ab-570581b98fc2"
+                }
+            ]
+        }
+    ]
+}

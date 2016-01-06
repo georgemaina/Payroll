@@ -1,0 +1,266 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": null,
+        "bodyPadding": 0,
+        "closable": null,
+        "collapsible": null,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "jobtitles",
+        "designer|userClassName": "JobTitles",
+        "draggable": true,
+        "frame": true,
+        "header": false,
+        "height": 541,
+        "layout": "absolute",
+        "padding": "0 0 0 0",
+        "simpleDrag": true,
+        "title": null,
+        "url": "data/updateFunctions.php?task=updateItems",
+        "width": 850
+    },
+    "designerId": "ecfec05d-4f3f-4ee2-b0d1-a6b27796984a",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 440,
+                "itemId": "jobTitlesGrid",
+                "layout|x": 0,
+                "layout|y": 100,
+                "store": "JobTitlesStore",
+                "title": "Titles",
+                "width": 848
+            },
+            "name": "MyGridPanel8",
+            "designerId": "161bbd41-076a-4e17-af32-d68209f78198",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView9",
+                    "designerId": "38b652ba-7987-42b6-8108-e66ebe52f385"
+                },
+                {
+                    "type": "Ext.selection.RowModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.RowModel",
+                    "name": "MyRowSelectionModel1",
+                    "designerId": "0d744e06-2ae0-420c-983b-6fe222d0ddeb"
+                },
+                {
+                    "type": "Ext.grid.plugin.RowEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.RowEditing",
+                    "name": "MyRowEditingPlugin1",
+                    "designerId": "0275e549-6dc4-4808-9dc0-22c6f86ae7a3"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "JobTitlesStore",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar9",
+                    "designerId": "0c85d2bd-b726-4b8b-a5fa-3d6068d273d0"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ID",
+                        "text": "ID"
+                    },
+                    "name": "MyColumn79",
+                    "designerId": "d250eb2f-2df5-45f2-a958-9b9b20476c8b"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "JobTitle",
+                        "text": "JobTitle",
+                        "width": 173
+                    },
+                    "name": "MyColumn80",
+                    "designerId": "d85fcffd-97db-44ac-9aac-c26f028d51e9"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "id": "deleteJobtitle",
+                        "text": "Delete",
+                        "width": 46
+                    },
+                    "name": "MyActionColumn6",
+                    "designerId": "bead0865-053d-4992-a1d1-12bb9aa8ddef",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/delete1.jpg"
+                            },
+                            "name": "MyActionColumnItem6",
+                            "designerId": "ea5aa404-f913-43ef-b97a-6354f0a321bd"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Title Name",
+                "labelAlign": "right",
+                "layout|x": 5,
+                "layout|y": 35,
+                "name": "JobTitle",
+                "width": 380
+            },
+            "name": "MyTextField66",
+            "designerId": "cee7fa61-04ac-4e84-be79-14a2c1703971"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "ID",
+                "labelAlign": "right",
+                "layout|x": 5,
+                "layout|y": 10,
+                "name": "ID",
+                "readOnly": true,
+                "width": 170
+            },
+            "name": "MyTextField67",
+            "designerId": "a0d2d097-0d6c-4e1d-81d9-e57230b30df1"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdClose",
+                "layout|x": 710,
+                "layout|y": 50,
+                "text": "<b>Close</b>",
+                "width": 105
+            },
+            "name": "MyButton26",
+            "designerId": "f45b12cf-94c3-4291-8ef0-7f19f1bd2e5a"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdSaveTitles",
+                "layout|x": 520,
+                "layout|y": 50,
+                "text": "<b>Save</b>",
+                "width": 105
+            },
+            "name": "MyButton27",
+            "designerId": "b26427cb-afd6-4527-912e-4ee71cca5ec5"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdNew",
+                "layout|x": 410,
+                "layout|y": 50,
+                "text": "<b>New</b>",
+                "width": 105
+            },
+            "name": "MyButton28",
+            "designerId": "8d1743f2-56e2-41b3-bf74-d35986ffd38f"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "layout|x": 705,
+                "layout|y": 10,
+                "name": "formStatus",
+                "readOnly": true,
+                "width": 110
+            },
+            "name": "MyTextField68",
+            "designerId": "3164cb96-1ddb-4db3-b930-5b9c2b303ae0"
+        }
+    ]
+}

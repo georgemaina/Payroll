@@ -1,0 +1,67 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "blankpayments",
+        "designer|userClassName": "BlankPayments"
+    },
+    "designerId": "0c3aacd5-0f6e-4a04-ae2a-88415306b4f7",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Pid"
+            },
+            "name": "MyField12",
+            "designerId": "9e39a4aa-2ff7-4497-a0b1-d3aa8e8dc5f2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EmpNames"
+            },
+            "name": "MyField13",
+            "designerId": "d3541e32-1f5b-424a-8eda-74976849c332"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Amount"
+            },
+            "name": "MyField14",
+            "designerId": "32c9a0d4-7353-49e2-9ce0-b66a07eb33f1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Balance"
+            },
+            "name": "MyField15",
+            "designerId": "02e2131c-e832-46b9-bcbf-fbd270001963"
+        }
+    ]
+}

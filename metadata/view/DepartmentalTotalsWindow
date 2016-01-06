@@ -1,0 +1,119 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "departmentaltotalswindow",
+        "designer|userClassName": "DepartmentalTotalsWindow",
+        "frame": true,
+        "height": 216,
+        "layout": "absolute",
+        "title": null,
+        "width": 394
+    },
+    "designerId": "9801b331-dd5b-4e7f-bec1-c111e1bbfe27",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "month",
+                "fieldLabel": "Payroll Month",
+                "itemId": "tpayMonth",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 20,
+                "queryMode": "local",
+                "store": "PayMonthStore",
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 320
+            },
+            "name": "MyComboBox36",
+            "designerId": "f76bda1c-b552-412e-a2ad-5f526b148054"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "deptName",
+                "fieldLabel": "Department",
+                "itemId": "deptName",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 50,
+                "store": "PayDeptStore",
+                "valueField": "deptName",
+                "width": 320
+            },
+            "name": "MyComboBox37",
+            "designerId": "adc44d40-bc6b-43c6-9f37-dae264a1f833"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPreviewdeptReport",
+                "layout|x": 20,
+                "layout|y": 100,
+                "text": "<b>Preview Report",
+                "width": 150
+            },
+            "name": "MyButton73",
+            "designerId": "24345443-1749-4840-bb75-6be43d3147c0"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPrintdeptReport",
+                "layout|x": 185,
+                "layout|y": 100,
+                "text": "<b>Print Report",
+                "width": 150
+            },
+            "name": "MyButton74",
+            "designerId": "b7094421-2be8-4b59-bd2d-f5eac06a211b"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdClose",
+                "layout|x": 95,
+                "layout|y": 150,
+                "text": "<b>Close",
+                "width": 150
+            },
+            "name": "MyButton75",
+            "designerId": "50be6f79-36a9-4128-a992-e62714fceb7b"
+        }
+    ]
+}

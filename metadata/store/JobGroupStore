@@ -1,0 +1,61 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "designer|userAlias": "jobgroupstore",
+        "designer|userClassName": "JobGroupStore",
+        "model": "JobGroups",
+        "storeId": "JobGroupStore"
+    },
+    "designerId": "de521d5a-0412-4899-aa92-e2e6080181cf",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getJobGroup"
+            },
+            "name": "MyAjaxProxy7",
+            "designerId": "84fc9556-38e7-4cea-88d3-d2905aa124f5",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "jobGroups"
+                    },
+                    "name": "MyJsonReader7",
+                    "designerId": "a9e914cb-fb49-41f5-9472-4c506218d83e"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "root": "editData"
+                    },
+                    "name": "MyJsonWriter1",
+                    "designerId": "a1f7ad11-f51f-4801-93a0-5d39745ae1a5"
+                }
+            ]
+        }
+    ]
+}

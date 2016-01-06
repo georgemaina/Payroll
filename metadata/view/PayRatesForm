@@ -1,0 +1,388 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 0,
+        "closable": null,
+        "collapsible": null,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "payratesform",
+        "designer|userClassName": "PayRatesForm",
+        "draggable": true,
+        "frame": true,
+        "header": false,
+        "height": 565,
+        "layout": "absolute",
+        "padding": 0,
+        "simpleDrag": true,
+        "title": null,
+        "url": "data/updateFunctions.php?task=updateItems",
+        "width": 824
+    },
+    "designerId": "abafa9eb-768d-4833-b6da-4fb4b601624a",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 390,
+                "itemId": "payRatesGrid",
+                "layout|x": 5,
+                "layout|y": 175,
+                "store": "PayRatesStore",
+                "title": "Payment Rates",
+                "width": 815
+            },
+            "name": "MyGridPanel6",
+            "designerId": "5e298af2-e2e2-4656-a855-91d64fc0d98b",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView7",
+                    "designerId": "c84a2b1f-0208-4d7d-a777-d7f02bea72dd"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "PayRatesStore",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar7",
+                    "designerId": "ff8c426f-cdf4-4f23-bcd1-8320a447e963"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ID",
+                        "text": "ID"
+                    },
+                    "name": "MyColumn70",
+                    "designerId": "9b046124-037f-42fa-867a-11133859dd12"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "RateName",
+                        "text": "RateName"
+                    },
+                    "name": "MyColumn71",
+                    "designerId": "c2a35d30-34e0-469b-9062-9530b702ff22"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Value",
+                        "text": "Value"
+                    },
+                    "name": "MyColumn72",
+                    "designerId": "66012906-4d63-4660-9970-c5a341a033e0"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Lower_Limit",
+                        "text": "Lower_Limit"
+                    },
+                    "name": "MyColumn73",
+                    "designerId": "202bacc8-6497-4ea0-9b0b-946044fd215b"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Upper_Limit",
+                        "text": "Upper_Limit"
+                    },
+                    "name": "MyColumn74",
+                    "designerId": "3c03791f-c422-4d7f-828f-89cfc55d187a"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Rate",
+                        "text": "Rate"
+                    },
+                    "name": "MyColumn75",
+                    "designerId": "67b6d602-755e-40ca-8c3c-c2c980d3d837"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "Text": "Delete",
+                        "align": "center",
+                        "altText": "Delete",
+                        "id": "deleteRates",
+                        "text": "Delete",
+                        "width": 61
+                    },
+                    "name": "MyActionColumn4",
+                    "designerId": "d1c0b352-b004-46c1-a687-c5ab52049622",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "Text",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "altText": "Delete",
+                                "icon": "icons/delete1.jpg",
+                                "tooltip": "Delete Rate"
+                            },
+                            "name": "MyActionColumnItem4",
+                            "designerId": "acc36f96-bafc-4f20-9bb0-5052092efaa7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Rate Name",
+                "labelAlign": "right",
+                "layout|x": 25,
+                "layout|y": 35,
+                "name": "RateName",
+                "tabIndex": 1,
+                "width": 345
+            },
+            "name": "MyTextField55",
+            "designerId": "7e8f22aa-5afb-4a2a-9f42-83760926048d"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "ID",
+                "labelAlign": "right",
+                "layout|x": 25,
+                "layout|y": 5,
+                "name": "ID",
+                "readOnly": true,
+                "tabIndex": 1,
+                "width": 155
+            },
+            "name": "MyTextField56",
+            "designerId": "13aab199-70bd-43b7-8012-60ae0d786308"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Value",
+                "labelAlign": "right",
+                "layout|x": 25,
+                "layout|y": 60,
+                "name": "Value",
+                "tabIndex": 2
+            },
+            "name": "MyTextField57",
+            "designerId": "39dabd6b-ed3e-4139-a02c-a8529f137c40"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Lower Limit",
+                "labelAlign": "right",
+                "layout|x": 25,
+                "layout|y": 85,
+                "name": "Lower_Limit",
+                "tabIndex": 3
+            },
+            "name": "MyTextField58",
+            "designerId": "1dd7291a-b10b-4ca9-9dbb-c8396479c467"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Upper Limit",
+                "labelAlign": "right",
+                "layout|x": 25,
+                "layout|y": 110,
+                "name": "Upper_Limit",
+                "tabIndex": 4
+            },
+            "name": "MyTextField59",
+            "designerId": "a46e6d3d-d898-489f-ae5a-710a1852845f"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Rate",
+                "labelAlign": "right",
+                "layout|x": 25,
+                "layout|y": 135,
+                "name": "Rate",
+                "tabIndex": 5
+            },
+            "name": "MyTextField60",
+            "designerId": "2f912ca2-c071-4c1f-b789-0360e92d9124"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdNew",
+                "layout|x": 375,
+                "layout|y": 120,
+                "tabIndex": 7,
+                "text": "<b>New</b>",
+                "width": 105
+            },
+            "name": "MyButton20",
+            "designerId": "964d035c-ab5f-4841-9241-b3a7586055bb"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdSaveRates",
+                "layout|x": 505,
+                "layout|y": 120,
+                "tabIndex": 6,
+                "text": "<b>Save</b>",
+                "width": 105
+            },
+            "name": "MyButton21",
+            "designerId": "0b88fda6-85ba-41c7-9ba1-88edb3dde47c"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdClose",
+                "layout|x": 665,
+                "layout|y": 120,
+                "tabIndex": 8,
+                "text": "<b>Close</b>",
+                "width": 105
+            },
+            "name": "MyButton22",
+            "designerId": "78787dca-e433-4600-8dbd-278e540288ab"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "layout|x": 655,
+                "layout|y": 30,
+                "name": "formStatus",
+                "readOnly": true,
+                "width": 120
+            },
+            "name": "MyTextField61",
+            "designerId": "5773c2dc-6948-4021-bbe5-e6ed7c0330b4"
+        }
+    ]
+}

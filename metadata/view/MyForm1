@@ -1,0 +1,18 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userClassName": "MyForm1",
+        "frame": true,
+        "height": 283,
+        "title": "Batch Posting",
+        "width": 409
+    },
+    "name": "MyForm1",
+    "designerId": "1a3c993c-209a-4802-af46-960e1df6bd68"
+}

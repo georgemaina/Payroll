@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "NssfReturnsStore",
+        "model": "NssfReturns",
+        "pageSize": 50,
+        "storeId": "NssfReturns"
+    },
+    "designerId": "060a71a0-f95a-45ad-86cf-6bdd694acd31",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getNssfReturns"
+            },
+            "name": "MyAjaxProxy19",
+            "designerId": "054cd42d-e450-46a5-b5f2-c5d66ed08702",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "NssfList"
+                    },
+                    "name": "MyJsonReader19",
+                    "designerId": "4ce93151-9cc7-499e-befe-4a23cd1cf901"
+                }
+            ]
+        }
+    ]
+}

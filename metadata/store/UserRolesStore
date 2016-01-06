@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "userrolesstore",
+        "designer|userClassName": "UserRolesStore",
+        "model": "UserRoles",
+        "storeId": "UserRolesStore"
+    },
+    "designerId": "1cf561b7-0a46-4fe3-8c58-8ef5ee1db84d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/manageUsers.php?task=getUserRoles"
+            },
+            "name": "MyAjaxProxy26",
+            "designerId": "e2283116-64b6-4261-b6f3-2bffab29e751",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "roles"
+                    },
+                    "name": "MyJsonReader26",
+                    "designerId": "51d187c3-b063-4ed5-97a6-7b4d1af5054c"
+                }
+            ]
+        }
+    ]
+}

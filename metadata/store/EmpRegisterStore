@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "empregisterstore",
+        "designer|userClassName": "EmpRegisterStore",
+        "model": "EmployeesRegister",
+        "pageSize": 200,
+        "storeId": "EmpRegisterStore"
+    },
+    "designerId": "a4b7edbe-c5e3-4fc9-a22f-29a6389d1b8a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getEmployeeRecord"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "87c35195-2282-4179-a66e-535b8adb0c16",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "Employees"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "766ff571-753f-401e-a5ea-44bec46e3f75"
+                }
+            ]
+        }
+    ]
+}

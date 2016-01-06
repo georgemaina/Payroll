@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "url": "css/payroll.css"
+    },
+    "designerId": "4cd4097c-b3ff-4cc5-95e0-1cf3885630e9"
+}

@@ -1,0 +1,48 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "payrolllistingsmainstore",
+        "designer|userClassName": "PayrollListingsMainStore",
+        "groupField": null,
+        "model": "PayrollListingsMainModel",
+        "pageSize": 50,
+        "storeId": "PayrollListingsMainStore"
+    },
+    "designerId": "92134b82-791b-4e63-9bde-f576db2f4a75",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPayrollListingsMain"
+            },
+            "name": "MyAjaxProxy24",
+            "designerId": "c5913670-6ed4-4918-aec7-472dfaa8cef4",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "payrolllistingsmain"
+                    },
+                    "name": "MyJsonReader24",
+                    "designerId": "2ce7e5bb-d907-428d-aed2-dab90e6012e0"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,220 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": true,
+        "closable": true,
+        "collapsible": true,
+        "designer|userAlias": "earningsgrid",
+        "designer|userClassName": "EarningsGrid",
+        "height": 650,
+        "store": "EarningStore",
+        "title": "Earnings Report",
+        "width": null
+    },
+    "designerId": "35f07700-7ba6-4626-8757-964789e73094",
+    "cn": [
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyGridView21",
+            "designerId": "c9c6fbc0-5684-4981-bf8c-9e106ed3729e"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "PayrollPostingStore",
+                "width": 360
+            },
+            "name": "MyPagingToolbar21",
+            "designerId": "94122ff1-707d-4071-a479-753d6af36174"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "height": 31
+            },
+            "name": "MyToolbar10",
+            "designerId": "b1fb70fe-04aa-4ee6-8496-8618d9e27b4e",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "PayType",
+                        "fieldLabel": "Pay Type",
+                        "itemId": "PaymentType",
+                        "labelAlign": "right",
+                        "layout|flex": null,
+                        "minChars": 2,
+                        "queryMode": "local",
+                        "store": "PayTypeStore",
+                        "typeAhead": true,
+                        "valueField": "ID",
+                        "width": 324
+                    },
+                    "name": "MyComboBox45",
+                    "designerId": "ea3d18df-b54b-4f5d-8bbd-8e5f3479ad8f"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "name": "MyFill5",
+                    "designerId": "83d0a089-a17e-4384-9883-dbce5c0bb640"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 23,
+                        "layout|flex": null,
+                        "text": "<b>Print</b>",
+                        "width": 117
+                    },
+                    "name": "MyButton89",
+                    "designerId": "6e6a1edc-4f2c-45a6-afea-b812ad830355"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 23,
+                        "itemId": "cmdExportEarnings",
+                        "layout|flex": null,
+                        "text": "<b>Export to Excel</b>",
+                        "width": 129
+                    },
+                    "name": "MyButton90",
+                    "designerId": "50956f22-f3fa-449f-8b14-bdfe13f04855"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "PID",
+                "text": "Pid",
+                "width": 53
+            },
+            "name": "MyColumn154",
+            "designerId": "52e0db0d-9eaf-42ce-855a-943134e920d3"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "EmpNames",
+                "text": "EmpNames",
+                "width": 224
+            },
+            "name": "MyColumn155",
+            "designerId": "628f120b-82c4-41b4-a284-58406a81f8ca"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Category",
+                "text": "CatID"
+            },
+            "name": "MyColumn156",
+            "designerId": "8eb6517b-8efb-4d7e-9e04-d580f967c1f0"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "PayType",
+                "text": "PayType",
+                "width": 171
+            },
+            "name": "MyColumn157",
+            "designerId": "e26e6b06-cd0a-44f6-b669-74fd0374c9a1"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Amount",
+                "text": "Amount"
+            },
+            "name": "MyColumn158",
+            "designerId": "31c517be-201e-4b84-ad45-5266714f5f4d"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Balance",
+                "text": "Balance"
+            },
+            "name": "MyColumn159",
+            "designerId": "405526bf-7679-48c4-a37e-1e66911cf46d"
+        }
+    ]
+}

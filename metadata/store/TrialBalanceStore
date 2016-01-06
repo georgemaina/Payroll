@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "trialbalancestore",
+        "designer|userClassName": "TrialBalanceStore",
+        "model": "TrialBalance",
+        "pageSize": 50,
+        "storeId": "TrialBalanceStore"
+    },
+    "designerId": "11a566bf-ed5f-4ca2-a4c9-f1e0d9ffdc08",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getTrialBalance"
+            },
+            "name": "MyAjaxProxy31",
+            "designerId": "f0e64d47-fedf-4471-bce1-514bc6a55ab6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "trialbalance"
+                    },
+                    "name": "MyJsonReader31",
+                    "designerId": "0ec5726d-155d-4373-be04-9ee401339f70"
+                }
+            ]
+        }
+    ]
+}

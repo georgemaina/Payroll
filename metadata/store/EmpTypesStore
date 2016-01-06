@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "emptypesstore",
+        "designer|userClassName": "EmpTypesStore",
+        "model": "EmploymentType",
+        "storeId": "EmpTypesStore"
+    },
+    "designerId": "a51cb91e-a37b-4265-9b04-857df1c61748",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getEmpType"
+            },
+            "name": "MyAjaxProxy10",
+            "designerId": "a9fe437e-3a2b-4a7d-abed-a4703e994dec",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "empTypes"
+                    },
+                    "name": "MyJsonReader10",
+                    "designerId": "a3815258-a1e7-46ae-8e83-835e0ce10a21"
+                }
+            ]
+        }
+    ]
+}

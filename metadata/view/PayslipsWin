@@ -1,0 +1,308 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "payslipswin",
+        "designer|userClassName": "PayslipsWin",
+        "frame": true,
+        "height": 328,
+        "layout": "absolute",
+        "styleHtmlCls": "styleHtmlCls",
+        "title": null,
+        "width": 381
+    },
+    "designerId": "44fea728-4f2f-4711-8875-3e14321664a5",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "styleHtmlCls",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "month",
+                "fieldLabel": "Payroll Month",
+                "itemId": "payslipMonth",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 15,
+                "name": null,
+                "queryMode": "local",
+                "store": "PayMonthStore",
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 290
+            },
+            "name": "MyComboBox19",
+            "designerId": "8827dc17-a4f6-4dea-a58f-4dbec86e1b11"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "month",
+                "fieldLabel": "To Payroll Month",
+                "itemId": "payslipMonth1",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 40,
+                "name": null,
+                "queryMode": "local",
+                "store": "PayMonthStore",
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 290
+            },
+            "name": "MyComboBox20",
+            "designerId": "3500bbe0-60d2-4c03-827d-493b187906c3"
+        },
+        {
+            "type": "Ext.form.RadioGroup",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "fieldLabel": "Payslips Per Page",
+                "layout": "vbox",
+                "layout|x": 15,
+                "layout|y": 165,
+                "width": 285
+            },
+            "name": "MyRadioGroup",
+            "designerId": "8fc5a987-0df3-48b2-8d2b-d19a2461d983",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "1",
+                        "fieldLabel": null,
+                        "id": "pages1",
+                        "inputValue": "1",
+                        "itemId": "",
+                        "name": "pages"
+                    },
+                    "name": "MyRadio",
+                    "designerId": "1a14ff58-af60-4a6f-a400-1066f43ea568"
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "2",
+                        "fieldLabel": null,
+                        "id": "pages2",
+                        "inputValue": "2",
+                        "name": "pages"
+                    },
+                    "name": "MyRadio1",
+                    "designerId": "3aaf2c38-1b67-445b-91a0-6d968d3fe5bd"
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "4",
+                        "fieldLabel": null,
+                        "id": "pages3",
+                        "inputValue": "4",
+                        "name": "pages"
+                    },
+                    "name": "MyRadio2",
+                    "designerId": "c2795320-63bb-4edf-8866-57de1b9712c8"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Between PID",
+                "itemId": "pid1",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 115,
+                "name": "pid1",
+                "width": 190
+            },
+            "name": "MyTextField88",
+            "designerId": "a9f16c90-70ff-4771-acd3-04be28bd655e"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "And PID",
+                "itemId": "pid2",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 140,
+                "name": "pid2",
+                "width": 190
+            },
+            "name": "MyTextField89",
+            "designerId": "4ea6cd7f-4cfc-485e-a951-d1d0549829ab"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "BranchName",
+                "emptyText": "Select Branch",
+                "fieldLabel": "Branch",
+                "itemId": "empBranch",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 65,
+                "name": "EmpBranch",
+                "queryMode": "local",
+                "store": "PayBranchStore",
+                "typeAhead": true,
+                "valueField": "BranchName",
+                "width": 285
+            },
+            "name": "MyComboBox21",
+            "designerId": "34de04dc-5eb3-408b-90cf-18089f8dac88"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "deptName",
+                "emptyText": "Select Department",
+                "fieldLabel": "Department",
+                "itemId": "department",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 90,
+                "name": "Department",
+                "queryMode": "local",
+                "store": "PayDeptStore",
+                "typeAhead": true,
+                "valueField": "deptName",
+                "width": 285
+            },
+            "name": "MyComboBox22",
+            "designerId": "71dfa6f6-c1f5-41f6-b16d-30a361344edf"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "cmdPreview",
+                "height": 35,
+                "itemId": "cmdSlipPreview",
+                "layout|x": 5,
+                "layout|y": 270,
+                "text": "<b>Preview Payslip</b>",
+                "width": 105
+            },
+            "name": "MyButton50",
+            "designerId": "16f44637-6e6a-4709-8f1e-0012871cc374"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdPrintPayslip",
+                "layout|x": 135,
+                "layout|y": 270,
+                "text": "<b>Print Payslip</b>",
+                "width": 105
+            },
+            "name": "MyButton51",
+            "designerId": "42f9a559-85ae-4800-bff0-1ccc15edbba5"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdClose",
+                "layout|x": 260,
+                "layout|y": 270,
+                "text": "<b>Cancel</b>",
+                "width": 110
+            },
+            "name": "MyButton52",
+            "designerId": "144fbb52-b600-4ed2-a9e1-131b26b9b861"
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    "Test"
+                ]
+            },
+            "name": "tpl28",
+            "designerId": "3a7f582a-6e9d-4273-ae28-925ae5c25151"
+        }
+    ]
+}

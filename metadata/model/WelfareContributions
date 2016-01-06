@@ -1,0 +1,107 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "welfarecontributions",
+        "designer|userClassName": "WelfareContributions"
+    },
+    "name": "MyModel",
+    "designerId": "93bf9dd2-d79e-4431-a2c9-21fd04de9e76",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Pid"
+            },
+            "name": "MyField193",
+            "designerId": "7db23d9e-a5f4-4788-8e05-e5768fcdbb3b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Names"
+            },
+            "name": "MyField194",
+            "designerId": "782bbd95-d1d9-4406-823b-9f0fc2266b71"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Designation"
+            },
+            "name": "MyField197",
+            "designerId": "ff61e55a-61e3-4a17-bdc2-8dcc98d9ea3c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MonthlyContrib"
+            },
+            "name": "MyField200",
+            "designerId": "3204563a-2dd0-406d-bf87-8c18a5c1c29f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Charges"
+            },
+            "name": "MyField201",
+            "designerId": "3073f3d0-7ff7-4752-8dfb-96d42e1d9e2e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LoanRepayment"
+            },
+            "name": "MyField206",
+            "designerId": "19a4bb04-3c5c-4c62-8f70-34f87e3dd766"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Total"
+            },
+            "name": "MyField208",
+            "designerId": "e888c815-de37-49bb-bdb9-db1b6e212b77"
+        }
+    ]
+}

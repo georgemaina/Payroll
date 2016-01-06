@@ -1,0 +1,147 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "collapsible": true,
+        "columnLines": true,
+        "designer|userAlias": "saccoreport",
+        "designer|userClassName": "SaccoReport",
+        "height": 650,
+        "store": "SaccoContributionStore",
+        "title": "Sacco Reports",
+        "width": null
+    },
+    "name": "MyGridPanel18",
+    "designerId": "90a3fc8a-9da7-41fb-a81b-f622b7000b1c",
+    "cn": [
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyGridView26",
+            "designerId": "656666dc-418a-4715-a6f0-c3093b0a3806"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Pid",
+                "text": "Pid"
+            },
+            "name": "MyColumn155",
+            "designerId": "18fb39f0-8e26-4f4f-8e59-d7a4c3949ee9"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Names",
+                "text": "Names"
+            },
+            "name": "MyColumn187",
+            "designerId": "08397610-eba5-4cde-b764-f59c80784953"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "MemberNo",
+                "text": "Member No"
+            },
+            "name": "MyColumn188",
+            "designerId": "5a767c2b-bddd-41f6-9934-e3412ffa2c1c"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "MonthlyContribution",
+                "text": "Monthly Contribution"
+            },
+            "name": "MyColumn189",
+            "designerId": "7520b0dd-4f72-4ab1-a98c-535ddbfff608"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Insurance",
+                "text": "Insurance"
+            },
+            "name": "MyColumn190",
+            "designerId": "5b5b06a2-b841-4ec0-8489-966014240b97"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Repayment",
+                "text": "Repayment"
+            },
+            "name": "MyColumn191",
+            "designerId": "e07b1544-2b64-4024-9305-fa9f629d2c84"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Total",
+                "text": "Total"
+            },
+            "name": "MyColumn192",
+            "designerId": "d1bac364-3f83-44a2-97ad-5a31bf63e768"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "SaccoContributionStore",
+                "width": 360
+            },
+            "name": "MyPagingToolbar26",
+            "designerId": "86868939-e57d-415c-a71f-ebb9aa188e95"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "paybranchstore",
+        "designer|userClassName": "PayBranchStore",
+        "model": "DeptBranch",
+        "storeId": "PayBranchStore"
+    },
+    "designerId": "38ad4ee7-540d-4ad9-ac35-7bd9f04f6ca3",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPayBranch"
+            },
+            "name": "MyAjaxProxy4",
+            "designerId": "95dfb4c8-3ac7-4d21-8ff9-0b0cd5df7d1a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "payBranches"
+                    },
+                    "name": "MyJsonReader4",
+                    "designerId": "833e5a3f-c934-40b5-b9bd-beb3ef04b3af"
+                }
+            ]
+        }
+    ]
+}

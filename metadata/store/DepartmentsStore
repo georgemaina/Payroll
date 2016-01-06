@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "departmentsstore",
+        "designer|userClassName": "DepartmentsStore",
+        "model": "TrialBalance",
+        "pageSize": 50,
+        "storeId": "DepartmentsStore"
+    },
+    "designerId": "6cce832c-072f-4cb0-9edf-1f5a489cf828",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getDepartmentTotals"
+            },
+            "name": "MyAjaxProxy32",
+            "designerId": "1e86dac7-d89c-4e15-ac9a-1c5d1b2b9781",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "trialbalance"
+                    },
+                    "name": "MyJsonReader32",
+                    "designerId": "f6009af4-6f46-4679-8c70-3946293756f7"
+                }
+            ]
+        }
+    ]
+}

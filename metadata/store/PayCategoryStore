@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "paycategorystore",
+        "designer|userClassName": "PayCategoryStore",
+        "model": "PayCategory",
+        "storeId": "PayCategoryStore"
+    },
+    "designerId": "41b3b8c0-c00e-4a31-b3fe-dc066d66686d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPaycategory"
+            },
+            "name": "MyAjaxProxy12",
+            "designerId": "3bada9a6-e2dc-4eb3-9726-97668ee683a6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "paycategories"
+                    },
+                    "name": "MyJsonReader12",
+                    "designerId": "0447906d-bc5f-4e66-89b1-f97d8934d605"
+                }
+            ]
+        }
+    ]
+}

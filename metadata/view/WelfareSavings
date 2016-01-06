@@ -1,0 +1,150 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "collapsible": true,
+        "columnLines": true,
+        "designer|userAlias": "welfaresavings",
+        "designer|userClassName": "WelfareSavings",
+        "height": 650,
+        "store": "WelfareStore",
+        "title": "Welfare Report",
+        "width": null
+    },
+    "name": "MyGridPanel18",
+    "designerId": "431e09f3-ab63-4176-a1d7-f9f24bd4529c",
+    "cn": [
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyGridView21",
+            "designerId": "fa267091-d017-460f-9484-29c2bfd2aa5d"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Pid",
+                "text": "Pid",
+                "width": 66
+            },
+            "name": "MyColumn154",
+            "designerId": "b5f7dd27-404e-4621-9531-f24938119b37"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Names",
+                "text": "Names",
+                "width": 214
+            },
+            "name": "MyColumn199",
+            "designerId": "3bdaa489-c7af-41dd-9b88-0a6e4bd43dd0"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Designation",
+                "text": "Designation",
+                "width": null
+            },
+            "name": "MyColumn200",
+            "designerId": "991e6ce5-03b6-4db2-8dc9-6e8dcd2402fd"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "MonthlyContrib",
+                "text": "Monthly Contrib"
+            },
+            "name": "MyColumn201",
+            "designerId": "c6293cb7-09f7-4560-a546-ecc2efc07be3"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Charges",
+                "text": "Charges"
+            },
+            "name": "MyColumn202",
+            "designerId": "41247eaf-6a2e-4b49-a55e-90099097f97d"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "LoanRepayment",
+                "text": "Loan Repayment"
+            },
+            "name": "MyColumn203",
+            "designerId": "3464cf7a-a0b4-40da-a749-6fdba1064460"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Total",
+                "text": "Total"
+            },
+            "name": "MyColumn204",
+            "designerId": "e1a8fff0-2c27-4f5c-8f1e-957a879f49b3"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "WelfareStore",
+                "width": 360
+            },
+            "name": "MyPagingToolbar21",
+            "designerId": "6fd8218b-13a9-4e1e-9754-3cef55cf275d"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "payratesstore",
+        "designer|userClassName": "PayRatesStore",
+        "model": "PayRates",
+        "pageSize": 50,
+        "storeId": "PayRatesStore"
+    },
+    "designerId": "f784f135-2cdb-4ab6-9f2e-ef2cc376a878",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPayRates"
+            },
+            "name": "MyAjaxProxy13",
+            "designerId": "96453dcd-8ea2-439a-a7b2-d9c774345709",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "payRates"
+                    },
+                    "name": "MyJsonReader13",
+                    "designerId": "94911357-7c79-4805-b999-ca9c9ea164ee"
+                }
+            ]
+        }
+    ]
+}

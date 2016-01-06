@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "slipempinfostore",
+        "designer|userClassName": "SlipEmpInfoStore",
+        "model": "SlipEmpInfo",
+        "pageSize": 50,
+        "storeId": "SlipEmpInfoStore"
+    },
+    "designerId": "0b55fe17-2b6d-4084-9ed8-968cb5595465",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getSlipEmpInfo"
+            },
+            "name": "MyAjaxProxy30",
+            "designerId": "4ac0e817-5690-41f2-a0b8-efea2303c3cf",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "slipEmpInfo"
+                    },
+                    "name": "MyJsonReader30",
+                    "designerId": "1a6994c5-5ff9-4718-9989-92daeb579f89"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,946 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "reportsactions",
+        "designer|userClassName": "ReportsActions",
+        "views": [
+            "TrialBalanceWindow",
+            "PayrollMain",
+            "DepartmentalTotalsWindow",
+            "PayrollPostingWindow",
+            "EarningsDeductionsWindow",
+            "EarningsGrid",
+            "PayrollListingWindow",
+            "NhifReturns",
+            "PayeReturns",
+            "NssfReturns",
+            "P9ReportWindow",
+            "P9Report",
+            "PayrollListingsMain",
+            "PayrollListingGrid",
+            "PayrollPostingGrid"
+        ]
+    },
+    "designerId": "96b53bbd-6881-45ce-bb82-9931fbf5c186",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({",
+                    "    '#cmdPreviewPostings':{",
+                    "        click:this.previewPostings",
+                    "    },",
+                    "    '#mnuDepartmentTotals':{",
+                    "        click:this.openDepartmentReports",
+                    "    },",
+                    "    '#cmdPreviewdeptReport':{",
+                    "        click:this.previewDepartmentsReport",
+                    "    },",
+                    "    '#mnuEarnings':{",
+                    "        click:this.openEarningsDeductionsWin",
+                    "    },",
+                    "    '#mnuDeductions':{",
+                    "        click:this.openEarningsDeductionsWin",
+                    "    },",
+                    "    '#cmdPreviewEarnDead':{",
+                    "        click:this.previewEarningsDeductions",
+                    "    },",
+                    "    '#cmdExportEarnings':{",
+                    "        click:this.exportEarnings",
+                    "    },",
+                    "    '#cmdExportListing':{",
+                    "        click:this.exportListing",
+                    "    },",
+                    "    '#cmdPreviewListing':{",
+                    "        click:this.previewListing",
+                    "    },",
+                    "    '#cmdExportNhif':{",
+                    "        click:this.exportNhif",
+                    "    },",
+                    "    '#cmdExportNssf':{",
+                    "        click:this.exportNssf",
+                    "    },",
+                    "    '#cmdExportPaye':{",
+                    "        click:this.exportPaye",
+                    "    },",
+                    "    '#mnuP9Report':{",
+                    "        click:this.openP9ReportWindow",
+                    "    },",
+                    "    '#cmdPreviewP9':{",
+                    "        click:this.previewP9",
+                    "    },",
+                    "    '#cmdPrintP9':{",
+                    "        click:this.printP9form",
+                    "    },",
+                    "    '#cmdExportListingsMain':{",
+                    "        click:this.exportListingsMain",
+                    "    },",
+                    "    '#cmdExportPostings':{",
+                    "        click:this.exportPayrollPostings",
+                    "    }",
+                    "});"
+                ]
+            },
+            "name": "init",
+            "designerId": "a9e2261d-8aa5-4943-a8df-378d5d603d5e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "payrollpostingwindow",
+                "selector": "payrollpostingwindow",
+                "xtype": "payrollpostingwindow"
+            },
+            "name": "payrollpostingwindow",
+            "designerId": "2d62806c-af76-41ad-a1aa-decdcb8a0c8c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "trialbalancewindow",
+                "selector": "trialbalancewindow",
+                "xtype": "trialbalancewindow"
+            },
+            "name": "trialbalancewindow",
+            "designerId": "00697142-75a0-4f56-8de1-111bb8336c10"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewPostings",
+                "implHandler": [
+                    "\r",
+                    "//Ext.Msg.alert(this.getPayslipswin().down(\"#payslipMonth\").getValue());\r",
+                    "\r",
+                    "postingsGrid = Ext.create('PayrollApp.view.PayrollPostingGrid', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]');\r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "var pmonth=this.getPayrollpostingwindow().down('#payMonth').getValue();\r",
+                    "var branch=this.getPayrollpostingwindow().down('#empBranch').getValue();\r",
+                    "var catID=this.getPayrollpostingwindow().down('#CatID').getValue();\r",
+                    "var payType=this.getPayrollpostingwindow().down('#PaymentType').getValue();\r",
+                    "\r",
+                    "\r",
+                    "var postingStore=Ext.data.StoreManager.lookup(\"PayrollPostingStore\");\r",
+                    "\r",
+                    "postingStore.load({\r",
+                    "    params: {\r",
+                    "        payMonth:pmonth,\r",
+                    "        empBranch:branch,\r",
+                    "        Payment:catID,\r",
+                    "        PaymentType:payType\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "center_container.add(postingsGrid);\r",
+                    ""
+                ]
+            },
+            "name": "previewPostings",
+            "designerId": "2544fa79-7cf6-4783-9612-26fd8463e8e4"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "viewport",
+                "selector": "payrollmain",
+                "xtype": "payrollmain"
+            },
+            "name": "viewport",
+            "designerId": "6b124141-4681-4639-a16a-c4a13bf26652"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openDepartmentReports",
+                "implHandler": [
+                    "deptReports= Ext.create('PayrollApp.view.DepartmentalTotalsWindow', {});\r",
+                    "var deptsWin=Ext.create('Ext.window.Window', {\r",
+                    "    title: 'Payroll Departmental Totals',\r",
+                    "    resizable:false,\r",
+                    "    animCollapse: true,\r",
+                    "    collapsible: true,\r",
+                    "    tools: [\r",
+                    "    {\r",
+                    "        xtype: 'tool',\r",
+                    "        type: 'minimize'\r",
+                    "    },\r",
+                    "    {\r",
+                    "        xtype: 'tool',\r",
+                    "        type: 'maximize'\r",
+                    "    }\r",
+                    "    ]\r",
+                    "});\r",
+                    "\r",
+                    "deptsWin.add(deptReports);\r",
+                    "deptsWin.show();"
+                ]
+            },
+            "name": "openDepartmentReports",
+            "designerId": "1ad9ae5e-f9dc-432d-bfa5-22cf6aff9393"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "departmentaltotalswindow",
+                "selector": "departmentaltotalswindow",
+                "xtype": "departmentaltotalswindow"
+            },
+            "name": "departmentaltotalswindow",
+            "designerId": "2eff1652-891f-49a9-8510-451c08c96991"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewDepartmentsReport",
+                "implHandler": [
+                    "\r",
+                    "//Ext.Msg.alert(this.getPayslipswin().down(\"#payslipMonth\").getValue());\r",
+                    "\r",
+                    "reportswindow = Ext.create('PayrollApp.view.ReportsMainView', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]');\r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "var pmonth=this.getDepartmentaltotalswindow().down('#tpayMonth').getValue();\r",
+                    "var deptName=this.getDepartmentaltotalswindow().down('#deptName').getValue();\r",
+                    "\r",
+                    "var departmentsStore=Ext.data.StoreManager.lookup(\"DepartmentsStore\");\r",
+                    "\r",
+                    "departmentsStore.load({\r",
+                    "    params: {\r",
+                    "        payMonth:pmonth,\r",
+                    "        deptName:deptName\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "var creditSum=0;\r",
+                    "var debitSum=0;\r",
+                    "departmentsStore.each(function (rec) {\r",
+                    "    creditSum += rec.get('Credit');\r",
+                    "    debitSum +=rec.get('Debit');\r",
+                    "});\r",
+                    "\r",
+                    "console.info(debitSum);\r",
+                    "\r",
+                    "center_container.add(reportswindow);\r",
+                    "\r",
+                    "var company;\r",
+                    "var Params=Ext.urlDecode(window.location.search.substring(1));\r",
+                    "\r",
+                    "var User2=Ext.data.StoreManager.lookup('DefaultItemsStore');\r",
+                    "User2.load({\r",
+                    "  params: {\r",
+                    "        userName: Params.user\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "       //company=\"records[1].data.CompanyName\";\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "User2.each(function (rec) {\r",
+                    "   company = rec.get('CompanyName');\r",
+                    "    //debitSum +=rec.get('Debit');\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "//var company=company;\r",
+                    "\r",
+                    "\r",
+                    "var data1=departmentsStore.proxy.reader.rawData;\r",
+                    "\r",
+                    "\r",
+                    "var d = new Date();\r",
+                    "var n = d.getFullYear();\r",
+                    "var period=pmonth +\" \"+ n;\r",
+                    "\r",
+                    "var tpl=new Ext.XTemplate(\r",
+                    "'<Table id=trialBalance>',\r",
+                    "'<tr><td colspan=4 class=titles>{[this.getCompanyName() ]}</td></tr>',\r",
+                    "'<tr><td colspan=4 class=titles>FINAL POSTINGS SUMMARY</td></tr>',\r",
+                    "'<tr><td colspan=4 class=titles>Department : {[this.getDepartment() ]}</td></tr>',\r",
+                    "'<tr><td colspan=4 class=titles>For the Period : {[this.getPeriod() ]}</td></tr>',\r",
+                    "'<tr><th>Pay Code</th><th>Pay Type</th><th>Debit</th><th>Credit</th></tr>',\r",
+                    "'<tpl for=\"trialbalance\">',\r",
+                    "'<tr>',\r",
+                    "'<td>{PayCode}</td>',\r",
+                    "'<td>{Pay_Type}</td>',\r",
+                    "'<td>{Debit}</td>',\r",
+                    "'<td>{Credit}</td>',\r",
+                    "'</tpl>',\r",
+                    "'<tr><td colspan=2 class=totals>Totals</td><td class=totals> {[this.getDebitTotal() ]}</td><td class=totals> {[ this.getCreditTotal() ]}</td></tr>',\r",
+                    "'</table>',\r",
+                    "{\r",
+                    "    getCompanyName:function(){\r",
+                    "        return company;\r",
+                    "    },\r",
+                    "    getDepartment:function(){\r",
+                    "        return deptName;\r",
+                    "    },\r",
+                    "    getPeriod:function(){\r",
+                    "        return period;\r",
+                    "    },\r",
+                    "    getDebitTotal:function(){\r",
+                    "        return debitSum.toFixed(2);\r",
+                    "    },\r",
+                    "    getCreditTotal:function(){\r",
+                    "        return creditSum.toFixed(2);\r",
+                    "    }\r",
+                    "}\r",
+                    ");\r",
+                    "\r",
+                    "tpl.overwrite(reportswindow.body,data1);\r",
+                    ""
+                ]
+            },
+            "name": "previewDepartmentsReport",
+            "designerId": "dd356c02-74eb-4f95-bb39-4261626135bf"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "earningsdeductionswindow",
+                "selector": "earningsdeductionswindow",
+                "xtype": "earningsdeductionswindow"
+            },
+            "name": "earningsdeductionswindow",
+            "designerId": "72eecc28-72f7-4c83-8c56-ac1febf4f5ce"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openEarningsDeductionsWin",
+                "implHandler": [
+                    "earnded= Ext.create('PayrollApp.view.EarningsDeductionsWindow', {});\r",
+                    "var earndedWin=Ext.create('Ext.window.Window', {\r",
+                    "    title: 'Payroll Earnings and Deductions',\r",
+                    "    resizable:false,\r",
+                    "    animCollapse: true,\r",
+                    "    collapsible: true,\r",
+                    "    tools: [\r",
+                    "    {\r",
+                    "        xtype: 'tool',\r",
+                    "        type: 'minimize'\r",
+                    "    },\r",
+                    "    {\r",
+                    "        xtype: 'tool',\r",
+                    "        type: 'maximize'\r",
+                    "    }\r",
+                    "    ]\r",
+                    "});\r",
+                    "\r",
+                    "earndedWin.add(earnded);\r",
+                    "earndedWin.show();"
+                ]
+            },
+            "name": "openEarningsDeductionsWin",
+            "designerId": "01baced4-e280-47ec-b699-8d8644b99d4e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewEarningsDeductions",
+                "implHandler": [
+                    "\r",
+                    "//Ext.Msg.alert(\"Test Test\");\r",
+                    "earningsGrid = Ext.create('PayrollApp.view.EarningsGrid', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]');\r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "var pmonth=this.getEarningsdeductionswindow().down('#payMonth').getValue();\r",
+                    "var payType=this.getEarningsdeductionswindow().down('#payType').getValue();\r",
+                    "\r",
+                    "\r",
+                    "var earningStore=Ext.data.StoreManager.lookup(\"EarningStore\");\r",
+                    "\r",
+                    "earningStore.load({\r",
+                    "    params: {\r",
+                    "        payMonth:pmonth,\r",
+                    "        PaymentType:payType\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "center_container.add(earningsGrid);\r",
+                    ""
+                ]
+            },
+            "name": "previewEarningsDeductions",
+            "designerId": "f371b6b4-21d8-4b7f-b97d-75dbe90a03a6"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "earningsgrid",
+                "selector": "earningsgrid",
+                "xtype": "earningsgrid"
+            },
+            "name": "earningsgrid",
+            "designerId": "07d35745-b8d4-4ffb-b164-24efa00e1c73"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportEarnings",
+                "implHandler": [
+                    "\r",
+                    "var payMonth=this.getEarningsdeductionswindow().down(\"#payMonth\").getValue();\r",
+                    "var payType=this.getEarningsdeductionswindow().down(\"#payType\").getValue();\r",
+                    "\r",
+                    "//Ext.Msg.alert(\"Test\",\"Value is \"+payType);\r",
+                    "\r",
+                    "window.open('reports/exportEarnings.php?payMonth='+payMonth+'&payType='+payType,\"Earnings and Deductions\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,\\n\\\r",
+                    "scrollbars=yes,status=yes\");"
+                ]
+            },
+            "name": "exportEarnings",
+            "designerId": "d7131609-60a8-4dd6-be5c-0f07c8018949"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "payrolllistingwindow",
+                "selector": "payrolllistingwindow",
+                "xtype": "payrolllistingwindow"
+            },
+            "name": "payrolllistingwindow",
+            "designerId": "5d548d20-1e11-4d9a-8f08-fe7c2153414f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportListing",
+                "implHandler": [
+                    "//Ext.Msg.alert(\"Test\",\"This is a test\");",
+                    "",
+                    "",
+                    "var payMonth=this.getPayrolllistingwindow().down(\"#payMonth\").getValue();",
+                    "var empBranch=this.getPayrolllistingwindow().down(\"#empBranch\").getValue();",
+                    "",
+                    "",
+                    "if(empBranch==='CCC'){",
+                    "    window.open('reports/exportListing.php?payMonth='+payMonth+'&empBranch='+empBranch,\"payroll Listing CCC\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    "}else{",
+                    "    window.open('reports/exportListingMain.php?payMonth='+payMonth+'&empBranch='+empBranch,\"payroll Listing Main\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    "}"
+                ]
+            },
+            "name": "exportListing",
+            "designerId": "66ed5fdc-8920-4800-8038-efac6adc645c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewListing",
+                "implHandler": [
+                    "//alert('test');",
+                    "empBranch=this.getPayrolllistingwindow().down('#empBranch').getValue();",
+                    "payMonth=this.getPayrolllistingwindow().down('#payMonth').getValue();",
+                    "",
+                    "",
+                    "        listingMainGrid = Ext.create('PayrollApp.view.PayrollListingsMain', {});",
+                    "        center_container = this.getViewport().down('container[region=center]');",
+                    "        center_container.removeAll();",
+                    "",
+                    "        center_container.add(listingMainGrid);",
+                    "",
+                    "        var listingMainStore=Ext.data.StoreManager.lookup(\"PayrollListingsMainStore\");",
+                    "",
+                    "        listingMainStore.load({",
+                    "            params: {",
+                    "                payMonth:payMonth,",
+                    "                empBranch:empBranch",
+                    "            },",
+                    "            callback: function(records, operation, success) {",
+                    "",
+                    "            },",
+                    "            scope: this",
+                    "        });",
+                    "",
+                    "    this.getPayrolllistingsmain().down('#payrollBranch').setValue(empBranch);",
+                    "    this.getPayrolllistingsmain().down('#payrollMonth').setValue(payMonth);",
+                    "",
+                    ""
+                ]
+            },
+            "name": "previewListing",
+            "designerId": "af9cdf31-9aeb-4e02-9900-5a5fd552ec8a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportNhif",
+                "implHandler": [
+                    "var payMonth=this.getNhifreturns().down(\"#nhifMonth\").getValue();\r",
+                    "\r",
+                    "//Ext.Msg.alert(\"Test\",\"Value is \"+payMonth);\r",
+                    "\r",
+                    "window.open('reports/exportNHIF.php?payMonth='+payMonth,\"NHIF Returns\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,\\n\\\r",
+                    "scrollbars=yes,status=yes\");"
+                ]
+            },
+            "name": "exportNhif",
+            "designerId": "0c4a1f97-19a9-482a-8c79-3e6e522f6704"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportNssf",
+                "implHandler": [
+                    "var payMonth=this.getNssfreturns().down(\"#nssfMonth\").getValue();\r",
+                    "\r",
+                    "//Ext.Msg.alert(\"Test\",\"Value is \"+payType);\r",
+                    "\r",
+                    "window.open('reports/exportNSSF.php?payMonth='+payMonth,\"NSSF Returns\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,\\n\\\r",
+                    "scrollbars=yes,status=yes\");"
+                ]
+            },
+            "name": "exportNssf",
+            "designerId": "81540acd-5e74-426d-8dec-5bd93aca5d20"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportPaye",
+                "implHandler": [
+                    "var payMonth=this.getPayereturns().down(\"#payeeMonth\").getValue();\r",
+                    "\r",
+                    "//Ext.Msg.alert(\"Test\",\"Value is \"+payMonth);\r",
+                    "\r",
+                    "window.open('reports/exportPaye.php?payMonth='+payMonth,\"PAYE Returns\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,\\n\\\r",
+                    "scrollbars=yes,status=yes\");"
+                ]
+            },
+            "name": "exportPaye",
+            "designerId": "24fd8d69-08e0-4bd4-a837-d1d4b526694d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "nhifreturns",
+                "selector": "nhifreturns",
+                "xtype": "nhifreturns"
+            },
+            "name": "nhifreturns",
+            "designerId": "2c02353d-bcc8-4272-ae58-291ad51fb0b9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "nssfreturns",
+                "selector": "nssfreturns",
+                "xtype": "nssfreturns"
+            },
+            "name": "nssfreturns",
+            "designerId": "321623d1-887b-4cf5-86ba-98700bbf228d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "payereturns",
+                "selector": "payereturns",
+                "xtype": "payereturns"
+            },
+            "name": "payereturns",
+            "designerId": "2be5fde9-db2a-48a1-8e8c-0e9d13d8f896"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openP9ReportWindow",
+                "implHandler": [
+                    "p9report= Ext.create('PayrollApp.view.P9ReportWindow', {});\r",
+                    "var p9reportwin=Ext.create('Ext.window.Window', {\r",
+                    "    title: 'Payroll P9 Report',\r",
+                    "    resizable:false,\r",
+                    "    animCollapse: true,\r",
+                    "    collapsible: true,\r",
+                    "    tools: [\r",
+                    "    {\r",
+                    "        xtype: 'tool',\r",
+                    "        type: 'minimize'\r",
+                    "    },\r",
+                    "    {\r",
+                    "        xtype: 'tool',\r",
+                    "        type: 'maximize'\r",
+                    "    }\r",
+                    "    ]\r",
+                    "});\r",
+                    "\r",
+                    "p9reportwin.add(p9report);\r",
+                    "p9reportwin.show();"
+                ]
+            },
+            "name": "openP9ReportWindow",
+            "designerId": "a9d6b992-ebf9-4dfd-bb5d-797b34c26686"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "p9report",
+                "selector": "p9report",
+                "xtype": "p9report"
+            },
+            "name": "p9report",
+            "designerId": "caf65228-6d58-419f-bc82-01ad414742dc"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "p9reportwindow",
+                "selector": "p9reportwindow",
+                "xtype": "p9reportwindow"
+            },
+            "name": "p9reportwindow",
+            "designerId": "56558a34-7eb0-4825-8716-c0c23c832bda"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewP9",
+                "implHandler": [
+                    "\r",
+                    "//Ext.Msg.alert(\"Test Test\");\r",
+                    "\r",
+                    "p9Grid = Ext.create('PayrollApp.view.P9Report', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]');\r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "\r",
+                    "var pid=this.getP9reportwindow().down('#pid').getValue();\r",
+                    "\r",
+                    "\r",
+                    "var p9Store=Ext.data.StoreManager.lookup(\"P9ReportStore\");\r",
+                    "\r",
+                    "p9Store.load({\r",
+                    "    params: {\r",
+                    "        pid:pid\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "center_container.add(p9Grid);\r",
+                    ""
+                ]
+            },
+            "name": "previewP9",
+            "designerId": "63abe937-d422-497d-8445-8dbe3f3f814d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "printP9form",
+                "implHandler": [
+                    "//Ext.Msg.alert(\"Test\",\"This is a test\");\r",
+                    "\r",
+                    "\r",
+                    "var pid=this.getP9reportwindow().down(\"#pid\").getValue();\r",
+                    "\r",
+                    "//Ext.Msg.alert(\"Test\",\"Value is \"+payType);\r",
+                    "\r",
+                    "window.open('reports/p9ReportPdf.php?pid='+pid,\"payroll P9 Report\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,\\n\\\r",
+                    "scrollbars=yes,status=yes\");"
+                ]
+            },
+            "name": "printP9form",
+            "designerId": "251b58e9-2c9e-4908-8f99-31b74e8f859d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportListingsMain",
+                "implHandler": [
+                    "var payMonth=this.getPayrolllistingsmain().down(\"#payrollMonth\").getValue();\r",
+                    "var payBranch=this.getPayrolllistingsmain().down(\"#payrollBranch\").getValue();\r",
+                    "\r",
+                    "\r",
+                    "//Ext.Msg.alert(\"Test\",\"Value is \"+payMonth);\r",
+                    "\r",
+                    "window.open('reports/exportListingMain.php?payMonth='+payMonth+'&payBranch='+payBranch,\"Pyaroll Listimgs Main\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,\\n\\\r",
+                    "scrollbars=yes,status=yes\");"
+                ]
+            },
+            "name": "exportListingsMain",
+            "designerId": "2da21536-e50a-48fc-990e-7e58ff657430"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "payrolllistingsmain",
+                "selector": "payrolllistingsmain",
+                "xtype": "payrolllistingsmain"
+            },
+            "name": "payrolllistingsmain",
+            "designerId": "e31d338d-7be2-42cb-b75c-38e161d7fdc0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "payrolllistinggrid",
+                "selector": "payrolllistinggrid",
+                "xtype": "payrolllistinggrid"
+            },
+            "name": "payrolllistinggrid",
+            "designerId": "c77ad7a8-d9df-4a5f-b77d-38caa4edbc49"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "payrollpostinggrid",
+                "selector": "payrollpostinggrid",
+                "xtype": "payrollpostinggrid"
+            },
+            "name": "payrollpostinggrid",
+            "designerId": "37de9e90-e26c-42af-baba-728101cbca7b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportPayrollPostings",
+                "implHandler": [
+                    "var payMonth=this.getPayrollpostingwindow().down(\"#payMonth\").getValue();",
+                    "var payBranch=this.getPayrollpostingwindow().down(\"#empBranch\").getValue();",
+                    "var catID=this.getPayrollpostingwindow().down(\"#CatID\").getValue();",
+                    "var PaymentType=this.getPayrollpostingwindow().down(\"#PaymentType\").getValue();",
+                    "",
+                    "",
+                    "//Ext.Msg.alert(\"Test\",\"Value is \"+payMonth);",
+                    "",
+                    "window.open('reports/exportPayrollPostings.php?payMonth='+payMonth+'&payBranch='+payBranch+'&catID='+catID+'&PaymentType='+PaymentType,\"Pyaroll Postings\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,\\n\\",
+                    "scrollbars=yes,status=yes\");"
+                ]
+            },
+            "name": "exportPayrollPostings",
+            "designerId": "81ba5446-00bd-4706-ac0a-3bd9a3860ae8"
+        }
+    ]
+}

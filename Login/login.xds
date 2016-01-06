@@ -1,0 +1,60 @@
+{
+    "name": "login",
+    "settings": {},
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "c2734439-33d0-473a-a7da-1dd8be54e487": {
+            "paths": [
+                "metadata/view/loginform",
+                "app/view/override/loginform.js",
+                "app/view/loginform.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "loginform"
+        },
+        "8a191332-8bc9-4bcb-9525-b88a3af42b42": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "c920df6c-32a7-4d23-8bc4-06e97caa8d45": {
+            "paths": [
+                "metadata/controller/MyController",
+                "app/controller/override/MyController.js",
+                "app/controller/MyController.js"
+            ],
+            "className": "MyController"
+        },
+        "5f6ecfb6-2b0e-4cfd-a4a3-dfc4d5d646f5": {
+            "paths": [
+                "metadata/model/Users",
+                "app/model/override/Users.js",
+                "app/model/Users.js"
+            ],
+            "className": "Users"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "c2734439-33d0-473a-a7da-1dd8be54e487"
+        ],
+        "store": [],
+        "controller": [
+            "c920df6c-32a7-4d23-8bc4-06e97caa8d45"
+        ],
+        "model": [
+            "5f6ecfb6-2b0e-4cfd-a4a3-dfc4d5d646f5"
+        ],
+        "resource": [
+            "8a191332-8bc9-4bcb-9525-b88a3af42b42"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

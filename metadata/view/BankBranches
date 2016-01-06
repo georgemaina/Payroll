@@ -1,0 +1,267 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": null,
+        "closable": null,
+        "collapsible": null,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "bankbranches",
+        "designer|userClassName": "BankBranches",
+        "draggable": null,
+        "frame": true,
+        "height": 446,
+        "layout": "absolute",
+        "simpleDrag": null,
+        "title": null,
+        "url": "data/updateFunctions.php?task=updateItems",
+        "width": 810
+    },
+    "designerId": "a86c7162-7fe0-4ac0-8e16-259841e2c7aa",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "ID",
+                "itemId": "DeptName",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": 20,
+                "layout|y": 10,
+                "name": "ID",
+                "readOnly": true,
+                "width": 180
+            },
+            "name": "MyTextField43",
+            "designerId": "cfe090df-97cb-4339-90df-606125350199"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Branch Name",
+                "itemId": "DeptName1",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": 20,
+                "layout|y": 35,
+                "name": "BankBranch",
+                "width": 350
+            },
+            "name": "MyTextField44",
+            "designerId": "f1d051a6-b886-462a-a06f-8a17bc2d3f8d",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "afterLabelTextTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "afterLabelTextTpl",
+                        "implHandler": [
+                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                        ]
+                    },
+                    "name": "tpl27",
+                    "designerId": "bc038e58-f369-4bb3-aade-8fbf7481b11a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 325,
+                "itemId": "bankBranchesGrid",
+                "layout|x": 0,
+                "layout|y": 110,
+                "store": "BankBrancheStore",
+                "title": "Benk Branches List",
+                "width": 800
+            },
+            "name": "MyGridPanel4",
+            "designerId": "381935d8-dfb1-4fbf-a6e2-074b7fe8fc9c",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView5",
+                    "designerId": "30436b0c-dc98-4a8e-900e-dad65c08f368"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "BankBrancheStore",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar5",
+                    "designerId": "f2584fb6-e734-4464-8e52-12e617eb0132"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ID",
+                        "text": "ID"
+                    },
+                    "name": "MyColumn60",
+                    "designerId": "009297fb-95a0-4a1a-9755-d49833624290"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "BankBranch",
+                        "text": "BankBranch",
+                        "width": 187
+                    },
+                    "name": "MyColumn61",
+                    "designerId": "91cf7378-e29a-4b0d-a88b-e035da0fe595"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "icon": "icons/delete1.jpg",
+                        "id": "deleteBankBranch",
+                        "text": "Delete"
+                    },
+                    "name": "MyActionColumn2",
+                    "designerId": "eed2100f-4ba0-4f37-85d3-abea85b55380",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "altText": "Delete",
+                                "icon": "icons/delete1.jpg",
+                                "tooltip": "Delete Bank branch"
+                            },
+                            "name": "MyActionColumnItem2",
+                            "designerId": "65335852-6df9-4c0b-894e-dad44a7f7001"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdNew",
+                "layout|x": 155,
+                "layout|y": 65,
+                "text": "<b>New</b>",
+                "width": 101
+            },
+            "name": "MyButton14",
+            "designerId": "0ac2fd87-5cb2-4bfd-a11f-d1b653fa62e1"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdSaveBankBranches",
+                "layout|x": 280,
+                "layout|y": 65,
+                "text": "<b>Save</b>",
+                "width": 101
+            },
+            "name": "MyButton15",
+            "designerId": "1cd538c3-d551-4aee-85ac-9059c4324c6f"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdClose",
+                "layout|x": 600,
+                "layout|y": 65,
+                "text": "<b>Close</b>",
+                "width": 101
+            },
+            "name": "MyButton16",
+            "designerId": "ca82f2e6-447a-4c26-8c82-233cfcb1fa3a"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "layout|x": 570,
+                "layout|y": 5,
+                "name": "formStatus",
+                "readOnly": true
+            },
+            "name": "MyTextField45",
+            "designerId": "d48ef93a-3b13-444c-adb8-e22955236e1d"
+        }
+    ]
+}

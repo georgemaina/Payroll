@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "employeesbatchliststore",
+        "designer|userClassName": "EmployeesBatchListStore",
+        "model": "EmployeesBatchList",
+        "storeId": "EmployeesBatchListStore"
+    },
+    "name": "UsersListStore1",
+    "designerId": "5f2d34f0-9b8d-467a-b81e-e213d9d5da23",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getEmployeesBatchlist"
+            },
+            "name": "MyAjaxProxy25",
+            "designerId": "978ef943-0737-488e-84f5-b482cbf9edf2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "BatchEmployeesList"
+                    },
+                    "name": "MyJsonReader25",
+                    "designerId": "55c81da8-351c-4025-8554-318744ac0b6a"
+                }
+            ]
+        }
+    ]
+}

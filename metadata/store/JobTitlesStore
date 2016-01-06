@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "jobtitlesstore",
+        "designer|userClassName": "JobTitlesStore",
+        "model": "JobTitles",
+        "storeId": "JobTitlesStore"
+    },
+    "designerId": "2664c331-7f27-4215-b688-3608ee131d9b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getJobTitle"
+            },
+            "name": "MyAjaxProxy6",
+            "designerId": "a558fe47-66d7-4a5c-aad3-4fd8db92f62a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "jobTitles"
+                    },
+                    "name": "MyJsonReader6",
+                    "designerId": "ba296ea4-add7-4035-a84f-d3b61de43ab8"
+                }
+            ]
+        }
+    ]
+}

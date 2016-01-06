@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "p9reportstore",
+        "designer|userClassName": "P9ReportStore",
+        "model": "P9Report",
+        "storeId": "P9ReportStore"
+    },
+    "designerId": "f060c78d-c8a2-414a-a61c-38a1363ac632",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getP9Report"
+            },
+            "name": "MyAjaxProxy27",
+            "designerId": "fc845d4d-67c8-4dbd-b3d3-d7032257691f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "p9report"
+                    },
+                    "name": "MyJsonReader27",
+                    "designerId": "0ce37d59-887f-4698-82e3-e84306d11c50"
+                }
+            ]
+        }
+    ]
+}

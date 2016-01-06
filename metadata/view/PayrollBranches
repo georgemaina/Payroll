@@ -1,0 +1,265 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": null,
+        "closable": null,
+        "collapsible": null,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "payrollbranches",
+        "designer|userClassName": "PayrollBranches",
+        "draggable": null,
+        "frame": true,
+        "height": 438,
+        "layout": "absolute",
+        "simpleDrag": null,
+        "title": null,
+        "url": "data/updateFunctions.php?task=updateItems",
+        "width": 810
+    },
+    "designerId": "da7a611e-a5c8-4651-9ccf-2ab84ef1a5c5",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Branch Name",
+                "itemId": "DeptName",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": 0,
+                "layout|y": 50,
+                "name": "BranchName",
+                "tabIndex": 1,
+                "width": 350
+            },
+            "name": "MyTextField40",
+            "designerId": "9ef89a60-e775-4546-beaf-63a58bedbc58",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "afterLabelTextTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "afterLabelTextTpl",
+                        "implHandler": [
+                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                        ]
+                    },
+                    "name": "tpl26",
+                    "designerId": "70568b63-48ea-4b6b-aea8-00cc67f6d2e0"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "ID",
+                "itemId": "DeptName1",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": -2,
+                "layout|y": 20,
+                "name": "ID",
+                "width": 190
+            },
+            "name": "MyTextField41",
+            "designerId": "f7158d9f-98cf-4617-a9f8-c9530733926c"
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 325,
+                "itemId": "branchesGrid",
+                "layout|x": 5,
+                "layout|y": 105,
+                "store": "PayBranchStore",
+                "title": "Branch List",
+                "width": 800
+            },
+            "name": "MyGridPanel3",
+            "designerId": "37a4d436-e731-4708-9381-cb16d1b7226c",
+            "cn": [
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView4",
+                    "designerId": "c3cb7e75-d153-4ef4-9ea4-3b7550142313"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "PayBranchStore",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar4",
+                    "designerId": "11b06e50-afa5-4541-9d3a-9f41b5f40754"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ID",
+                        "text": "ID"
+                    },
+                    "name": "MyColumn58",
+                    "designerId": "8880a8a9-d1a9-4653-9284-bc27b4555148"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "BranchName",
+                        "text": "BranchName",
+                        "width": 202
+                    },
+                    "name": "MyColumn59",
+                    "designerId": "aae1a319-1db0-422a-976e-cea7ff9c482a"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "id": "deleteBranch",
+                        "text": "Delete"
+                    },
+                    "name": "MyActionColumn1",
+                    "designerId": "7cffc610-eeb9-41c7-befb-34bdf1db4531",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/delete1.jpg"
+                            },
+                            "name": "MyActionColumnItem1",
+                            "designerId": "80543832-909c-49d8-b85c-da846d05b671"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdNew",
+                "layout|x": 525,
+                "layout|y": 55,
+                "text": "<b>New</b>",
+                "width": 101
+            },
+            "name": "MyButton11",
+            "designerId": "9dec29d2-635f-4db3-9d10-bf077ad29a76"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdSaveBranches",
+                "layout|x": 405,
+                "layout|y": 55,
+                "tabIndex": 2,
+                "text": "<b>Save</b>",
+                "width": 101
+            },
+            "name": "MyButton12",
+            "designerId": "fa574200-fd56-4c7f-98f1-99a134ba1f9e"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "itemId": "cmdClose",
+                "layout|x": 645,
+                "layout|y": 55,
+                "text": "<b>Close</b>",
+                "width": 101
+            },
+            "name": "MyButton13",
+            "designerId": "608751c8-9f97-4bc4-ace5-f5b3b848a6ca"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "layout|x": 509,
+                "layout|y": 21,
+                "name": "formStatus",
+                "readOnly": true
+            },
+            "name": "MyTextField42",
+            "designerId": "d0d64185-eb6a-46f0-a0e9-b7a6fec166e2"
+        }
+    ]
+}

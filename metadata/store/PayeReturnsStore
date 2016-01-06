@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "payereturnsstore",
+        "designer|userClassName": "PayeReturnsStore",
+        "model": "PayeReturns",
+        "pageSize": 50,
+        "storeId": "PayeReturns"
+    },
+    "designerId": "b8fcf6ae-1bbd-4622-badc-998a99715b97",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPayeReturns"
+            },
+            "name": "MyAjaxProxy20",
+            "designerId": "4dc1fcd1-d4f7-496f-89e8-b0287c37a763",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "PayeList"
+                    },
+                    "name": "MyJsonReader20",
+                    "designerId": "3faba282-c38f-4f25-b139-a62addd71e46"
+                }
+            ]
+        }
+    ]
+}

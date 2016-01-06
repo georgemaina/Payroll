@@ -1,0 +1,823 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoScroll": true,
+        "designer|initialView": true,
+        "designer|userAlias": "payrollmain",
+        "designer|userClassName": "PayrollMain",
+        "itemId": "mnuP9Report",
+        "layout": "border"
+    },
+    "designerId": "d5e8ede8-576a-4840-82c9-43f7622cec22",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "animCollapse": true,
+                "autoScroll": true,
+                "collapsible": true,
+                "designer|displayName": "menus",
+                "layout|region": "west",
+                "width": 239
+            },
+            "name": "MyPanel",
+            "designerId": "02902824-aa6f-404b-ba16-b0299ee2a39d",
+            "cn": [
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "animCollapse": true,
+                        "collapsed": false,
+                        "collapsible": true,
+                        "floating": false,
+                        "title": "Main Menu",
+                        "width": 227
+                    },
+                    "name": "MyMenu",
+                    "designerId": "7a34b4d6-5fd2-4f46-be0c-fe98ed4c3eb1",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/register.png",
+                                "itemId": "mnuEmpRegister",
+                                "text": "Employee Register"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "325dd439-ce06-4765-ad22-dcae996a0697"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/note_accept.png",
+                                "itemId": "mnuEmployeePayments",
+                                "text": "Employee Payments"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "b4070c20-7e4b-4e8b-8043-e33bc9765e96"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Application-ok.png",
+                                "iconCls": "",
+                                "id": "mnuProcessPayroll",
+                                "text": "Process Payroll"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "8e74be91-86b6-4f37-b7a2-cd632abb4c81"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Application-run.png",
+                                "id": "mnuPostPayroll",
+                                "text": "Post Payroll"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "7d70374a-c9d1-42ad-95b6-ddf75b8e3694"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "animCollapse": true,
+                        "collapsed": false,
+                        "collapsible": true,
+                        "floating": false,
+                        "title": "Administration",
+                        "width": 227
+                    },
+                    "name": "MyMenu1",
+                    "designerId": "950db493-a403-4aeb-879e-95915deb50fe",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/compile.png",
+                                "iconCls": "",
+                                "itemId": "mnuCompanySettings",
+                                "text": "Company Settings"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "2581850e-968b-4b17-ad92-a4b32740cd13"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Application-add.png",
+                                "itemId": "mnuBranches",
+                                "text": "Branches"
+                            },
+                            "name": "MyMenuItem5",
+                            "designerId": "4555b3ff-42ae-4742-a660-d9ae1a2089bc"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/news.png",
+                                "itemId": "mnuDepartments",
+                                "text": "Departments"
+                            },
+                            "name": "MyMenuItem6",
+                            "designerId": "24d2827d-561a-4fe9-8ac5-c21ac3df4f1c"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/compile-add.png",
+                                "itemId": "mnuPayTypes",
+                                "text": "Paytypes"
+                            },
+                            "name": "MyMenuItem7",
+                            "designerId": "2813f6d4-8ada-497e-8039-2e999996b8f8"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/news-edit.png",
+                                "itemId": "mnuPayRates",
+                                "text": "Rates"
+                            },
+                            "name": "MyMenuItem8",
+                            "designerId": "7488cb62-a6a9-4efe-b8de-189db94ccbba"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/date.png",
+                                "itemId": "mnuBanks",
+                                "text": "Banks"
+                            },
+                            "name": "MyMenuItem9",
+                            "designerId": "185b0c82-5b78-480c-a1bc-05c4360c6f5f"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/date-del.png",
+                                "itemId": "mnuBankBranches",
+                                "text": "Bank Branches"
+                            },
+                            "name": "MyMenuItem10",
+                            "designerId": "fdc96dbe-02a0-4f5a-8778-e7d3408c8feb"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/note.png",
+                                "itemId": "mnuJobTitles",
+                                "text": "Job Titles"
+                            },
+                            "name": "MyMenuItem11",
+                            "designerId": "6c967fe7-5be1-4c48-ad71-e4dcf4a22370"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/link.png",
+                                "itemId": "mnuJobGroups",
+                                "text": "Job Groups"
+                            },
+                            "name": "MyMenuItem12",
+                            "designerId": "00aaec45-09db-4ceb-909e-b5c3a480bb4f"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/tag-blue.png",
+                                "itemId": "mnuLoanTypes",
+                                "text": "Loan Types"
+                            },
+                            "name": "MyMenuItem13",
+                            "designerId": "0019eee1-bda4-49f5-8f7a-6cf200a204b5"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/image-edit.png",
+                                "itemId": "mnuLeaves",
+                                "text": "Leaves"
+                            },
+                            "name": "MyMenuItem14",
+                            "designerId": "cd51e384-5593-42bc-bbd5-24c0a8db5648"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/time-edit.png",
+                                "itemId": "mnuOvertime",
+                                "text": "Overtime"
+                            },
+                            "name": "MyMenuItem15",
+                            "designerId": "ff6af75a-5fd2-4839-8192-7bc0c601512f"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/user-edit.png",
+                                "itemId": "mnuBatchUpdate",
+                                "text": "Batch Update"
+                            },
+                            "name": "MyMenuItem16",
+                            "designerId": "7761fd15-cc25-4032-bab6-95757244ff7f"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/user-edit.png",
+                                "itemId": "mnuUsers1",
+                                "text": "Users Administration"
+                            },
+                            "name": "MyMenuItem33",
+                            "designerId": "88d90dcb-76a5-4a6b-9aec-a301e03d62fb"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "animCollapse": true,
+                        "collapsed": false,
+                        "collapsible": true,
+                        "floating": false,
+                        "title": "Reports",
+                        "width": 227
+                    },
+                    "name": "MyMenu2",
+                    "designerId": "1b1b8e97-3507-482a-8e5d-c62d956ad849",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/news-ok.png",
+                                "itemId": "mnuPayslips",
+                                "text": "Payslips"
+                            },
+                            "name": "MyMenuItem17",
+                            "designerId": "5e843195-8390-4f1b-95fa-8b6dea5936ad"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuOpenPostingWindow",
+                                "text": "Payroll Postings"
+                            },
+                            "name": "MyMenuItem18",
+                            "designerId": "3488d52d-c0fa-481f-aaa0-88a674d36322"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuPayrollListing",
+                                "text": "Payroll Listings"
+                            },
+                            "name": "MyMenuItem19",
+                            "designerId": "e498c12c-b72c-4805-8a54-704ed1c1ec1e"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuTrialBalance",
+                                "text": "Trial Balance"
+                            },
+                            "name": "MyMenuItem20",
+                            "designerId": "779b197f-6db7-4e1e-9b28-a604e48b606e"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuP9Report",
+                                "text": "P9A Report"
+                            },
+                            "name": "MyMenuItem21",
+                            "designerId": "b15b02e1-0491-45de-b64b-09ed3d31104b"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuP9AReport",
+                                "text": "P9A Hosp Report"
+                            },
+                            "name": "MyMenuItem22",
+                            "designerId": "aa5e82f5-7eae-4311-900f-68c528997f35"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuNssfReturns",
+                                "text": "NSSF Returns"
+                            },
+                            "name": "MyMenuItem23",
+                            "designerId": "bfb0fb52-c11a-4002-bdd3-94f9d8960c83"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuNhifReturns",
+                                "text": "NHIF Returns"
+                            },
+                            "name": "MyMenuItem24",
+                            "designerId": "dc83e197-3982-404d-a950-fd6c92bf11e9"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuPayeReturns",
+                                "text": "PAYE Returns"
+                            },
+                            "name": "MyMenuItem25",
+                            "designerId": "16a958b7-83a9-4b6b-a7e9-628d5242e491"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuEarnings",
+                                "text": "Monthly Earnings"
+                            },
+                            "name": "MyMenuItem26",
+                            "designerId": "66b01804-f297-4b9f-b127-60d04bc049e0"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuDeductions",
+                                "text": "Monthly Deductions"
+                            },
+                            "name": "MyMenuItem27",
+                            "designerId": "d69cf751-ee17-44ff-8f26-4f589a01bc33"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuBankPayments",
+                                "text": "Bank Payment Schedule"
+                            },
+                            "name": "MyMenuItem28",
+                            "designerId": "4d5404f7-a25c-4acd-b7af-837b8e49ebc9"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuDepartmentTotals",
+                                "text": "Monthly Department Totals"
+                            },
+                            "name": "MyMenuItem29",
+                            "designerId": "ffe87b65-2a5d-4726-a30b-6e304201ad09"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "text": "Monthly Organisation Totals"
+                            },
+                            "name": "MyMenuItem30",
+                            "designerId": "0a65326f-8a43-4d03-b869-2799c65c2192"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuCooperativeContributions",
+                                "text": "Cooperative/Other Deductions"
+                            },
+                            "name": "MyMenuItem31",
+                            "designerId": "758f379d-cffb-419a-90b9-3aba649e115c"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "text": "Employees List"
+                            },
+                            "name": "MyMenuItem32",
+                            "designerId": "aeb21170-0570-4b3d-9f99-9a752c3c60f5"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuSaccoReports",
+                                "text": "Sacco Reports"
+                            },
+                            "name": "MyMenuItem34",
+                            "designerId": "d2e5606c-ccca-466a-ac46-4017f5861772"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "icons/Chart2-Edit.png",
+                                "itemId": "mnuWelfareReports",
+                                "text": "Welfare Reports"
+                            },
+                            "name": "MyMenuItem35",
+                            "designerId": "c49da1e8-d581-4307-9882-27c90d26141f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "designer|displayName": "contents",
+                "designer|snapToGrid": 10,
+                "layout": "absolute",
+                "layout|region": "center"
+            },
+            "name": "MyContainer1",
+            "designerId": "9aa11c96-7d09-49f6-ac4e-66374ab51242"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 36,
+                "layout": "absolute",
+                "layout|region": "south"
+            },
+            "name": "MyContainer2",
+            "designerId": "64140dc5-6ccf-4585-9c00-5d2f28e8586e",
+            "cn": [
+                {
+                    "type": "Ext.ProgressBar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "animate": true,
+                        "itemId": "prollProgress",
+                        "layout|x": 240,
+                        "layout|y": 3,
+                        "value": 0.4,
+                        "width": 395
+                    },
+                    "name": "MyProgressBar",
+                    "designerId": "301df393-e8bb-45ad-b9ef-58d62f7b633c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 46,
+                "layout|region": "north",
+                "margin": "0 0 0 0"
+            },
+            "name": "MyToolbar1",
+            "designerId": "7ecfad71-ac56-4678-b130-57f1f2812e69",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 32,
+                        "layout|flex": null,
+                        "src": "images/care_logo_mysql.gif",
+                        "width": 131
+                    },
+                    "name": "MyImg",
+                    "designerId": "7eb78d32-e113-4e92-bed0-6a8d38f309d6"
+                },
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<b>Payroll</b>",
+                        "layout|flex": null,
+                        "text": "",
+                        "width": 65
+                    },
+                    "name": "MyLabel",
+                    "designerId": "a070868e-2576-4e89-aa0a-88b1eddc8388"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 41,
+                        "itemId": "companyName",
+                        "layout|flex": null,
+                        "overflowX": "auto",
+                        "width": 387
+                    },
+                    "name": "MySpacer",
+                    "designerId": "21770a04-34ed-44b4-8f6f-b6f3affc15e0"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "fieldStyle": "font-size: large;font-weight: bold;color: green;",
+                        "itemId": "CompanyName",
+                        "layout|flex": null,
+                        "name": "",
+                        "value": null,
+                        "width": 446
+                    },
+                    "name": "MyDisplayField1",
+                    "designerId": "01c6fe0d-75ab-4f9a-a7eb-88756164617a"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "name": "MyFill",
+                    "designerId": "5d437f04-b920-45a8-bb67-f44facfdb5c7"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "itemId": "userName",
+                        "labelWidth": 150,
+                        "layout|flex": null,
+                        "width": 239
+                    },
+                    "name": "MyDisplayField2",
+                    "designerId": "bd87e620-9f9d-41d2-b9f6-290d71c9ca02"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdlogout",
+                        "layout|flex": null,
+                        "text": "<b>Logout</b>",
+                        "width": 129
+                    },
+                    "name": "MyButton1",
+                    "designerId": "3847bd1d-1c20-4ad6-a763-3ba1d024696d"
+                }
+            ]
+        }
+    ]
+}

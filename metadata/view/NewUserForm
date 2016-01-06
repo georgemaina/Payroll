@@ -1,0 +1,299 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "newuserform",
+        "designer|userClassName": "NewUserForm",
+        "frame": true,
+        "height": 250,
+        "itemId": "myform1",
+        "layout": "absolute",
+        "title": null,
+        "url": "data/manageUsers.php?task=updateUser",
+        "width": 400
+    },
+    "designerId": "80181272-f8f1-420c-ad29-acd93bbfe197",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "ID",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": 5,
+                "layout|y": 5,
+                "name": "ID",
+                "readOnly": true,
+                "width": 155
+            },
+            "name": "MyTextField93",
+            "designerId": "35be2b85-8604-4019-ab84-a9dc8ed9170e"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "First Name",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": 5,
+                "layout|y": 30,
+                "name": "FirstName",
+                "tabIndex": 1,
+                "width": 290
+            },
+            "name": "MyTextField94",
+            "designerId": "1f413c0e-7638-4167-94e2-61167f12db55",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "afterLabelTextTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "afterLabelTextTpl",
+                        "implHandler": [
+                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                        ]
+                    },
+                    "name": "tpl31",
+                    "designerId": "3a1fa67f-17ad-4006-9f7e-413e2a276382"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Last Name",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": 5,
+                "layout|y": 55,
+                "name": "LastName",
+                "tabIndex": 2,
+                "width": 290
+            },
+            "name": "MyTextField95",
+            "designerId": "2b330dc1-589e-442d-8c69-f5a965640b82",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "afterLabelTextTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "afterLabelTextTpl",
+                        "implHandler": [
+                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                        ]
+                    },
+                    "name": "tpl32",
+                    "designerId": "7c95df34-6cc2-482b-8549-f741649bfa4e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Username",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": 5,
+                "layout|y": 80,
+                "name": "UserName",
+                "tabIndex": 3,
+                "width": 290
+            },
+            "name": "MyTextField96",
+            "designerId": "fd812f39-f21f-458f-9f1f-b14091ba22a9",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "afterLabelTextTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "afterLabelTextTpl",
+                        "implHandler": [
+                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                        ]
+                    },
+                    "name": "tpl33",
+                    "designerId": "aa6cf8da-a396-4b19-8646-612c747a14ee"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Password",
+                "inputType": "password",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": 5,
+                "layout|y": 105,
+                "name": "password1",
+                "submitValue": false,
+                "tabIndex": 4,
+                "validateBlank": true,
+                "width": 290
+            },
+            "name": "MyTextField97",
+            "designerId": "e85d26b1-b8fd-43bf-ad87-60464b88aa6e",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "afterLabelTextTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "afterLabelTextTpl",
+                        "implHandler": [
+                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                        ]
+                    },
+                    "name": "tpl34",
+                    "designerId": "c83d145d-5f39-4eb5-aa9c-3a0a89dab025"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Confirm Password",
+                "inputType": "password",
+                "labelAlign": "right",
+                "labelWidth": 120,
+                "layout|x": 5,
+                "layout|y": 130,
+                "name": "password2",
+                "submitValue": false,
+                "tabIndex": 5,
+                "validateBlank": true,
+                "width": 290
+            },
+            "name": "MyTextField98",
+            "designerId": "de6e5426-d67f-4c46-b7c0-3023a84cdbec",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "afterLabelTextTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "afterLabelTextTpl",
+                        "implHandler": [
+                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                        ]
+                    },
+                    "name": "tpl35",
+                    "designerId": "8141f94b-5db1-4ab0-8921-f66c6748be71"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdSaveUser",
+                "layout|x": 65,
+                "layout|y": 170,
+                "tabIndex": 6,
+                "text": "<b>Save</b>",
+                "width": 100
+            },
+            "name": "MyButton96",
+            "designerId": "ac629d06-775b-47ff-90f7-a6293fdfaac9"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdClose",
+                "layout|x": 250,
+                "layout|y": 170,
+                "text": "<b>Cancel</b>",
+                "width": 100
+            },
+            "name": "MyButton97",
+            "designerId": "52ae9fb2-9185-45eb-98c7-cb62ec564b33"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "hidden": true,
+                "layout|x": 10,
+                "layout|y": 215,
+                "name": "formStatus"
+            },
+            "name": "MyTextField99",
+            "designerId": "dc056830-fd2b-40b2-b29f-cad0fdafae7a"
+        }
+    ]
+}

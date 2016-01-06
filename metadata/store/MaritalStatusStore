@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "maritalstatusstore",
+        "designer|userClassName": "MaritalStatusStore",
+        "model": "MaritalStatus",
+        "storeId": "MaritalStatusStore"
+    },
+    "designerId": "4d8c3342-6838-4ad8-b131-9a75ad88aa71",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getMaritalStatus"
+            },
+            "name": "MyAjaxProxy3",
+            "designerId": "10f8bf0c-cf5b-4fce-8788-d050b1f374f1",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "maritalstatus"
+                    },
+                    "name": "MyJsonReader3",
+                    "designerId": "6ffbdd00-1160-4cae-a68f-263ca65ee449"
+                }
+            ]
+        }
+    ]
+}

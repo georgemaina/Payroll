@@ -1,0 +1,205 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "newpaymentsform",
+        "designer|userClassName": "NewPaymentsForm",
+        "frame": true,
+        "height": 310,
+        "layout": "absolute",
+        "title": null,
+        "url": "data/getDataFunctions.php?task=InsertItem",
+        "width": 379
+    },
+    "designerId": "86147daf-59aa-421d-9ca2-b44b2ec72711",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "PID",
+                "itemId": "pid",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 15,
+                "name": "pid",
+                "tabIndex": 1
+            },
+            "name": "MyTextField82",
+            "designerId": "ae72b2e2-edea-4290-b33b-cc91c2fb220c"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Balance",
+                "itemId": "txtBalance",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 165,
+                "name": "Balance",
+                "tabIndex": 6
+            },
+            "name": "MyTextField83",
+            "designerId": "88f4292e-5f5c-40cb-985e-19b6f2850569"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Amount",
+                "itemId": "txtAmount",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 135,
+                "name": "Amount",
+                "tabIndex": 5
+            },
+            "name": "MyTextField84",
+            "designerId": "26776e2d-eb54-422e-bb9f-7356e236f670"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Total Time",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 45,
+                "name": "totalTime",
+                "tabIndex": 2
+            },
+            "name": "MyTextField85",
+            "designerId": "c174d604-f785-4c66-8ca0-7701ae9cc3bb"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "PayType",
+                "fieldLabel": "Payment",
+                "itemId": "cmbPaymentsTypes",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 105,
+                "minChars": 2,
+                "name": "Payment",
+                "queryMode": "local",
+                "store": "PayTypeStore",
+                "tabIndex": 4,
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 305
+            },
+            "name": "MyComboBox15",
+            "designerId": "0e22b6d4-ebbc-43fb-8138-1a58e831d252"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "CatName",
+                "fieldLabel": "Payment Type",
+                "itemId": "CatID",
+                "labelAlign": "right",
+                "layout|x": 10,
+                "layout|y": 75,
+                "minChars": 2,
+                "name": "PaymentType",
+                "queryMode": "local",
+                "store": "PayCategoryStore",
+                "tabIndex": 3,
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 305
+            },
+            "name": "MyComboBox16",
+            "designerId": "6308da51-5be5-4d73-bfbb-3660386a1347"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 45,
+                "itemId": "cmdSaveEmpPayment",
+                "layout|x": 40,
+                "layout|y": 210,
+                "tabIndex": 7,
+                "text": "<b>Save</b>",
+                "width": 105
+            },
+            "name": "MyButton37",
+            "designerId": "55637404-80a9-4165-8a88-a642fb47b887"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 45,
+                "itemId": "cmdClose",
+                "layout|x": 225,
+                "layout|y": 210,
+                "tabIndex": 8,
+                "text": "<b>Close</b>",
+                "width": 105
+            },
+            "name": "MyButton38",
+            "designerId": "7b0a927f-52ac-4bac-95d8-9244f6ae228a"
+        },
+        {
+            "type": "Ext.form.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "itemId": "formStatus",
+                "layout|x": 105,
+                "layout|y": 265,
+                "name": "formStatus"
+            },
+            "name": "MyHiddenField",
+            "designerId": "d7fe5319-cb42-4654-9aaa-6343559ca6dd"
+        }
+    ]
+}

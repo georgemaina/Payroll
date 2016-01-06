@@ -1,0 +1,145 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "designer|userAlias": "bankpayments",
+        "designer|userClassName": "BankPayments",
+        "frame": true,
+        "height": 222,
+        "layout": "absolute",
+        "title": null,
+        "width": 348
+    },
+    "designerId": "cbc697fa-8585-465b-8786-d3c82777646c",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "month",
+                "fieldLabel": "Payroll Month",
+                "itemId": "payMonth",
+                "labelAlign": "right",
+                "layout|x": -11,
+                "layout|y": 30,
+                "minChars": 2,
+                "queryMode": "local",
+                "store": "PayMonthStore",
+                "typeAhead": true,
+                "valueField": "month",
+                "width": 310
+            },
+            "name": "MyComboBox23",
+            "designerId": "62ea2572-e03f-4c60-9c87-1061bf89c93c"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "BankBranch",
+                "fieldLabel": "Bank Branch",
+                "itemId": "branch",
+                "labelAlign": "right",
+                "layout|x": -11,
+                "layout|y": 90,
+                "queryMode": "local",
+                "store": "BankBrancheStore",
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 310
+            },
+            "name": "MyComboBox24",
+            "designerId": "4acf9d87-8c50-4cf8-9393-f6f74b02dd3e"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "BankName",
+                "fieldLabel": "Bank Name",
+                "itemId": "bankcode",
+                "labelAlign": "right",
+                "layout|x": -11,
+                "layout|y": 60,
+                "queryMode": "local",
+                "store": "BankStore",
+                "typeAhead": true,
+                "valueField": "BankCode",
+                "width": 310
+            },
+            "name": "MyComboBox25",
+            "designerId": "0c23832b-e48a-46c3-867f-8f3036943955"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdBankPayments",
+                "layout|x": 20,
+                "layout|y": 160,
+                "text": "<b>Open Report</b>",
+                "width": 90
+            },
+            "name": "MyButton53",
+            "designerId": "c11ad648-392d-47d3-bc90-bc9c38c99255"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdExportBankPayments",
+                "layout|x": 120,
+                "layout|y": 160,
+                "text": "<b>Export Report</b>",
+                "width": 90
+            },
+            "name": "MyButton54",
+            "designerId": "690a4700-6cd0-437c-ba25-883da1d5b873"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdClose",
+                "layout|x": 220,
+                "layout|y": 160,
+                "text": "<b>Close</b>",
+                "width": 100
+            },
+            "name": "MyButton55",
+            "designerId": "97903464-9709-4df6-be22-52eb0d64cf25"
+        }
+    ]
+}

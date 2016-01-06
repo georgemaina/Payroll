@@ -1,0 +1,28 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "gratuityrates",
+        "designer|userClassName": "GratuityRates"
+    },
+    "designerId": "b8c6e961-ba93-4540-930a-306aec2ac978",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "rate"
+            },
+            "name": "MyField77",
+            "designerId": "d2a06db7-df68-4d74-ae8a-47cf7fe46683"
+        }
+    ]
+}
