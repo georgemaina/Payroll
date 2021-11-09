@@ -3879,7 +3879,7 @@
                     "",
                     "",
                     "                     this.getViewport().down('#userName').setValue(\"<b>You are Logged in as \"+user );",
-                    "                     this.getViewport().down('#CompanyName').setValue(\"<b>CHAK TEKELEZI PROJECT</b>\" );",
+                    "                     this.getViewport().down('#CompanyName').setValue(\"<b>MOTHER AMADEA MISSION HOSPITAL</b>\" );",
                     "                     this.getViewport().down('#Period').setValue(\"Period is \"+period);",
                     "",
                     "                     var loginSess=Ext.data.StoreManager.lookup('LoginSessions');",
