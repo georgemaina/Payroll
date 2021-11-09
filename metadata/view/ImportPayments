@@ -1,0 +1,156 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userAlias": "importpayments",
+        "designer|userClassName": "ImportPayments",
+        "height": 146,
+        "width": 332
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "width": "auto"
+    },
+    "name": "MyPanel8",
+    "designerId": "e88e236c-f699-4a14-b437-a33e4fa6c84d",
+    "viewControllerInstanceId": "8d56fbed-9891-45e1-af02-41de92f3b454",
+    "viewModelInstanceId": "2e091837-bdec-4c6d-a30d-b5c2534054d0",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "CatName",
+                "fieldLabel": "Payment Type",
+                "labelAlign": "right",
+                "minChars": 2,
+                "queryMode": "local",
+                "store": "PayCategoryStore",
+                "typeAhead": true,
+                "valueField": "ID"
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "minChars": "number",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield"
+            },
+            "name": "MyComboBox20",
+            "designerId": "b5432c16-20e5-4413-a233-5fa7b85f6125"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "PayType",
+                "fieldLabel": "Payment",
+                "labelAlign": "right",
+                "minChars": 2,
+                "queryMode": "local",
+                "store": "PayTypeStore",
+                "typeAhead": true,
+                "valueField": "ID"
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "minChars": "number",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield"
+            },
+            "name": "MyComboBox36",
+            "designerId": "6b97a5a4-40d3-490b-bc5f-132f86156890"
+        },
+        {
+            "type": "Ext.form.FieldContainer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "middle",
+                "container|pack": "center",
+                "layout": "hbox"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "layout": "string"
+            },
+            "name": "MyFieldContainer1",
+            "designerId": "03379505-e5f9-44fc-a3c5-b06fed8156b7",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-upload",
+                        "itemId": "cmdImportPayments",
+                        "margin": "0 50 0 30",
+                        "text": "Import",
+                        "width": 98
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "margin": "auto",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton45",
+                    "designerId": "a00e461a-3088-45e3-b7f2-dfb981a592eb"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-close",
+                        "itemId": "cmdClose",
+                        "text": "Cancel",
+                        "width": 109
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton73",
+                    "designerId": "8a075f48-7c5e-4e67-8264-915758f0c796"
+                }
+            ]
+        }
+    ]
+}

@@ -13,6 +13,14 @@
         "pageSize": 50,
         "storeId": "TrialBalanceStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "11a566bf-ed5f-4ca2-a4c9-f1e0d9ffdc08",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getTrialBalance"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy31",
             "designerId": "f0e64d47-fedf-4471-bce1-514bc6a55ab6",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "trialbalance"
+                        "rootProperty": "trialbalance"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader31",
                     "designerId": "0ec5726d-155d-4373-be04-9ee401339f70"

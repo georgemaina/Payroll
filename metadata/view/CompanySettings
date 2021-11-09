@@ -15,7 +15,7 @@
         "designer|userClassName": "CompanySettings",
         "frame": true,
         "header": false,
-        "height": 513,
+        "height": 552,
         "layout": "absolute",
         "margin": null,
         "padding": 0,
@@ -23,7 +23,28 @@
         "url": "data/getDataFunctions.php?task=updateCompany",
         "width": 870
     },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "bodyPadding": "auto",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "header": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "margin": "auto",
+        "padding": "auto",
+        "title": "string",
+        "url": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "45c8d594-50ef-4d1e-9065-c66f29ac2de0",
+    "viewControllerInstanceId": "0ec65ddb-ed04-476e-9543-9bce70eb6081",
+    "viewModelInstanceId": "b1d14781-2481-492e-8d45-bc1c22bbe36e",
     "cn": [
         {
             "type": "Ext.tab.Panel",
@@ -34,8 +55,14 @@
             "codeClass": null,
             "userConfig": {
                 "activeTab": 0,
-                "height": 436,
+                "height": 490,
                 "width": 870
+            },
+            "configAlternates": {
+                "activeTab": "auto",
+                "height": "auto",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTabPanel1",
             "designerId": "d539b76a-f9dc-4e5c-b235-c7229e002e4c",
@@ -50,9 +77,19 @@
                     "userConfig": {
                         "designer|snapToGrid": 5,
                         "frame": true,
+                        "height": 392,
                         "layout": "absolute",
                         "title": "Company Info",
                         "width": 774
+                    },
+                    "configAlternates": {
+                        "designer|snapToGrid": "number",
+                        "frame": "boolean",
+                        "layout": "string",
+                        "title": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "height": "auto"
                     },
                     "name": "MyPanel3",
                     "designerId": "7ee3991c-861b-43a2-9d4f-741d0897a99f",
@@ -64,6 +101,9 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
                             "name": "TabConfig3",
                             "designerId": "60c0f531-fcad-4034-8271-27cd8f085e44"
                         },
@@ -83,6 +123,16 @@
                                 "tabIndex": 1,
                                 "width": 360
                             },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
                             "name": "MyTextField23",
                             "designerId": "bce73ecd-9724-46f8-a2c6-20c842626526"
                         },
@@ -97,10 +147,20 @@
                                 "fieldLabel": "Website",
                                 "labelAlign": "right",
                                 "layout|x": 10,
-                                "layout|y": 220,
+                                "layout|y": 290,
                                 "name": "Website",
                                 "tabIndex": 9,
                                 "width": 360
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField24",
                             "designerId": "8b982609-d475-412b-9691-5ce5c231930a"
@@ -116,10 +176,20 @@
                                 "fieldLabel": "Country",
                                 "labelAlign": "right",
                                 "layout|x": 10,
-                                "layout|y": 135,
+                                "layout|y": 185,
                                 "name": "Country",
                                 "tabIndex": 6,
                                 "width": 260
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField25",
                             "designerId": "96771c40-25c9-4785-b15d-55247cf6c752"
@@ -135,10 +205,20 @@
                                 "fieldLabel": "Town",
                                 "labelAlign": "right",
                                 "layout|x": 10,
-                                "layout|y": 85,
+                                "layout|y": 115,
                                 "name": "Town",
                                 "tabIndex": 4,
                                 "width": 360
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField26",
                             "designerId": "d10c4b29-0fae-4632-b9e8-877d889cc86c"
@@ -153,11 +233,23 @@
                             "userConfig": {
                                 "fieldLabel": "Physical Address",
                                 "labelAlign": "right",
-                                "layout|x": 10,
-                                "layout|y": 110,
+                                "labelWidth": 120,
+                                "layout|x": -9,
+                                "layout|y": 150,
                                 "name": "PhysicalAddress",
                                 "tabIndex": 5,
                                 "width": 360
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "labelWidth": "number"
                             },
                             "name": "MyTextField27",
                             "designerId": "65a00dff-68e9-4630-ad55-732a8528ec83"
@@ -173,10 +265,20 @@
                                 "fieldLabel": "Email",
                                 "labelAlign": "right",
                                 "layout|x": 10,
-                                "layout|y": 195,
+                                "layout|y": 255,
                                 "name": "Email",
                                 "tabIndex": 8,
                                 "width": 360
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField28",
                             "designerId": "8d66844e-205b-4153-8b11-d396a3d85bcd"
@@ -192,10 +294,20 @@
                                 "fieldLabel": "Phone",
                                 "labelAlign": "right",
                                 "layout|x": 10,
-                                "layout|y": 165,
+                                "layout|y": 220,
                                 "name": "Phone",
                                 "tabIndex": 7,
                                 "width": 260
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField29",
                             "designerId": "49eeff85-2ab1-46b7-ab5d-1abe1cbce61e"
@@ -211,10 +323,20 @@
                                 "fieldLabel": "Postal Code",
                                 "labelAlign": "right",
                                 "layout|x": 10,
-                                "layout|y": 60,
+                                "layout|y": 80,
                                 "name": "Postal",
                                 "tabIndex": 3,
                                 "width": 260
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField30",
                             "designerId": "72a820d5-fd78-4c9a-acf8-c4bbd1fa25e1"
@@ -230,10 +352,20 @@
                                 "fieldLabel": "Address",
                                 "labelAlign": "right",
                                 "layout|x": 10,
-                                "layout|y": 35,
+                                "layout|y": 45,
                                 "name": "Address",
                                 "tabIndex": 2,
                                 "width": 360
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField31",
                             "designerId": "23237a05-9546-419f-86c7-11ec95650e34"
@@ -254,6 +386,16 @@
                                 "tabIndex": 10,
                                 "width": 345
                             },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
                             "name": "MyTextField32",
                             "designerId": "39ee463d-9da0-4217-8cbe-1462fdc04f31"
                         },
@@ -268,10 +410,20 @@
                                 "fieldLabel": "Incoporation No",
                                 "labelAlign": "right",
                                 "layout|x": 445,
-                                "layout|y": 65,
+                                "layout|y": 80,
                                 "name": "IncNo",
                                 "tabIndex": 12,
                                 "width": 345
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField33",
                             "designerId": "6377f759-ef72-44f1-8fae-469b683cf190"
@@ -288,10 +440,21 @@
                                 "labelAlign": "right",
                                 "labelWidth": 150,
                                 "layout|x": 395,
-                                "layout|y": 95,
+                                "layout|y": 115,
                                 "name": "BankAccountNo",
                                 "tabIndex": 13,
                                 "width": 345
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "labelWidth": "number",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField34",
                             "designerId": "18b75c75-04bf-48c8-84b2-3e0128706891"
@@ -307,10 +470,20 @@
                                 "fieldLabel": "VAT No",
                                 "labelAlign": "right",
                                 "layout|x": 445,
-                                "layout|y": 35,
+                                "layout|y": 45,
                                 "name": "VatNo",
                                 "tabIndex": 11,
                                 "width": 345
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField35",
                             "designerId": "7b8da8ac-0a68-4340-8d13-016a5700c747"
@@ -324,12 +497,22 @@
                             "codeClass": null,
                             "userConfig": {
                                 "fieldLabel": "Other info about the Company",
-                                "height": 141,
+                                "height": 112,
                                 "labelAlign": "top",
                                 "layout|x": 110,
-                                "layout|y": 255,
+                                "layout|y": 315,
                                 "name": "OtherInfo",
                                 "width": 690
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextArea",
                             "designerId": "e6adf1b2-ae12-4c8b-a638-259b6d6a0013"
@@ -345,12 +528,26 @@
                                 "displayField": "BranchName",
                                 "fieldLabel": "Company Branch",
                                 "labelAlign": "right",
-                                "layout|x": 445,
-                                "layout|y": 130,
+                                "labelWidth": 120,
+                                "layout|x": 425,
+                                "layout|y": 150,
                                 "name": "CompanyBranch",
                                 "store": "PayBranchStore",
                                 "valueField": "BranchName",
                                 "width": 280
+                            },
+                            "configAlternates": {
+                                "displayField": "datafield",
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "store": "store",
+                                "valueField": "datafield",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "labelWidth": "number"
                             },
                             "name": "MyComboBox11",
                             "designerId": "14058209-224b-41e6-87f7-caccebed2f20"
@@ -372,6 +569,15 @@
                         "title": "Messages",
                         "width": 837
                     },
+                    "configAlternates": {
+                        "designer|snapToGrid": "number",
+                        "frame": "boolean",
+                        "height": "auto",
+                        "layout": "string",
+                        "title": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPanel4",
                     "designerId": "b6ad28ad-1fe2-4a5c-8691-cce099632dd2",
                     "cn": [
@@ -382,6 +588,9 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
                             "name": "TabConfig4",
                             "designerId": "4ba87ee6-bf8c-4130-be14-e5ea606b0bd6"
                         },
@@ -400,6 +609,16 @@
                                 "name": "TopMessage",
                                 "tabIndex": 14,
                                 "width": 785
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextArea1",
                             "designerId": "69ea6438-3c78-4ef9-bb8d-0d847e344a8c"
@@ -420,6 +639,16 @@
                                 "tabIndex": 15,
                                 "width": 785
                             },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
                             "name": "MyTextArea2",
                             "designerId": "1a31483d-bb03-410b-bfc0-bd7b994292c6"
                         }
@@ -435,6 +664,10 @@
                     "userConfig": {
                         "title": "Other Info"
                     },
+                    "configAlternates": {
+                        "title": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPanel5",
                     "designerId": "c9bdb040-ba24-4ca4-bd82-bca9b1abcbb4",
                     "cn": [
@@ -445,6 +678,9 @@
                                 "type": "object"
                             },
                             "codeClass": null,
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
                             "name": "TabConfig5",
                             "designerId": "7fda31ed-065b-4a11-a894-3c87b8513086"
                         },
@@ -460,6 +696,13 @@
                                 "height": 411,
                                 "name": "MoreInfo",
                                 "width": 867
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "name": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
                             },
                             "name": "MyHtmlEditor",
                             "designerId": "528ea2bc-49e1-4f71-96e5-cea620d91651"
@@ -479,9 +722,18 @@
                 "height": 53,
                 "itemId": "cmdSave",
                 "layout|x": 80,
-                "layout|y": 445,
+                "layout|y": 495,
                 "text": "<b>Save</b>",
                 "width": 148
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton6",
             "designerId": "bce497f3-c425-43da-9558-e1075fc45c5a"
@@ -497,9 +749,18 @@
                 "height": 53,
                 "itemId": "cmdClose",
                 "layout|x": 510,
-                "layout|y": 445,
+                "layout|y": 495,
                 "text": "<b>Close</b>",
                 "width": 148
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton7",
             "designerId": "d28f848d-5300-4e11-8486-4af08701b315"

@@ -13,6 +13,14 @@
         "pageSize": 50,
         "storeId": "DepartmentsStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "6cce832c-072f-4cb0-9edf-1f5a489cf828",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getDepartmentTotals"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy32",
             "designerId": "1e86dac7-d89c-4e15-ac9a-1c5d1b2b9781",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "trialbalance"
+                        "rootProperty": "trialbalance"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader32",
                     "designerId": "f6009af4-6f46-4679-8c70-3946293756f7"

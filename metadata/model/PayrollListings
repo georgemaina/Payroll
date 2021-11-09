@@ -9,10 +9,14 @@
         "designer|userAlias": "payrolllistings",
         "designer|userClassName": "PayrollListings"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "77ffd0cb-ae78-45ba-8254-96d5147de749",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "Pid"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField160",
             "designerId": "413ffe02-a48a-462c-9d5a-e0188fa05adc"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -34,11 +41,14 @@
             "userConfig": {
                 "name": "EmpNames"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField161",
             "designerId": "5a41128d-246c-4543-9a79-b06d48712b65"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -47,162 +57,148 @@
             "userConfig": {
                 "name": "JobTitle"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField162",
             "designerId": "f225d613-1829-491b-97a7-ac37766a836d"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.String",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "EmpBranch",
+                "name": "EmpBranch"
+            },
+            "configAlternates": {
+                "name": "string",
                 "type": "string"
             },
-            "name": "MyField163",
+            "name": "MyString",
             "designerId": "0c2937a1-9f34-4af2-88eb-9dc2b2de527e"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.String",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "PayMonth",
+                "name": "PayMonth"
+            },
+            "configAlternates": {
+                "name": "string",
                 "type": "string"
             },
-            "name": "MyField164",
+            "name": "MyString1",
             "designerId": "f72fc31b-582a-4d0a-a0b0-d20d9372bc4f"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "BasicPay",
-                "type": "int"
+                "name": "BasicPay"
             },
-            "name": "MyField165",
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger1",
             "designerId": "93785e65-64bd-42c0-b376-429df8d85bd8"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "SpecialRisk"
+                "name": "HouseAllowance"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField166",
             "designerId": "a91498ce-13a5-487f-88de-80156f3dcf4c"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "RiskAllowance",
-                "type": "int"
+                "name": "CallAllowance"
             },
-            "name": "MyField167",
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger2",
             "designerId": "605cd375-d11f-4473-8770-21a195d8372b"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "ResponsibilityAllowance"
+                "name": "Locum"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField168",
             "designerId": "fdbf5f4d-4d29-46a4-a1e5-07e22839afc9"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "LeaveAllowance",
-                "type": "int"
+                "name": "NonPractice"
             },
-            "name": "MyField169",
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger3",
             "designerId": "e2e17e98-3ffe-4302-82e5-e169c2d1f4c1"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "FieldAllowance"
+                "name": "Gratuity"
             },
-            "name": "MyField170",
-            "designerId": "f43c2df5-85ae-47d0-9ed9-f24873ae69f0"
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger4",
+            "designerId": "f0f4f800-f93c-403b-ae70-a15631fcc774"
         },
         {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "HouseAllowance",
-                "type": "int"
-            },
-            "name": "MyField171",
-            "designerId": "8ec5fe3b-7167-483a-9a32-2dd22c63bd02"
-        },
-        {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "Gratuity",
-                "type": "int"
-            },
-            "name": "MyField172",
-            "designerId": "61fef6dd-c33d-404a-89a9-3969abd74e83"
-        },
-        {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "Medical",
-                "type": "int"
-            },
-            "name": "MyField173",
-            "designerId": "174a0b29-b9a7-42f2-a3e6-344e4763bd60"
-        },
-        {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -210,69 +206,137 @@
             "codeClass": null,
             "userConfig": {
                 "mapping": "GROSS_PAY",
-                "name": "GrossSalary",
-                "type": "int"
+                "name": "GrossSalary"
             },
-            "name": "MyField174",
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger5",
             "designerId": "5ee64225-33bc-4b22-aca1-fcc51bfebd6c"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "PAYE",
-                "type": "int"
+                "name": "PAYE"
             },
-            "name": "MyField175",
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger6",
             "designerId": "7606b245-2bac-4d0f-8f51-3e246a7ac23b"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "NSSF",
-                "type": "int"
+                "name": "NSSF"
             },
-            "name": "MyField176",
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger7",
             "designerId": "07530799-04f2-4681-9fa3-797e4aa14602"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "NHIF",
-                "type": "int"
+                "name": "NHIF"
             },
-            "name": "MyField177",
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger8",
             "designerId": "9013e85f-259f-4985-8a99-6384cebe17ac"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "loans"
+                "mapping": "Sacco",
+                "name": "Welfare"
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger9",
+            "designerId": "aab59b0f-6db5-4527-963f-a5f20302a746"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Transport"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger10",
+            "designerId": "d4df3925-039d-42a4-860b-0463b8c59d51"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Food"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField178",
             "designerId": "9a0193d8-8d9b-4363-a9fd-d8b0aba1d201"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Bereavement"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField180",
+            "designerId": "b410453a-73ef-44c3-ba40-010ea51e08b9"
+        },
+        {
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -281,67 +345,14 @@
             "userConfig": {
                 "name": "Advance"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField179",
             "designerId": "7528ed68-062b-453c-a344-bb8d07e3f30e"
         },
         {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "Insurance"
-            },
-            "name": "MyField180",
-            "designerId": "b410453a-73ef-44c3-ba40-010ea51e08b9"
-        },
-        {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "GratuityB",
-                "type": "int"
-            },
-            "name": "MyField181",
-            "designerId": "f0f4f800-f93c-403b-ae70-a15631fcc774"
-        },
-        {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "MedicalB",
-                "type": "int"
-            },
-            "name": "MyField182",
-            "designerId": "d4df3925-039d-42a4-860b-0463b8c59d51"
-        },
-        {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "mapping": "Sacco",
-                "name": "Welfare",
-                "type": "int"
-            },
-            "name": "MyField183",
-            "designerId": "aab59b0f-6db5-4527-963f-a5f20302a746"
-        },
-        {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -349,14 +360,18 @@
             "codeClass": null,
             "userConfig": {
                 "mapping": "Deductions",
-                "name": "Deductions",
-                "type": "int"
+                "name": "Deductions"
             },
-            "name": "MyField184",
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger11",
             "designerId": "1f662bf9-e7ed-4921-b6b2-3a596ffc39b0"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Integer",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -364,11 +379,191 @@
             "codeClass": null,
             "userConfig": {
                 "mapping": "NetPay",
-                "name": "NetPay",
-                "type": "int"
+                "name": "NetPay"
             },
-            "name": "MyField185",
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger12",
             "designerId": "d91374b3-f738-484c-8fb7-884dace95fc4"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "OtherDeductions"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField172",
+            "designerId": "1d9e22f2-437e-464f-8895-a9769ecf6023"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "HealthCentre"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField173",
+            "designerId": "9ae4f1b8-5a79-4691-b867-3e011048710d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AphiaPlus"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField210",
+            "designerId": "59a7972b-46e0-41f0-9c1f-a5e53b48ff42"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "GlobalFund"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField292",
+            "designerId": "ccc2ddad-4c01-47a6-9842-0c755430fbd5"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WasichanaWote"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField293",
+            "designerId": "461a27be-4f9b-4777-b885-442955f2beb6"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Icop"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField294",
+            "designerId": "73dfc862-055b-4755-8319-317a4b7322f6"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "YouthProgram"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField295",
+            "designerId": "56a9172b-a20a-49e3-bd41-32f532cee5f9"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MyField296"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField296",
+            "designerId": "775e230b-318b-4cbd-89b1-905aa0abf363"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Nilinde"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField297",
+            "designerId": "135fd9cc-5058-4ec9-b640-0acd460c08e8"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Amref"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField298",
+            "designerId": "1acc3be6-750e-45f6-8972-52fd35a6f4b7"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PoolAccount"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField299",
+            "designerId": "ab08d8ab-38cb-4045-a045-b16bd889507e"
         }
     ]
 }

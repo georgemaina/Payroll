@@ -9,10 +9,14 @@
         "designer|userAlias": "employmenttype",
         "designer|userClassName": "EmploymentType"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "7974299e-b002-4d3d-a6e8-22daf16cecd7",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "ID"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField74",
             "designerId": "b5f0c111-9165-44cd-9b0b-a8a5706740b9"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -34,11 +41,14 @@
             "userConfig": {
                 "name": "EmpType"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField75",
             "designerId": "d4da21ae-c4a4-4fb9-b494-ae0e1aab4215"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -46,6 +56,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Duration"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField76",
             "designerId": "b0503781-40f4-40b2-a656-ad7947eae50f"

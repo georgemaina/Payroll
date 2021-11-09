@@ -14,6 +14,15 @@
         "pageSize": 50,
         "storeId": "PayrollStatusStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "autoSync": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "d7671b68-1753-4955-ae24-fa05dfad9515",
     "cn": [
         {
@@ -25,6 +34,9 @@
             "codeClass": null,
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getPayrollStatus"
+            },
+            "configAlternates": {
+                "url": "string"
             },
             "name": "MyAjaxProxy28",
             "designerId": "20897eb3-1ca2-4840-84d0-267b7c4e9b04",
@@ -38,7 +50,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "record": null,
-                        "root": "PayrollStatus"
+                        "rootProperty": "PayrollStatus"
+                    },
+                    "configAlternates": {
+                        "record": "string",
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader28",
                     "designerId": "4f8b2338-0c28-4f8a-b141-0d04157d0c1b"

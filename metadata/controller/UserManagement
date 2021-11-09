@@ -13,6 +13,11 @@
             "NewUserForm"
         ]
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "views": "typedarray"
+    },
     "designerId": "cc567cb9-a7d3-4d8b-a0bf-8a6dd082bbaf",
     "cn": [
         {
@@ -42,6 +47,11 @@
                     "\r",
                     "});"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadUserRoles",
             "designerId": "08f39526-1228-4c36-8fc6-67e4a431f0ec"
@@ -84,6 +94,11 @@
                     "usersWin.show();"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openUserForm",
             "designerId": "2f8dbf4f-ec5b-4ea4-8699-6f4d4877b822"
         },
@@ -99,6 +114,11 @@
                 "selector": "newuserform",
                 "xtype": "newuserform"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "newuserform",
             "designerId": "af81eca9-5077-42fe-974d-ecc51ce52a89"
         },
@@ -113,6 +133,11 @@
                 "ref": "usermanagement",
                 "selector": "usermanagement",
                 "xtype": "usermanagement"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "usermanagement",
             "designerId": "03cd97c0-839d-4fa5-a9a4-0b243b26206c"
@@ -149,6 +174,11 @@
                     "    }\r",
                     "});"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "init",
             "designerId": "ee96f13c-fe5a-44c1-8898-1a89c02625a5"
@@ -202,6 +232,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "saveUser",
             "designerId": "e1a5428a-66b3-4bb7-8ba3-80f2a3b26dd1"
         },
@@ -221,6 +256,14 @@
                 ],
                 "name": "click",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "onButtonClick",
             "designerId": "7dc13842-3afa-40bd-b347-5165a76687a4"
@@ -263,6 +306,11 @@
                     "\r",
                     "userform.getForm().loadRecord(record);"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "viewUserDetails",
             "designerId": "0fda05c9-5e36-4e4f-a03b-5f690996ce71"
@@ -318,6 +366,11 @@
                     "        }\r",
                     "    });"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "deleteUser",
             "designerId": "cdf2a86e-e61e-4328-88dc-420c931db016"

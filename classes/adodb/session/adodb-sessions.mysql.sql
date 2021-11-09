@@ -1,4 +1,4 @@
--- $CVSHeader: care2002_tz_mero_vps/classes/adodb/session/adodb-sessions.mysql.sql,v 1.4 2009/01/31 20:07:11 andi Exp $
+-- $CVSHeader$
 
 CREATE DATABASE /*! IF NOT EXISTS */ adodb_sessions;
 

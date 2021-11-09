@@ -1,0 +1,36 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "periods",
+        "designer|userClassName": "Periods"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "e0ed5d8c-bbe5-49df-a82a-f3af1f2dface",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Period"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField232",
+            "designerId": "732a3bd1-c47f-4b24-836f-55148471f770"
+        }
+    ]
+}

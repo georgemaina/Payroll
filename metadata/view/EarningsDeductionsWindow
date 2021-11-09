@@ -10,12 +10,25 @@
         "designer|userAlias": "earningsdeductionswindow",
         "designer|userClassName": "EarningsDeductionsWindow",
         "frame": true,
-        "height": 216,
+        "height": 182,
         "layout": "absolute",
         "title": null,
-        "width": 423
+        "width": 394
+    },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
     },
     "designerId": "fab5ec7c-3233-4b9f-8fcf-5050a0af0fab",
+    "viewControllerInstanceId": "5c7ab417-eb4b-4c0c-a5bc-313b40a826ae",
+    "viewModelInstanceId": "adec2b0b-cb80-45bd-b35f-ecdb4906db9e",
     "cn": [
         {
             "type": "Ext.form.field.ComboBox",
@@ -25,17 +38,31 @@
             },
             "codeClass": null,
             "userConfig": {
-                "displayField": "month",
+                "displayField": "Month",
                 "fieldLabel": "Payroll Month",
                 "itemId": "payMonth",
                 "labelAlign": "right",
                 "layout|x": 0,
-                "layout|y": 20,
+                "layout|y": 5,
                 "queryMode": "local",
                 "store": "PayMonthStore",
                 "typeAhead": true,
                 "valueField": "ID",
-                "width": 320
+                "width": 270
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyComboBox38",
             "designerId": "78d157a6-b030-4051-b7d4-6b0e1eae78c7"
@@ -52,11 +79,23 @@
                 "fieldLabel": "Pay Type",
                 "itemId": "payType",
                 "labelAlign": "right",
-                "layout|x": 0,
-                "layout|y": 50,
+                "layout|x": -2,
+                "layout|y": 40,
                 "store": "PayCategoryStore",
                 "valueField": "CatName",
-                "width": 320
+                "width": 270
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyComboBox39",
             "designerId": "25e17043-7707-45e6-8f21-21435eb74b00"
@@ -71,10 +110,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdPreviewEarnDead",
-                "layout|x": 20,
-                "layout|y": 100,
+                "layout|x": 10,
+                "layout|y": 85,
                 "text": "<b>Preview Report",
-                "width": 105
+                "width": 120
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton76",
             "designerId": "c0a6719e-0fd3-4f4b-b3f0-992e65a3e5a2"
@@ -89,10 +137,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdExportEarnings",
-                "layout|x": 285,
-                "layout|y": 100,
+                "layout|x": 265,
+                "layout|y": 85,
                 "text": "<b>Export Report",
                 "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton77",
             "designerId": "5d2cf0b6-2e37-42ee-80f5-e810a13c5475"
@@ -107,10 +164,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdPrintdeptReport",
-                "layout|x": 150,
-                "layout|y": 100,
+                "layout|x": 145,
+                "layout|y": 85,
                 "text": "<b>Print Report",
                 "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton78",
             "designerId": "2ed91084-0d3d-44f8-a4c5-541a05b3baf2"
@@ -126,9 +192,18 @@
                 "height": 40,
                 "itemId": "cmdClose",
                 "layout|x": 265,
-                "layout|y": 160,
+                "layout|y": 130,
                 "text": "<b>Close",
-                "width": 150
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton79",
             "designerId": "3be6dd83-e91d-4309-b9de-bb4d78ec2dd8"

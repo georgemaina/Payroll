@@ -6,13 +6,22 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": true,
+        "autoLoad": false,
         "designer|userAlias": "payrolllistingsstore",
         "designer|userClassName": "PayrollListingsStore",
         "groupField": "JobTitle",
         "model": "PayrollListings",
         "pageSize": 50,
         "storeId": "PayrolllistingsStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
     },
     "designerId": "d78cb54f-5897-4364-8aa2-ae0b1a8b02ff",
     "cn": [
@@ -26,6 +35,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getPayrollListings"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy23",
             "designerId": "23ae1793-420d-416c-b244-d3d5008312c3",
             "cn": [
@@ -37,7 +49,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "payrolllistings"
+                        "rootProperty": "payrolllistings"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader23",
                     "designerId": "f60a0b57-6ecb-4802-a401-4d1d76df6abb"

@@ -12,6 +12,13 @@
         "model": "BlankPayments",
         "storeId": "BlankPaymentsStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "designerId": "5f4b83ea-169f-4d2f-85f4-db3fde4d0160",
     "cn": [
         {
@@ -24,6 +31,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getBlankPayments"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy1",
             "designerId": "9207ed27-665f-48ee-b1f4-feced947f01a",
             "cn": [
@@ -35,7 +45,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "blankPayments"
+                        "rootProperty": "blankPayments"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader1",
                     "designerId": "22c17aef-36f4-4f14-9e4f-aa8c9a328f0d"
@@ -49,7 +63,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "encode": true,
-                        "root": "savePostings"
+                        "rootProperty": "savePostings"
+                    },
+                    "configAlternates": {
+                        "encode": "boolean",
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonWriter",
                     "designerId": "c4f5663d-3fd8-4cbc-bcb2-a0cb6d91d909"

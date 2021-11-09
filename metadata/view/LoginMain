@@ -1,0 +1,263 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "loginMain",
+        "designer|userClassName": "LoginMain",
+        "layout": "absolute"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "scrollable": "boolean"
+    },
+    "designerId": "1a88040f-faae-4e04-b311-40a6fbfda1e9",
+    "viewControllerInstanceId": "79dfb87b-ce5c-49ac-a734-373c185652ae",
+    "viewModelInstanceId": "99fea9a6-a4e2-496a-8927-50e57d89692f",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 220,
+                "layout": "absolute",
+                "layout|x": 500,
+                "layout|y": 300,
+                "title": null,
+                "width": 405
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPanel6",
+            "designerId": "f9dc5938-f2e3-41d7-aee4-6cedd110f310",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Username",
+                        "itemId": "login-user",
+                        "labelAlign": "right",
+                        "layout|x": 55,
+                        "layout|y": 60,
+                        "width": 300
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "labelAlign": "string"
+                    },
+                    "name": "MyTextField109",
+                    "designerId": "2806441c-958f-4280-b7ea-82f41529ed74"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Password",
+                        "inputType": "password",
+                        "itemId": "login-pwd",
+                        "labelAlign": "right",
+                        "layout|x": 55,
+                        "layout|y": 95,
+                        "maxLength": 12,
+                        "minHeight": null,
+                        "minLength": 6,
+                        "minWidth": null,
+                        "width": 300
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "inputType": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "maxLength": "number",
+                        "minHeight": "number",
+                        "minLength": "number",
+                        "minWidth": "number",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "labelAlign": "string"
+                    },
+                    "name": "MyTextField110",
+                    "designerId": "a23ee3d2-db4c-4da1-b322-6101ab5f0fdc"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "Period",
+                        "fieldLabel": "Select a Different Period",
+                        "itemId": "login-period",
+                        "labelAlign": "right",
+                        "labelWidth": 150,
+                        "layout|x": 5,
+                        "layout|y": 130,
+                        "minChars": 2,
+                        "queryMode": "local",
+                        "store": "PeriodsStore",
+                        "typeAhead": true,
+                        "valueField": "Period",
+                        "width": 270
+                    },
+                    "configAlternates": {
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "minChars": "number",
+                        "queryMode": "string",
+                        "store": "store",
+                        "typeAhead": "boolean",
+                        "valueField": "datafield",
+                        "scrollable": "boolean",
+                        "labelAlign": "string",
+                        "labelWidth": "number",
+                        "width": "auto"
+                    },
+                    "name": "MyComboBox33",
+                    "designerId": "cd386aac-baf6-4ae1-aba5-3aa7d5beec33"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdLogin",
+                        "layout|x": 150,
+                        "layout|y": 175,
+                        "text": "<b>Login</b>",
+                        "width": 80
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton71",
+                    "designerId": "e6fce05d-143c-4ca0-ae36-08b5a68d9c2f"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdCancel",
+                        "layout|x": 285,
+                        "layout|y": 180,
+                        "text": "<b>Cancel</b>",
+                        "width": 80
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton72",
+                    "designerId": "78a36204-d2f1-49ec-86aa-a5ca77923b94"
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 40,
+                        "layout|x": 10,
+                        "layout|y": 5,
+                        "src": "images/care_logo_mysql.gif",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "src": "uri",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyImg1",
+                    "designerId": "90b2dc20-a1f1-4788-9a91-15eefe84b0a3"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                        "layout|x": 130,
+                        "layout|y": 30,
+                        "value": "Payroll Login"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField22",
+                    "designerId": "d3702b1f-ddce-4440-a68c-b8bd7eb384cc"
+                }
+            ]
+        }
+    ]
+}

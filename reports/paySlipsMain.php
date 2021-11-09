@@ -6,7 +6,7 @@ require ($root_path . 'include/inc_environment_global.php');
 require ('roots.php');
 require_once 'Zend/Pdf.php';
 $pdf = new Zend_Pdf ();
-$page = new Zend_Pdf_Page(Zend_Pdf_Page::SIZE_LETTER);
+$page = new Zend_Pdf_Page(Zend_Pdf_Page::SIZE_A4_LANDSCAPE);
 
 $paymonth = $_REQUEST['slipMnth'];
 $spid = $_REQUEST['pid'];
@@ -103,6 +103,8 @@ createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pdf, $page)
 
 function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pdf, $page) {
     global $db;
+    $debug=false;
+
     $pageHeight = $page->getHeight();
     $width = $page->getWidth();
     $topPos = $pageHeight - 10;
@@ -114,10 +116,13 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 
     $pdfBase = new Library_Pdf_Base();
 
+//    $period=$_SESSION['period'];
+    $period=date('Y');
 
     $sql = "SELECT distinct p.Pid, CONCAT(p.surname ,' ', p.firstname ,' ', p.lastname) AS empnames,
             p.EmpBranch,d.deptName,p.basicpay,c.payMonth,p.pin_no,p.id,c.payDate,p.ID_No FROM proll_empRegister p
-            LEFT JOIN proll_payments c on p.PID=c.Pid left  join proll_departments d on p.department=d.ID where c.payMonth= '$paymonth'";
+            LEFT JOIN proll_payments c on p.PID=c.Pid left  join proll_departments d on p.department=d.ID
+             where c.payMonth= '$paymonth' and period='$period'";
 
     if ($spid <> '' && $spid2 == '') {
         $sql.= " and p.pid='$spid'";
@@ -187,9 +192,11 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
         $normalStyle->setFont($font, 10);
         $page->setStyle($normalStyle);
 
-        $page->drawText("Employee: ", $leftPos + 36, $topPos - 50);
+        $page->drawText("Payroll No: ", $leftPos + 36, $topPos - 50);
         $page->drawText($pid, $leftPos + 100, $topPos - 50);
-        $page->drawText(" : " . $empnames, $leftPos + 125, $topPos - 50);
+        $topPos=$topPos-10;
+        $page->drawText("Names:" , $leftPos + 36, $topPos - 50);
+        $page->drawText( $empnames, $leftPos + 100, $topPos - 50);
         $page->drawText("Period: ", $leftPos + 36, $topPos - 60);
         $page->drawText($paymonth, $leftPos + 100, $topPos - 60);
         $page->drawText($payDate, $leftPos + 150, $topPos - 60);
@@ -214,6 +221,7 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 
         $page->setStyle($headingStyle);
         $page->drawText('Earnings :-', $leftPos + 36, $topPos - 110);
+        $page->drawText(' Amount', $leftPos + 170, $topPos - 110);
         $page->drawText(' Bal', $leftPos + 240, $topPos - 110);
 
         $page->setStyle($lineStyle1);
@@ -221,10 +229,10 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 
 
 
-        $sql = 'select a.Pid, a.emp_names,c.id,a.pay_type,a.amount,a.Notes FROM proll_payments a
+        $sql = "select a.Pid, a.emp_names,c.id,a.pay_type,a.amount,a.Notes FROM proll_payments a
             LEFT JOIN proll_paytypes b on a.pay_type=b.PayType
             LEFT JOIN proll_paycategory c on b.CatID=c.ID
-            where a.catid in("Earnings","Benefits") and amount>0 and pid="' . $pid . '" and a.paymonth="' . $paymonth . '" order by b.ID asc';
+            where a.catid in('Earnings','Benefits') and period='$period' and amount>0 and pid='$pid' and a.paymonth='$paymonth' order by b.ID asc";
         //echo $sql;
         $result = $db->Execute($sql);
         $numRows = $result->RecordCount();
@@ -242,7 +250,7 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 
 
         $sql = 'select pid,sum(amount) as grosspay from proll_payments where catID IN("Earnings","Benefits") 
-            and pid="' . $pid . '" and paymonth="' . $paymonth . '" AND pay_type<>"PENSION"';
+            and pid="' . $pid . '" and paymonth="' . $paymonth . '" AND pay_type<>"PENSION"  and period="'.$period.'"';
         $result = $db->Execute($sql);
         $numRows = $result->RecordCount();
         $sumRows = $result->FetchRow();
@@ -262,10 +270,10 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
         $currpos = $currpos + 5;
 
 
-        $sql = ' select a.Pid, a.emp_names,c.id,a.pay_type,a.amount,a.Notes FROM proll_payments a
+        $sql = "select a.Pid, a.emp_names,c.id,a.pay_type,a.amount,a.Notes FROM proll_payments a
                         LEFT JOIN proll_paytypes b on a.pay_type=b.PayType
                         LEFT JOIN proll_paycategory c on b.CatID=c.ID
-                        where c.id="Deductions" and pid="' . $pid . '" and a.paymonth="' . $paymonth . '"';
+                        where c.id='Deductions' and period='$period' and pid='$pid' and a.paymonth='$paymonth'";
         $result = $db->Execute($sql);
         $numRows = $result->RecordCount();
 
@@ -287,46 +295,51 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 
         $currpos = $currpos + 20;
 
-        $sql = 'SELECT a.Pid, a.emp_names,a.pay_type,a.amount,a.Notes FROM proll_payments a
-     WHERE  pid="' . $pid . '" AND a.paymonth="' . $paymonth . '" AND pay_type IN("NSSF","Pension")';
+        $sql = "SELECT a.Pid, a.emp_names,a.pay_type,a.amount,a.Notes FROM proll_payments a
+     WHERE  pid='$pid' AND a.paymonth='$paymonth'and period='$period' AND pay_type IN('N.S.S.F','Pension','N.H.I.F ')";
         $result = $db->Execute($sql);
         $numRows = $result->RecordCount();
         while ($numRows = $result->FetchRow()) {
-            if (ucwords(strtolower($numRows[2])) == 'NSSF') {
+            if ($numRows[2]== 'N.S.S.F') {
                 $lable = 'N.S.S.F';
             } else {
-                $lable = ucwords(strtolower($numRows[2]));
+                $lable = $numRows[2];
             }
             $page->drawText('* ' . $lable, $leftPos + 36, $topPos - $currpos+15);
 
 //            $page->drawText(number_format($numRows[3], 2), $leftPos + 180, $topPos - $currpos);
             $pdfBase->drawText($page, number_format($numRows[3], 2), $leftPos + 220, $topPos - $currpos  +15, $leftPos + 220, right);
-            if($numRows[2]=='NSSF'){ $nssf=$numRows[3];}
-            if($numRows[2]=='PENSION'){ $pension=$numRows[3];}
+            if($numRows[2]=='N.S.S.F'){
+                $nssf=$numRows[3];
+            }
+            if($numRows[2]=='PENSION'){ 
+                $pension=$numRows[3];
+            }
             $currpos = $currpos + 10;
         }
 
-        $pyesql = 'select pid,sum(amount) as grosspay from proll_payments where catID IN("Earnings","Benefits")
-         and pid="' . $pid . '" and paymonth="' . $paymonth . '" AND pay_type NOT IN ("PENSION")';
+        $pyesql = "select pid,sum(amount) as grosspay from proll_payments where catID IN('Earnings','Benefits')
+         and pid='$pid' and paymonth='$paymonth' AND pay_type NOT IN ('PENSION') and period='$period'";
         $pyeresult = $db->Execute($pyesql);
         $pyerow = $pyeresult->FetchRow();
         $page->drawText("* Taxable Pay", $leftPos + 36, $topPos - $currpos+10);
 //        $page->drawText(number_format($pyerow[1], 2), $leftPos + 180, $topPos - $currpos);
 
-        $pdfBase->drawText($page, number_format($pyerow[1]-$nssf, 2), $leftPos + 220, $topPos - $currpos+10, $leftPos + 220, right);
+        $pdfBase->drawText($page, number_format($pyerow[1]-$nssf-$pension, 2), $leftPos + 220, $topPos - $currpos+10, $leftPos + 220, right);
 
     $currpos = $currpos + 10;
 
         $isql = "SELECT amount,t.`ReliefPercentage` FROM proll_payments p LEFT JOIN proll_paytypes t
                ON P.`pay_type`=T.`PayType`
-               WHERE pid='$pid' AND paymonth='$paymonth' AND T.`TaxRelief`='on'";
+               WHERE pid='$pid' AND paymonth='$paymonth' and period='$period' AND T.`TaxRelief`='on'";
         $iresult = $db->Execute($isql);
         $icount = $iresult->RecordCount();
         $irow = $iresult->FetchRow();
         $insuranceRelief = $irow[0];
         
-        $pyesql1 = 'select amount from proll_payments where pid="' . $pid . '" and pay_type="paye"
-        and paymonth="' . $paymonth . '"';
+        $pyesql1 = "select amount from proll_payments where pid='$pid' and period='$period' and pay_type='paye'
+        and paymonth='$paymonth'";
+
 //    echo $pyesql1;
         $pyeresult1 = $db->Execute($pyesql1);
         $pyerow1 = $pyeresult1->FetchRow();
@@ -336,8 +349,9 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 //        $page->drawText(number_format($txCharged, 2), $leftPos + 180, $topPos - $currpos);
 
         $currpos = $currpos + 10;
-        $pyesql2 = 'select amount from proll_payments where pid="' . $pid . '" and pay_type="Personal Relief" 
-         and paymonth="' . $paymonth . '"';
+        $pyesql2 = "select amount from proll_payments where pid='$pid' and pay_type='Personal Relief' 
+                      and paymonth='$paymonth' and period='$period' ";
+
         $pyeresult2 = $db->Execute($pyesql2);
         $pyerow2 = $pyeresult2->FetchRow();
         $txRelief = $pyerow2[0];
@@ -369,10 +383,10 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
         $page->setStyle($normalStyle);
         $currpos = $currpos + 5;
 
-        $sql = 'select a.Pid, a.emp_names,c.id,a.pay_type,a.amount,a.Notes,a.balance FROM proll_payments a
+        $sql = "select a.Pid, a.emp_names,c.id,a.pay_type,a.amount,a.Notes,a.balance FROM proll_payments a
                 inner join proll_paytypes b on a.pay_type=b.PayType
                 inner join proll_paycategory c on b.CatID=c.ID
-                where a.catid="Deductions" and amount>0 and pid="' . $pid . '" and a.paymonth="' . $paymonth . '"';
+                where a.catid='Deductions' and amount>0 and pid='$pid' and a.paymonth='$paymonth' and period='$period' ";
         $result = $db->Execute($sql);
         $numRows = $result->RecordCount();
 
@@ -380,7 +394,7 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
             $balance = $row[6] ? $row[6] : "0";
             if (ucwords(strtolower($row[3])) == 'Nssf') {
                 $lable = 'N.S.S.F';
-            } else if (ucwords(strtolower($row[3])) == 'Nhif') {
+            } else if (ucwords(strtolower($row[3])) == 'N.h.i.f') {
                 $lable = 'N.H.I.F';
             } else {
                 $lable = ucwords(strtolower($row[3]));
@@ -401,10 +415,9 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 
         $sql3 = "SELECT pid,catID,Pay_type,Amount,Balance FROM proll_payments
                  WHERE pid='$pid' AND 
-                 pay_type IN('GRATUITY','NSSF') and paymonth='$paymonth'";
-        if ($debug) {
-            echo $sql3;
-        }
+                 pay_type IN('GRATUITY','NSSF') and paymonth='$paymonth' and period='$period'";
+        if ($debug) echo $sql3;
+
         $request3 = $db->Execute($sql3);
         $numRows3 = $request3->RecordCount();
         $count3 = 0;
@@ -417,7 +430,7 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
         $currpos = $currpos + 10;
            $page->setStyle($normalStyle);
         while ($numRows3 = $request3->FetchRow()) {
-            if (ucwords(strtolower($numRows3[Pay_type])) == 'N.s.s.f') {
+            if (ucwords(strtolower($numRows3['Pay_type'])) == 'N.s.s.f') {
                 $lable = 'N.S.S.F';
             } else {
                 $lable = ucwords(strtolower($numRows3[Pay_type]));
@@ -434,7 +447,10 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
                 if($numRowsr[RateName]=='NSSF Company'){
                     $nssfCo = $numRowsr[Value];
                      $page->drawText('* ' .$numRowsr[RateName], $leftPos + 36, $topPos - $currpos);
-                     $pdfBase->drawText($page, number_format($nssfCo,2), $leftPos + 220, $topPos - $currpos, $leftPos + 280, right);
+                    $pdfBase->drawText($page, number_format($nssfCo,2), $leftPos + 220, $topPos - $currpos, $leftPos + 280, right);
+                    $currpos=$currpos+10;
+//                    $page->drawText('* PENSION', $leftPos + 36, $topPos - $currpos);
+//                    $pdfBase->drawText($page, number_format($pension,2), $leftPos + 220, $topPos - $currpos, $leftPos + 280, right);
                 }
             }
            
@@ -450,8 +466,8 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 
 
         $currpos = $currpos + 5;
-        $sql = 'select pid,sum(amount) as deductions from proll_payments where catID IN("Deductions") and pid="' . $pid . '" and
-        paymonth="' . $paymonth . '" AND pay_type NOT IN ("paye","Personal Relief")';
+        $sql = "select pid,sum(amount) as deductions from proll_payments where catID IN('Deductions') and pid='$pid' and
+        paymonth='$paymonth' AND pay_type NOT IN ('paye','Personal Relief')  and period='$period'";
        // echo $sql;
 
         $result = $db->Execute($sql);
@@ -504,7 +520,7 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 //        $topPos = $topPos - $currpos;
         if ($position == $max) {
             array_push($pdf->pages, $page);
-            $page = new Zend_Pdf_Page(Zend_Pdf_Page::SIZE_LETTER);
+            $page = new Zend_Pdf_Page(Zend_Pdf_Page::SIZE_A4_LANDSCAPE);
             $resultsStyle = new Zend_Pdf_Style ();
             $resultsStyle->setLineDashingPattern(array(2), 1.6);
             $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
@@ -517,8 +533,8 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
             $leftPos = -8;
             $position = 1;
         } else {
-            $leftPos = $leftPos + 300;
-            $topPos = $pageHeight - 20;
+            $leftPos = $leftPos + 270;
+            $topPos = $pageHeight - 10;
             $position++;
         }
     }
@@ -528,12 +544,5 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
     echo $pdf->render();
 }
 
-//  1,1,2
-//  3,4,5
-//  6,7,8,
-//  9,10,11
-//  12,13,14
-//  15,16,17
-//
-//
+
 ?>

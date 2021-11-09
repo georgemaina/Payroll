@@ -23,7 +23,28 @@
         "url": "data/updateFunctions.php?task=updateItems",
         "width": 824
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "draggable": "boolean",
+        "frame": "boolean",
+        "header": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "padding": "auto",
+        "simpleDrag": "boolean",
+        "title": "string",
+        "url": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "abafa9eb-768d-4833-b6da-4fb4b601624a",
+    "viewControllerInstanceId": "d160c7f7-dcae-44e9-9abb-3115c2c3e9a9",
+    "viewModelInstanceId": "eafd1801-7ac3-4260-9e67-4a50f6adf511",
     "cn": [
         {
             "type": "Ext.grid.Panel",
@@ -35,22 +56,35 @@
             "userConfig": {
                 "height": 390,
                 "itemId": "payRatesGrid",
-                "layout|x": 5,
-                "layout|y": 175,
+                "layout|x": 0,
+                "layout|y": 215,
                 "store": "PayRatesStore",
                 "title": "Payment Rates",
                 "width": 815
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyGridPanel6",
             "designerId": "5e298af2-e2e2-4656-a855-91d64fc0d98b",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView7",
                     "designerId": "c84a2b1f-0208-4d7d-a777-d7f02bea72dd"
                 },
@@ -67,6 +101,13 @@
                         "store": "PayRatesStore",
                         "width": 360
                     },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPagingToolbar7",
                     "designerId": "ff8c426f-cdf4-4f23-bcd1-8320a447e963"
                 },
@@ -80,6 +121,11 @@
                     "userConfig": {
                         "dataIndex": "ID",
                         "text": "ID"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn70",
                     "designerId": "9b046124-037f-42fa-867a-11133859dd12"
@@ -95,6 +141,11 @@
                         "dataIndex": "RateName",
                         "text": "RateName"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn71",
                     "designerId": "c2a35d30-34e0-469b-9062-9530b702ff22"
                 },
@@ -108,6 +159,11 @@
                     "userConfig": {
                         "dataIndex": "Value",
                         "text": "Value"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn72",
                     "designerId": "66012906-4d63-4660-9970-c5a341a033e0"
@@ -123,6 +179,11 @@
                         "dataIndex": "Lower_Limit",
                         "text": "Lower_Limit"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn73",
                     "designerId": "202bacc8-6497-4ea0-9b0b-946044fd215b"
                 },
@@ -137,6 +198,11 @@
                         "dataIndex": "Upper_Limit",
                         "text": "Upper_Limit"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn74",
                     "designerId": "3c03791f-c422-4d7f-828f-89cfc55d187a"
                 },
@@ -150,6 +216,11 @@
                     "userConfig": {
                         "dataIndex": "Rate",
                         "text": "Rate"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn75",
                     "designerId": "67b6d602-755e-40ca-8c3c-c2c980d3d837"
@@ -168,6 +239,15 @@
                         "id": "deleteRates",
                         "text": "Delete",
                         "width": 61
+                    },
+                    "configAlternates": {
+                        "Text": "string",
+                        "align": "string",
+                        "altText": "string",
+                        "id": "string",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyActionColumn4",
                     "designerId": "d1c0b352-b004-46c1-a687-c5ab52049622",
@@ -191,6 +271,11 @@
                                 "icon": "icons/delete1.jpg",
                                 "tooltip": "Delete Rate"
                             },
+                            "configAlternates": {
+                                "altText": "string",
+                                "icon": "string",
+                                "tooltip": "string"
+                            },
                             "name": "MyActionColumnItem4",
                             "designerId": "acc36f96-bafc-4f20-9bb0-5052092efaa7"
                         }
@@ -209,10 +294,20 @@
                 "fieldLabel": "Rate Name",
                 "labelAlign": "right",
                 "layout|x": 25,
-                "layout|y": 35,
+                "layout|y": 40,
                 "name": "RateName",
                 "tabIndex": 1,
                 "width": 345
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField55",
             "designerId": "7e8f22aa-5afb-4a2a-9f42-83760926048d"
@@ -234,6 +329,17 @@
                 "tabIndex": 1,
                 "width": 155
             },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "readOnly": "boolean",
+                "tabIndex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyTextField56",
             "designerId": "13aab199-70bd-43b7-8012-60ae0d786308"
         },
@@ -248,9 +354,18 @@
                 "fieldLabel": "Value",
                 "labelAlign": "right",
                 "layout|x": 25,
-                "layout|y": 60,
+                "layout|y": 75,
                 "name": "Value",
                 "tabIndex": 2
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "scrollable": "boolean"
             },
             "name": "MyTextField57",
             "designerId": "39dabd6b-ed3e-4139-a02c-a8529f137c40"
@@ -266,9 +381,18 @@
                 "fieldLabel": "Lower Limit",
                 "labelAlign": "right",
                 "layout|x": 25,
-                "layout|y": 85,
+                "layout|y": 110,
                 "name": "Lower_Limit",
                 "tabIndex": 3
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "scrollable": "boolean"
             },
             "name": "MyTextField58",
             "designerId": "1dd7291a-b10b-4ca9-9dbb-c8396479c467"
@@ -284,9 +408,18 @@
                 "fieldLabel": "Upper Limit",
                 "labelAlign": "right",
                 "layout|x": 25,
-                "layout|y": 110,
+                "layout|y": 145,
                 "name": "Upper_Limit",
                 "tabIndex": 4
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "scrollable": "boolean"
             },
             "name": "MyTextField59",
             "designerId": "a46e6d3d-d898-489f-ae5a-710a1852845f"
@@ -302,9 +435,18 @@
                 "fieldLabel": "Rate",
                 "labelAlign": "right",
                 "layout|x": 25,
-                "layout|y": 135,
+                "layout|y": 180,
                 "name": "Rate",
                 "tabIndex": 5
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "scrollable": "boolean"
             },
             "name": "MyTextField60",
             "designerId": "2f912ca2-c071-4c1f-b789-0360e92d9124"
@@ -319,11 +461,21 @@
             "userConfig": {
                 "height": 35,
                 "itemId": "cmdNew",
-                "layout|x": 375,
-                "layout|y": 120,
+                "layout|x": 405,
+                "layout|y": 170,
                 "tabIndex": 7,
                 "text": "<b>New</b>",
                 "width": 105
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton20",
             "designerId": "964d035c-ab5f-4841-9241-b3a7586055bb"
@@ -338,11 +490,21 @@
             "userConfig": {
                 "height": 35,
                 "itemId": "cmdSaveRates",
-                "layout|x": 505,
-                "layout|y": 120,
+                "layout|x": 545,
+                "layout|y": 170,
                 "tabIndex": 6,
                 "text": "<b>Save</b>",
                 "width": 105
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton21",
             "designerId": "0b88fda6-85ba-41c7-9ba1-88edb3dde47c"
@@ -357,11 +519,21 @@
             "userConfig": {
                 "height": 35,
                 "itemId": "cmdClose",
-                "layout|x": 665,
-                "layout|y": 120,
+                "layout|x": 675,
+                "layout|y": 170,
                 "tabIndex": 8,
                 "text": "<b>Close</b>",
                 "width": 105
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton22",
             "designerId": "78787dca-e433-4600-8dbd-278e540288ab"
@@ -380,6 +552,15 @@
                 "name": "formStatus",
                 "readOnly": true,
                 "width": 120
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "readOnly": "boolean",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField61",
             "designerId": "5773c2dc-6948-4021-bbe5-e6ed7c0330b4"

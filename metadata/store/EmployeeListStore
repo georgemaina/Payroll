@@ -13,6 +13,14 @@
         "pageSize": 200,
         "storeId": "EmployeeListStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "9d9a7740-1369-41e9-9c18-9b83b2b2360e",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getEmployeeRecord"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy14",
             "designerId": "1dc75d22-cfd7-4925-81f6-cb7c63440da2",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "Employees"
+                        "rootProperty": "Employees"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader14",
                     "designerId": "6e61eaf3-39a7-4676-b40f-f631a0a2c771"

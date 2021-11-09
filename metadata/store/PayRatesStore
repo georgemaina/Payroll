@@ -13,6 +13,14 @@
         "pageSize": 50,
         "storeId": "PayRatesStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "f784f135-2cdb-4ab6-9f2e-ef2cc376a878",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getPayRates"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy13",
             "designerId": "96453dcd-8ea2-439a-a7b2-d9c774345709",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "payRates"
+                        "rootProperty": "payRates"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader13",
                     "designerId": "94911357-7c79-4805-b999-ca9c9ea164ee"

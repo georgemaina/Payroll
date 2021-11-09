@@ -1,0 +1,117 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "nssfreturns",
+        "designer|userClassName": "NssfReturnsViewModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "027a7899-60be-472e-85cd-d0b7183c3209",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[{\"ID\":\"alias_01\",\"pid\":\"consequatur\",\"empNames\":\"qui\",\"pay_type\":\"aut\",\"Self\":\"eos\",\"Company\":\"animi\",\"Amount\":\"perferendis\",\"ID_No\":\"exercitationem\",\"NSSFNo\":\"et\",\"payMonth\":\"consequatur\"},{\"ID\":\"ipsam_11\",\"pid\":\"et\",\"empNames\":\"dolorem\",\"pay_type\":\"temporibus\",\"Self\":\"qui\",\"Company\":\"quae\",\"Amount\":\"tenetur\",\"ID_No\":\"perferendis\",\"NSSFNo\":\"amet\",\"payMonth\":\"aut\"},{\"ID\":\"ad_21\",\"pid\":\"unde\",\"empNames\":\"dolorum\",\"pay_type\":\"cum\",\"Self\":\"ipsum\",\"Company\":\"voluptas\",\"Amount\":\"rerum\",\"ID_No\":\"aut\",\"NSSFNo\":\"voluptatibus\",\"payMonth\":\"nostrum\"},{\"ID\":\"aut_31\",\"pid\":\"et\",\"empNames\":\"sunt\",\"pay_type\":\"aut\",\"Self\":\"facere\",\"Company\":\"nihil\",\"Amount\":\"facilis\",\"ID_No\":\"sunt\",\"NSSFNo\":\"sunt\",\"payMonth\":\"totam\"},{\"ID\":\"laudantium_41\",\"pid\":\"praesentium\",\"empNames\":\"ipsam\",\"pay_type\":\"autem\",\"Self\":\"molestiae\",\"Company\":\"ut\",\"Amount\":\"similique\",\"ID_No\":\"ea\",\"NSSFNo\":\"ex\",\"payMonth\":\"velit\"},{\"ID\":\"doloremque_51\",\"pid\":\"impedit\",\"empNames\":\"sed\",\"pay_type\":\"nisi\",\"Self\":\"necessitatibus\",\"Company\":\"corrupti\",\"Amount\":\"eum\",\"ID_No\":\"sapiente\",\"NSSFNo\":\"necessitatibus\",\"payMonth\":\"magni\"},{\"ID\":\"ea_61\",\"pid\":\"laudantium\",\"empNames\":\"rerum\",\"pay_type\":\"iste\",\"Self\":\"pariatur\",\"Company\":\"et\",\"Amount\":\"repudiandae\",\"ID_No\":\"consequatur\",\"NSSFNo\":\"et\",\"payMonth\":\"exercitationem\"},{\"ID\":\"et_71\",\"pid\":\"blanditiis\",\"empNames\":\"aperiam\",\"pay_type\":\"laboriosam\",\"Self\":\"iusto\",\"Company\":\"et\",\"Amount\":\"praesentium\",\"ID_No\":\"at\",\"NSSFNo\":\"veniam\",\"payMonth\":\"similique\"},{\"ID\":\"amet_81\",\"pid\":\"praesentium\",\"empNames\":\"temporibus\",\"pay_type\":\"necessitatibus\",\"Self\":\"temporibus\",\"Company\":\"ut\",\"Amount\":\"pariatur\",\"ID_No\":\"ducimus\",\"NSSFNo\":\"doloremque\",\"payMonth\":\"eligendi\"},{\"ID\":\"accusantium_91\",\"pid\":\"omnis\",\"empNames\":\"nihil\",\"pay_type\":\"dolorum\",\"Self\":\"ea\",\"Company\":\"ab\",\"Amount\":\"laudantium\",\"ID_No\":\"aut\",\"NSSFNo\":\"ex\",\"payMonth\":\"aut\"},{\"ID\":\"dolor_101\",\"pid\":\"consequatur\",\"empNames\":\"vero\",\"pay_type\":\"magnam\",\"Self\":\"exercitationem\",\"Company\":\"quasi\",\"Amount\":\"nostrum\",\"ID_No\":\"ut\",\"NSSFNo\":\"aut\",\"payMonth\":\"rem\"},{\"ID\":\"sit_111\",\"pid\":\"et\",\"empNames\":\"illo\",\"pay_type\":\"magni\",\"Self\":\"similique\",\"Company\":\"expedita\",\"Amount\":\"qui\",\"ID_No\":\"ut\",\"NSSFNo\":\"ea\",\"payMonth\":\"ipsum\"},{\"ID\":\"dolores_121\",\"pid\":\"voluptate\",\"empNames\":\"dignissimos\",\"pay_type\":\"voluptate\",\"Self\":\"nisi\",\"Company\":\"autem\",\"Amount\":\"omnis\",\"ID_No\":\"magnam\",\"NSSFNo\":\"quia\",\"payMonth\":\"facilis\"},{\"ID\":\"voluptatem_131\",\"pid\":\"ut\",\"empNames\":\"et\",\"pay_type\":\"voluptas\",\"Self\":\"fugiat\",\"Company\":\"aliquid\",\"Amount\":\"veniam\",\"ID_No\":\"laudantium\",\"NSSFNo\":\"eveniet\",\"payMonth\":\"ut\"},{\"ID\":\"vel_141\",\"pid\":\"possimus\",\"empNames\":\"quia\",\"pay_type\":\"repellendus\",\"Self\":\"quos\",\"Company\":\"enim\",\"Amount\":\"repudiandae\",\"ID_No\":\"esse\",\"NSSFNo\":\"aspernatur\",\"payMonth\":\"reprehenderit\"},{\"ID\":\"consequatur_151\",\"pid\":\"sint\",\"empNames\":\"ullam\",\"pay_type\":\"repudiandae\",\"Self\":\"voluptatem\",\"Company\":\"minus\",\"Amount\":\"sint\",\"ID_No\":\"maiores\",\"NSSFNo\":\"facere\",\"payMonth\":\"dolores\"},{\"ID\":\"laborum_161\",\"pid\":\"cum\",\"empNames\":\"eligendi\",\"pay_type\":\"voluptatem\",\"Self\":\"delectus\",\"Company\":\"quo\",\"Amount\":\"ipsum\",\"ID_No\":\"possimus\",\"NSSFNo\":\"nulla\",\"payMonth\":\"consequatur\"},{\"ID\":\"accusantium_171\",\"pid\":\"corrupti\",\"empNames\":\"similique\",\"pay_type\":\"ut\",\"Self\":\"eius\",\"Company\":\"quia\",\"Amount\":\"est\",\"ID_No\":\"voluptas\",\"NSSFNo\":\"rerum\",\"payMonth\":\"cum\"},{\"ID\":\"odio_181\",\"pid\":\"earum\",\"empNames\":\"asperiores\",\"pay_type\":\"aut\",\"Self\":\"fuga\",\"Company\":\"dignissimos\",\"Amount\":\"commodi\",\"ID_No\":\"quas\",\"NSSFNo\":\"incidunt\",\"payMonth\":\"aspernatur\"},{\"ID\":\"hic_191\",\"pid\":\"quasi\",\"empNames\":\"deserunt\",\"pay_type\":\"quibusdam\",\"Self\":\"maiores\",\"Company\":\"sit\",\"Amount\":\"eaque\",\"ID_No\":\"ut\",\"NSSFNo\":\"labore\",\"payMonth\":\"autem\"},{\"ID\":\"qui_201\",\"pid\":\"nam\",\"empNames\":\"eius\",\"pay_type\":\"vel\",\"Self\":\"id\",\"Company\":\"consequuntur\",\"Amount\":\"aut\",\"ID_No\":\"sunt\",\"NSSFNo\":\"earum\",\"payMonth\":\"minima\"},{\"ID\":\"consectetur_211\",\"pid\":\"molestiae\",\"empNames\":\"voluptate\",\"pay_type\":\"sit\",\"Self\":\"quae\",\"Company\":\"molestiae\",\"Amount\":\"placeat\",\"ID_No\":\"facere\",\"NSSFNo\":\"dolorum\",\"payMonth\":\"et\"},{\"ID\":\"voluptates_221\",\"pid\":\"rerum\",\"empNames\":\"explicabo\",\"pay_type\":\"id\",\"Self\":\"magni\",\"Company\":\"eum\",\"Amount\":\"quia\",\"ID_No\":\"repellendus\",\"NSSFNo\":\"sit\",\"payMonth\":\"aliquid\"},{\"ID\":\"eos_231\",\"pid\":\"dolore\",\"empNames\":\"aut\",\"pay_type\":\"voluptas\",\"Self\":\"blanditiis\",\"Company\":\"et\",\"Amount\":\"beatae\",\"ID_No\":\"dolor\",\"NSSFNo\":\"et\",\"payMonth\":\"sapiente\"},{\"ID\":\"ex_241\",\"pid\":\"ipsa\",\"empNames\":\"rerum\",\"pay_type\":\"rerum\",\"Self\":\"eum\",\"Company\":\"maxime\",\"Amount\":\"eum\",\"ID_No\":\"sint\",\"NSSFNo\":\"voluptatem\",\"payMonth\":\"accusantium\"},{\"ID\":\"aut_251\",\"pid\":\"qui\",\"empNames\":\"quis\",\"pay_type\":\"alias\",\"Self\":\"sit\",\"Company\":\"voluptatem\",\"Amount\":\"exercitationem\",\"ID_No\":\"qui\",\"NSSFNo\":\"quia\",\"payMonth\":\"labore\"},{\"ID\":\"rerum_261\",\"pid\":\"et\",\"empNames\":\"minima\",\"pay_type\":\"non\",\"Self\":\"placeat\",\"Company\":\"consequuntur\",\"Amount\":\"nostrum\",\"ID_No\":\"mollitia\",\"NSSFNo\":\"quo\",\"payMonth\":\"aut\"},{\"ID\":\"nam_271\",\"pid\":\"esse\",\"empNames\":\"reprehenderit\",\"pay_type\":\"aspernatur\",\"Self\":\"rerum\",\"Company\":\"dolorem\",\"Amount\":\"culpa\",\"ID_No\":\"nam\",\"NSSFNo\":\"error\",\"payMonth\":\"eum\"},{\"ID\":\"accusantium_281\",\"pid\":\"aliquid\",\"empNames\":\"qui\",\"pay_type\":\"odio\",\"Self\":\"dolor\",\"Company\":\"cupiditate\",\"Amount\":\"rem\",\"ID_No\":\"dolores\",\"NSSFNo\":\"voluptatem\",\"payMonth\":\"dicta\"},{\"ID\":\"est_291\",\"pid\":\"incidunt\",\"empNames\":\"doloribus\",\"pay_type\":\"explicabo\",\"Self\":\"dolorum\",\"Company\":\"est\",\"Amount\":\"molestiae\",\"ID_No\":\"sunt\",\"NSSFNo\":\"deleniti\",\"payMonth\":\"ut\"}]"
+                ],
+                "model": "NssfReturns",
+                "name": "nssfReturns"
+            },
+            "configAlternates": {
+                "data": "array",
+                "model": "model",
+                "name": "string"
+            },
+            "name": "nssfReturns",
+            "designerId": "4380eef2-15a5-47a7-bf54-b30dad84af30",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy",
+                    "designerId": "70921e20-d847-4f36-ad64-0472323ab9b7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[{\"ID\":\"culpa_01\",\"pid\":\"exercitationem\",\"empNames\":\"corporis\",\"pay_type\":\"voluptates\",\"Self\":\"dolorem\",\"Company\":\"sed\",\"Amount\":\"qui\",\"ID_No\":\"in\",\"NSSFNo\":\"id\",\"payMonth\":\"laborum\"},{\"ID\":\"ducimus_11\",\"pid\":\"odit\",\"empNames\":\"sed\",\"pay_type\":\"aliquam\",\"Self\":\"dolore\",\"Company\":\"eaque\",\"Amount\":\"dolor\",\"ID_No\":\"blanditiis\",\"NSSFNo\":\"nihil\",\"payMonth\":\"nulla\"},{\"ID\":\"consequatur_21\",\"pid\":\"dolores\",\"empNames\":\"enim\",\"pay_type\":\"debitis\",\"Self\":\"et\",\"Company\":\"sit\",\"Amount\":\"ipsam\",\"ID_No\":\"voluptas\",\"NSSFNo\":\"sunt\",\"payMonth\":\"velit\"},{\"ID\":\"repellat_31\",\"pid\":\"assumenda\",\"empNames\":\"sunt\",\"pay_type\":\"autem\",\"Self\":\"est\",\"Company\":\"placeat\",\"Amount\":\"modi\",\"ID_No\":\"ut\",\"NSSFNo\":\"qui\",\"payMonth\":\"voluptatibus\"},{\"ID\":\"minima_41\",\"pid\":\"neque\",\"empNames\":\"libero\",\"pay_type\":\"odit\",\"Self\":\"aut\",\"Company\":\"enim\",\"Amount\":\"sed\",\"ID_No\":\"hic\",\"NSSFNo\":\"similique\",\"payMonth\":\"repellendus\"},{\"ID\":\"iusto_51\",\"pid\":\"quia\",\"empNames\":\"corrupti\",\"pay_type\":\"quia\",\"Self\":\"quo\",\"Company\":\"occaecati\",\"Amount\":\"quia\",\"ID_No\":\"omnis\",\"NSSFNo\":\"inventore\",\"payMonth\":\"aut\"},{\"ID\":\"cupiditate_61\",\"pid\":\"et\",\"empNames\":\"magni\",\"pay_type\":\"perferendis\",\"Self\":\"commodi\",\"Company\":\"ullam\",\"Amount\":\"ad\",\"ID_No\":\"repellat\",\"NSSFNo\":\"voluptas\",\"payMonth\":\"quis\"},{\"ID\":\"et_71\",\"pid\":\"veritatis\",\"empNames\":\"corporis\",\"pay_type\":\"exercitationem\",\"Self\":\"commodi\",\"Company\":\"porro\",\"Amount\":\"praesentium\",\"ID_No\":\"debitis\",\"NSSFNo\":\"vel\",\"payMonth\":\"occaecati\"},{\"ID\":\"laudantium_81\",\"pid\":\"modi\",\"empNames\":\"vel\",\"pay_type\":\"sed\",\"Self\":\"quis\",\"Company\":\"est\",\"Amount\":\"aut\",\"ID_No\":\"eos\",\"NSSFNo\":\"voluptatem\",\"payMonth\":\"et\"},{\"ID\":\"magnam_91\",\"pid\":\"eveniet\",\"empNames\":\"dolor\",\"pay_type\":\"voluptatum\",\"Self\":\"velit\",\"Company\":\"exercitationem\",\"Amount\":\"aut\",\"ID_No\":\"aut\",\"NSSFNo\":\"repellendus\",\"payMonth\":\"dolores\"},{\"ID\":\"sed_101\",\"pid\":\"sunt\",\"empNames\":\"voluptatibus\",\"pay_type\":\"dignissimos\",\"Self\":\"vitae\",\"Company\":\"animi\",\"Amount\":\"eum\",\"ID_No\":\"aut\",\"NSSFNo\":\"vero\",\"payMonth\":\"sunt\"},{\"ID\":\"exercitationem_111\",\"pid\":\"alias\",\"empNames\":\"qui\",\"pay_type\":\"impedit\",\"Self\":\"sunt\",\"Company\":\"eum\",\"Amount\":\"mollitia\",\"ID_No\":\"ea\",\"NSSFNo\":\"illo\",\"payMonth\":\"qui\"},{\"ID\":\"et_121\",\"pid\":\"aut\",\"empNames\":\"in\",\"pay_type\":\"qui\",\"Self\":\"voluptas\",\"Company\":\"id\",\"Amount\":\"amet\",\"ID_No\":\"aliquid\",\"NSSFNo\":\"ea\",\"payMonth\":\"vel\"},{\"ID\":\"quo_131\",\"pid\":\"tempora\",\"empNames\":\"assumenda\",\"pay_type\":\"ipsam\",\"Self\":\"delectus\",\"Company\":\"praesentium\",\"Amount\":\"tempore\",\"ID_No\":\"assumenda\",\"NSSFNo\":\"soluta\",\"payMonth\":\"impedit\"},{\"ID\":\"porro_141\",\"pid\":\"fuga\",\"empNames\":\"soluta\",\"pay_type\":\"et\",\"Self\":\"rerum\",\"Company\":\"expedita\",\"Amount\":\"non\",\"ID_No\":\"minus\",\"NSSFNo\":\"et\",\"payMonth\":\"molestias\"},{\"ID\":\"et_151\",\"pid\":\"omnis\",\"empNames\":\"perspiciatis\",\"pay_type\":\"aut\",\"Self\":\"non\",\"Company\":\"occaecati\",\"Amount\":\"quibusdam\",\"ID_No\":\"ullam\",\"NSSFNo\":\"aut\",\"payMonth\":\"eum\"},{\"ID\":\"iste_161\",\"pid\":\"laboriosam\",\"empNames\":\"magnam\",\"pay_type\":\"dolore\",\"Self\":\"neque\",\"Company\":\"rem\",\"Amount\":\"aut\",\"ID_No\":\"sequi\",\"NSSFNo\":\"aspernatur\",\"payMonth\":\"earum\"},{\"ID\":\"culpa_171\",\"pid\":\"in\",\"empNames\":\"dolor\",\"pay_type\":\"autem\",\"Self\":\"expedita\",\"Company\":\"exercitationem\",\"Amount\":\"ut\",\"ID_No\":\"ut\",\"NSSFNo\":\"laborum\",\"payMonth\":\"architecto\"},{\"ID\":\"sed_181\",\"pid\":\"quibusdam\",\"empNames\":\"sequi\",\"pay_type\":\"et\",\"Self\":\"amet\",\"Company\":\"pariatur\",\"Amount\":\"ex\",\"ID_No\":\"sunt\",\"NSSFNo\":\"sed\",\"payMonth\":\"reiciendis\"},{\"ID\":\"qui_191\",\"pid\":\"similique\",\"empNames\":\"quia\",\"pay_type\":\"ut\",\"Self\":\"vel\",\"Company\":\"tempore\",\"Amount\":\"alias\",\"ID_No\":\"quisquam\",\"NSSFNo\":\"est\",\"payMonth\":\"molestias\"},{\"ID\":\"eos_201\",\"pid\":\"vel\",\"empNames\":\"excepturi\",\"pay_type\":\"ipsum\",\"Self\":\"ab\",\"Company\":\"autem\",\"Amount\":\"recusandae\",\"ID_No\":\"rerum\",\"NSSFNo\":\"adipisci\",\"payMonth\":\"earum\"},{\"ID\":\"odio_211\",\"pid\":\"quae\",\"empNames\":\"ipsam\",\"pay_type\":\"et\",\"Self\":\"reprehenderit\",\"Company\":\"occaecati\",\"Amount\":\"amet\",\"ID_No\":\"ab\",\"NSSFNo\":\"placeat\",\"payMonth\":\"rerum\"},{\"ID\":\"saepe_221\",\"pid\":\"expedita\",\"empNames\":\"non\",\"pay_type\":\"nisi\",\"Self\":\"nam\",\"Company\":\"dolor\",\"Amount\":\"nisi\",\"ID_No\":\"molestiae\",\"NSSFNo\":\"possimus\",\"payMonth\":\"ipsum\"},{\"ID\":\"omnis_231\",\"pid\":\"quod\",\"empNames\":\"nulla\",\"pay_type\":\"optio\",\"Self\":\"voluptatem\",\"Company\":\"ea\",\"Amount\":\"maxime\",\"ID_No\":\"veniam\",\"NSSFNo\":\"dolore\",\"payMonth\":\"est\"},{\"ID\":\"temporibus_241\",\"pid\":\"sint\",\"empNames\":\"quod\",\"pay_type\":\"nisi\",\"Self\":\"nihil\",\"Company\":\"qui\",\"Amount\":\"aut\",\"ID_No\":\"autem\",\"NSSFNo\":\"veniam\",\"payMonth\":\"sed\"},{\"ID\":\"illum_251\",\"pid\":\"nesciunt\",\"empNames\":\"quos\",\"pay_type\":\"rerum\",\"Self\":\"sunt\",\"Company\":\"dicta\",\"Amount\":\"ut\",\"ID_No\":\"placeat\",\"NSSFNo\":\"rerum\",\"payMonth\":\"enim\"},{\"ID\":\"expedita_261\",\"pid\":\"laudantium\",\"empNames\":\"voluptatem\",\"pay_type\":\"laboriosam\",\"Self\":\"vero\",\"Company\":\"eos\",\"Amount\":\"nihil\",\"ID_No\":\"tenetur\",\"NSSFNo\":\"ut\",\"payMonth\":\"eum\"},{\"ID\":\"placeat_271\",\"pid\":\"fuga\",\"empNames\":\"quo\",\"pay_type\":\"sint\",\"Self\":\"vel\",\"Company\":\"nisi\",\"Amount\":\"accusamus\",\"ID_No\":\"cupiditate\",\"NSSFNo\":\"sit\",\"payMonth\":\"est\"},{\"ID\":\"tempore_281\",\"pid\":\"aut\",\"empNames\":\"eaque\",\"pay_type\":\"incidunt\",\"Self\":\"sunt\",\"Company\":\"omnis\",\"Amount\":\"debitis\",\"ID_No\":\"eos\",\"NSSFNo\":\"nihil\",\"payMonth\":\"et\"},{\"ID\":\"quis_291\",\"pid\":\"itaque\",\"empNames\":\"omnis\",\"pay_type\":\"adipisci\",\"Self\":\"sit\",\"Company\":\"expedita\",\"Amount\":\"nihil\",\"ID_No\":\"in\",\"NSSFNo\":\"sunt\",\"payMonth\":\"dolorum\"}]"
+                ],
+                "model": "NssfReturns",
+                "name": "nssfReturns"
+            },
+            "configAlternates": {
+                "data": "array",
+                "model": "model",
+                "name": "string"
+            },
+            "name": "nssfReturns",
+            "designerId": "67590a51-2791-40a2-9e91-7a1108d04ec2",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy1",
+                    "designerId": "6f386cd3-9c86-4fe8-b999-3aee016d63e2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "NssfReturns",
+                "name": "nssfReturns"
+            },
+            "configAlternates": {
+                "model": "model",
+                "name": "string"
+            },
+            "name": "nssfReturns",
+            "designerId": "bbfb05bf-737c-4214-858a-a5ae36f64a15",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy2",
+                    "designerId": "a9279c72-3eda-4754-9770-81a0668869b9"
+                }
+            ]
+        }
+    ]
+}

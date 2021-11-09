@@ -6,12 +6,18 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userAlias": "payrollmonths",
         "designer|userClassName": "PayrollMonths"
     },
-    "designerId": "f6a8fcb6-ffbf-44fe-87df-443d3cc7b395",
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "359ce591-05ab-47a0-93eb-ca7407ac746b",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -20,21 +26,27 @@
             "userConfig": {
                 "name": "ID"
             },
-            "name": "MyField109",
-            "designerId": "c9654658-eb1a-4ddd-ab81-eca7c8300ed0"
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField105",
+            "designerId": "06593ba9-5edc-4ee0-9602-d32a183b21e2"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "month"
+                "name": "Month"
             },
-            "name": "MyField110",
-            "designerId": "e5ce8cc8-f7bd-42b8-b7ce-5a17a69a3f1e"
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField109",
+            "designerId": "ee893a7e-d7da-4e1d-b5a9-4a4d6ccbb4e3"
         }
     ]
 }

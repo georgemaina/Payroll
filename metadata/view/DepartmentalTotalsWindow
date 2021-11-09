@@ -15,7 +15,20 @@
         "title": null,
         "width": 394
     },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "9801b331-dd5b-4e7f-bec1-c111e1bbfe27",
+    "viewControllerInstanceId": "8ade20d8-ad9f-4004-a83e-f63dc0b802b9",
+    "viewModelInstanceId": "888d5a64-152a-47aa-a6bf-271cba333229",
     "cn": [
         {
             "type": "Ext.form.field.ComboBox",
@@ -25,17 +38,31 @@
             },
             "codeClass": null,
             "userConfig": {
-                "displayField": "month",
+                "displayField": "Month",
                 "fieldLabel": "Payroll Month",
                 "itemId": "tpayMonth",
                 "labelAlign": "right",
-                "layout|x": 0,
-                "layout|y": 20,
+                "layout|x": -1,
+                "layout|y": 15,
                 "queryMode": "local",
                 "store": "PayMonthStore",
                 "typeAhead": true,
                 "valueField": "ID",
                 "width": 320
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyComboBox36",
             "designerId": "f76bda1c-b552-412e-a2ad-5f526b148054"
@@ -58,6 +85,18 @@
                 "valueField": "deptName",
                 "width": 320
             },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyComboBox37",
             "designerId": "adc44d40-bc6b-43c6-9f37-dae264a1f833"
         },
@@ -75,6 +114,15 @@
                 "layout|y": 100,
                 "text": "<b>Preview Report",
                 "width": 150
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton73",
             "designerId": "24345443-1749-4840-bb75-6be43d3147c0"
@@ -94,6 +142,15 @@
                 "text": "<b>Print Report",
                 "width": 150
             },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyButton74",
             "designerId": "b7094421-2be8-4b59-bd2d-f5eac06a211b"
         },
@@ -111,6 +168,15 @@
                 "layout|y": 150,
                 "text": "<b>Close",
                 "width": 150
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton75",
             "designerId": "50be6f79-36a9-4128-a992-e62714fceb7b"

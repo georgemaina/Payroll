@@ -43,7 +43,11 @@
             "EmployeesBatchList",
             "GratuityRates",
             "SaccoContributions",
-            "WelfareContributions"
+            "WelfareContributions",
+            "P9Report",
+            "PayrollListingsMainModel",
+            "Periods",
+            "MemberEmails"
         ],
         "stores": [
             "EmpRegisterStore",
@@ -58,14 +62,11 @@
             "EmpTypesStore",
             "EmpPaymentStore",
             "BankStore",
-            "BankBrancheStore",
             "CompanyInfoStore",
             "PaymentsSummaryStore",
             "ProllPaymentsStore",
             "PayMonthStore",
             "NhifReturnsStore",
-            "NssfReturnsStore",
-            "PayeReturnsStore",
             "PayrollPostingStore",
             "SlipEmpInfoStore",
             "TrialBalanceStore",
@@ -81,7 +82,14 @@
             "EmployeesBatchListStore",
             "GratuityRatesStore",
             "SaccoContributionStore",
-            "WelfareStore"
+            "WelfareStore",
+            "P9ReportStore",
+            "PeriodsStore",
+            "PayrollListingsMainStore",
+            "NssfReturnsStore",
+            "PayeReturnsStore",
+            "BankBranchStore",
+            "MemberEmailStore"
         ],
         "views": [
             "EmployeeRegister",
@@ -118,8 +126,19 @@
             "PayrollBatchUpdate",
             "WelfareSavings",
             "SaccoReport",
-            "SaccoWelfare"
+            "SaccoWelfare",
+            "LoginMain",
+            "BankLoansWin",
+            "ReturnsReports",
+            "MembersEmails"
         ]
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "views": "typedarray"
     },
     "designerId": "9349d08d-3d64-4b69-887a-45a115958149",
     "cn": [
@@ -181,6 +200,9 @@
                     "    },",
                     "    '#mnuBankPayments':{",
                     "        click:this.openBankPaymentsWin",
+                    "    },",
+                    "    '#mnuBankLoans':{",
+                    "        click:this.openBankLoans",
                     "    },",
                     "    '#mnuBatchUpdate':{",
                     "        click:this.openBatchUpdate",
@@ -246,7 +268,7 @@
                     "        click:this.clearImports",
                     "    },",
                     "    '#payMonth':{",
-                    "        select:this.getProcessedPaments",
+                    "        select:this.getProcessedPayments",
                     "    },",
                     "    '#postMonth':{",
                     "        select:this.getPostPayments",
@@ -337,11 +359,35 @@
                     "    },",
                     "    '#mnuCooperativeContributions':{",
                     "        click:this.openCooperativeContributions",
+                    "    },",
+                    "    '#cmdSearchEmployee':{",
+                    "        click:this.searchEmployee",
+                    "    },",
+                    "    '#cmdLogin':{",
+                    "        click:this.loginHandle",
+                    "    },",
+                    "    '#cmdPrintBankLoans':{",
+                    "        click:this.printBankLoans",
+                    "    },",
+                    "    '#cmdOpenImportWin':{",
+                    "        click:this.openImportWin",
+                    "    },",
+                    "    '#cmdEmailPayslip':{",
+                    "        click:this.openEmailsWindow",
+                    "    },",
+                    "    '#cmdSendEmails':{",
+                    "        click:this.generatePayslips",
                     "    }",
+                    "",
                     "});",
                     "",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "init",
             "designerId": "c5b32ec3-c011-4872-b267-b8772f23bb53"
@@ -358,6 +404,11 @@
                 "selector": "employeeregister",
                 "xtype": "employeeregister"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "employeeregister",
             "designerId": "b6877295-29c8-49c0-ba03-62f802e47cd0"
         },
@@ -372,6 +423,11 @@
                 "ref": "viewport",
                 "selector": "payrollmain",
                 "xtype": "payrollmain"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "viewport",
             "designerId": "4810e59b-ac15-46bd-a732-7d377c18cbd9"
@@ -389,21 +445,26 @@
                 ],
                 "fn": "loadRegisterForm",
                 "implHandler": [
-                    "//alert(\"Test Register\");\r",
-                    "var registerForm=Ext.create('PayrollApp.view.RegisterForm', {});\r",
-                    "var registerWindow=Ext.create('PayrollApp.view.RegisterWindow', {});\r",
-                    "\r",
-                    "//this.getForm().loadRecord(record);\r",
-                    "\r",
-                    "\r",
-                    "//Ext.getCmp('formStatus').setValue('update');\r",
-                    "registerForm.query('textfield[name=\"formStatus\"]')[0].setValue('update');\r",
-                    "\r",
-                    "//dbRegisterForm.show();\r",
-                    "registerWindow.add(registerForm);\r",
-                    "registerWindow.show();\r",
+                    "//alert(\"Test Register\");",
+                    "var registerForm=Ext.create('PayrollApp.view.RegisterForm', {});",
+                    "var registerWindow=Ext.create('PayrollApp.view.RegisterWindow', {});",
+                    "",
+                    "//this.getForm().loadRecord(record);",
+                    "",
+                    "",
+                    "registerForm.down('#formStatus').setValue('update');",
+                    "//registerForm.query('textfield[name=\"formStatus\"]')[0].setValue('update');",
+                    "",
+                    "//dbRegisterForm.show();",
+                    "registerWindow.add(registerForm);",
+                    "registerWindow.show();",
                     "registerForm.getForm().loadRecord(record);"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadRegisterForm",
             "designerId": "757ee8b9-e096-4f49-b45e-4aacaad269ef"
@@ -424,6 +485,11 @@
                     "var win = button.up('registerwindow');\r",
                     "win.destroy();"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "CloseRegister",
             "designerId": "4d912ec2-919d-46c4-92c2-f8282918ee49"
@@ -451,6 +517,11 @@
                     "registerWindow.show();\r",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openRegisterForm",
             "designerId": "3d7153d2-8ff0-4e50-a644-7f6342db3ee4"
@@ -499,6 +570,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "saveRegister",
             "designerId": "f5d9ba88-57fd-401b-91af-a0f763f260a3"
         },
@@ -531,6 +607,10 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openCompanySettings",
             "designerId": "f2374d25-f40e-4a72-b3cb-bc939ebfb68c"
         },
@@ -545,6 +625,11 @@
                 "ref": "companysettings",
                 "selector": "companysettings",
                 "xtype": "companysettings"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "companysettings",
             "designerId": "116d3f46-beab-4627-bb86-9b1c93f7d5a1"
@@ -570,6 +655,10 @@
                     "departmentsWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openDepartments",
             "designerId": "e4078f67-dc2c-4ff4-9a17-3e7a939186c5"
         },
@@ -585,6 +674,11 @@
                 "selector": "departmentsform",
                 "xtype": "departmentsform"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "departmentsform",
             "designerId": "822ff144-08c1-4043-891f-123be7ffc232"
         },
@@ -599,6 +693,11 @@
                 "ref": "paytypesform",
                 "selector": "paytypesform",
                 "xtype": "paytypesform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "paytypesform",
             "designerId": "e16f4b41-4c21-4aaf-ad9f-ac08d0326b17"
@@ -624,6 +723,10 @@
                     "paytypesWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openPayTypes",
             "designerId": "0849a43a-e5f0-4a94-9893-c096554f86e3"
         },
@@ -638,6 +741,11 @@
                 "ref": "payratesform",
                 "selector": "payratesform",
                 "xtype": "payratesform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "payratesform",
             "designerId": "bb02fd3b-f9f3-413b-af6d-245b5a824b40"
@@ -663,6 +771,10 @@
                     "ratesWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openPayRates",
             "designerId": "0e5c8b3f-ae12-4550-9aa0-a3e6b822f56e"
         },
@@ -677,6 +789,11 @@
                 "ref": "banks",
                 "selector": "banks",
                 "xtype": "banks"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "banks",
             "designerId": "8fd99224-7995-459c-a06e-9472174948c7"
@@ -699,6 +816,10 @@
                     "banksWindow.add(banksform);\r",
                     "banksWindow.show();"
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openBanks",
             "designerId": "9e7fabb7-81dc-4401-aedc-95c05cd76ee0"
@@ -723,6 +844,10 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openJobTitles",
             "designerId": "619078a0-d4cf-4544-89e4-564c329e4580"
         },
@@ -737,6 +862,11 @@
                 "ref": "jobtitles",
                 "selector": "jobtitles",
                 "xtype": "jobtitles"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "jobtitles",
             "designerId": "fdcd3d58-fffe-443f-82d5-1c92b9b30e35"
@@ -761,23 +891,12 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openJobGroups",
             "designerId": "fc362d2b-9f29-4423-adaf-2aa01c5f4f75"
-        },
-        {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "jobgroups",
-                "selector": "jobgroups",
-                "xtype": "jobgroups"
-            },
-            "name": "jobgroups",
-            "designerId": "a8ef7886-95af-4118-bf52-b48b3ca5d0f3"
         },
         {
             "type": "basicfunction",
@@ -796,6 +915,11 @@
                     "//win.removeAll();\r",
                     "win.close();"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "closeWindow",
             "designerId": "277c6243-9006-458a-a5e0-321244c1bd69"
@@ -817,6 +941,10 @@
                     "\r",
                     "center_container.add(employeepayments);"
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openEmployeePayments",
             "designerId": "636df8ca-d64d-4ea1-aa44-4566b9686ceb"
@@ -854,6 +982,11 @@
                     "});"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "loadEmployeePayments",
             "designerId": "7c702120-6ff1-43d6-a5e0-65a6276cd2f6"
         },
@@ -869,6 +1002,11 @@
                 "selector": "emppayments",
                 "xtype": "emppayments"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "emppayments",
             "designerId": "11b6d03a-7f7a-4f26-a8b2-cff8187f975e"
         },
@@ -883,6 +1021,11 @@
                 "ref": "newpaymentsform",
                 "selector": "newpaymentsform",
                 "xtype": "newpaymentsform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "newpaymentsform",
             "designerId": "374feebf-9b62-46aa-82cc-55bd8e29ad81"
@@ -900,22 +1043,27 @@
                 ],
                 "fn": "openNewPaymentsForm",
                 "implHandler": [
-                    "var pidField=button.up('form').getForm().findField('PID');\r",
-                    "var pid=pidField.getValue();\r",
-                    "\r",
-                    "newemppayments= Ext.create('PayrollApp.view.NewPaymentsForm', {});\r",
-                    "\r",
-                    "var paymentsWindow=Ext.create('Ext.window.Window', {\r",
-                    "    title: 'Add a Payment or Deduction',\r",
-                    "    resizable:false\r",
-                    "});\r",
-                    "\r",
-                    "this.getNewpaymentsform().down(\"#formStatus\").setValue('insert');\r",
-                    "this.getNewpaymentsform().down(\"#pid\").setValue(pid);\r",
-                    "\r",
-                    "paymentsWindow.add(newemppayments);\r",
+                    "var pidField=button.up('form').getForm().findField('PID');",
+                    "var pid=pidField.getValue();",
+                    "",
+                    "newemppayments= Ext.create('PayrollApp.view.NewPaymentsForm', {});",
+                    "",
+                    "var paymentsWindow=Ext.create('Ext.window.Window', {",
+                    "    title: 'Add a Payment or Deduction',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "this.getNewpaymentsform().down(\"#formStatus\").setValue('insert');",
+                    "this.getNewpaymentsform().down(\"#pid\").setValue(pid);",
+                    "",
+                    "paymentsWindow.add(newemppayments);",
                     "paymentsWindow.show();"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openNewPaymentsForm",
             "designerId": "b23dc1f8-c2bb-4c6c-b773-0e1dd1bbf7b4"
@@ -947,6 +1095,10 @@
                     "});"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "loadPaymentTypes",
             "designerId": "da54914c-d069-4fc5-bab3-3e6f68faa0f7"
         },
@@ -963,45 +1115,50 @@
                 ],
                 "fn": "saveEmpPayment",
                 "implHandler": [
-                    "var form = button.up('form').getForm(); // get the basic form\r",
-                    "var pidField=button.up('form').getForm().findField('pid');\r",
-                    "var pid=pidField.getValue();\r",
-                    "\r",
-                    "if (form.isValid()) { // make sure the form contains valid data before submitting\r",
-                    "    form.submit({\r",
-                    "        success: function(form, action) {\r",
-                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
-                    "\r",
-                    "            var emppaymentstore=Ext.data.StoreManager.lookup('EmpPaymentStore');\r",
-                    "            emppaymentstore.load({\r",
-                    "                params: {\r",
-                    "                    pid: pid\r",
-                    "                },\r",
-                    "                callback: function(records, operation, success) {\r",
-                    "                     var data1=this.getStore('EmpPaymentStore').getAt(0);\r",
-                    "                     myform.loadRecord(data1);\r",
-                    "\r",
-                    "                },\r",
-                    "                scope: this\r",
-                    "\r",
-                    "            });\r",
-                    "            var win = button.up('window');\r",
-                    "            win.close();\r",
-                    "\r",
-                    "        },\r",
-                    "        failure: function(form, action) {\r",
-                    "            if(action.result.errNo==1){\r",
-                    "                Ext.Msg.alert('Failed', 'Payment already exists in Employees record ,'+action.result.payName+' already exists');\r",
-                    "            }else{\r",
-                    "                Ext.Msg.alert('Failed', 'Could no add payment, please check your entries. Error='+action.result.payName);\r",
-                    "            }\r",
-                    "\r",
-                    "        }\r",
-                    "    });\r",
-                    "} else { // display error alert if the data is invalid\r",
-                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');\r",
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "var pidField=button.up('form').getForm().findField('pid');",
+                    "var pid=pidField.getValue();",
+                    "",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');",
+                    "",
+                    "            var emppaymentstore=Ext.data.StoreManager.lookup('EmpPaymentStore');",
+                    "            emppaymentstore.load({",
+                    "                params: {",
+                    "                    pid: pid",
+                    "                },",
+                    "                callback: function(records, operation, success) {",
+                    "                     //var data1=this.getStore('EmpPaymentStore').getAt(0);",
+                    "                     //myform.loadRecord(data1);",
+                    "",
+                    "                },",
+                    "                scope: this",
+                    "",
+                    "            });",
+                    "            //var win = button.up('window');",
+                    "            //win.hide();",
+                    "",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            if(action.result.errNo==1){",
+                    "                Ext.Msg.alert('Failed', 'Payment already exists in Employees record ,'+action.result.payName+' already exists');",
+                    "            }else{",
+                    "                Ext.Msg.alert('Failed', 'Could no add payment, please check your entries. Error='+action.result.payName);",
+                    "            }",
+                    "",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
                     "}"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "saveEmpPayment",
             "designerId": "78c1e54a-c4cf-4381-83da-0e6933682a8b"
@@ -1033,6 +1190,11 @@
                     "}"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "loadPaytypeform",
             "designerId": "0ecec77b-8651-4711-a21e-051e006b8c57"
         },
@@ -1060,6 +1222,11 @@
                     "    this.getDepartmentsform().getForm().findField('formStatus').setValue('update');\r",
                     "}"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadDeptsform",
             "designerId": "448c30d7-40b8-4c11-a8c9-7fcc319a2083"
@@ -1090,8 +1257,33 @@
                     "}"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "loadRatesform",
             "designerId": "37233aac-0b0a-49ca-aff5-e0b8f3dac9d2"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "jobgroups",
+                "selector": "jobgroups",
+                "xtype": "jobgroups"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "jobgroups",
+            "designerId": "a8ef7886-95af-4118-bf52-b48b3ca5d0f3"
         },
         {
             "type": "basicfunction",
@@ -1118,6 +1310,11 @@
                     "\r",
                     "}"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadBanksform",
             "designerId": "ce229534-ece8-4713-b24d-b8030df7ef64"
@@ -1146,6 +1343,11 @@
                     "     this.getJobtitles().getForm().findField('formStatus').setValue('update');\r",
                     "}"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadTitlesForm",
             "designerId": "3702441f-d746-4a61-9080-b9f8f95fa4d3"
@@ -1176,6 +1378,11 @@
                     "}"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "loadJobGroupsForm",
             "designerId": "70958397-282d-42f8-b72e-28c272948867"
         },
@@ -1190,6 +1397,11 @@
                 "ref": "processpayroll",
                 "selector": "processpayroll",
                 "xtype": "processpayroll"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "processpayroll",
             "designerId": "bc80bcf9-7d0a-4399-8a5f-f7ed739087a6"
@@ -1215,6 +1427,10 @@
                     "//paySummary.load({});"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openProcessPayroll",
             "designerId": "53d80646-a2bf-465a-857d-b8ca498dfd13"
         },
@@ -1234,6 +1450,7 @@
                     "var grid=button.up('grid');",
                     "",
                     "payMonth=this.getProcesspayroll().down(\"#payMonth\").getValue();",
+                    "period=sessionStorage.getItem(\"Period\");",
                     "",
                     "if(payMonth===null){",
                     "    Ext.Msg.alert('Missing Payment','Please Select the Payroll Month');",
@@ -1250,12 +1467,423 @@
                     "                Ext.Ajax.request({",
                     "                    url: 'data/getDataFunctions.php?task=importPayments',",
                     "                    params: {",
-                    "                        payMonth:payMonth",
+                    "                        payMonth:payMonth,",
+                    "                        period:period",
                     "                    },",
                     "                    waitMsg: 'Importing Posted Payments...',",
                     "                    success: function(response){",
                     "                        var text = response.responseText;",
                     "                        Ext.Msg.alert('Data Import Status','Payment Data imported Successfully');",
+                    "                        var paySummary=Ext.data.StoreManager.lookup('PaymentsSummaryStore');",
+                    "                        paySummary.load({",
+                    "                            params:{",
+                    "                                payMonth:payMonth,",
+                    "                                period:period",
+                    "                            },",
+                    "                            callback: function(records, operation, success) {",
+                    "",
+                    "                            },",
+                    "                            scope: this",
+                    "                        });",
+                    "",
+                    "                    },",
+                    "                    failure:function(response){",
+                    "                        var resp = JSON.parseJSON(response);",
+                    "                        Ext.Msg.alert(resp.error);",
+                    "                    }",
+                    "                });",
+                    "",
+                    "            }",
+                    "        }",
+                    "    });",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "importPayments",
+            "designerId": "d7a99c5a-a251-47f7-9728-2660822ec710"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel, record, item, index, e, eOpts"
+                ],
+                "fn": "loadPaymentDetails",
+                "implHandler": [
+                    "payMonth=this.getProcesspayroll().down(\"#payMonth\").getValue();",
+                    "period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "",
+                    "var prollpaymentsstore=Ext.data.StoreManager.lookup('ProllPaymentsStore');",
+                    "prollpaymentsstore.load({",
+                    "    params: {",
+                    "        pid: record.get('PID'),",
+                    "        payMonth:payMonth,",
+                    "        period:period",
+                    "",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "var emplist=Ext.data.StoreManager.lookup('EmployeeListStore');",
+                    "emplist.load({",
+                    "    params: {",
+                    "        pid: record.get('PID')",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        var data1=this.getStore('EmployeeListStore').getAt(0);",
+                    "        //myform.loadRecord(data1);",
+                    "        var empPayform=gridpanel.up('form');",
+                    "        empPayform.getForm().loadRecord(data1);",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadPaymentDetails",
+            "designerId": "576c57cd-ee1c-482e-b358-b83f6f5eb1d4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "updateTaxes",
+                "implHandler": [
+                    "var grid=button.up('grid');",
+                    "",
+                    "payMonth=this.getProcesspayroll().down(\"#payMonth\").getValue();",
+                    "period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "if(payMonth===null){",
+                    "    Ext.Msg.alert('Missing Payment','Please Select the Payroll Month');",
+                    "}else{",
+                    "",
+                    "    Ext.Msg.show({",
+                    "        title:'Process Payments?',",
+                    "        msg: 'Are you sure you want to Process Payroll',",
+                    "        buttons: Ext.Msg.YESNOCANCEL,",
+                    "        icon: Ext.Msg.QUESTION,",
+                    "        fn: function(rec) {",
+                    "            if (rec === \"yes\") {",
+                    "                Ext.Ajax.request({",
+                    "                    url: 'data/getDataFunctions.php?task=updateTaxes',",
+                    "                    params: {",
+                    "                        payMonth:payMonth,",
+                    "                        period:period",
+                    "                    },",
+                    "                    waitMsg: 'Processing Payroll ...',",
+                    "                    success: function(response){",
+                    "                        var text = response.responseText;",
+                    "                        Ext.Msg.alert('Process Status','Payroll Successfully Processed');",
+                    "                         var paySummary=Ext.data.StoreManager.lookup('PaymentsSummaryStore');",
+                    "                        paySummary.load({",
+                    "                            params:{",
+                    "                                payMonth:payMonth,",
+                    "                                period:period",
+                    "                            },",
+                    "                            callback: function(records, operation, success) {",
+                    "",
+                    "                            },",
+                    "                            scope: this",
+                    "                        });",
+                    "                    },",
+                    "                    failure:function(response){",
+                    "                        var resp = JSON.parseJSON(response);",
+                    "                        Ext.Msg.alert(resp.error);",
+                    "                    }",
+                    "                });",
+                    "",
+                    "            }",
+                    "        }",
+                    "    });",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "updateTaxes",
+            "designerId": "c5f584dc-7fdc-46c2-aa7f-35164467fd16"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "clearImports",
+                "implHandler": [
+                    "var grid=button.up('grid');",
+                    "",
+                    "payMonth=this.getProcesspayroll().down(\"#payMonth\").getValue();",
+                    "prollStatus=this.getProcesspayroll().down(\"#prollStatus\").getValue();",
+                    " period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "if(payMonth===null){",
+                    "    Ext.Msg.alert('Payment Month','Please select the Payment Month');",
+                    "}else if(prollStatus===\"POSTED\"){",
+                    "    Ext.Msg.alert('Payroll Closed','The Payroll you are trying to clear is already Closed,\\nPlease Select an Open Month/Payroll');",
+                    "}else{",
+                    "",
+                    "    Ext.Msg.show({",
+                    "        title:'Clear Imported Payments?',",
+                    "        msg: 'Are you sure you want to Clear Imported Data',",
+                    "        buttons: Ext.Msg.YESNOCANCEL,",
+                    "        icon: Ext.Msg.QUESTION,",
+                    "        fn: function(rec) {",
+                    "            if (rec === \"yes\") {",
+                    "                Ext.Ajax.request({",
+                    "                    url: 'data/getDataFunctions.php?task=clearImports',",
+                    "                    params: {",
+                    "                        payMonth:payMonth,",
+                    "                        period:period",
+                    "                    },",
+                    "                    success: function(response,opt){",
+                    "                        var text = response.responseText;",
+                    "                        Ext.Msg.alert('Clear Data Status','Successfully Cleared Imports');",
+                    "                        var paySummary=Ext.data.StoreManager.lookup('PaymentsSummaryStore');",
+                    "                        paySummary.load({});",
+                    "",
+                    "                    },",
+                    "                    failure:function(response,opt){",
+                    "                        var resp = JSON.parseJSON(response);",
+                    "                        Ext.Msg.alert(resp.errorNo);",
+                    "                    }",
+                    "                });",
+                    "",
+                    "            }",
+                    "        }",
+                    "    });",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "clearImports",
+            "designerId": "0d9ba78c-571a-419c-a279-eb9bfa516929"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openPostPayroll",
+                "implHandler": [
+                    "postPayroll = Ext.create('PayrollApp.view.PostPayroll', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]');\r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "center_container.add(postPayroll);\r",
+                    "\r",
+                    "//var paySummary=Ext.data.StoreManager.lookup('PaymentsSummaryStore');\r",
+                    "//paySummary.load({});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openPostPayroll",
+            "designerId": "1fe43274-9b84-4f51-8a65-f4a3a5549ae8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "postpayroll",
+                "selector": "postpayroll",
+                "xtype": "postpayroll"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "postpayroll",
+            "designerId": "4fa1788f-85cd-49f7-9faf-2506b9d5e05e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getProcessedPayments",
+                "implHandler": [
+                    "var payMonth=this.getProcesspayroll().down(\"#payMonth\").getValue();",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "var pStatus=0;",
+                    "",
+                    "var paymentsSummary=Ext.data.StoreManager.lookup(\"PaymentsSummaryStore\");",
+                    "var prollStatusStore=Ext.data.StoreManager.lookup(\"PayrollStatusStore\");",
+                    "",
+                    "prollStatusStore.load({",
+                    "    params:{",
+                    "        payMonth:payMonth,",
+                    "        period:period",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "         pStatus = records[0].data.prollStatus;",
+                    "        // pStatus=prollStatusStore.first().get('prollStatus');",
+                    "         // Ext.Msg.alert('Clear Data Status',pStatus);",
+                    "         if(pStatus===\"POSTED\"){",
+                    "             this.getProcesspayroll().down(\"#prollStatus\").setValue(\"Payroll Status: \"+pStatus);",
+                    "             this.getProcesspayroll().down(\"#PayrollStatus\").setValue(\"Payroll for the month of \"+payMonth+\" is Already Closed\");",
+                    "         }else{",
+                    "             this.getProcesspayroll().down(\"#prollStatus\").setValue(\"Payroll Status: \"+pStatus);",
+                    "             this.getProcesspayroll().down(\"#PayrollStatus\").setValue(\"Payroll Status: \"+pStatus);",
+                    "",
+                    "         }",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "paymentsSummary.load({",
+                    "    params:{",
+                    "        payMonth:payMonth,",
+                    "        period:period",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getProcessedPayments",
+            "designerId": "beecac99-6ccf-4f6e-9b4d-109a96ae10d7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getPostPayments",
+                "implHandler": [
+                    "var payMonth=this.getPostpayroll().down(\"#postMonth\").getValue();",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "var paymentsSummary=Ext.data.StoreManager.lookup(\"PaymentsSummaryStore\");",
+                    "",
+                    "paymentsSummary.load({",
+                    "    params:{",
+                    "        payMonth:payMonth,",
+                    "         period:period",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        //var data1=this.getStore('DebtorDetails').getAt(0);",
+                    "        // myform.loadRecord(data1);",
+                    "        pstatus=records[0].get('pstatus');",
+                    "",
+                    "        if(pstatus===\"POSTED\"){",
+                    "            this.getPostpayroll().down('#payrollStatus').setValue('Payroll Already POSTED');",
+                    "            this.getPostpayroll().down('#cmdPostPayroll').hide();",
+                    "        }else{",
+                    "            this.getPostpayroll().down('#payrollStatus').setValue('');",
+                    "            this.getPostpayroll().down('#cmdPostPayroll').show();",
+                    "        }",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getPostPayments",
+            "designerId": "9125f22d-7d25-4310-8a4a-0005bf2d910f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "postPayroll",
+                "implHandler": [
+                    "payMonth=this.getPostpayroll().down(\"#postMonth\").getValue();",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "if(payMonth===null){",
+                    "    Ext.Msg.alert('test','Paymonth cannot be null');",
+                    "}else{",
+                    "    Ext.Msg.show({",
+                    "        title:'POST PAYROLL?',",
+                    "        msg: 'Are you sure you want to POST PAYROLL, this process is irriversible',",
+                    "        buttons: Ext.Msg.YESNOCANCEL,",
+                    "        icon: Ext.Msg.QUESTION,",
+                    "        fn: function(rec) {",
+                    "            if (rec === \"yes\") {",
+                    "                Ext.Ajax.request({",
+                    "                    url: 'data/getDataFunctions.php?task=postPayroll',",
+                    "                    params: {",
+                    "                        payMonth:payMonth,",
+                    "                        period:period",
+                    "                    },",
+                    "                    success: function(response){",
+                    "                        var text = response.responseText;",
+                    "                        Ext.Msg.alert('Tax Update Status','Successfully Posted Payroll');",
                     "                        var paySummary=Ext.data.StoreManager.lookup('PaymentsSummaryStore');",
                     "                        paySummary.load({",
                     "                            params:{",
@@ -1281,363 +1909,10 @@
                     ""
                 ]
             },
-            "name": "importPayments",
-            "designerId": "d7a99c5a-a251-47f7-9728-2660822ec710"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|params": [
-                    "gridpanel, record, item, index, e, eOpts"
-                ],
-                "fn": "loadPaymentDetails",
-                "implHandler": [
-                    "payMonth=this.getProcesspayroll().down(\"#payMonth\").getValue();\r",
-                    "\r",
-                    "var prollpaymentsstore=Ext.data.StoreManager.lookup('ProllPaymentsStore');\r",
-                    "prollpaymentsstore.load({\r",
-                    "    params: {\r",
-                    "        pid: record.get('PID'),\r",
-                    "        payMonth:payMonth\r",
-                    "\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
-                    "\r",
-                    "var emplist=Ext.data.StoreManager.lookup('EmployeeListStore');\r",
-                    "emplist.load({\r",
-                    "    params: {\r",
-                    "        pid: record.get('PID')\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "        var data1=this.getStore('EmployeeListStore').getAt(0);\r",
-                    "        //myform.loadRecord(data1);\r",
-                    "        var empPayform=gridpanel.up('form');\r",
-                    "        empPayform.getForm().loadRecord(data1);\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});"
-                ]
-            },
-            "name": "loadPaymentDetails",
-            "designerId": "576c57cd-ee1c-482e-b358-b83f6f5eb1d4"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|params": [
-                    "button"
-                ],
-                "fn": "updateTaxes",
-                "implHandler": [
-                    "var grid=button.up('grid');\r",
-                    "\r",
-                    "payMonth=this.getProcesspayroll().down(\"#payMonth\").getValue();\r",
-                    "\r",
-                    "if(payMonth===null){\r",
-                    "    Ext.Msg.alert('Missing Payment','Please Select the Payroll Month');\r",
-                    "}else{\r",
-                    "\r",
-                    "    Ext.Msg.show({\r",
-                    "        title:'Process Payments?',\r",
-                    "        msg: 'Are you sure you want to Process Payroll',\r",
-                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
-                    "        icon: Ext.Msg.QUESTION,\r",
-                    "        fn: function(rec) {\r",
-                    "            if (rec === \"yes\") {\r",
-                    "                Ext.Ajax.request({\r",
-                    "                    url: 'data/getDataFunctions.php?task=updateTaxes',\r",
-                    "                    params: {\r",
-                    "                        payMonth:payMonth\r",
-                    "                    },\r",
-                    "                    waitMsg: 'Processing Payroll ...',\r",
-                    "                    success: function(response){\r",
-                    "                        var text = response.responseText;\r",
-                    "                        Ext.Msg.alert('Process Status','Payroll Successfully Processed');\r",
-                    "                         var paySummary=Ext.data.StoreManager.lookup('PaymentsSummaryStore');\r",
-                    "                        paySummary.load({\r",
-                    "                            params:{\r",
-                    "                                payMonth:payMonth\r",
-                    "                            },\r",
-                    "                            callback: function(records, operation, success) {\r",
-                    "                        \r",
-                    "                            },\r",
-                    "                            scope: this\r",
-                    "                        });\r",
-                    "                    },\r",
-                    "                    failure:function(response){\r",
-                    "                        var resp = JSON.parseJSON(response);\r",
-                    "                        Ext.Msg.alert(resp.error);\r",
-                    "                    }\r",
-                    "                });\r",
-                    "\r",
-                    "            }\r",
-                    "        }\r",
-                    "    });\r",
-                    "}"
-                ]
-            },
-            "name": "updateTaxes",
-            "designerId": "c5f584dc-7fdc-46c2-aa7f-35164467fd16"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|params": [
-                    "button"
-                ],
-                "fn": "clearImports",
-                "implHandler": [
-                    "var grid=button.up('grid');\r",
-                    "\r",
-                    "payMonth=this.getProcesspayroll().down(\"#payMonth\").getValue();\r",
-                    "prollStatus=this.getProcesspayroll().down(\"#prollStatus\").getValue();\r",
-                    "\r",
-                    "if(payMonth===null){\r",
-                    "    Ext.Msg.alert('Payment Month','Please select the Payment Month');\r",
-                    "}else if(prollStatus===\"POSTED\"){\r",
-                    "    Ext.Msg.alert('Payroll Closed','The Payroll you are trying to clear is already Closed,\\nPlease Select an Open Month/Payroll');\r",
-                    "}else{\r",
-                    "\r",
-                    "    Ext.Msg.show({\r",
-                    "        title:'Clear Imported Payments?',\r",
-                    "        msg: 'Are you sure you want to Clear Imported Data',\r",
-                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
-                    "        icon: Ext.Msg.QUESTION,\r",
-                    "        fn: function(rec) {\r",
-                    "            if (rec === \"yes\") {\r",
-                    "                Ext.Ajax.request({\r",
-                    "                    url: 'data/getDataFunctions.php?task=clearImports',\r",
-                    "                    params: {\r",
-                    "                        payMonth:payMonth\r",
-                    "                    },\r",
-                    "                    success: function(response,opt){\r",
-                    "                        var text = response.responseText;\r",
-                    "                        Ext.Msg.alert('Clear Data Status','Successfully Cleared Imports');\r",
-                    "                        var paySummary=Ext.data.StoreManager.lookup('PaymentsSummaryStore');\r",
-                    "                        paySummary.load({});\r",
-                    "\r",
-                    "                    },\r",
-                    "                    failure:function(response,opt){\r",
-                    "                        var resp = JSON.parseJSON(response);\r",
-                    "                        Ext.Msg.alert(resp.errorNo);\r",
-                    "                    }\r",
-                    "                });\r",
-                    "\r",
-                    "            }\r",
-                    "        }\r",
-                    "    });\r",
-                    "}"
-                ]
-            },
-            "name": "clearImports",
-            "designerId": "0d9ba78c-571a-419c-a279-eb9bfa516929"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "openPostPayroll",
-                "implHandler": [
-                    "postPayroll = Ext.create('PayrollApp.view.PostPayroll', {});\r",
-                    "center_container = this.getViewport().down('container[region=center]');\r",
-                    "center_container.removeAll();\r",
-                    "\r",
-                    "center_container.add(postPayroll);\r",
-                    "\r",
-                    "//var paySummary=Ext.data.StoreManager.lookup('PaymentsSummaryStore');\r",
-                    "//paySummary.load({});"
-                ]
-            },
-            "name": "openPostPayroll",
-            "designerId": "1fe43274-9b84-4f51-8a65-f4a3a5549ae8"
-        },
-        {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "postpayroll",
-                "selector": "postpayroll",
-                "xtype": "postpayroll"
-            },
-            "name": "postpayroll",
-            "designerId": "4fa1788f-85cd-49f7-9faf-2506b9d5e05e"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "getProcessedPaments",
-                "implHandler": [
-                    "var payMonth=this.getProcesspayroll().down(\"#payMonth\").getValue();\r",
-                    "var pStatus=0;\r",
-                    "\r",
-                    "var paymentsSummary=Ext.data.StoreManager.lookup(\"PaymentsSummaryStore\");\r",
-                    "var prollStatusStore=Ext.data.StoreManager.lookup(\"PayrollStatusStore\");\r",
-                    "\r",
-                    "prollStatusStore.load({\r",
-                    "    params:{\r",
-                    "        payMonth:payMonth\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "         pStatus = records[0].data.prollStatus;\r",
-                    "         if(pStatus===\"POSTED\"){\r",
-                    "             this.getProcesspayroll().down(\"#prollStatus\").setValue(pStatus);\r",
-                    "             this.getProcesspayroll().down(\"#PayrollStatus\").setValue(\"Payroll for the month of \"+payMonth+\" is Already Closed\");\r",
-                    "         }else{\r",
-                    "             this.getProcesspayroll().down(\"#prollStatus\").reset();\r",
-                    "             this.getProcesspayroll().down(\"#PayrollStatus\").reset();\r",
-                    "             \r",
-                    "         }\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
-                    "\r",
-                    "paymentsSummary.load({\r",
-                    "    params:{\r",
-                    "        payMonth:payMonth\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "        \r",
-                    "        \r",
-                    "        \r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
-                    ""
-                ]
-            },
-            "name": "getProcessedPaments",
-            "designerId": "beecac99-6ccf-4f6e-9b4d-109a96ae10d7"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "getPostPayments",
-                "implHandler": [
-                    "var payMonth=this.getPostpayroll().down(\"#postMonth\").getValue();\r",
-                    "\r",
-                    "var paymentsSummary=Ext.data.StoreManager.lookup(\"PaymentsSummaryStore\");\r",
-                    "\r",
-                    "paymentsSummary.load({\r",
-                    "    params:{\r",
-                    "        payMonth:payMonth\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "        //var data1=this.getStore('DebtorDetails').getAt(0);\r",
-                    "        // myform.loadRecord(data1);\r",
-                    "        pstatus=records[0].get('pstatus');\r",
-                    "\r",
-                    "        if(pstatus===\"POSTED\"){\r",
-                    "            this.getPostpayroll().down('#payrollStatus').setValue('Payroll Already POSTED');\r",
-                    "            this.getPostpayroll().down('#cmdPostPayroll').hide();\r",
-                    "        }else{\r",
-                    "            this.getPostpayroll().down('#payrollStatus').setValue('');\r",
-                    "            this.getPostpayroll().down('#cmdPostPayroll').show();\r",
-                    "        }\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});"
-                ]
-            },
-            "name": "getPostPayments",
-            "designerId": "9125f22d-7d25-4310-8a4a-0005bf2d910f"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|params": [
-                    "button"
-                ],
-                "fn": "postPayroll",
-                "implHandler": [
-                    "payMonth=this.getPostpayroll().down(\"#postMonth\").getValue();\r",
-                    "\r",
-                    "if(payMonth===null){\r",
-                    "    Ext.Msg.alert('test','Paymonth cannot be null');\r",
-                    "}else{\r",
-                    "    Ext.Msg.show({\r",
-                    "        title:'POST PAYROLL?',\r",
-                    "        msg: 'Are you sure you want to POST PAYROLL, this process is irriversible',\r",
-                    "        buttons: Ext.Msg.YESNOCANCEL,\r",
-                    "        icon: Ext.Msg.QUESTION,\r",
-                    "        fn: function(rec) {\r",
-                    "            if (rec === \"yes\") {\r",
-                    "                Ext.Ajax.request({\r",
-                    "                    url: 'data/getDataFunctions.php?task=postPayroll',\r",
-                    "                    params: {\r",
-                    "                        payMonth:payMonth\r",
-                    "                    },\r",
-                    "                    success: function(response){\r",
-                    "                        var text = response.responseText;\r",
-                    "                        Ext.Msg.alert('Tax Update Status','Successfully Posted Payroll');\r",
-                    "                         var paySummary=Ext.data.StoreManager.lookup('PaymentsSummaryStore');\r",
-                    "                        paySummary.load({\r",
-                    "                            params:{\r",
-                    "                                payMonth:payMonth\r",
-                    "                            },\r",
-                    "                            callback: function(records, operation, success) {\r",
-                    "\r",
-                    "                            },\r",
-                    "                            scope: this\r",
-                    "                        });\r",
-                    "\r",
-                    "                    },\r",
-                    "                    failure:function(response){\r",
-                    "                        var resp = JSON.parseJSON(response);\r",
-                    "                        Ext.Msg.alert(resp.error);\r",
-                    "                    }\r",
-                    "                });\r",
-                    "\r",
-                    "            }\r",
-                    "        }\r",
-                    "    });\r",
-                    "}\r",
-                    ""
-                ]
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "postPayroll",
             "designerId": "8a0b79ca-7cc7-4c40-b438-eeb2595ab4aa"
@@ -1655,23 +1930,30 @@
                 ],
                 "fn": "loadPostPaymentDetails",
                 "implHandler": [
-                    "payMonth=this.getPostpayroll().down(\"#postMonth\").getValue();\r",
-                    "\r",
-                    "var prollpaymentsstore=Ext.data.StoreManager.lookup('ProllPaymentsStore');\r",
-                    "prollpaymentsstore.load({\r",
-                    "    params: {\r",
-                    "        pid: record.get('PID'),\r",
-                    "        payMonth:payMonth\r",
-                    "\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
+                    "payMonth=this.getPostpayroll().down(\"#postMonth\").getValue();",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "var prollpaymentsstore=Ext.data.StoreManager.lookup('ProllPaymentsStore');",
+                    "prollpaymentsstore.load({",
+                    "    params: {",
+                    "        pid: record.get('PID'),",
+                    "        payMonth:payMonth,",
+                    "        perod:period",
+                    "",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadPostPaymentDetails",
             "designerId": "85c4ba07-b593-424b-9b3e-3e2cd31e9bc9"
@@ -1688,6 +1970,11 @@
                 "selector": "reportsmainview",
                 "xtype": "reportsmainview"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "reportsmainview",
             "designerId": "1d08f6e0-1797-4071-b55b-b9c912f43b5e"
         },
@@ -1702,6 +1989,11 @@
                 "ref": "payslipswin",
                 "selector": "payslipswin",
                 "xtype": "payslipswin"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "payslipswin",
             "designerId": "a8e8a004-ca79-49e8-9230-54ff3961bac6"
@@ -1727,6 +2019,10 @@
                     "slipsWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openPayslipsWin",
             "designerId": "3993d7bd-5c86-42d3-8fbd-3dfa2299580c"
         },
@@ -1743,101 +2039,107 @@
                 ],
                 "fn": "openSlipPreview",
                 "implHandler": [
-                    "//Ext.Msg.alert(this.getPayslipswin().down(\"#payslipMonth\").getValue());\r",
-                    "\r",
-                    "reportswindow = Ext.create('PayrollApp.view.ReportsMainView', {});\r",
-                    "center_container = this.getViewport().down('container[region=center]');\r",
-                    "center_container.removeAll();\r",
-                    "//reportswindow = Ext.create('PayrollApp.view.ReportsMainView', {});\r",
-                    "\r",
-                    "\r",
-                    "var staffStore=Ext.data.StoreManager.lookup(\"SlipEmpInfoStore\");\r",
-                    "staffStore.load({\r",
-                    "    params: {\r",
-                    "        pid:this.getPayslipswin().down('#pid1').getValue(),\r",
-                    "        pid2:this.getPayslipswin().down('#pid2').getValue(),\r",
-                    "        payMonth:this.getPayslipswin().down('#payslipMonth').getValue(),\r",
-                    "        empBranch:this.getPayslipswin().down('#empBranch').getValue(),\r",
-                    "        department:this.getPayslipswin().down('#department').getValue()\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
-                    "\r",
-                    "center_container.add(reportswindow);\r",
-                    "\r",
-                    "var data1=staffStore.proxy.reader.rawData;\r",
-                    "\r",
-                    "var tpl=new Ext.XTemplate(\r",
-                    "'<Table id=prollTable>',\r",
-                    "'{[ position=1 ]}',\r",
-                    "'<tpl for=\"StaffList\">',\r",
-                    "'{[ (position===1) ? \"<tr>\" : \"\" ]}',\r",
-                    "'<td valign=top class=mainTD>',\r",
-                    "'<b>PID:{pid}</b><br>',\r",
-                    "'<b>Company:{CompanyName}</b><br>',\r",
-                    "'Name:{empNames}<br>',\r",
-                    "'Period:{period}<br>',\r",
-                    "'Branch:{empBranch}<br>',\r",
-                    "'Department:{department}<br>',\r",
-                    "'PinNo:{Pin_NO}<br><br>',\r",
-                    "'<table id=payslips><tr class=txtheading><td>',\r",
-                    "'<b>EARNINGS:</b></td><td align=right><b>AMOUNTS</b></td><td align=right><b>BAL</b></td></tr>',\r",
-                    "'<tpl for=\"Earnings\">',\r",
-                    "'<tr><td>{PayType}</td><td align=right>{Amount}</td><td align=right>{Balance}</td></tr>',\r",
-                    "'</tpl>',\r",
-                    "'<tr><td>GROSS PAY</td><td align=right><b>{GrossPay}</b></td><td align=right></td></tr>',\r",
-                    "'<tr><td colspan=3>&nbsp;</td></tr>',\r",
-                    "\r",
-                    "'<tr class=txtheading><td><b>TAX DETAILS:</b></td><td align=right></td><td align=right></td></tr>',\r",
-                    "'<tpl for=\"TaxDeductions\">',\r",
-                    "'<tr><td>{PayType}</td><td align=right>{Amount}</td><td align=right>{Balance}</td></tr>',\r",
-                    "'</tpl>',\r",
-                    "\r",
-                    "'<tpl if=\"InsuranceRelief &gt; 0\">' ,\r",
-                    "'<tr><td>Insurance Relief</td><td align=right>{InsuranceRelief}</td><td align=right></td></tr>',\r",
-                    "'</tpl>',\r",
-                    "\r",
-                    "'<tr><td>Tax Deducted</td><td align=right><b>{TaxDeducted}</b></td><td align=right></td></tr>',\r",
-                    "\r",
-                    "'<tr><td colspan=3>&nbsp;</td></tr>',\r",
-                    "\r",
-                    "'<tr class=txtheading><td><b>DEDUCTIONS:</b></td><td align=right></td><td align=right></td></tr>',\r",
-                    "\r",
-                    "'<tpl for=\"Deductions\">',\r",
-                    "'<tr><td>{PayType}</td><td align=right>{Amount}</td><td align=right>{Balance}</td></tr>',\r",
-                    "'</tpl>',\r",
-                    "'<tr><td colspan=3>&nbsp;</td></tr>',\r",
-                    "\r",
-                    "'<tr class=txtheading><td><b>INFORMATION-:</b></td><td align=right></td><td align=right></td></tr>',\r",
-                    "    '<tpl for=\"Information\">',\r",
-                    "    '<tr><td>{PayType}</td><td align=right>{Amount}</td><td align=right>{Balance}</td></tr>',\r",
-                    "    '</tpl>',\r",
-                    "'<tr><td>NSSF Company</td><td align=right>{NssfCompany}</td><td align=right>{Balance}</td></tr>',\r",
-                    "\r",
-                    "'<tr class=txtheading><td><b>SUMMARY-:</b></td><td align=right></td><td align=right></td></tr>',\r",
-                    "'<tr><td>LESS DEDUCTIONS</td><td align=right>{TotalDeduction}</td><td align=right></td></tr>',\r",
-                    "'<tr><td><b>NET PAY</b></td><td align=right><b>{NetPay}</b></td><td align=right></td></tr>',\r",
-                    "\r",
-                    "'<tr><td colspan=3>&nbsp;</td></tr>',\r",
-                    "'<tr><td colspan=3>&nbsp;</td></tr>',\r",
-                    "\r",
-                    "\r",
-                    "\r",
-                    "'</table>',\r",
-                    "'<br><br><br>',\r",
-                    "'</td>',\r",
-                    "'{[ (position===4) ? (position=1) : (position++) ]}',\r",
-                    "'</tpl>',\r",
-                    "'</table>'\r",
-                    ");\r",
-                    "\r",
-                    "tpl.overwrite(reportswindow.body,data1);\r",
+                    "//Ext.Msg.alert(this.getPayslipswin().down(\"#payslipMonth\").getValue());",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "reportswindow = Ext.create('PayrollApp.view.ReportsMainView', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll();",
+                    "//reportswindow = Ext.create('PayrollApp.view.ReportsMainView', {});",
+                    "",
+                    "",
+                    "var staffStore=Ext.data.StoreManager.lookup(\"SlipEmpInfoStore\");",
+                    "staffStore.load({",
+                    "    params: {",
+                    "        pid:this.getPayslipswin().down('#pid1').getValue(),",
+                    "        pid2:this.getPayslipswin().down('#pid2').getValue(),",
+                    "        payMonth:this.getPayslipswin().down('#payslipMonth').getValue(),",
+                    "        empBranch:this.getPayslipswin().down('#empBranch').getValue(),",
+                    "        department:this.getPayslipswin().down('#department').getValue(),",
+                    "        period:period",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "center_container.add(reportswindow);",
+                    "",
+                    "var data1=staffStore.proxy.reader.rawData;",
+                    "",
+                    "var tpl=new Ext.XTemplate(",
+                    "'<Table id=prollTable>',",
+                    "'{[ position=1 ]}',",
+                    "'<tpl for=\"StaffList\">',",
+                    "'{[ (position===1) ? \"<tr>\" : \"\" ]}',",
+                    "'<td valign=top class=mainTD>',",
+                    "'<b>PID:{pid}</b><br>',",
+                    "'<b>Company:{CompanyName}</b><br>',",
+                    "'Name:{empNames}<br>',",
+                    "'Period:{period}<br>',",
+                    "'Branch:{empBranch}<br>',",
+                    "'Department:{department}<br>',",
+                    "'PinNo:{Pin_NO}<br><br>',",
+                    "'<table id=payslips><tr class=txtheading><td>',",
+                    "'<b>EARNINGS:</b></td><td align=right><b>AMOUNTS</b></td><td align=right><b>BAL</b></td></tr>',",
+                    "'<tpl for=\"Earnings\">',",
+                    "'<tr><td>{PayType}</td><td align=right>{Amount}</td><td align=right>{Balance}</td></tr>',",
+                    "'</tpl>',",
+                    "'<tr><td>GROSS PAY</td><td align=right><b>{GrossPay}</b></td><td align=right></td></tr>',",
+                    "'<tr><td colspan=3>&nbsp;</td></tr>',",
+                    "",
+                    "'<tr class=txtheading><td><b>TAX DETAILS:</b></td><td align=right></td><td align=right></td></tr>',",
+                    "'<tpl for=\"TaxDeductions\">',",
+                    "'<tr><td>{PayType}</td><td align=right>{Amount}</td><td align=right>{Balance}</td></tr>',",
+                    "'</tpl>',",
+                    "",
+                    "'<tpl if=\"InsuranceRelief &gt; 0\">' ,",
+                    "'<tr><td>Insurance Relief</td><td align=right>{InsuranceRelief}</td><td align=right></td></tr>',",
+                    "'</tpl>',",
+                    "",
+                    "'<tr><td>Tax Deducted</td><td align=right><b>{TaxDeducted}</b></td><td align=right></td></tr>',",
+                    "",
+                    "'<tr><td colspan=3>&nbsp;</td></tr>',",
+                    "",
+                    "'<tr class=txtheading><td><b>DEDUCTIONS:</b></td><td align=right></td><td align=right></td></tr>',",
+                    "",
+                    "'<tpl for=\"Deductions\">',",
+                    "'<tr><td>{PayType}</td><td align=right>{Amount}</td><td align=right>{Balance}</td></tr>',",
+                    "'</tpl>',",
+                    "'<tr><td colspan=3>&nbsp;</td></tr>',",
+                    "",
+                    "'<tr class=txtheading><td><b>INFORMATION-:</b></td><td align=right></td><td align=right></td></tr>',",
+                    "    '<tpl for=\"Information\">',",
+                    "    '<tr><td>{PayType}</td><td align=right>{Amount}</td><td align=right>{Balance}</td></tr>',",
+                    "    '</tpl>',",
+                    "'<tr><td>NSSF Company</td><td align=right>{NssfCompany}</td><td align=right>{Balance}</td></tr>',",
+                    "",
+                    "'<tr class=txtheading><td><b>SUMMARY-:</b></td><td align=right></td><td align=right></td></tr>',",
+                    "'<tr><td>LESS DEDUCTIONS</td><td align=right>{TotalDeduction}</td><td align=right></td></tr>',",
+                    "'<tr><td><b>NET PAY</b></td><td align=right><b>{NetPay}</b></td><td align=right></td></tr>',",
+                    "",
+                    "'<tr><td colspan=3>&nbsp;</td></tr>',",
+                    "'<tr><td colspan=3>&nbsp;</td></tr>',",
+                    "",
+                    "",
+                    "",
+                    "'</table>',",
+                    "'<br><br><br>',",
+                    "'</td>',",
+                    "'{[ (position===4) ? (position=1) : (position++) ]}',",
+                    "'</tpl>',",
+                    "'</table>'",
+                    ");",
+                    "",
+                    "tpl.overwrite(reportswindow.body,data1);",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openSlipPreview",
             "designerId": "7f26e5c6-c293-4dae-a5c1-290608b6e5af"
@@ -1861,10 +2163,10 @@
                     "var slipMnth=this.getPayslipswin().down('#payslipMonth').getValue();",
                     "var pNo=this.getPayslipswin().down('#pid1').getValue();",
                     "var pNo2=this.getPayslipswin().down('#pid2').getValue();",
-                    "var slipsNo='2';//this.getPayslipswin().down('textfield[name=pages]').getValue();",
+                    "var slipsNo='3';//this.getPayslipswin().down('textfield[name=pages]').getValue();",
                     "var payDept=this.getPayslipswin().down('#department').getValue();",
                     "var branch=this.getPayslipswin().down('#empBranch').getValue();",
-                    "",
+                    "var period=sessionStorage.getItem(\"Period\");",
                     "",
                     "var strparam='';",
                     "",
@@ -1886,6 +2188,12 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|commentHeader": "comment",
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "printPayslip",
             "designerId": "21c70354-b6dd-4323-babf-11caf829b060"
         },
@@ -1899,16 +2207,21 @@
             "userConfig": {
                 "fn": "openBankPaymentsWin",
                 "implHandler": [
-                    "\r",
-                    "bankpayments= Ext.create('PayrollApp.view.BankPayments', {});\r",
-                    "var bpaymentsWin=Ext.create('Ext.window.Window', {\r",
-                    "    title: 'Bank Payments Schedule',\r",
-                    "    resizable:false\r",
-                    "});\r",
-                    "\r",
-                    "bpaymentsWin.add(bankpayments);\r",
-                    "bpaymentsWin.show();"
+                    "bankpayments= Ext.create('PayrollApp.view.BankPayments', {});",
+                    "var bpaymentsWin=Ext.create('Ext.window.Window', {",
+                    "    title: 'Bank Payments Schedule',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "bpaymentsWin.add(bankpayments);",
+                    "bpaymentsWin.show();",
+                    "",
+                    "this.getBankpayments().down('#formStatus').setValue('schedule');"
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openBankPaymentsWin",
             "designerId": "a6a7949f-8bf3-4afb-9527-cf6a44d35ee3"
@@ -1926,29 +2239,33 @@
                 ],
                 "fn": "openBanksPaymentsPDf",
                 "implHandler": [
-                    "var payMonth=this.getBankpayments().down('#payMonth').getValue();\r",
-                    "var bankcode=this.getBankpayments().down('#bankcode').getValue();\r",
-                    "var branch=this.getBankpayments().down('#branch').getValue();\r",
-                    "\r",
-                    "\r",
-                    "var strparam='';\r",
-                    "\r",
-                    "if(!payMonth){\r",
-                    "    Ext.Msg.alert('Missing Month','Please select the Payment Month ');\r",
-                    "    //strparam+='&paydept='+payDept;\r",
-                    "}else if(!bankcode){\r",
-                    "    Ext.Msg.alert('Missing Bank','Please select the Bank Branch ');\r",
-                    "    //strparam+='&paydept='+payDept;\r",
-                    "}else if(!branch){\r",
-                    "    //Ext.Msg.alert('Missing Branch','Please select the Bank Branch ');\r",
-                    "    // strparam+='&branch='+branch;\r",
-                    "    window.open('reports/prollBanklistNaz.php?payMonth='+payMonth+'&bankcode='+bankcode,\"Reports\",\r",
-                    "    \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");\r",
-                    "}else{\r",
-                    "    window.open('reports/prollBanklistpdf.php?payMonth='+payMonth+'&bankcode='+bankcode+'&branchID='+branch,\"Reports\",\r",
-                    "    \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");\r",
-                    "}"
+                    "var payMonth=this.getBankpayments().down('#payMonth').getValue();",
+                    "var bankcode=this.getBankpayments().down('#bankcode').getValue();",
+                    "//var formStatus=this.getBankpayments().down('#formStatus').getValue();",
+                    "",
+                    "",
+                    "var strparam='';",
+                    "",
+                    "if(!payMonth){",
+                    "    Ext.Msg.alert('Missing Month','Please select the Payment Month ');",
+                    "    //strparam+='&paydept='+payDept;",
+                    "}else if(!bankcode){",
+                    "    Ext.Msg.alert('Missing Bank','Please select the Bank Branch ');",
+                    "    //strparam+='&paydept='+payDept;",
+                    "}",
+                    "",
+                    "",
+                    "    //Ext.Msg.alert('Missing Branch','Please select the Bank Branch ');",
+                    "    // strparam+='&branch='+branch;",
+                    "    window.open('reports/prollBanklistNaz.php?payMonth='+payMonth+'&bankcode='+bankcode,\"Reports\",",
+                    "    \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openBanksPaymentsPDf",
             "designerId": "d5070085-eb7c-47af-8d2e-cba6a9de6fe1"
@@ -1965,6 +2282,11 @@
                 "selector": "bankpayments",
                 "xtype": "bankpayments"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "bankpayments",
             "designerId": "3aac4c1d-02c6-4b08-929c-db70aa23df17"
         },
@@ -1979,6 +2301,11 @@
                 "ref": "nhifreturns",
                 "selector": "nhifreturns",
                 "xtype": "nhifreturns"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "nhifreturns",
             "designerId": "49a647a9-abdf-4a34-ba62-7c70b781844e"
@@ -2018,6 +2345,10 @@
                     "nhifWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openNhifReturns",
             "designerId": "e0d9a74e-2c46-459d-aa38-48c7bc30d534"
         },
@@ -2031,31 +2362,35 @@
             "userConfig": {
                 "fn": "openNssfReturns",
                 "implHandler": [
-                    "nssfreturns= Ext.create('PayrollApp.view.NssfReturns', {});\r",
-                    "var nssfWindow=Ext.create('Ext.window.Window', {\r",
-                    "    title: 'NSSF Returns',\r",
-                    "    animCollapse: true,\r",
-                    "    collapsible: true,\r",
-                    "    tools: [\r",
-                    "    {\r",
-                    "        xtype: 'tool',\r",
-                    "        type: 'minimize'\r",
-                    "    },\r",
-                    "    {\r",
-                    "        xtype: 'tool',\r",
-                    "        type: 'maximize'\r",
-                    "    }\r",
-                    "    ]\r",
-                    "});\r",
-                    "\r",
-                    "\r",
-                    "var nssfStore=Ext.data.StoreManager.lookup(\"NssfReturnsStore\");\r",
-                    "\r",
-                    "nssfStore.load({});\r",
-                    "\r",
-                    "nssfWindow.add(nssfreturns);\r",
+                    "nssfreturns= Ext.create('PayrollApp.view.NssfReturns', {});",
+                    "var nssfWindow=Ext.create('Ext.window.Window', {",
+                    "    title: 'NSSF Returns',",
+                    "    animCollapse: true,",
+                    "    collapsible: true,",
+                    "    tools: [",
+                    "    {",
+                    "        xtype: 'tool',",
+                    "        type: 'minimize'",
+                    "    },",
+                    "    {",
+                    "        xtype: 'tool',",
+                    "        type: 'maximize'",
+                    "    }",
+                    "    ]",
+                    "});",
+                    "",
+                    "",
+                    "//var nssfStore=Ext.data.StoreManager.lookup(\"NssfReturnsStore\");",
+                    "",
+                    "//nssfStore.load({});",
+                    "",
+                    "nssfWindow.add(nssfreturns);",
                     "nssfWindow.show();"
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openNssfReturns",
             "designerId": "05ba0842-8d8b-4ba9-9f2b-272f0f7c4afd"
@@ -2096,6 +2431,10 @@
                     "payeWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openPayeReturns",
             "designerId": "ec673b82-8c52-4726-90c6-ed9375f18793"
         },
@@ -2110,6 +2449,11 @@
                 "ref": "nssfreturns",
                 "selector": "nssfreturns",
                 "xtype": "nssfreturns"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "nssfreturns",
             "designerId": "b4ce7530-72cc-4457-bbf4-3f5f45c982c2"
@@ -2126,6 +2470,11 @@
                 "selector": "payereturns",
                 "xtype": "payereturns"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "payereturns",
             "designerId": "20817f48-ecae-4b23-bf2c-229f21e6738c"
         },
@@ -2140,6 +2489,11 @@
                 "ref": "trialbalancewindow",
                 "selector": "trialbalancewindow",
                 "xtype": "trialbalancewindow"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "trialbalancewindow",
             "designerId": "20f67445-7413-4833-81af-2e3a825e82c1"
@@ -2157,110 +2511,121 @@
                 ],
                 "fn": "previewTrialBalance",
                 "implHandler": [
-                    "\r",
-                    "//Ext.Msg.alert(this.getPayslipswin().down(\"#payslipMonth\").getValue());\r",
-                    "\r",
-                    "reportswindow = Ext.create('PayrollApp.view.ReportsMainView', {});\r",
-                    "center_container = this.getViewport().down('container[region=center]');\r",
-                    "center_container.removeAll();\r",
-                    "\r",
-                    "var pmonth=this.getTrialbalancewindow().down('#tpayMonth').getValue();\r",
-                    "var branch=this.getTrialbalancewindow().down('#empBranch').getValue();\r",
-                    "\r",
-                    "var trialStore=Ext.data.StoreManager.lookup(\"TrialBalanceStore\");\r",
-                    "\r",
-                    "trialStore.load({\r",
-                    "    params: {\r",
-                    "        payMonth:pmonth,\r",
-                    "        empBranch:branch\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
-                    "\r",
-                    "var creditSum=0;\r",
-                    "var debitSum=0;\r",
-                    "trialStore.each(function (rec) {\r",
-                    "    creditSum += rec.get('Credit');\r",
-                    "    debitSum +=rec.get('Debit');\r",
-                    "});\r",
-                    "\r",
-                    "console.info(debitSum);\r",
-                    "\r",
-                    "center_container.add(reportswindow);\r",
-                    "\r",
-                    "var company;\r",
-                    "var Params=Ext.urlDecode(window.location.search.substring(1));\r",
-                    "\r",
-                    "var User2=Ext.data.StoreManager.lookup('DefaultItemsStore');\r",
-                    "User2.load({\r",
-                    "  params: {\r",
-                    "        userName: Params.user\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "       //company=\"records[1].data.CompanyName\";\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "\r",
-                    "});\r",
-                    "\r",
-                    "\r",
-                    "User2.each(function (rec) {\r",
-                    "   company = rec.get('CompanyName');\r",
-                    "    //debitSum +=rec.get('Debit');\r",
-                    "});\r",
-                    "\r",
-                    "\r",
-                    "//var company=company;\r",
-                    "\r",
-                    "\r",
-                    "var data1=trialStore.proxy.reader.rawData;\r",
-                    "\r",
-                    "\r",
-                    "var d = new Date();\r",
-                    "var n = d.getFullYear();\r",
-                    "var period=pmonth +\" \"+ n;\r",
-                    "\r",
-                    "var tpl=new Ext.XTemplate(\r",
-                    "'<Table id=trialBalance>',\r",
-                    "'<tr><td colspan=4 class=titles>{[this.getCompanyName() ]}</td></tr>',\r",
-                    "'<tr><td colspan=4 class=titles>FINAL POSTINGS SUMMARY</td></tr>',\r",
-                    "'<tr><td colspan=4 class=titles>Branch : {[this.getBranch() ]}</td></tr>',\r",
-                    "'<tr><td colspan=4 class=titles>For the Period : {[this.getPeriod() ]}</td></tr>',\r",
-                    "'<tr><th>Pay Code</th><th>Pay Type</th><th>Debit</th><th>Credit</th></tr>',\r",
-                    "'<tpl for=\"trialbalance\">',\r",
-                    "'<tr>',\r",
-                    "'<td>{PayCode}</td>',\r",
-                    "'<td>{Pay_Type}</td>',\r",
-                    "'<td>{Debit}</td>',\r",
-                    "'<td>{Credit}</td>',\r",
-                    "'</tpl>',\r",
-                    "'<tr><td colspan=2 class=totals>Totals</td><td class=totals> {[this.getDebitTotal() ]}</td><td class=totals> {[ this.getCreditTotal() ]}</td></tr>',\r",
-                    "'</table>',\r",
-                    "{\r",
-                    "    getCompanyName:function(){\r",
-                    "        return company;\r",
-                    "    },\r",
-                    "    getBranch:function(){\r",
-                    "        return branch;\r",
-                    "    },\r",
-                    "    getPeriod:function(){\r",
-                    "        return period;\r",
-                    "    },\r",
-                    "    getDebitTotal:function(){\r",
-                    "        return debitSum.toFixed(2);\r",
-                    "    },\r",
-                    "    getCreditTotal:function(){\r",
-                    "        return creditSum.toFixed(2);\r",
-                    "    }\r",
-                    "}\r",
-                    ");\r",
-                    "\r",
-                    "tpl.overwrite(reportswindow.body,data1);\r",
+                    "",
+                    "//Ext.Msg.alert(this.getPayslipswin().down(\"#payslipMonth\").getValue());",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "reportswindow = Ext.create('PayrollApp.view.ReportsMainView', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll();",
+                    "",
+                    "var pmonth=this.getTrialbalancewindow().down('#tpayMonth').getValue();",
+                    "var branch=this.getTrialbalancewindow().down('#empBranch').getValue();",
+                    "",
+                    "var trialStore=Ext.data.StoreManager.lookup(\"TrialBalanceStore\");",
+                    "",
+                    "center_container.add(reportswindow);",
+                    "",
+                    "var company;",
+                    "var Params=Ext.urlDecode(window.location.search.substring(1));",
+                    "",
+                    "var User2=Ext.data.StoreManager.lookup('DefaultItemsStore');",
+                    "User2.load({",
+                    "    params: {",
+                    "        userName: Params.user",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        //company=\"records[1].data.CompanyName\";",
+                    "    },",
+                    "    scope: this",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    "User2.each(function (rec) {",
+                    "    company = rec.get('CompanyName');",
+                    "    //debitSum +=rec.get('Debit');",
+                    "});",
+                    "",
+                    "",
+                    "//var company=company;",
+                    "",
+                    "",
+                    "var data1=trialStore.proxy.reader.rawData;",
+                    "",
+                    "",
+                    "// var d = new Date();",
+                    "// var n = d.getFullYear();",
+                    "// var period=pmonth +\" \"+ n;",
+                    "",
+                    "trialStore.load({",
+                    "    params: {",
+                    "        payMonth:pmonth,",
+                    "        period:period,",
+                    "        empBranch:branch",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        var tpl=new Ext.XTemplate(",
+                    "            '<Table id=trialBalance>',",
+                    "            '<tr><td colspan=4 class=titles>{[this.getCompanyName() ]}</td></tr>',",
+                    "            '<tr><td colspan=4 class=titles>FINAL POSTINGS SUMMARY</td></tr>',",
+                    "            '<tr><td colspan=4 class=titles>Branch : {[this.getBranch() ]}</td></tr>',",
+                    "            '<tr><td colspan=4 class=titles>For the Period : {[this.getPeriod() ]}</td></tr>',",
+                    "            '<tr><th>Pay Code</th><th>Pay Type</th><th>Debit</th><th>Credit</th></tr>',",
+                    "            '<tpl for=\".\">',",
+                    "            '<tr>',",
+                    "            '<td>{PayCode}</td>',",
+                    "            '<td>{Pay_Type}</td>',",
+                    "            '<td>{Debit}</td>',",
+                    "            '<td>{Credit}</td></tr>',",
+                    "            '</tpl>',",
+                    "            '<tr><td colspan=2 class=totals>Totals</td><td class=totals> {[this.getDebitTotal() ]}</td><td class=totals> {[ this.getCreditTotal() ]}</td></tr>',",
+                    "            '</table>',",
+                    "            {",
+                    "                getCompanyName:function(){",
+                    "                    return company;",
+                    "                },",
+                    "                getBranch:function(){",
+                    "                    return branch;",
+                    "                },",
+                    "                getPeriod:function(){",
+                    "                    return period;",
+                    "                },",
+                    "                getDebitTotal:function(){",
+                    "                    return debitSum.toFixed(2);",
+                    "                },",
+                    "                getCreditTotal:function(){",
+                    "                    return creditSum.toFixed(2);",
+                    "                }",
+                    "            }",
+                    "        );",
+                    "        var data = [];",
+                    "        var creditSum=0;",
+                    "        var debitSum=0;",
+                    "        trialStore.each(function(record) {",
+                    "            data.push(record.getData());",
+                    "            creditSum += record.get('Credit');",
+                    "            debitSum +=record.get('Debit');",
+                    "        });",
+                    "        console.info(debitSum);",
+                    "",
+                    "         //var data1=notesStore.proxy.reader.rawData;",
+                    "        tpl.overwrite(reportswindow.body,data);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    "// tpl.overwrite(reportswindow.body,data1);",
+                    "",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "previewTrialBalance",
             "designerId": "6f6872ea-27f1-48b7-ae30-1f9ef8b5a537"
@@ -2296,6 +2661,10 @@
                     "trialWin.add(trialbalance);\r",
                     "trialWin.show();"
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openTrialBalanceWindow",
             "designerId": "c317518e-4b62-46cf-a8ec-62dc1e97753b"
@@ -2333,6 +2702,10 @@
                     "postingwindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openPostingWindow",
             "designerId": "d372bca0-05e6-45a9-a73e-d8d9e5c6704e"
         },
@@ -2346,6 +2719,10 @@
             "userConfig": {
                 "ref": "payrollpostingwindow",
                 "selector": "payrollpostingwindow"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
             },
             "name": "payrollpostingwindow",
             "designerId": "fc015d7d-1374-42b7-b034-656147612e16"
@@ -2361,6 +2738,11 @@
                 "ref": "payrollpostinggrid",
                 "selector": "payrollpostinggrid",
                 "xtype": "payrollpostinggrid"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "payrollpostinggrid",
             "designerId": "97a08c69-527b-4d8a-b095-e35b9abde896"
@@ -2378,32 +2760,39 @@
                 ],
                 "fn": "openPayrollPostings",
                 "implHandler": [
-                    "//alert('test');\r",
-                    "\r",
-                    "postingGrid = Ext.create('PayrollApp.view.PayrollPostingGrid', {});\r",
-                    "center_container = this.getViewport().down('container[region=center]');\r",
-                    "center_container.removeAll();\r",
-                    "\r",
-                    "center_container.add(postingGrid);\r",
-                    "\r",
-                    "var postingStore=Ext.data.StoreManager.lookup(\"PayrollPostingStore\");\r",
-                    "\r",
-                    "postingStore.load({\r",
-                    "    params: {\r",
-                    "        payMonth:this.getPayrollpostingwindow().down('#payMonth').getValue(),\r",
-                    "        empBranch:this.getPayrollpostingwindow().down('#empBranch').getValue(),\r",
-                    "        CatID:this.getPayrollpostingwindow().down('#CatID').getValue(),\r",
-                    "        PayType:this.getPayrollpostingwindow().down('#PaymentType').getValue(),\r",
-                    "        pid:this.getPayrollpostingwindow().down('#pid1').getValue(),\r",
-                    "        pid2:this.getPayrollpostingwindow().down('#pid2').getValue()\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
+                    "//alert('test');",
+                    "",
+                    "postingGrid = Ext.create('PayrollApp.view.PayrollPostingGrid', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll();",
+                    "",
+                    "center_container.add(postingGrid);",
+                    "",
+                    "var postingStore=Ext.data.StoreManager.lookup(\"PayrollPostingStore\");",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "postingStore.load({",
+                    "    params: {",
+                    "        payMonth:this.getPayrollpostingwindow().down('#payMonth').getValue(),",
+                    "        empBranch:this.getPayrollpostingwindow().down('#empBranch').getValue(),",
+                    "        CatID:this.getPayrollpostingwindow().down('#CatID').getValue(),",
+                    "        PayType:this.getPayrollpostingwindow().down('#PaymentType').getValue(),",
+                    "        pid:this.getPayrollpostingwindow().down('#pid1').getValue(),",
+                    "        pid2:this.getPayrollpostingwindow().down('#pid2').getValue(),",
+                    "        period:period",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openPayrollPostings",
             "designerId": "0972cf90-70c4-4846-9007-344549333f3e"
@@ -2418,19 +2807,25 @@
             "userConfig": {
                 "fn": "loadNssfData",
                 "implHandler": [
-                    "var nssfStore=Ext.data.StoreManager.lookup(\"NssfReturnsStore\");\r",
-                    "\r",
-                    "nssfStore.load({\r",
-                    "    params: {\r",
-                    "        payMonth:this.getNssfreturns().down('#nssfMonth').getValue()\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
+                    "var nssfStore=Ext.data.StoreManager.lookup(\"NssfReturnsStore\");",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "nssfStore.load({",
+                    "    params: {",
+                    "        payMonth:this.getNssfreturns().down('#nssfMonth').getValue(),",
+                    "        period:period",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadNssfData",
             "designerId": "56569f2e-f753-49b9-a30b-f2e1e65d397d"
@@ -2445,19 +2840,25 @@
             "userConfig": {
                 "fn": "loadNhifData",
                 "implHandler": [
-                    "var nhifStore=Ext.data.StoreManager.lookup(\"NhifReturnsStore\");\r",
-                    "\r",
-                    "nhifStore.load({\r",
-                    "    params: {\r",
-                    "        payMonth:this.getNhifreturns().down('#nhifMonth').getValue()\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
+                    "var nhifStore=Ext.data.StoreManager.lookup(\"NhifReturnsStore\");",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "nhifStore.load({",
+                    "    params: {",
+                    "        payMonth:this.getNhifreturns().down('#nhifMonth').getValue(),",
+                    "        period:period",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadNhifData",
             "designerId": "28f49c46-83d8-4856-bd1f-8feaa02cdf76"
@@ -2472,19 +2873,25 @@
             "userConfig": {
                 "fn": "loadPayeeData",
                 "implHandler": [
-                    "var payeeStore=Ext.data.StoreManager.lookup(\"PayeReturnsStore\");\r",
-                    "\r",
-                    "payeeStore.load({\r",
-                    "    params: {\r",
-                    "        payMonth:this.getPayereturns().down('#payeeMonth').getValue()\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});\r",
+                    "var payeeStore=Ext.data.StoreManager.lookup(\"PayeReturnsStore\");",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "payeeStore.load({",
+                    "    params: {",
+                    "        payMonth:this.getPayereturns().down('#payeeMonth').getValue(),",
+                    "        period:period",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadPayeeData",
             "designerId": "b42c6032-2e3c-4c4d-8139-bc7d83347695"
@@ -2500,6 +2907,11 @@
                 "ref": "payrolllistinggrid",
                 "selector": "payrolllistinggrid",
                 "xtype": "payrolllistinggrid"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "payrolllistinggrid",
             "designerId": "56702859-9d92-4424-9c8a-b2bd1234d087"
@@ -2538,6 +2950,10 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "getProllListing",
             "designerId": "8606386e-cee9-4e78-8117-22b0d5f71486"
         },
@@ -2553,67 +2969,35 @@
                 "designer|targetType": "Ext.form.field.Display",
                 "fn": "getLoggedUser",
                 "implHandler": [
-                    "var Params=Ext.urlDecode(window.location.search.substring(1));\r",
-                    "\r",
-                    "var User2=Ext.data.StoreManager.lookup('DefaultItemsStore');\r",
-                    "User2.load({\r",
-                    "    params: {\r",
-                    "        userName: Params.user\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "         var data1=this.getStore('EmpPaymentStore').getAt(0);\r",
-                    "        //myform.loadRecord(data1);\r",
-                    "        console.log(\"Loaded user 1: \" + records[0].data.FirstName);\r",
-                    "        component.setValue(\"<b> You are Logged in as \"+records[0].data.FirstName+\"</b>\");\r",
-                    "        // alert('user2.get(FirstName)'+records[0].data.FirstName);\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "\r",
+                    "var Params=Ext.urlDecode(window.location.search.substring(1));",
+                    "",
+                    "var User2=Ext.data.StoreManager.lookup('DefaultItemsStore');",
+                    "User2.load({",
+                    "    params: {",
+                    "        userName: Params.user",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "         var data1=this.getStore('EmpPaymentStore').getAt(0);",
+                    "",
+                    "        component.setValue(\"<b>You are Logged in as \"+sessionStorage.getItem(\"User\")+\"</b>\");",
+                    "    },",
+                    "    scope: this",
+                    "",
                     "});"
                 ],
                 "name": "afterrender",
                 "scope": "me"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
             },
             "name": "getLoggedUser",
             "designerId": "3810b1c6-23fb-477d-a53a-39177c383836"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|controlQuery": "#CompanyName",
-                "designer|targetType": "Ext.form.field.Display",
-                "fn": "onDisplayfieldAfterRender",
-                "implHandler": [
-                    "\r",
-                    "var Params=Ext.urlDecode(window.location.search.substring(1));\r",
-                    "\r",
-                    "var User2=Ext.data.StoreManager.lookup('DefaultItemsStore');\r",
-                    "User2.load({\r",
-                    "  params: {\r",
-                    "        userName: Params.user\r",
-                    "    },\r",
-                    "    callback: function(records, operation, success) {\r",
-                    "         var data1=this.getStore('EmpPaymentStore').getAt(0);\r",
-                    "        //myform.loadRecord(data1);\r",
-                    "        component.setValue(\"<b> \"+records[0].data.CompanyName+\"</b>\");\r",
-                    "        // alert('user2.get(FirstName)'+records[0].data.FirstName);\r",
-                    "\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "\r",
-                    "});"
-                ],
-                "name": "afterrender",
-                "scope": "me"
-            },
-            "name": "onDisplayfieldAfterRender",
-            "designerId": "d0f2bf73-0e50-4307-b217-253dddad4d16"
         },
         {
             "type": "basicfunction",
@@ -2650,6 +3034,11 @@
                     "}"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "saveCompanyDetails",
             "designerId": "2be9ce88-b37e-47cc-82d7-966068fa8a94"
         },
@@ -2674,6 +3063,10 @@
                     "branchesWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openDeptBranches",
             "designerId": "982f8e05-9573-43ba-bf3d-cc206795f584"
         },
@@ -2688,6 +3081,11 @@
                 "ref": "payrollbranches",
                 "selector": "payrollbranches",
                 "xtype": "payrollbranches"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "payrollbranches",
             "designerId": "893c7623-a236-4d12-83be-23c131dec8eb"
@@ -2711,6 +3109,11 @@
                     "    this.getPayrollbranches().getForm().findField('formStatus').setValue('update');\r",
                     "}"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "loadBranchesform",
             "designerId": "7e225be0-9475-4502-8ca3-377c6d4f10ce"
@@ -2736,6 +3139,10 @@
                     "bankBranchesWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openBankBranches",
             "designerId": "807da1e2-5dc1-4dc6-8ed5-212c3498e227"
         },
@@ -2750,6 +3157,11 @@
                 "ref": "bankbranches",
                 "selector": "bankbranches",
                 "xtype": "bankbranches"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "bankbranches",
             "designerId": "79510149-2b36-4af5-a8e9-4e34689d3fbf"
@@ -2772,6 +3184,11 @@
                     "}"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "loadBankBranch",
             "designerId": "f26d3ae8-c224-465a-a520-e0961e5afad0"
         },
@@ -2793,6 +3210,11 @@
                     "\r",
                     "button.up('form').getForm().findField('formStatus').setValue('insert');"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "resetForms",
             "designerId": "6ea5ab8a-f8dd-4382-be12-d41aadbc3dc8"
@@ -2818,6 +3240,10 @@
                     "usersWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "getUsersList",
             "designerId": "13ec6f6d-79b5-4552-b736-4c57dc475724"
         },
@@ -2836,25 +3262,39 @@
                 ],
                 "fn": "doLogout",
                 "implHandler": [
-                    "var Params=Ext.urlDecode(window.location.search.substring(1));\r",
-                    "Ext.Ajax.request(\r",
-                    "{\r",
-                    "    // waitMsg: 'Saving changes...',\r",
-                    "    url:'data/getDataFunctions.php?task=doLogout',\r",
-                    "    params: {\r",
-                    "       user:Params.user\r",
-                    "    },\r",
-                    "    success:function(response,options){\r",
-                    "\r",
-                    "        document.location.href='index.php';\r",
-                    "\r",
-                    "    },\r",
-                    "    failure:function(response,options){\r",
-                    "        Ext.MessageBox.alert('Warning','Invalid login Info, Check the username and password...');\r",
-                    "        //ds.rejectChanges();//undo any changes\r",
-                    "    }\r",
+                    "var loginSess=Ext.data.StoreManager.lookup('LoginSessions');",
+                    "loginSess.load();",
+                    "//Ext.Msg.alert('Session',loginSess.first().get('sessionname'));",
+                    "",
+                    "var user=loginSess.first().get('sessionname');",
+                    "",
+                    "Ext.Ajax.request(",
+                    "{",
+                    "    // waitMsg: 'Saving changes...',",
+                    "    url:'data/getDataFunctions.php?task=doLogout',",
+                    "    params: {",
+                    "       user:user",
+                    "    },",
+                    "    success:function(response,options){",
+                    "        loginSess.first().drop();",
+                    "        loginSess.sync();",
+                    "        //Ext.create('PayrollApp.view.LoginMain' , {renderTo: Ext.getBody()});",
+                    "       // Ext.Msg.alert('Session After',loginSess.first().get('sessionname'));",
+                    "",
+                    "        document.location.href='index.php';",
+                    "",
+                    "    },",
+                    "    failure:function(response,options){",
+                    "        Ext.MessageBox.alert('Warning','Invalid login Info, Check the username and password...');",
+                    "        //ds.rejectChanges();//undo any changes",
+                    "    }",
                     "});"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "doLogout",
             "designerId": "a2c89e7b-aedd-47ff-ae95-58c67620daf1"
@@ -2879,6 +3319,11 @@
                     "window.open('reports/trialBalance.php?payMonth='+pmonth+'&branch='+branch ,\"Reports\",\r",
                     "\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "printTrialbalance",
             "designerId": "25a9d653-c391-4f61-86cb-276d62837c00"
@@ -2915,6 +3360,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "searchEmpPayments",
             "designerId": "ef56b813-1db2-4094-969b-0fa8fe5edf12"
         },
@@ -2950,6 +3400,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openPostByCode",
             "designerId": "7ce627dc-5cb0-4965-bfb6-631ad991bd13"
         },
@@ -2964,6 +3419,11 @@
                 "ref": "postbycode",
                 "selector": "postbycode",
                 "xtype": "postbycode"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "postbycode",
             "designerId": "f0082d4a-a825-4171-87a5-1644c0c932c1"
@@ -2990,6 +3450,11 @@
                     "this.getPostbycode().down('#txtPayTypeID').setValue(record.get('ID'));\r",
                     "this.getPostbycode().down('#txtPayCatId').setValue(record.get('CatID'));"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "getSelectedCode",
             "designerId": "c16056fc-c381-4a24-830e-a7453ebbd516"
@@ -3041,6 +3506,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "doCalculations",
             "designerId": "ed0ba644-1d79-4d41-90f3-20d8f06e5d00"
         },
@@ -3074,6 +3544,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openEmpRegister",
             "designerId": "dc805f37-fe63-44c3-908b-e3e4b7a188f5"
         },
@@ -3099,6 +3574,10 @@
                     "center_container.add(batchUpdateForm);"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openBatchUpdate",
             "designerId": "e1f44a96-d855-4a69-b67c-822992773392"
         },
@@ -3113,6 +3592,11 @@
                 "ref": "payrollbatchupdate",
                 "selector": "payrollbatchupdate",
                 "xtype": "payrollbatchupdate"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "payrollbatchupdate",
             "designerId": "ef15ea4b-8d26-4266-97c7-e88505c45f99"
@@ -3152,6 +3636,11 @@
                     "});"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "loadBatchPayments",
             "designerId": "4039fd6a-238d-44fb-a969-a667becf34de"
         },
@@ -3181,6 +3670,10 @@
                     "center_container.add(saccoReports);"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openSaccoReports",
             "designerId": "b0a4cd94-ed71-4f27-a446-e3a5a44d8e10"
         },
@@ -3196,6 +3689,11 @@
                 "selector": "saccoreport",
                 "xtype": "saccoreport"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "saccoreport",
             "designerId": "8ea0286c-8561-47f3-a209-ed05f6ef9986"
         },
@@ -3210,6 +3708,11 @@
                 "ref": "welfaresavings",
                 "selector": "welfaresavings",
                 "xtype": "welfaresavings"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "welfaresavings",
             "designerId": "eb6c18b4-16d4-4d13-a83a-47732c876e22"
@@ -3237,6 +3740,10 @@
                     "",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "openWelfareSaving",
             "designerId": "4bd430dd-ef03-4f3e-baeb-74842f74c8dd"
@@ -3273,6 +3780,10 @@
                     "coopsWin.show();"
                 ]
             },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "openCooperativeContributions",
             "designerId": "38ef64a2-cb0b-4053-afdb-540d2aa01f3c"
         },
@@ -3288,8 +3799,394 @@
                 "selector": "saccowelfare",
                 "xtype": "saccowelfare"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "saccowelfare",
             "designerId": "cee9e278-85dc-45c1-af2a-f717b30101ce"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchEmployee",
+                "implHandler": [
+                    "var searchParam=this.getEmployeeregister().down('#txtSearchEmployee').getValue();",
+                    "",
+                    "var empregisterStore=Ext.data.StoreManager.lookup(\"EmpRegisterStore\");",
+                    "empregisterStore.load({",
+                    "    params:{",
+                    "        searchParam:searchParam",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchEmployee",
+            "designerId": "54702aea-8889-4501-a97e-47fdb927f8ca"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "loginHandle",
+                "implHandler": [
+                    "var user = button.up('panel').down('#login-user').getValue();",
+                    "var pass = button.up('panel').down('#login-pwd').getValue();",
+                    "var period=button.up('panel').down('#login-period').getValue();",
+                    "",
+                    "if (user === '' || pass === '') {",
+                    "    Ext.MessageBox.alert('Warning', 'Username and Password cannot be empty');",
+                    "} else {",
+                    "    Ext.Ajax.request(",
+                    "        {",
+                    "            // waitMsg: 'Saving changes...',",
+                    "            url: 'data/getDataFunctions.php?task=doLogin',",
+                    "            params: {",
+                    "                user: user,",
+                    "                pass: pass,",
+                    "                period:period",
+                    "            },",
+                    "            success: function(response, options) {",
+                    "                var strResp=Ext.decode(response.responseText);",
+                    "                    button.up('container').hide();",
+                    "                    Ext.create('PayrollApp.view.PayrollMain');",
+                    "",
+                    "",
+                    "                     this.getViewport().down('#userName').setValue(\"<b>You are Logged in as \"+user );",
+                    "                     this.getViewport().down('#CompanyName').setValue(\"<b>CHAK TEKELEZI PROJECT</b>\" );",
+                    "                     this.getViewport().down('#Period').setValue(\"Period is \"+period);",
+                    "",
+                    "                     var loginSess=Ext.data.StoreManager.lookup('LoginSessions');",
+                    "                     loginSess.add({sessionname:user});",
+                    "                     loginSess.sync();",
+                    "",
+                    "                     sessionStorage.setItem(\"User\",user);",
+                    "                     sessionStorage.setItem(\"Period\",period);",
+                    "",
+                    "                                },",
+                    "            failure: function(response, options) {",
+                    "                var strErr=Ext.decode(response.responseText);",
+                    "                Ext.MessageBox.alert('Warning', 'Invalid login Info, Check the username and password...'+strErr);",
+                    "",
+                    "            },",
+                    "        scope: this",
+                    "        }",
+                    "    );",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loginHandle",
+            "designerId": "4a6fa33d-341c-4c1e-8d4a-2fcfa6f340c7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openBankLoans",
+                "implHandler": [
+                    "bankloans= Ext.create('PayrollApp.view.BankLoansWin', {});",
+                    "var bankLoansWin=Ext.create('Ext.window.Window', {",
+                    "    title: 'Bank Loan Deductions',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "bankLoansWin.add(bankloans);",
+                    "bankLoansWin.show();",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openBankLoans",
+            "designerId": "2c776b90-39be-48c7-9042-5fa082b05243"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "bankloanswin",
+                "selector": "bankloanswin",
+                "xtype": "bankloanswin"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "bankloanswin",
+            "designerId": "b6b2d50d-4b15-42eb-922e-a7057055a2db"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "printBankLoans",
+                "implHandler": [
+                    "var payMonth=this.getBankloanswin().down('#payMonth').getValue();",
+                    "var payType=this.getBankloanswin().down('#payType').getValue();",
+                    "",
+                    "",
+                    "if(!payMonth){",
+                    "    Ext.Msg.alert('Missing Month','Please select the Payment Month ');",
+                    "    //strparam+='&paydept='+payDept;",
+                    "}else if(!payType){",
+                    "    Ext.Msg.alert('Missing Paytype','Please select the Pay Type ');",
+                    "    //strparam+='&paydept='+payDept;",
+                    "}",
+                    "",
+                    "",
+                    "//Ext.Msg.alert('Missing Branch','Please select the Bank Branch ');",
+                    "// strparam+='&branch='+branch;",
+                    "window.open('reports/bankLoansPDF.php?payMonth='+payMonth+'&payType='+payType,\"Reports\",",
+                    "            \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "printBankLoans",
+            "designerId": "aee1834e-e420-476d-b55c-ce55262325b8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "usermanagement",
+                "selector": "usermanagement",
+                "xtype": "usermanagement"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "usermanagement",
+            "designerId": "571f6352-a328-45cf-891c-eee223f7d506"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#CompanyName",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.form.field.Display",
+                "fn": "onCompanyNameAfterRender",
+                "implHandler": [
+                    "//Ext.Msg.alert('Test',component.getValue());",
+                    "var Params=Ext.urlDecode(window.location.search.substring(1));",
+                    "",
+                    "var User2=Ext.data.StoreManager.lookup('DefaultItemsStore');",
+                    "User2.load({",
+                    "  params: {",
+                    "        userName: Params.user",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "        component.setValue(\"<b>JAMII TEKELEZI PROJECT</b>\");",
+                    "    },",
+                    "    scope: this",
+                    "",
+                    "});"
+                ],
+                "name": "afterrender"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onCompanyNameAfterRender",
+            "designerId": "ad0d638d-08d6-4581-a34b-a4dc6ec4bfe6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "openImportWin",
+                "implHandler": [
+                    "var importsForm=Ext.create('PayrollApp.view.ImportPayments', {});",
+                    "var importsWindow=Ext.create('Ext.window.Window', {",
+                    "     title: 'Import Earnings and Deductions',",
+                    "     resizable:false",
+                    " });",
+                    "",
+                    "importsWindow.add(importsForm);",
+                    "importsWindow.show();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openImportWin",
+            "designerId": "ed47b4f3-aa3f-4bf2-b44b-fe21d9951027"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "openEmailsWindow",
+                "implHandler": [
+                    "var emailsForm=Ext.create('PayrollApp.view.MembersEmails', {});",
+                    "var emailsWindow=Ext.create('Ext.window.Window', {});",
+                    "",
+                    "emailsWindow.add(emailsForm);",
+                    "emailsWindow.show();",
+                    "",
+                    "var emailsStore=Ext.data.StoreManager.lookup(\"MemberEmailStore\");",
+                    "emailsStore.load({});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openEmailsWindow",
+            "designerId": "216ed877-2994-494b-8acb-c848dcb1b140"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "membersemails",
+                "selector": "membersemails",
+                "xtype": "membersemails"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "membersemails",
+            "designerId": "b6722fdf-1a8e-4433-9f64-19d4f3514949"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "generatePayslips",
+                "implHandler": [
+                    "var slipMnth=this.getPayslipswin().down('#payslipMonth').getValue();",
+                    "var pNo=this.getPayslipswin().down('#pid1').getValue();",
+                    "var pNo2=this.getPayslipswin().down('#pid2').getValue();",
+                    "var slipsNo='3';//this.getPayslipswin().down('textfield[name=pages]').getValue();",
+                    "var payDept=this.getPayslipswin().down('#department').getValue();",
+                    "var branch=this.getPayslipswin().down('#empBranch').getValue();",
+                    "var period=sessionStorage.getItem(\"Period\");",
+                    "",
+                    "var strparam='';",
+                    "",
+                    "if(payDept){",
+                    "    //Ext.Msg.alert('Select','Selected to displaye pages '+payDept);",
+                    "    strparam+='&paydept='+payDept;",
+                    "}",
+                    "",
+                    "",
+                    "window.open('reports/singlePayslips.php?slipMnth='+slipMnth+'&pid='+pNo+'&pid2='+pNo2+'&slipsNo='+slipsNo+strparam ,\"Reports\",",
+                    "            \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    "      "
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "generatePayslips",
+            "designerId": "9b99131e-394e-48bd-8af8-f61fc4a5cd74"
         }
     ]
 }

@@ -16,16 +16,33 @@
         "title": "Welfare Report",
         "width": null
     },
+    "configAlternates": {
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "name": "MyGridPanel18",
     "designerId": "431e09f3-ab63-4176-a1d7-f9f24bd4529c",
+    "viewControllerInstanceId": "9113005d-804c-4dd0-9cb1-8594b21f20d3",
+    "viewModelInstanceId": "034c78e2-6736-4e83-a953-f8c78d47f576",
     "cn": [
         {
-            "type": "Ext.grid.View",
+            "type": "Ext.view.Table",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
             "name": "MyGridView21",
             "designerId": "fa267091-d017-460f-9484-29c2bfd2aa5d"
         },
@@ -40,6 +57,12 @@
                 "dataIndex": "Pid",
                 "text": "Pid",
                 "width": 66
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyColumn154",
             "designerId": "b5f7dd27-404e-4621-9531-f24938119b37"
@@ -56,6 +79,12 @@
                 "text": "Names",
                 "width": 214
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn199",
             "designerId": "3bdaa489-c7af-41dd-9b88-0a6e4bd43dd0"
         },
@@ -71,6 +100,12 @@
                 "text": "Designation",
                 "width": null
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn200",
             "designerId": "991e6ce5-03b6-4db2-8dc9-6e8dcd2402fd"
         },
@@ -84,6 +119,11 @@
             "userConfig": {
                 "dataIndex": "MonthlyContrib",
                 "text": "Monthly Contrib"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn201",
             "designerId": "c6293cb7-09f7-4560-a546-ecc2efc07be3"
@@ -99,6 +139,11 @@
                 "dataIndex": "Charges",
                 "text": "Charges"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn202",
             "designerId": "41247eaf-6a2e-4b49-a55e-90099097f97d"
         },
@@ -113,6 +158,11 @@
                 "dataIndex": "LoanRepayment",
                 "text": "Loan Repayment"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn203",
             "designerId": "3464cf7a-a0b4-40da-a749-6fdba1064460"
         },
@@ -126,6 +176,11 @@
             "userConfig": {
                 "dataIndex": "Total",
                 "text": "Total"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn204",
             "designerId": "e1a8fff0-2c27-4f5c-8f1e-957a879f49b3"
@@ -142,6 +197,13 @@
                 "dock": "bottom",
                 "store": "WelfareStore",
                 "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyPagingToolbar21",
             "designerId": "6fd8218b-13a9-4e1e-9754-3cef55cf275d"

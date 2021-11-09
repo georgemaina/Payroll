@@ -9,10 +9,14 @@
         "designer|userAlias": "deptbranch",
         "designer|userClassName": "DeptBranch"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "71b265f2-d746-4df5-bad4-d8f31a200f12",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "ID"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField56",
             "designerId": "5e0dcf5a-1f0a-4d81-8506-96e571fc6f15"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -33,6 +40,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "BranchName"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField57",
             "designerId": "0b6e28f8-d65b-4bc1-a2e2-c281213ec64b"

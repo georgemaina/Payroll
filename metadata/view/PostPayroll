@@ -14,12 +14,29 @@
         "designer|userAlias": "postpayroll",
         "designer|userClassName": "PostPayroll",
         "frame": true,
-        "height": 693,
+        "height": 585,
         "layout": "absolute",
         "title": "PAYROLL POSTING",
         "width": null
     },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "bodyPadding": "auto",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "f51c3809-678d-4f85-816b-cbe73e6f1259",
+    "viewControllerInstanceId": "51155584-5d31-4215-b8f4-151c429c8b78",
+    "viewModelInstanceId": "725d444f-8403-4c5b-b191-05af45d0aafb",
     "cn": [
         {
             "type": "Ext.grid.Panel",
@@ -29,25 +46,46 @@
             },
             "codeClass": null,
             "userConfig": {
+                "bodyBorder": true,
                 "columnLines": true,
-                "height": 655,
+                "designer|uiInterfaceName": "default",
+                "height": 540,
                 "itemId": "empPostGridSummary",
                 "layout|x": 0,
                 "layout|y": 0,
                 "store": "PaymentsSummaryStore",
-                "title": "Payroll Summary",
                 "width": 455
+            },
+            "configAlternates": {
+                "columnLines": "boolean",
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean",
+                "bodyBorder": "boolean",
+                "designer|uiInterfaceName": "string"
             },
             "name": "MyGridPanel14",
             "designerId": "4094a247-3225-4d8f-8d8e-1f4c0357abcd",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "userConfig": {
+                        "border": 1
+                    },
+                    "configAlternates": {
+                        "scrollable": "boolean",
+                        "border": "auto"
+                    },
                     "name": "MyGridView15",
                     "designerId": "20c07b71-6f57-4204-a686-da145effdabc"
                 },
@@ -64,6 +102,13 @@
                         "store": "PaymentsSummaryStore",
                         "width": 360
                     },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPagingToolbar15",
                     "designerId": "b866020f-967f-4a48-ba3e-4bde4fd261b8"
                 },
@@ -78,6 +123,12 @@
                         "dataIndex": "PID",
                         "text": "PID",
                         "width": 52
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn113",
                     "designerId": "80ac9627-2d9a-4d8f-8465-a632c164ad94"
@@ -94,6 +145,12 @@
                         "text": "Emp_names",
                         "width": 199
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn114",
                     "designerId": "4bb290d1-fdd2-4cb9-aa81-8b4c8070516a"
                 },
@@ -107,6 +164,11 @@
                     "userConfig": {
                         "dataIndex": "total",
                         "text": "Total"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn115",
                     "designerId": "773f0a8d-2363-42cc-87dd-32ee6d27164d"
@@ -123,6 +185,12 @@
                         "hidden": true,
                         "text": "Pstatus"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn116",
                     "designerId": "f9c116e5-800c-4866-834a-70d3ba1b41b9"
                 }
@@ -137,23 +205,36 @@
             "codeClass": null,
             "userConfig": {
                 "columnLines": true,
-                "height": 560,
+                "height": 445,
                 "layout|x": 460,
                 "layout|y": 95,
                 "store": "ProllPaymentsStore",
                 "title": "Employee Payments Details",
                 "width": null
             },
+            "configAlternates": {
+                "columnLines": "boolean",
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyGridPanel15",
             "designerId": "024fc1c6-8fcf-48ac-92c1-e8a4acce936b",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView16",
                     "designerId": "f8bec8ca-866d-4929-8508-c9c77f908ed9"
                 },
@@ -168,6 +249,12 @@
                         "dataIndex": "ID",
                         "text": "ID",
                         "width": 55
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn117",
                     "designerId": "2e125f8e-9658-4bfa-9c6a-c908c7231885"
@@ -184,6 +271,12 @@
                         "text": "PID",
                         "width": 55
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn118",
                     "designerId": "4c866294-b398-4874-bb16-50b157b0a646"
                 },
@@ -198,6 +291,12 @@
                         "dataIndex": "PayType",
                         "text": "PayType",
                         "width": 73
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn119",
                     "designerId": "f7ffa5dc-b778-4a76-ac26-4e32ff989101"
@@ -214,6 +313,12 @@
                         "text": "PayName",
                         "width": 142
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn120",
                     "designerId": "d703b05d-2a36-4ac5-ab11-bf934a0373af"
                 },
@@ -228,6 +333,11 @@
                         "dataIndex": "Amount",
                         "text": "Amount"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn121",
                     "designerId": "293424ce-575d-4743-9a9f-41bd83ce2e07"
                 },
@@ -241,6 +351,11 @@
                     "userConfig": {
                         "dataIndex": "Balance",
                         "text": "Balance"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn122",
                     "designerId": "37ad663b-f10b-43bc-9a5a-aaf1e712b571"
@@ -258,6 +373,13 @@
                         "store": "ProllPaymentsStore",
                         "width": 360
                     },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPagingToolbar16",
                     "designerId": "cc91a632-08a0-4b66-beb7-3c0aefb66022"
                 }
@@ -271,22 +393,37 @@
             },
             "codeClass": null,
             "userConfig": {
+                "displayField": "Month",
                 "fieldLabel": "<b>Select Payroll Month</b>",
                 "forceSelection": true,
                 "itemId": "postMonth",
                 "labelWidth": 140,
-                "layout|x": 490,
-                "layout|y": 15,
-                "store": [
-                    "[['January','January'],['February','February'],['March','March'],['April','April'],['May','May'],['June','June'],\r",
-                    "['July','July'],['August','August'],['September','September'],['October','October'],['November','November'],['December','December']]"
-                ],
-                "width": 335
+                "layout|x": 470,
+                "layout|y": 5,
+                "minChars": 3,
+                "queryMode": "local",
+                "store": "PayMonthsStore",
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 575
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "forceSelection": "boolean",
+                "itemId": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "scrollable": "boolean",
+                "displayField": "datafield",
+                "valueField": "datafield",
+                "minChars": "number",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean"
             },
             "name": "MyComboBox18",
-            "configAlternates": {
-                "store": "array"
-            },
             "designerId": "1368e69e-d474-480c-87a1-7c57bcce95b7"
         },
         {
@@ -299,10 +436,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdPostPayroll",
-                "layout|x": 635,
+                "layout|x": 805,
                 "layout|y": 50,
                 "text": "<b> POST PAYROLL</B>",
                 "width": 145
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton47",
             "designerId": "c3d25f27-6dbe-466c-9c7c-c3b05936df04"
@@ -317,10 +463,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdClose",
-                "layout|x": 1075,
+                "layout|x": 1110,
                 "layout|y": 50,
                 "text": "<b>CANCEL</b>",
                 "width": 170
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton48",
             "designerId": "35b6ca10-e817-4b67-9748-040672d6a929"
@@ -335,10 +490,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdPreviewPayslip",
-                "layout|x": 790,
+                "layout|x": 955,
                 "layout|y": 50,
                 "text": "<b>Preview Payslip</b>",
                 "width": 145
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton49",
             "designerId": "7525ed72-4f2b-478f-a3d1-ec56d9e53689"
@@ -354,11 +518,22 @@
                 "fieldLabel": null,
                 "fieldStyle": "font-size: medium;font-weight: bold;color: red;",
                 "itemId": "payrollStatus",
-                "layout|x": 920,
-                "layout|y": 30,
+                "layout|x": 465,
+                "layout|y": 45,
                 "name": "payrollStatus",
-                "value": null,
+                "value": "Payroll Status",
                 "width": 250
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "value": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyDisplayField18",
             "designerId": "c5b36cc5-6f01-4f07-8379-5ff93ee1d439"

@@ -13,6 +13,14 @@
         "pageSize": 120,
         "storeId": "PayTypeStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "3e8726c8-4e67-4e98-a99f-fbfa60b25a55",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getPayTypes"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy",
             "designerId": "1d08ba40-2e74-46ef-8243-3d2f4a3636b2",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "payTypes"
+                        "rootProperty": "payTypes"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader",
                     "designerId": "80205f31-390d-450d-a302-8df4026a04a0"

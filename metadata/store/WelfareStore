@@ -12,6 +12,13 @@
         "model": "WelfareContributions",
         "storeId": "WelfareStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "SaccoContributionStore1",
     "designerId": "d2e54e00-3ecd-486c-a161-27469b2dd085",
     "cn": [
@@ -25,6 +32,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getWelfareReport"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy9",
             "designerId": "cc7b69b7-085c-4e66-bc6f-54516ff2468c",
             "cn": [
@@ -36,7 +46,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "welfareSavings"
+                        "rootProperty": "welfareSavings"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader9",
                     "designerId": "84467a82-c160-4956-92eb-d1fbcee068e7"

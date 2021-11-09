@@ -7,16 +7,30 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
-        "designer|snapToGrid": 10,
+        "designer|snapToGrid": 5,
         "designer|userAlias": "postbycode",
         "designer|userClassName": "PostByCode",
         "frame": true,
-        "height": 655,
+        "height": 516,
         "layout": "absolute",
         "title": null,
-        "width": 952
+        "width": 891
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
     },
     "designerId": "dfd1be7e-52ff-4b99-bdc6-c347ebe12f3a",
+    "viewControllerInstanceId": "6d2268f2-b522-49e3-8908-fd686d213078",
+    "viewModelInstanceId": "269a2dc2-2865-4831-9e39-6bb98a30d983",
     "cn": [
         {
             "type": "Ext.grid.Panel",
@@ -26,24 +40,36 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": 610,
+                "height": 450,
                 "itemId": "payTypesGrid",
-                "layout|x": 0,
-                "layout|y": 10,
+                "layout|x": -1,
+                "layout|y": 0,
                 "store": "PayTypeStore",
-                "title": "Pay Types",
                 "width": 290
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyGridPanel",
             "designerId": "97918620-7f3e-44a5-8a01-856a189e9287",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView",
                     "designerId": "dc2afd33-e475-4312-91ee-37ef2c604b66"
                 },
@@ -58,6 +84,12 @@
                         "dataIndex": "ID",
                         "text": "ID",
                         "width": 47
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn",
                     "designerId": "056647fe-a381-419a-b461-9119c02c3f57"
@@ -74,6 +106,12 @@
                         "hidden": true,
                         "text": "CatID"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn1",
                     "designerId": "995b2181-78d7-4242-95a0-dbae66ed4fa9"
                 },
@@ -88,6 +126,12 @@
                         "dataIndex": "PayType",
                         "text": "PayType",
                         "width": 201
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn2",
                     "designerId": "b81628e1-cf24-4603-bd9e-d71b8505a2bc"
@@ -104,6 +148,12 @@
                         "hidden": true,
                         "text": "Fixed"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn3",
                     "designerId": "14d6c51d-78c7-45ba-9b69-ba3d82726895"
                 },
@@ -118,6 +168,12 @@
                         "dataIndex": "Contribution",
                         "hidden": true,
                         "text": "Contribution"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn4",
                     "designerId": "77397bce-751a-435b-8d3f-0af8f2ab2eb8"
@@ -134,6 +190,12 @@
                         "hidden": true,
                         "text": "Gl_acc"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn5",
                     "designerId": "dabb61f2-de2f-4e5a-80e8-fbf322781702"
                 },
@@ -148,6 +210,12 @@
                         "dataIndex": "gl_desc",
                         "hidden": true,
                         "text": "Gl_desc"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn6",
                     "designerId": "99c16f00-38c7-4bd9-b20a-8dca454d1c78"
@@ -164,6 +232,12 @@
                         "hidden": true,
                         "text": "Posted"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn7",
                     "designerId": "4bcee40b-1ec4-4c95-9b8d-5d205ea37ff7"
                 },
@@ -178,6 +252,12 @@
                         "dataIndex": "Interest",
                         "hidden": true,
                         "text": "Interest"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn8",
                     "designerId": "bb4f2208-b5be-4240-bacb-4d527b37628a"
@@ -194,6 +274,12 @@
                         "hidden": true,
                         "text": "InterestCode"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn9",
                     "designerId": "5e51d2af-0244-4038-9768-502f64ffcbc8"
                 },
@@ -209,6 +295,12 @@
                         "hidden": true,
                         "text": "InterestName"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn10",
                     "designerId": "2f071e64-27bb-4c0e-9532-72aa09b598ac"
                 },
@@ -223,6 +315,12 @@
                         "dataIndex": "Recurrent",
                         "hidden": true,
                         "text": "Recurrent"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn11",
                     "designerId": "b1439162-8588-44db-be4a-23abb3878649"
@@ -240,6 +338,13 @@
                         "store": "PayTypeStore",
                         "width": 360
                     },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPagingToolbar",
                     "designerId": "f922bc2b-10f3-41e0-ba96-0da91e506208"
                 }
@@ -254,24 +359,37 @@
             "codeClass": null,
             "userConfig": {
                 "columnLines": true,
-                "height": 550,
+                "height": 450,
                 "itemId": "postByCodeGrid",
-                "layout|x": 290,
-                "layout|y": 70,
+                "layout|x": 300,
+                "layout|y": 0,
                 "store": "BlankPaymentsStore",
-                "title": "Payments",
-                "width": 650
+                "width": 585
+            },
+            "configAlternates": {
+                "columnLines": "boolean",
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyGridPanel1",
             "designerId": "3126ae17-ca6b-4dfe-89fc-f8bb90fadf51",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView1",
                     "designerId": "88d28502-b6d7-4320-add2-b562f8af6dda"
                 },
@@ -287,6 +405,13 @@
                         "dock": "bottom",
                         "store": "BlankPaymentsStore",
                         "width": 360
+                    },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyPagingToolbar1",
                     "designerId": "3afd60aa-be47-4f26-8295-85c1b4cf3202"
@@ -304,6 +429,13 @@
                         "text": "Pid",
                         "width": 54
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "locked": "boolean",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn12",
                     "designerId": "a997323b-42f0-4ad6-9e76-40802fb59a2f"
                 },
@@ -320,6 +452,13 @@
                         "text": "Names",
                         "width": 189
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "locked": "boolean",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn13",
                     "designerId": "df3c45ba-7647-4767-9f0b-f77dade9067b"
                 },
@@ -333,6 +472,11 @@
                     "userConfig": {
                         "dataIndex": "Amount",
                         "text": "Amount"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn14",
                     "designerId": "93e46937-ac82-4425-8a4d-ed897a513182",
@@ -350,6 +494,13 @@
                                 "selectOnFocus": true,
                                 "width": 100
                             },
+                            "configAlternates": {
+                                "enableKeyEvents": "boolean",
+                                "name": "string",
+                                "selectOnFocus": "boolean",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
                             "name": "MyTextField",
                             "designerId": "89fd53b8-d7e4-4616-beb4-25255108e6ba"
                         }
@@ -366,6 +517,11 @@
                         "dataIndex": "Balance",
                         "text": "Balance"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn15",
                     "designerId": "f7999b52-baa1-49a5-a156-68286e850728",
                     "cn": [
@@ -378,6 +534,10 @@
                             "codeClass": null,
                             "userConfig": {
                                 "name": "txtBalance"
+                            },
+                            "configAlternates": {
+                                "name": "string",
+                                "scrollable": "boolean"
                             },
                             "name": "MyTextField1",
                             "designerId": "cdcacb11-851f-4c16-99fd-9b118112a7fd"
@@ -394,6 +554,9 @@
                     "userConfig": {
                         "clicksToEdit": 1
                     },
+                    "configAlternates": {
+                        "clicksToEdit": "number"
+                    },
                     "name": "MyCellEditingPlugin",
                     "designerId": "550f382b-0da0-4f3a-89a2-7a18a91b80f5"
                 },
@@ -407,57 +570,41 @@
                     "userConfig": {
                         "mode": "SINGLE"
                     },
+                    "configAlternates": {
+                        "mode": "string"
+                    },
                     "name": "MyCellSelectionModel",
                     "designerId": "6e568db4-c3ae-47c5-872a-88685b644911"
-                },
-                {
-                    "type": "Ext.toolbar.Toolbar",
-                    "reference": {
-                        "name": "dockedItems",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dock": "top"
-                    },
-                    "name": "MyToolbar",
-                    "designerId": "d8fa3ed9-9927-402a-876c-508289b30a3d",
-                    "cn": [
-                        {
-                            "type": "Ext.button.Button",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "height": 33,
-                                "itemId": "cmdSavePaymentsPosting",
-                                "layout|flex": null,
-                                "text": "<b>Save </b>",
-                                "width": 127
-                            },
-                            "name": "MyButton",
-                            "designerId": "69c96510-4430-4bea-b105-f7be063b2a54"
-                        }
-                    ]
                 }
             ]
         },
         {
             "type": "Ext.form.FieldSet",
             "reference": {
-                "name": "items",
+                "name": "dockedItems",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
                 "designer|snapToGrid": 5,
-                "height": 60,
+                "dock": "top",
+                "height": 40,
                 "layout": "absolute",
-                "layout|x": 300,
-                "layout|y": 10,
+                "layout|x": 290,
+                "layout|y": -1,
+                "padding": "0 0 0 0",
                 "width": 640
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "scrollable": "boolean",
+                "dock": "string",
+                "padding": "auto"
             },
             "name": "MyFieldSet",
             "designerId": "51a7fc9c-734c-437b-8d1b-fbade02d564b",
@@ -475,10 +622,22 @@
                         "itemId": "payTitle",
                         "labelStyle": "font-size: small;font-weight: bold;color: green;",
                         "labelWidth": 130,
-                        "layout|x": 0,
-                        "layout|y": 15,
+                        "layout|x": -1,
+                        "layout|y": 0,
                         "value": null,
-                        "width": 500
+                        "width": 455
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "itemId": "string",
+                        "labelStyle": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyDisplayField",
                     "designerId": "a5f8221b-9fc5-497f-a842-3534ea2fe174"
@@ -498,6 +657,15 @@
                         "layout|y": 20,
                         "width": 65
                     },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "hidden": "boolean",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyTextField2",
                     "designerId": "7dd5f1e1-97f9-49f3-81b3-4fe4c7b3c723"
                 },
@@ -516,8 +684,45 @@
                         "layout|y": 20,
                         "width": 65
                     },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "hidden": "boolean",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyTextField3",
                     "designerId": "26039d97-7a99-48ee-b903-a2da42fc85c4"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "itemId": "cmdSavePaymentsPosting",
+                        "layout|x": 735,
+                        "layout|y": 0,
+                        "text": "<b>Save </b>",
+                        "width": 127
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyButton",
+                    "designerId": "69c96510-4430-4bea-b105-f7be063b2a54"
                 }
             ]
         }

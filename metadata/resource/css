@@ -9,5 +9,9 @@
         "designer|userClassName": "css",
         "url": "css/payroll.css"
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "url": "uri"
+    },
     "designerId": "4cd4097c-b3ff-4cc5-95e0-1cf3885630e9"
 }

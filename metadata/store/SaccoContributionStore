@@ -12,6 +12,13 @@
         "model": "SaccoContributions",
         "storeId": "SaccoContributionStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "BankBrancheStore1",
     "designerId": "d35c52af-8f81-4175-a57d-48a9078e73d4",
     "cn": [
@@ -25,6 +32,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getSaccoReport"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy9",
             "designerId": "82f4998d-4587-4260-87df-3eb4ea0e97a8",
             "cn": [
@@ -36,7 +46,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "saccosavings"
+                        "rootProperty": "saccosavings"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader9",
                     "designerId": "b31f8442-f9e9-437b-bcff-a6087b92c675"

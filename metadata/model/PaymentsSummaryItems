@@ -9,10 +9,14 @@
         "designer|userAlias": "paymentssummaryitems",
         "designer|userClassName": "PaymentsSummaryItems"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "a76b9300-e120-4ead-bd71-877be0350733",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -20,14 +24,18 @@
             "codeClass": null,
             "userConfig": {
                 "name": "PID",
-                "sortType": "asUCString",
-                "type": null
+                "sortType": "asInt"
             },
-            "name": "MyField105",
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string",
+                "type": "string"
+            },
+            "name": "MyField110",
             "designerId": "8da4bd7e-107e-4023-8e57-58a5a821ceab"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -36,25 +44,31 @@
             "userConfig": {
                 "name": "emp_names"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField106",
             "designerId": "c7df9b50-c17d-4f6b-bf72-acc5078ec081"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "total",
-                "type": "float"
+                "name": "total"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
             },
             "name": "MyField107",
             "designerId": "a38532f9-ae9e-4403-9c61-b3ea53028132"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -62,6 +76,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "pstatus"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField108",
             "designerId": "5940305a-ecfe-4474-966d-3fb5d44fc753"

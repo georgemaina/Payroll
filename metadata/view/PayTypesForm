@@ -13,11 +13,26 @@
         "designer|userClassName": "PayTypesForm",
         "draggable": null,
         "header": false,
-        "height": 597,
+        "height": 616,
         "title": null,
-        "width": 838
+        "width": 835
+    },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "draggable": "boolean",
+        "header": "boolean",
+        "height": "auto",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
     },
     "designerId": "86960ac9-d180-4f91-a7fa-f56c38a734ca",
+    "viewControllerInstanceId": "88877a0f-d753-4cab-8a22-109373c98dc9",
+    "viewModelInstanceId": "737baa01-a44a-424c-8236-4441f7b68390",
     "cn": [
         {
             "type": "Ext.form.Panel",
@@ -30,11 +45,22 @@
                 "bodyPadding": 10,
                 "designer|snapToGrid": 5,
                 "frame": true,
-                "height": 240,
+                "height": 274,
                 "itemId": "paytypesfrm",
                 "layout": "absolute",
                 "title": null,
                 "url": "data/updateFunctions.php?task=updateItems"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "designer|snapToGrid": "number",
+                "frame": "boolean",
+                "height": "auto",
+                "itemId": "string",
+                "layout": "string",
+                "title": "string",
+                "url": "string",
+                "scrollable": "boolean"
             },
             "name": "MyForm",
             "designerId": "cb947288-f913-444f-82b7-b0bb84a4bc49",
@@ -59,6 +85,20 @@
                         "typeAhead": true,
                         "valueField": "ID"
                     },
+                    "configAlternates": {
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "minChars": "number",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "tabIndex": "number",
+                        "typeAhead": "boolean",
+                        "valueField": "datafield",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyComboBox13",
                     "designerId": "c0c08001-2d13-4709-8c49-3b2c47891878"
                 },
@@ -73,10 +113,20 @@
                         "fieldLabel": "Pay Type",
                         "labelAlign": "right",
                         "layout|x": 15,
-                        "layout|y": 60,
+                        "layout|y": 75,
                         "name": "PayType",
                         "tabIndex": 3,
                         "width": 295
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyTextField46",
                     "designerId": "99499a8e-53ab-4698-9cf3-9862b3936e23"
@@ -92,10 +142,20 @@
                         "fieldLabel": "Type ID",
                         "labelAlign": "right",
                         "layout|x": 15,
-                        "layout|y": 35,
+                        "layout|y": 40,
                         "name": "ID",
                         "tabIndex": 2,
                         "width": 170
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyTextField47",
                     "designerId": "c079bbfe-2883-43a8-a541-94a8159b7b51"
@@ -111,10 +171,20 @@
                         "fieldLabel": "Interest Name",
                         "labelAlign": "right",
                         "layout|x": 480,
-                        "layout|y": 125,
+                        "layout|y": 150,
                         "name": "InterestName",
                         "tabIndex": 12,
                         "width": 295
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyTextField48",
                     "designerId": "d89c1f13-7255-42bf-afa9-2a34f752462c"
@@ -129,12 +199,23 @@
                     "userConfig": {
                         "fieldLabel": null,
                         "labelAlign": "right",
-                        "layout|x": 585,
-                        "layout|y": 155,
+                        "layout|x": 665,
+                        "layout|y": 185,
                         "name": "formStatus",
                         "readOnly": true,
                         "tabIndex": 12,
                         "width": 110
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyTextField49",
                     "designerId": "67ef6d73-f435-4447-9738-7ff2c5212d54"
@@ -150,10 +231,20 @@
                         "fieldLabel": "Interest Code",
                         "labelAlign": "right",
                         "layout|x": 480,
-                        "layout|y": 95,
+                        "layout|y": 115,
                         "name": "InterestCode",
                         "tabIndex": 11,
                         "width": 295
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyTextField50",
                     "designerId": "537f8f5b-6c12-4410-a57f-fbaef2fa2455"
@@ -168,11 +259,23 @@
                     "userConfig": {
                         "fieldLabel": "GL Account Code",
                         "labelAlign": "right",
-                        "layout|x": 480,
+                        "labelWidth": 120,
+                        "layout|x": 460,
                         "layout|y": 10,
                         "name": "Gl_acc",
                         "tabIndex": 8,
                         "width": 295
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "labelWidth": "number"
                     },
                     "name": "MyTextField51",
                     "designerId": "73541eff-15d8-4120-887f-9816e5b9009a"
@@ -188,10 +291,20 @@
                         "fieldLabel": "Interest",
                         "labelAlign": "right",
                         "layout|x": 480,
-                        "layout|y": 65,
+                        "layout|y": 80,
                         "name": "Interest",
                         "tabIndex": 10,
                         "width": 295
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyTextField52",
                     "designerId": "ac486248-5b48-49c1-b14b-5b44e7564107"
@@ -206,11 +319,23 @@
                     "userConfig": {
                         "fieldLabel": "GL Account Name",
                         "labelAlign": "right",
-                        "layout|x": 480,
-                        "layout|y": 30,
+                        "labelWidth": 120,
+                        "layout|x": 460,
+                        "layout|y": 45,
                         "name": "Gl_desc",
                         "tabIndex": 9,
                         "width": 295
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "labelWidth": "number"
                     },
                     "name": "MyTextField53",
                     "designerId": "870240bb-e1dd-4095-b7e5-4aabd42143d1"
@@ -227,10 +352,21 @@
                         "fieldLabel": "Fixed",
                         "labelAlign": "right",
                         "layout|x": 15,
-                        "layout|y": 90,
+                        "layout|y": 100,
                         "name": "Fixed",
                         "tabIndex": 4,
                         "uncheckedValue": "off"
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "uncheckedValue": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckbox6",
                     "designerId": "c567ffa2-45a8-4c1d-8d8e-600cd0eec89d"
@@ -247,10 +383,21 @@
                         "fieldLabel": "Contribution",
                         "labelAlign": "right",
                         "layout|x": 15,
-                        "layout|y": 110,
+                        "layout|y": 125,
                         "name": "Contribution",
                         "tabIndex": 5,
                         "uncheckedValue": "off"
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "uncheckedValue": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckbox7",
                     "designerId": "6d242ed0-5ae9-426f-99aa-f0bf01e7f09b"
@@ -267,10 +414,21 @@
                         "fieldLabel": "Posted",
                         "labelAlign": "right",
                         "layout|x": 15,
-                        "layout|y": 130,
+                        "layout|y": 150,
                         "name": "Posted",
                         "tabIndex": 6,
                         "uncheckedValue": "off"
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "uncheckedValue": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckbox8",
                     "designerId": "03f2456b-61f7-4f15-aa65-6f3616524bd6"
@@ -284,13 +442,24 @@
                     "codeClass": null,
                     "userConfig": {
                         "fieldLabel": "Notes",
-                        "height": 57,
+                        "height": 82,
                         "labelAlign": "right",
                         "layout|x": 15,
-                        "layout|y": 155,
+                        "layout|y": 180,
                         "name": "Notes",
                         "tabIndex": 7,
                         "width": 400
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyTextArea3",
                     "designerId": "45a4925e-9e3b-4177-b4ed-a02874487f9b"
@@ -305,11 +474,21 @@
                     "userConfig": {
                         "height": 35,
                         "itemId": "cmdNew",
-                        "layout|x": 590,
-                        "layout|y": 190,
+                        "layout|x": 600,
+                        "layout|y": 230,
                         "tabIndex": 14,
                         "text": "<b>New</b>",
                         "width": 105
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "tabIndex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyButton17",
                     "designerId": "3105d4a6-d3cd-43fb-9936-4c266031c7b6"
@@ -324,11 +503,21 @@
                     "userConfig": {
                         "height": 35,
                         "itemId": "cmdSavePaytypes",
-                        "layout|x": 480,
-                        "layout|y": 190,
+                        "layout|x": 470,
+                        "layout|y": 230,
                         "tabIndex": 13,
                         "text": "<b>Save</b>",
                         "width": 100
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "tabIndex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyButton18",
                     "designerId": "b1e2da15-d51b-4c92-b09f-ef6b96972f23"
@@ -343,11 +532,21 @@
                     "userConfig": {
                         "height": 35,
                         "itemId": "cmdClose",
-                        "layout|x": 705,
-                        "layout|y": 190,
+                        "layout|x": 720,
+                        "layout|y": 230,
                         "tabIndex": 15,
                         "text": "<b>Close</b>",
                         "width": 105
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "tabIndex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyButton19",
                     "designerId": "829e1096-6a4e-4c85-ae1f-448d5b2dca11"
@@ -365,6 +564,14 @@
                         "layout|x": 220,
                         "layout|y": 95,
                         "name": "formStatus"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "hidden": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyTextField54",
                     "designerId": "b542042a-ff6c-404f-8c3c-a69ec1ff3e40"
@@ -384,16 +591,26 @@
                 "store": "PayTypeStore",
                 "title": "Pay Types List"
             },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "store": "store",
+                "title": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyGridPanel5",
             "designerId": "46946b26-31f6-41f2-8b4e-0aa974578ecf",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView6",
                     "designerId": "07146473-779a-4b9f-a3d2-84410411cf1d"
                 },
@@ -409,6 +626,13 @@
                         "locked": true,
                         "text": "ID",
                         "width": 36
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "locked": "boolean",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn62",
                     "designerId": "478106e4-c70e-462f-a435-9b0611d7c30a"
@@ -426,6 +650,13 @@
                         "text": "CatID",
                         "width": 53
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "locked": "boolean",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn63",
                     "designerId": "66c94142-3f2c-49bc-bb9e-f36dff628a14"
                 },
@@ -442,11 +673,18 @@
                         "text": "PayType",
                         "width": 168
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "locked": "boolean",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn64",
                     "designerId": "beb12d23-853e-4ba9-ae98-4e5141b5589a"
                 },
                 {
-                    "type": "Ext.grid.column.CheckColumn",
+                    "type": "Ext.grid.column.Check",
                     "reference": {
                         "name": "columns",
                         "type": "array"
@@ -457,11 +695,17 @@
                         "text": "Fixed",
                         "width": 53
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyCheckColumn",
                     "designerId": "fa1a8465-2dc2-4b25-a309-f6737fe38035"
                 },
                 {
-                    "type": "Ext.grid.column.CheckColumn",
+                    "type": "Ext.grid.column.Check",
                     "reference": {
                         "name": "columns",
                         "type": "array"
@@ -470,6 +714,11 @@
                     "userConfig": {
                         "dataIndex": "Contribution",
                         "text": "Contribution"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckColumn1",
                     "designerId": "8118a8d6-7e2e-4e8e-adda-d1c17e49947f"
@@ -485,6 +734,11 @@
                         "dataIndex": "gl_acc",
                         "text": "Gl_acc"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn65",
                     "designerId": "76e08c15-bab6-4521-b251-e1c85d88c1ca"
                 },
@@ -499,11 +753,16 @@
                         "dataIndex": "gl_desc",
                         "text": "Gl_desc"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn66",
                     "designerId": "7c27fe9c-8c79-4c31-bbe7-8feb19db0997"
                 },
                 {
-                    "type": "Ext.grid.column.CheckColumn",
+                    "type": "Ext.grid.column.Check",
                     "reference": {
                         "name": "columns",
                         "type": "array"
@@ -512,6 +771,11 @@
                     "userConfig": {
                         "dataIndex": "Posted",
                         "text": "Posted"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckColumn2",
                     "designerId": "2615aaa7-2096-4bcd-8416-d2dfbd4dc242"
@@ -527,6 +791,11 @@
                         "dataIndex": "Interest",
                         "text": "Interest"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn67",
                     "designerId": "ef4d191c-8bd9-4103-9ae3-bb72fd31148f"
                 },
@@ -540,6 +809,11 @@
                     "userConfig": {
                         "dataIndex": "InterestCode",
                         "text": "InterestCode"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn68",
                     "designerId": "65aaba85-80ca-457d-9acf-079492df280b"
@@ -555,11 +829,16 @@
                         "dataIndex": "InterestName",
                         "text": "InterestName"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn69",
                     "designerId": "0b3922dc-4d08-497a-bcf4-4873eb6b3197"
                 },
                 {
-                    "type": "Ext.grid.column.CheckColumn",
+                    "type": "Ext.grid.column.Check",
                     "reference": {
                         "name": "columns",
                         "type": "array"
@@ -568,6 +847,11 @@
                     "userConfig": {
                         "dataIndex": "Recurrent",
                         "text": "Recurrent"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckColumn3",
                     "designerId": "256d864e-6104-4f24-8242-388586255187"
@@ -585,6 +869,13 @@
                         "store": "PayTypeStore",
                         "width": 360
                     },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPagingToolbar6",
                     "designerId": "1a44828a-ad71-44b9-af00-9afc42a93c25"
                 },
@@ -600,6 +891,12 @@
                         "id": "deletePaytypes",
                         "text": "Delete"
                     },
+                    "configAlternates": {
+                        "align": "string",
+                        "id": "string",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyActionColumn3",
                     "designerId": "7dac4c66-d213-4306-9117-a035448d307a",
                     "cn": [
@@ -612,6 +909,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "icon": "icons/delete1.jpg"
+                            },
+                            "configAlternates": {
+                                "icon": "string"
                             },
                             "name": "MyActionColumnItem3",
                             "designerId": "6bcd9d17-448d-4a5d-9cf7-8a911d447c96"

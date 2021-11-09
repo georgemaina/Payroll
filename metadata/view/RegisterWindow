@@ -8,7 +8,6 @@
     "userConfig": {
         "designer|userAlias": "registerwindow",
         "designer|userClassName": "RegisterWindow",
-        "height": 570,
         "maximizable": true,
         "minimizable": true,
         "resizable": [
@@ -17,5 +16,18 @@
         "title": "Employee Register",
         "width": 860
     },
-    "designerId": "fccbbde8-0cd3-4ee0-88b8-9be937658afa"
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "maximizable": "boolean",
+        "minimizable": "boolean",
+        "resizable": "object",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "designerId": "fccbbde8-0cd3-4ee0-88b8-9be937658afa",
+    "viewControllerInstanceId": "9e7a731a-0f4c-4cda-bd40-f4c3aa85cb8a",
+    "viewModelInstanceId": "056a5b20-e2a8-4304-aed9-9b5fd458ee82"
 }

@@ -6,8 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "basePath": "../../Ext-4",
+        "basePath": "../ext-6/build/",
+        "debug": true,
         "designer|userClassName": "Library"
+    },
+    "configAlternates": {
+        "basePath": "uri",
+        "designer|userClassName": "string",
+        "debug": "boolean"
     },
     "designerId": "7e4d1c8a-a016-44a0-af07-597702e449c8"
 }

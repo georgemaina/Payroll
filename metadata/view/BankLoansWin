@@ -1,0 +1,213 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "bankloanswin",
+        "designer|userClassName": "BankLoansWin",
+        "frame": true,
+        "height": 216,
+        "layout": "absolute",
+        "title": null,
+        "width": 423
+    },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "EarningsDeductionsWindow1",
+    "designerId": "37deaa66-18f5-488c-9858-09194a23cd58",
+    "viewControllerInstanceId": "49db235c-ea59-495b-b7f8-8d99bb171fb1",
+    "viewModelInstanceId": "5377959b-e7ef-4352-85ff-628fc41a35d0",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "month",
+                "fieldLabel": "Payroll Month",
+                "itemId": "payMonth",
+                "labelAlign": "right",
+                "layout|x": 0,
+                "layout|y": 20,
+                "queryMode": "local",
+                "store": "PayMonthStore",
+                "typeAhead": true,
+                "valueField": "ID",
+                "width": 320
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyComboBox38",
+            "designerId": "a00cfe67-7674-49dd-849c-1e87cfd714f6"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "PayType",
+                "fieldLabel": "Pay Type",
+                "itemId": "payType",
+                "labelAlign": "right",
+                "layout|x": -2,
+                "layout|y": 55,
+                "store": "PayTypeStore",
+                "valueField": "ID",
+                "width": 320
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyComboBox39",
+            "designerId": "39498f1b-e37f-4a5c-b681-c339c0cb4bc9"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPreviewEarnDead",
+                "layout|x": 20,
+                "layout|y": 100,
+                "text": "<b>Preview Report",
+                "width": 105
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyButton76",
+            "designerId": "f3cdce5b-9a01-479d-a9a5-fb0c50c6a2ed"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdExportEarnings",
+                "layout|x": 285,
+                "layout|y": 100,
+                "text": "<b>Export Report",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyButton77",
+            "designerId": "dd31cead-73f5-4d4d-9b40-c64db7801f21"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdPrintBankLoans",
+                "layout|x": 150,
+                "layout|y": 100,
+                "text": "<b>Print Report",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyButton78",
+            "designerId": "ab5395ee-a9fc-4a5b-9496-05d08152ef13"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 40,
+                "itemId": "cmdClose",
+                "layout|x": 265,
+                "layout|y": 160,
+                "text": "<b>Close",
+                "width": 150
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyButton79",
+            "designerId": "894060c2-45e5-4df2-af49-adaf6140a57d"
+        }
+    ]
+}

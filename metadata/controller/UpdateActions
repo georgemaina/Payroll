@@ -26,6 +26,13 @@
             "PayrollBatchUpdate"
         ]
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
     "designerId": "7a4a5810-4648-499c-8ca4-3ca267b34a02",
     "cn": [
         {
@@ -75,6 +82,11 @@
                     "});"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "init",
             "designerId": "4f460547-1a75-44d2-bb88-4ee3cf8a2244"
         },
@@ -112,7 +124,8 @@
                     "",
                     "        },",
                     "        failure: function(form, action) {",
-                    "            Ext.Msg.alert('Failed', 'Error updating Items please check your input values');",
+                    "            var jsonResp = Ext.decode(action.response.responseText);",
+                    "            Ext.Msg.alert('Failed',\"Could not save Record \"+ jsonResp.errNo);",
                     "        }",
                     "    });",
                     "} else { // display error alert if the data is invalid",
@@ -122,6 +135,11 @@
                     "",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "savePayTypes",
             "designerId": "2aec783b-f73c-48ca-a395-816ac8017530"
@@ -137,6 +155,11 @@
                 "ref": "paytypesform",
                 "selector": "paytypesform",
                 "xtype": "paytypesform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "paytypesform",
             "designerId": "ce70baf0-aa90-4aab-98e4-0d237d17f35d"
@@ -191,6 +214,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "saveRates",
             "designerId": "97c9bd4e-61dd-406d-a427-1f9fea95ef09"
         },
@@ -205,6 +233,11 @@
                 "ref": "payratesform",
                 "selector": "payratesform",
                 "xtype": "payratesform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "payratesform",
             "designerId": "2fa2790d-7e70-4a84-97ac-7205cce7a616"
@@ -254,6 +287,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "saveTitles",
             "designerId": "a02e847a-08fc-4f1c-9b42-c2fc95bd8eeb"
         },
@@ -301,6 +339,11 @@
                     "\r",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "saveGroups",
             "designerId": "1f5938e7-80c3-4085-b878-f9486baefdc2"
@@ -350,6 +393,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "saveBanks",
             "designerId": "531a236e-1ebe-49d7-9795-a6408e145101"
         },
@@ -364,6 +412,11 @@
                 "ref": "banks",
                 "selector": "banks",
                 "xtype": "banks"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "banks",
             "designerId": "d2912c1e-b0da-4885-8205-895d39123754"
@@ -380,6 +433,11 @@
                 "selector": "jobtitles",
                 "xtype": "jobtitles"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "jobtitles",
             "designerId": "0f94a612-41b9-4507-87fd-eb5cf30593b2"
         },
@@ -394,6 +452,11 @@
                 "ref": "jobgroups",
                 "selector": "jobgroups",
                 "xtype": "jobgroups"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "jobgroups",
             "designerId": "47642cb1-4949-4534-a826-8ae37cecdb2f"
@@ -410,6 +473,11 @@
                 "selector": "departmentsform",
                 "xtype": "departmentsform"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "departmentsform",
             "designerId": "b71fd91a-de40-4961-a326-d2b7ee1fb88c"
         },
@@ -424,6 +492,11 @@
                 "ref": "payrollbranches",
                 "selector": "payrollbranches",
                 "xtype": "payrollbranches"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "payrollbranches",
             "designerId": "cb013161-11dd-41ff-91de-19dfd9b3042e"
@@ -474,6 +547,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "saveDepartments",
             "designerId": "647a5a11-4797-4cc8-b42c-e494c85affdc"
         },
@@ -517,6 +595,11 @@
                     "\r",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "saveBranches",
             "designerId": "d95c948b-c768-471c-8073-6f2a685ddff2"
@@ -566,6 +649,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "saveBankBranches",
             "designerId": "1f016630-d199-4719-9a1a-e1fc36124994"
         },
@@ -580,6 +668,11 @@
                 "ref": "postbycode",
                 "selector": "postbycode",
                 "xtype": "postbycode"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "postbycode",
             "designerId": "e5d60c5d-73f2-45e9-8c7e-b06a9167ab21"
@@ -628,6 +721,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "savePayTypePayments",
             "designerId": "62fc1f80-f4de-4a61-89cc-e856e5f0f575"
         },
@@ -667,6 +765,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "processBatches",
             "designerId": "2c1ae24a-a6fe-4902-98bd-c1081ef947bc"
         },
@@ -681,6 +784,11 @@
                 "ref": "payrollbatchupdate",
                 "selector": "payrollbatchupdate",
                 "xtype": "payrollbatchupdate"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "payrollbatchupdate",
             "designerId": "c5d8326a-45c9-4863-98c8-e57df8b1a5c7"
@@ -722,6 +830,12 @@
                     "gratuityPostingWindow.show();"
                 ]
             },
+            "configAlternates": {
+                "designer|commentHeader": "comment",
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "postGratuity",
             "designerId": "efa08f16-ba65-4baf-83f0-78cc6190f932"
         },
@@ -755,6 +869,11 @@
                     "            ]",
                     "        });"
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "postPension",
             "designerId": "3041137e-d02e-4ad5-bd44-525fc06578d5"

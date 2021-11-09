@@ -21,7 +21,26 @@
         "url": "data/updateFunctions.php?task=updateItems",
         "width": 810
     },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "draggable": "boolean",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "simpleDrag": "boolean",
+        "title": "string",
+        "url": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "5dfc0f33-d3c8-44d5-963d-e6f8616a9f6b",
+    "viewControllerInstanceId": "390b0e8d-c8ae-46c9-83f8-0094ca7e8763",
+    "viewModelInstanceId": "a829274a-b9fa-4af0-bc89-d4f9c5133f39",
     "cn": [
         {
             "type": "Ext.form.field.Text",
@@ -42,6 +61,19 @@
                 "tabIndex": 1,
                 "width": 350
             },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyTextField36",
             "designerId": "e6d4e532-26eb-4213-92f6-cab9aef44916",
             "cn": [
@@ -57,6 +89,10 @@
                         "implHandler": [
                             "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
                         ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
                     },
                     "name": "tpl24",
                     "designerId": "415c7aef-6a21-4e3e-ad57-93b4f3bf20ed"
@@ -76,10 +112,22 @@
                 "labelAlign": "right",
                 "labelWidth": 120,
                 "layout|x": 15,
-                "layout|y": 10,
+                "layout|y": 5,
                 "name": "ID",
                 "readOnly": true,
                 "width": 165
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "readOnly": "boolean",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField37",
             "designerId": "dccbd34f-b27f-495e-92f6-9e2d8ecf9ca2"
@@ -99,11 +147,26 @@
                 "labelAlign": "right",
                 "labelWidth": 120,
                 "layout|x": 15,
-                "layout|y": 65,
+                "layout|y": 75,
                 "name": "BranchID",
                 "store": "PayBranchStore",
                 "tabIndex": 2,
                 "valueField": "ID"
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "store": "store",
+                "tabIndex": "number",
+                "valueField": "datafield",
+                "scrollable": "boolean"
             },
             "name": "MyComboBox12",
             "designerId": "2e65b21b-cf2d-4705-8ce1-ee59177686ca",
@@ -120,6 +183,10 @@
                         "implHandler": [
                             "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
                         ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
                     },
                     "name": "tpl25",
                     "designerId": "21f47653-990c-4482-b407-c17acb86aff4"
@@ -139,9 +206,20 @@
                 "labelAlign": "right",
                 "labelWidth": 120,
                 "layout|x": 15,
-                "layout|y": 95,
+                "layout|y": 110,
                 "name": "gl_acc",
                 "tabIndex": 3
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "scrollable": "boolean"
             },
             "name": "MyTextField38",
             "designerId": "faeeff84-2b3d-4d92-b676-554d95a774f8"
@@ -157,21 +235,34 @@
                 "height": 355,
                 "itemId": "deptsGrid",
                 "layout|x": 0,
-                "layout|y": 140,
+                "layout|y": 155,
                 "store": "PayDeptStore",
                 "title": "Department List",
                 "width": 800
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyGridPanel2",
             "designerId": "af0bc9fd-efe1-4bd8-b60a-d889e19a175a",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView3",
                     "designerId": "4223c224-5dce-40aa-8da5-0f8e87b992d7"
                 },
@@ -188,6 +279,13 @@
                         "store": "PayDeptStore",
                         "width": 360
                     },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPagingToolbar3",
                     "designerId": "e20f3489-3306-4845-8c3d-65eb3744577e"
                 },
@@ -202,6 +300,12 @@
                         "dataIndex": "ID",
                         "text": "ID",
                         "width": 48
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn54",
                     "designerId": "930eafe3-1ee3-495d-807e-60987071a079"
@@ -218,6 +322,12 @@
                         "text": "DeptName",
                         "width": 176
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn55",
                     "designerId": "80b0fa5e-4081-4668-a1fa-fc4726b17979"
                 },
@@ -232,6 +342,11 @@
                         "dataIndex": "BranchID",
                         "text": "BranchID"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn56",
                     "designerId": "e99ef513-fc05-45e8-b993-5cc0f4a46693"
                 },
@@ -245,6 +360,11 @@
                     "userConfig": {
                         "dataIndex": "gl_acc",
                         "text": "Gl_acc"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn57",
                     "designerId": "cf3a51e4-505f-4da3-9587-542dcb8c5a43"
@@ -268,6 +388,19 @@
                         "tooltipType": "title",
                         "width": 53
                     },
+                    "configAlternates": {
+                        "align": "string",
+                        "altText": "string",
+                        "draggable": "boolean",
+                        "id": "string",
+                        "itemId": "string",
+                        "menuText": "string",
+                        "tdCls": "string",
+                        "text": "string",
+                        "tooltipType": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyActionColumn",
                     "designerId": "bb7e9e4e-4a86-4d06-83c3-33d81f9f9e3a",
                     "cn": [
@@ -282,6 +415,11 @@
                                 "altText": "Delete",
                                 "icon": "icons/delete1.jpg",
                                 "tooltip": "Delete Department"
+                            },
+                            "configAlternates": {
+                                "altText": "string",
+                                "icon": "string",
+                                "tooltip": "string"
                             },
                             "name": "MyActionColumnItem",
                             "designerId": "9baa4a0b-c0c3-482d-993f-4521f00464ef"
@@ -306,6 +444,16 @@
                 "text": "<b>Save</b>",
                 "width": 101
             },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyButton8",
             "designerId": "3522973e-a3d3-4de4-b4bf-f174e8c3c99e"
         },
@@ -324,6 +472,16 @@
                 "tabIndex": 5,
                 "text": "<b>New</b>",
                 "width": 101
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton9",
             "designerId": "64f70d02-8540-4511-b96b-f67761a25afb"
@@ -344,6 +502,16 @@
                 "text": "<b>Close</b>",
                 "width": 101
             },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyButton10",
             "designerId": "2c66a171-a3d9-456f-91a8-c5c16afc52e3"
         },
@@ -360,6 +528,14 @@
                 "layout|y": 26,
                 "name": "formStatus",
                 "readOnly": true
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "readOnly": "boolean",
+                "scrollable": "boolean"
             },
             "name": "MyTextField39",
             "designerId": "33904912-1355-4ed0-8d56-07c25480a60d"

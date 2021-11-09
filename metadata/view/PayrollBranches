@@ -19,9 +19,28 @@
         "simpleDrag": null,
         "title": null,
         "url": "data/updateFunctions.php?task=updateItems",
-        "width": 810
+        "width": 801
+    },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "draggable": "boolean",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "simpleDrag": "boolean",
+        "title": "string",
+        "url": "string",
+        "width": "auto",
+        "scrollable": "boolean"
     },
     "designerId": "da7a611e-a5c8-4651-9ccf-2ab84ef1a5c5",
+    "viewControllerInstanceId": "13234b83-d72b-400d-a30c-1778bc69164d",
+    "viewModelInstanceId": "47a6bc8e-7704-4c20-865e-923a38ee6924",
     "cn": [
         {
             "type": "Ext.form.field.Text",
@@ -36,11 +55,24 @@
                 "itemId": "DeptName",
                 "labelAlign": "right",
                 "labelWidth": 120,
-                "layout|x": 0,
-                "layout|y": 50,
+                "layout|x": -2,
+                "layout|y": 45,
                 "name": "BranchName",
                 "tabIndex": 1,
                 "width": 350
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField40",
             "designerId": "9ef89a60-e775-4546-beaf-63a58bedbc58",
@@ -57,6 +89,10 @@
                         "implHandler": [
                             "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
                         ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
                     },
                     "name": "tpl26",
                     "designerId": "70568b63-48ea-4b6b-aea8-00cc67f6d2e0"
@@ -75,10 +111,21 @@
                 "itemId": "DeptName1",
                 "labelAlign": "right",
                 "labelWidth": 120,
-                "layout|x": -2,
-                "layout|y": 20,
+                "layout|x": -4,
+                "layout|y": 10,
                 "name": "ID",
                 "width": 190
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField41",
             "designerId": "f7158d9f-98cf-4617-a9f8-c9530733926c"
@@ -91,24 +138,37 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": 325,
+                "height": 335,
                 "itemId": "branchesGrid",
-                "layout|x": 5,
-                "layout|y": 105,
+                "layout|x": 0,
+                "layout|y": 95,
                 "store": "PayBranchStore",
                 "title": "Branch List",
                 "width": 800
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyGridPanel3",
             "designerId": "37a4d436-e731-4708-9381-cb16d1b7226c",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView4",
                     "designerId": "c3cb7e75-d153-4ef4-9ea4-3b7550142313"
                 },
@@ -125,6 +185,13 @@
                         "store": "PayBranchStore",
                         "width": 360
                     },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPagingToolbar4",
                     "designerId": "11b06e50-afa5-4541-9d3a-9f41b5f40754"
                 },
@@ -138,6 +205,11 @@
                     "userConfig": {
                         "dataIndex": "ID",
                         "text": "ID"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn58",
                     "designerId": "8880a8a9-d1a9-4653-9284-bc27b4555148"
@@ -154,6 +226,12 @@
                         "text": "BranchName",
                         "width": 202
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn59",
                     "designerId": "aae1a319-1db0-422a-976e-cea7ff9c482a"
                 },
@@ -169,6 +247,12 @@
                         "id": "deleteBranch",
                         "text": "Delete"
                     },
+                    "configAlternates": {
+                        "align": "string",
+                        "id": "string",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyActionColumn1",
                     "designerId": "7cffc610-eeb9-41c7-befb-34bdf1db4531",
                     "cn": [
@@ -181,6 +265,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "icon": "icons/delete1.jpg"
+                            },
+                            "configAlternates": {
+                                "icon": "string"
                             },
                             "name": "MyActionColumnItem1",
                             "designerId": "80543832-909c-49d8-b85c-da846d05b671"
@@ -199,10 +286,19 @@
             "userConfig": {
                 "height": 35,
                 "itemId": "cmdNew",
-                "layout|x": 525,
+                "layout|x": 535,
                 "layout|y": 55,
                 "text": "<b>New</b>",
                 "width": 101
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton11",
             "designerId": "9dec29d2-635f-4db3-9d10-bf077ad29a76"
@@ -217,11 +313,21 @@
             "userConfig": {
                 "height": 35,
                 "itemId": "cmdSaveBranches",
-                "layout|x": 405,
+                "layout|x": 415,
                 "layout|y": 55,
                 "tabIndex": 2,
                 "text": "<b>Save</b>",
                 "width": 101
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton12",
             "designerId": "fa574200-fd56-4c7f-98f1-99a134ba1f9e"
@@ -236,10 +342,19 @@
             "userConfig": {
                 "height": 35,
                 "itemId": "cmdClose",
-                "layout|x": 645,
+                "layout|x": 650,
                 "layout|y": 55,
                 "text": "<b>Close</b>",
                 "width": 101
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton13",
             "designerId": "608751c8-9f97-4bc4-ace5-f5b3b848a6ca"
@@ -253,10 +368,18 @@
             "codeClass": null,
             "userConfig": {
                 "fieldLabel": null,
-                "layout|x": 509,
-                "layout|y": 21,
+                "layout|x": 570,
+                "layout|y": 5,
                 "name": "formStatus",
                 "readOnly": true
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "readOnly": "boolean",
+                "scrollable": "boolean"
             },
             "name": "MyTextField42",
             "designerId": "d0d64185-eb6a-46f0-a0e9-b7a6fec166e2"

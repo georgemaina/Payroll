@@ -9,10 +9,14 @@
         "designer|userAlias": "banks",
         "designer|userClassName": "Banks"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "65aebc2f-5b57-45b1-811a-e2c7fd7e689e",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "ID"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField69",
             "designerId": "8743a907-20b7-46e7-9bde-0d47f29c1132"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -34,11 +41,14 @@
             "userConfig": {
                 "name": "BankCode"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField70",
             "designerId": "843914b8-261d-4954-a906-909a26eafb51"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -46,6 +56,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "BankName"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField71",
             "designerId": "6c08972e-d71f-4fb2-971d-088cdf29cec2"

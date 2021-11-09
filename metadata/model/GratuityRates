@@ -9,10 +9,14 @@
         "designer|userAlias": "gratuityrates",
         "designer|userClassName": "GratuityRates"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "b8c6e961-ba93-4540-930a-306aec2ac978",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -20,6 +24,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "rate"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField77",
             "designerId": "d2a06db7-df68-4d74-ae8a-47cf7fe46683"

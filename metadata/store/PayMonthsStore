@@ -1,0 +1,51 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[['1','January'],['2','February'],['3','March'],['4','April'],['5','May'],['6','June'],",
+            "['7','July'],['8','August'],['9','September'],['10','October'],['11','November'],['12','December']]"
+        ],
+        "designer|userAlias": "paymonthsstore",
+        "designer|userClassName": "PayMonthsStore",
+        "model": "PayrollMonths",
+        "storeId": "PayMonthsStore"
+    },
+    "configAlternates": {
+        "data": "array",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "5f6127e1-41ed-480b-8745-cb69ee3041a3",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy34",
+            "designerId": "9c2967b2-ba2a-44b7-a8ad-2823f34dfe3d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader34",
+                    "designerId": "9ab8092c-a325-4d25-a14e-96c93be8d6ab"
+                }
+            ]
+        }
+    ]
+}

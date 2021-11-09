@@ -7,12 +7,34 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "payereturns",
-        "designer|userClassName": "PayeReturns"
+        "designer|userClassName": "PayeReturns",
+        "idProperty": "ID"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "idProperty": "string"
     },
     "designerId": "79c196e3-251c-4cf5-b122-2f974b0e9a65",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField127",
+            "designerId": "79c39ba2-be80-4e89-9235-0e689644d773"
+        },
+        {
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +43,14 @@
             "userConfig": {
                 "name": "pid"
             },
-            "name": "MyField127",
-            "designerId": "79c39ba2-be80-4e89-9235-0e689644d773"
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField163",
+            "designerId": "868201e4-4f6c-49e7-8d4c-ae2559ba013e"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -34,11 +59,14 @@
             "userConfig": {
                 "name": "empNames"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField128",
             "designerId": "1fd595d1-3b34-4655-952c-f4bc880ca512"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -47,11 +75,14 @@
             "userConfig": {
                 "name": "pay_type"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField129",
             "designerId": "5bc663f4-52e7-44f7-87bb-a2a5c5d0d1ff"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -60,11 +91,14 @@
             "userConfig": {
                 "name": "Amount"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField130",
             "designerId": "cab82cc1-ee53-4fe7-af8f-a664a11bfa79"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -73,11 +107,14 @@
             "userConfig": {
                 "name": "ID_No"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField131",
             "designerId": "c0efbf19-b844-4b86-a211-ceaf11232935"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -86,11 +123,14 @@
             "userConfig": {
                 "name": "PinNo"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField132",
             "designerId": "665297bf-3f90-4f5e-8623-43cc2085da62"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -98,6 +138,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "payMonth"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField133",
             "designerId": "83a1bb2d-fec8-46c7-b416-d315c8c36724"

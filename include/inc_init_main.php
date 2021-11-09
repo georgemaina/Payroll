@@ -3,10 +3,10 @@
 $dbname='chak_payroll';
 
 # Database user name, default is root or httpd for mysql, or postgres for postgresql
-$dbusername='root';
+$dbusername='george';
 
 # Database user password, default is empty char
-$dbpassword='355ewxxke';
+$dbpassword='&355ewxxKE';
 
 # Database host name, default = localhost
 $dbhost='localhost';
@@ -30,5 +30,5 @@ $fotoserver_ip='localhost';
 $httprotocol='http';
 
 # Set this to your database type. For details refer to ADODB manual or goto http://php.weblogs.com/ADODB/
-$dbtype='mysql';
+$dbtype='mysqli';
 ?>

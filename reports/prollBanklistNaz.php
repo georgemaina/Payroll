@@ -153,23 +153,26 @@ function createInvoiceTitle($db,$bankid,$branchID,$payMonth,$pdf,$page) {
     $headlineStyle4->setFont($font, 10);
     $page->setStyle($headlineStyle4);
     $page->drawText($title, $leftPos + 220, $topPos - 60);
+
         
     $sqlb="Select BankCode,BankName from proll_banks where BankCode='$bankid'";
     $result=$db->Execute($sqlb);
     $row=$result->FetchRow();
+    
+    $page->drawText($row[BankName].' '.$branchID, $leftPos + 240, $topPos - 80);
 
-    $topPos=$topPos-20;
+    $topPos=$topPos-40;
     $page->drawText('Emp No:', $leftPos + 12, $topPos - 60);
     $page->drawText('Name:', $leftPos + 55, $topPos - 60);
-    $page->drawText('Account No:', $leftPos + 200, $topPos - 60);
-    $page->drawText('Bank Name ', $leftPos + 300, $topPos - 60);
-    $page->drawText('Branch', $leftPos + 400, $topPos - 60);
-    $page->drawText('Amount ', $leftPos + 500, $topPos - 60);
+    $page->drawText('Account No:', $leftPos + 220, $topPos - 60);
+    $page->drawText('ID Number ', $leftPos + 320, $topPos - 60);
+//    $page->drawText('Branch', $leftPos + 400, $topPos - 60);
+    $page->drawText('Amount ', $leftPos + 480, $topPos - 60);
 //    $page->setLineWidth(0.9);
 //    $page->drawLine($leftPos + 12, $topPos - 105, $leftPos + 550, $topPos - 105, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
 
-    $sql = "SELECT DISTINCT p.`PID`, p.`FirstName`, p.`Surname`, p.`LastName`, p.`Account_No`, b.`BankName`, e.`BankBranch` ,p.`ID_No`
-            FROM proll_empregister p
+    $sql = "SELECT DISTINCT p.`PID`, p.`FirstName`, p.`Surname`, p.`LastName`, p.`Account_No`, 
+        p.`ID_No` FROM proll_empregister p
             LEFT JOIN proll_banks b ON b.bankcode=p.bankid
             LEFT JOIN proll_bankbranches e ON e.ID=p.BranchID
              WHERE b.BankCode= '$bankid' and p.empstatus='Active'";
@@ -215,9 +218,9 @@ function createInvoiceTitle($db,$bankid,$branchID,$payMonth,$pdf,$page) {
 
         $page->drawText($row['PID'] , $leftPos + 12, $topPos - $currpoint);
         $page->drawText(strtoupper($row['FirstName']) . ' ' . strtoupper($row['Surname']) . ' ' . strtoupper($row['LastName']), $leftPos + 45, $topPos - $currpoint);
-        $page->drawText($row['Account_No'], $leftPos + 200, $topPos - $currpoint);
-        $page->drawText($row['BankName'] , $leftPos + 300, $topPos - $currpoint);
-        $page->drawText($row['BankBranch'] , $leftPos + 400, $topPos - $currpoint);
+        $page->drawText($row['Account_No'], $leftPos + 220, $topPos - $currpoint);
+        $page->drawText($row['ID_No'] , $leftPos + 320, $topPos - $currpoint);
+      //  $page->drawText($row['BankBranch'] , $leftPos + 400, $topPos - $currpoint);
 
         $sql = 'select pid,sum(amount) as NetPay from proll_payments where Pay_Type ="NET PAY" and pid="' . $row['PID'] . '" and paymonth="'.$payMonth.'"';
         //echo $sql;
@@ -225,7 +228,7 @@ function createInvoiceTitle($db,$bankid,$branchID,$payMonth,$pdf,$page) {
         $sumRows = $result2->FetchRow();
         
         $amount=  $sumRows[1];
-        $pdfBase->drawText($page, "Ksh ".number_format($amount,2), $leftPos + 540, $topPos - $currpoint,$leftPos + 450,right);
+        $pdfBase->drawText($page, "Ksh ".number_format($amount,2), $leftPos + 520, $topPos - $currpoint,$leftPos + 520,right);
         
         if($amount==0){
             $sql1="Insert into proll_empregister_inactive(pid) values( $row[PID])";
@@ -247,9 +250,9 @@ function createInvoiceTitle($db,$bankid,$branchID,$payMonth,$pdf,$page) {
     $totalStyle->setFillColor(new Zend_Pdf_Color_RGB(0, 0, 0));
     $totalStyle->setFont($font, 10);
     $page->setStyle($totalStyle);
-    $page->drawText('TOTAL', $leftPos + 420, $topPos - 84);
+    $page->drawText('TOTAL', $leftPos + 400, $topPos - 84);
     //$page->drawText("Ksh ".number_format($total,2), $leftPos + 400, $topPos - 10);
-    $pdfBase->drawText($page, "Ksh ".number_format($total,2), $leftPos + 540, $topPos - 84,$leftPos + 450,right);
+    $pdfBase->drawText($page, "Ksh ".number_format($total,2), $leftPos + 520, $topPos - 84,$leftPos + 520,right);
 
     $dataStyle = new Zend_Pdf_Style ();
     $dataStyle->setFillColor(new Zend_Pdf_Color_RGB(0.1, 0.1, 0.1));

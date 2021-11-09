@@ -13,12 +13,27 @@
         "designer|userAlias": "processpayroll",
         "designer|userClassName": "ProcessPayroll",
         "frame": true,
-        "height": 693,
+        "height": 754,
         "layout": "absolute",
-        "title": "Process Payroll",
-        "width": null
+        "title": "Process Payroll"
+    },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
     },
     "designerId": "1f24dd15-0469-4c50-8223-2f826c56f92f",
+    "viewControllerInstanceId": "ff0d4c31-1def-4958-b8e6-2283e3832890",
+    "viewModelInstanceId": "05a53c58-ba98-4e42-9208-ab2a406c1255",
     "cn": [
         {
             "type": "Ext.grid.Panel",
@@ -29,88 +44,39 @@
             "codeClass": null,
             "userConfig": {
                 "columnLines": true,
-                "height": 485,
+                "height": 575,
                 "itemId": "empPayGridSummary",
-                "layout|x": 5,
-                "layout|y": 205,
+                "layout|x": 10,
+                "layout|y": 130,
                 "store": "PaymentsSummaryStore",
-                "title": "Employees List",
                 "width": 425
+            },
+            "configAlternates": {
+                "columnLines": "boolean",
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyGridPanel12",
             "designerId": "8a0a2e6f-1a5d-49b1-8cb8-c046e7caf1fd",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView13",
                     "designerId": "25148c16-b0e0-4b76-9f43-96f6e6bd7f9c"
-                },
-                {
-                    "type": "Ext.toolbar.Paging",
-                    "reference": {
-                        "name": "dockedItems",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "displayInfo": true,
-                        "dock": "bottom",
-                        "store": "PaymentsSummaryStore",
-                        "width": 360
-                    },
-                    "name": "MyPagingToolbar13",
-                    "designerId": "370dad90-0786-4c7c-bb07-e0006d1d1fca"
-                },
-                {
-                    "type": "Ext.toolbar.Toolbar",
-                    "reference": {
-                        "name": "dockedItems",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dock": "top"
-                    },
-                    "name": "MyToolbar5",
-                    "designerId": "0178a554-9674-458d-9dd6-db3ba928ce7b",
-                    "cn": [
-                        {
-                            "type": "Ext.form.field.Text",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "emptyText": "Search by PID or Names",
-                                "fieldLabel": null,
-                                "layout|flex": null,
-                                "width": 202
-                            },
-                            "name": "MyTextField86",
-                            "designerId": "fb4c929b-3089-4a21-a8b8-13ac002359fa"
-                        },
-                        {
-                            "type": "Ext.button.Button",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "layout|flex": null,
-                                "text": "<b>Search</b>",
-                                "tooltip": null
-                            },
-                            "name": "MyButton39",
-                            "designerId": "d0629bc9-9ea4-4036-b090-9f25ab3a86ac"
-                        }
-                    ]
                 },
                 {
                     "type": "Ext.grid.column.Number",
@@ -124,6 +90,13 @@
                         "format": "000",
                         "text": "PID",
                         "width": 67
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyNumberColumn",
                     "designerId": "0b9aa569-54fc-43c3-b136-521495963a53"
@@ -140,6 +113,12 @@
                         "text": "Emp_names",
                         "width": 181
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn105",
                     "designerId": "51733bfc-1456-4154-a767-8b5ff0261375"
                 },
@@ -155,6 +134,12 @@
                         "dataIndex": "total",
                         "text": "Total"
                     },
+                    "configAlternates": {
+                        "align": "string",
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyNumberColumn1",
                     "designerId": "edb703e9-b21d-4ef3-808c-dc4fac6aac0d"
                 },
@@ -169,6 +154,12 @@
                         "dataIndex": "pstatus",
                         "hidden": true,
                         "text": "Pstatus"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn106",
                     "designerId": "54e2bb4d-6145-4aa8-b9ce-cbaa615f9c42"
@@ -186,8 +177,93 @@
                         "store": "PaymentsSummaryStore",
                         "width": 360
                     },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyPagingToolbar27",
                     "designerId": "257f99c3-7748-446a-8b3d-cf2c740b6b3d"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|snapToGrid": 5,
+                        "dock": "top",
+                        "height": 34,
+                        "layout": "absolute",
+                        "width": 100
+                    },
+                    "configAlternates": {
+                        "designer|snapToGrid": "number",
+                        "dock": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "fc3d5605-e6a2-4c63-a56f-b350f8819143",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 285,
+                                "layout|y": 0,
+                                "text": "<b>Search</b>",
+                                "tooltip": null,
+                                "width": 115
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "text": "string",
+                                "tooltip": "object",
+                                "scrollable": "boolean",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "width": "auto"
+                            },
+                            "name": "MyButton39",
+                            "designerId": "d0629bc9-9ea4-4036-b090-9f25ab3a86ac"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "emptyText": "Search by PID or Names",
+                                "fieldLabel": null,
+                                "layout|x": 0,
+                                "layout|y": -1,
+                                "width": 285
+                            },
+                            "configAlternates": {
+                                "emptyText": "string",
+                                "fieldLabel": "string",
+                                "layout|flex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "layout|x": "number",
+                                "layout|y": "number"
+                            },
+                            "name": "MyTextField86",
+                            "designerId": "fb4c929b-3089-4a21-a8b8-13ac002359fa"
+                        }
+                    ]
                 }
             ]
         },
@@ -200,42 +276,39 @@
             "codeClass": null,
             "userConfig": {
                 "columnLines": true,
-                "height": 485,
+                "height": 570,
                 "itemId": "empPayGridDetail",
-                "layout|x": 435,
-                "layout|y": 205,
+                "layout|x": 445,
+                "layout|y": 130,
                 "store": "ProllPaymentsStore",
-                "title": "Employee Payments",
-                "width": null
+                "width": 841
+            },
+            "configAlternates": {
+                "columnLines": "boolean",
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyGridPanel13",
             "designerId": "f39d75c8-4896-4a14-ba92-819801a26683",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView14",
                     "designerId": "acc425c2-fcb4-40f7-8111-9ee8582aaf2e"
-                },
-                {
-                    "type": "Ext.toolbar.Paging",
-                    "reference": {
-                        "name": "dockedItems",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "displayInfo": true,
-                        "dock": "bottom",
-                        "store": "ProllPaymentsStore",
-                        "width": 360
-                    },
-                    "name": "MyPagingToolbar14",
-                    "designerId": "fba23c77-9ee0-4e22-bf06-32c40e0e3287"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -248,6 +321,12 @@
                         "dataIndex": "ID",
                         "text": "ID",
                         "width": 41
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn107",
                     "designerId": "20d8edbc-141d-43e7-8848-de618159ba01"
@@ -264,6 +343,12 @@
                         "text": "PID",
                         "width": 63
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn108",
                     "designerId": "0a5f2d85-7bec-4f16-9226-9b656e8b5b34"
                 },
@@ -278,6 +363,12 @@
                         "dataIndex": "PayType",
                         "text": "PayType",
                         "width": 73
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn109",
                     "designerId": "9fc5146c-3c20-459f-aa70-a2761d26cf2c"
@@ -294,6 +385,12 @@
                         "text": "PayName",
                         "width": 145
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn110",
                     "designerId": "1b92e35c-f61c-4804-b468-24e78ccee64e"
                 },
@@ -309,6 +406,12 @@
                         "dataIndex": "Amount",
                         "text": "Amount"
                     },
+                    "configAlternates": {
+                        "align": "string",
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn111",
                     "designerId": "06e42cb5-321f-4376-beb6-014feafe01bf"
                 },
@@ -323,24 +426,13 @@
                         "dataIndex": "Balance",
                         "text": "Balance"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn112",
                     "designerId": "655d5075-7fd2-4d2c-bd99-c8e63f0f7aa1"
-                },
-                {
-                    "type": "Ext.toolbar.Paging",
-                    "reference": {
-                        "name": "dockedItems",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "displayInfo": true,
-                        "dock": "bottom",
-                        "store": "ProllPaymentsStore",
-                        "width": 360
-                    },
-                    "name": "MyPagingToolbar28",
-                    "designerId": "a358fc90-41dd-420a-981a-db241f0df71b"
                 }
             ]
         },
@@ -353,12 +445,23 @@
             "codeClass": null,
             "userConfig": {
                 "designer|snapToGrid": 5,
-                "height": 165,
+                "height": 140,
                 "layout": "absolute",
-                "layout|x": 5,
-                "layout|y": 35,
-                "title": "Payroll Month",
-                "width": 525
+                "layout|x": 10,
+                "layout|y": -10,
+                "padding": "0 0 0 ",
+                "width": 505
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean",
+                "padding": "auto"
             },
             "name": "MyFieldSet5",
             "designerId": "53207cb1-6191-4231-862f-a57a5f48764c",
@@ -371,28 +474,43 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "displayField": "Month",
                         "emptyText": "Select the Payroll Month",
                         "fieldLabel": "Select Payroll Month",
                         "forceSelection": true,
                         "itemId": "payMonth",
-                        "labelWidth": 120,
+                        "labelWidth": 130,
                         "layout|anchor": "100%",
-                        "layout|x": 0,
-                        "layout|y": 5,
+                        "layout|x": 5,
+                        "layout|y": 15,
                         "matchFieldWidth": false,
                         "name": "payMonth",
                         "queryMode": "local",
-                        "store": [
-                            "[['January','January'],['February','February'],['March','March'],['April','April'],['May','May'],['June','June'],\r",
-                            "['July','July'],['August','August'],['September','September'],['October','October'],['November','November'],['December','December']]"
-                        ],
+                        "store": "PayMonthStore",
                         "typeAhead": true,
+                        "valueField": "ID",
                         "width": 503
                     },
-                    "name": "MyComboBox17",
                     "configAlternates": {
-                        "store": "array"
+                        "emptyText": "string",
+                        "fieldLabel": "string",
+                        "forceSelection": "boolean",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|anchor": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "matchFieldWidth": "boolean",
+                        "name": "string",
+                        "queryMode": "string",
+                        "typeAhead": "boolean",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "displayField": "datafield",
+                        "store": "store",
+                        "valueField": "datafield"
                     },
+                    "name": "MyComboBox17",
                     "designerId": "a3251617-aa48-411f-a74b-32513621eda7"
                 },
                 {
@@ -403,12 +521,21 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 43,
+                        "height": 35,
                         "itemId": "cmdUpdateTaxes",
-                        "layout|x": 175,
+                        "layout|x": 185,
                         "layout|y": 95,
                         "text": "<b>Process Payroll</b>",
-                        "width": 155
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyButton40",
                     "designerId": "a34c21b4-dc3c-451c-87b2-6de7a818ade1"
@@ -421,12 +548,21 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 43,
+                        "height": 35,
                         "itemId": "cmdImportPayments",
-                        "layout|x": 0,
+                        "layout|x": 5,
                         "layout|y": 95,
                         "text": "<b>Import Posted Payments</b>",
-                        "width": 165
+                        "width": 175
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyButton41",
                     "designerId": "0b4d96c6-0691-4876-87f8-42dd6dd7e518"
@@ -439,12 +575,21 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 40,
+                        "height": 35,
                         "itemId": "cmdClearImports",
-                        "layout|x": 340,
+                        "layout|x": 310,
                         "layout|y": 95,
                         "text": "<b>Clear Imported Payments</b>",
-                        "width": 165
+                        "width": 185
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyButton42",
                     "designerId": "b3d8e6c7-b5e9-4e73-af05-3262016f4505"
@@ -460,10 +605,20 @@
                         "fieldLabel": null,
                         "fieldStyle": "font-size: large;font-weight: bold;color: maroon;",
                         "itemId": "PayrollStatus",
-                        "layout|x": 5,
-                        "layout|y": 45,
-                        "value": null,
+                        "layout|x": 10,
+                        "layout|y": 50,
+                        "value": "Payroll Status",
                         "width": 485
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyDisplayField10",
                     "designerId": "3ca45f5a-6422-4abe-8357-903db5b709f3"
@@ -483,6 +638,15 @@
                         "layout|x": 5,
                         "layout|y": 65
                     },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "hidden": "boolean",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyTextField87",
                     "designerId": "3ee83c45-a12c-457b-be67-614abf3df570"
                 }
@@ -496,16 +660,28 @@
             },
             "codeClass": null,
             "userConfig": {
-                "collapsible": true,
                 "designer|snapToGrid": 5,
                 "frame": false,
-                "height": 170,
+                "height": 130,
                 "itemId": null,
                 "layout": "absolute",
-                "layout|x": 530,
+                "layout|x": 520,
                 "layout|y": 5,
-                "title": "<b>Employee Details</b>",
-                "width": 740
+                "padding": "0 0 0 0"
+            },
+            "configAlternates": {
+                "collapsible": "boolean",
+                "designer|snapToGrid": "number",
+                "frame": "boolean",
+                "height": "auto",
+                "itemId": "string",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean",
+                "padding": "auto"
             },
             "name": "MyFieldSet6",
             "designerId": "acb42f9c-9d2d-4287-87dc-910c0cbc8d9f",
@@ -522,10 +698,21 @@
                         "fieldStyle": "font-size: small;font-weight: bold;color: green;",
                         "itemId": "pid",
                         "labelAlign": "right",
-                        "layout|x": -33,
+                        "layout|x": -20,
                         "layout|y": -1,
                         "name": "PID",
                         "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "itemId": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "value": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyDisplayField11",
                     "designerId": "f27075a1-e686-4c73-8db3-67f250c02505"
@@ -541,10 +728,20 @@
                         "fieldLabel": "Job Group",
                         "fieldStyle": "font-size: small;font-weight: bold;color: green;",
                         "labelAlign": "right",
-                        "layout|x": -28,
-                        "layout|y": 125,
+                        "layout|x": -18,
+                        "layout|y": 85,
                         "name": "JobGroup",
                         "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "value": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyDisplayField12",
                     "designerId": "c5fb32e3-77a5-4268-81ea-8efd0045a979"
@@ -560,10 +757,20 @@
                         "fieldLabel": "Job Title",
                         "fieldStyle": "font-size: small;font-weight: bold;color: green;",
                         "labelAlign": "right",
-                        "layout|x": -29,
-                        "layout|y": 105,
+                        "layout|x": -20,
+                        "layout|y": 65,
                         "name": "JobTitle",
                         "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "value": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyDisplayField13",
                     "designerId": "17d26ed4-336e-4d76-8f8b-f1ee404376be"
@@ -579,10 +786,20 @@
                         "fieldLabel": "Departmant",
                         "fieldStyle": "font-size: small;font-weight: bold;color: green;",
                         "labelAlign": "right",
-                        "layout|x": -29,
-                        "layout|y": 85,
+                        "layout|x": -20,
+                        "layout|y": 45,
                         "name": "Department",
                         "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "value": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyDisplayField14",
                     "designerId": "b330da41-d9b9-4169-8c62-8d3f76f41240"
@@ -595,52 +812,25 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": "Surname",
+                        "fieldLabel": "Names",
                         "fieldStyle": "font-size: small;font-weight: bold;color: green;",
                         "labelAlign": "right",
-                        "layout|x": -30,
-                        "layout|y": 65,
-                        "name": "SurName",
-                        "value": null
-                    },
-                    "name": "MyDisplayField15",
-                    "designerId": "20c2d903-4518-45f1-a3ea-dbe545e6f8f7"
-                },
-                {
-                    "type": "Ext.form.field.Display",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Last Name",
-                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
-                        "labelAlign": "right",
-                        "layout|x": -31,
-                        "layout|y": 45,
-                        "name": "LastName",
-                        "value": null
-                    },
-                    "name": "MyDisplayField16",
-                    "designerId": "a07d1b4f-53c0-4481-8b24-542b38a684c8"
-                },
-                {
-                    "type": "Ext.form.field.Display",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "First Name",
-                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
-                        "labelAlign": "right",
-                        "layout|x": -33,
-                        "layout|y": 20,
+                        "layout|x": -20,
+                        "layout|y": 25,
                         "name": "FirstName",
                         "shadow": true,
                         "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "shadow": "auto",
+                        "value": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyDisplayField17",
                     "designerId": "c554708d-43c2-4dd0-ad83-998aeb6a167f"
@@ -655,10 +845,19 @@
                     "userConfig": {
                         "boxLabel": "Taxable",
                         "fieldLabel": null,
-                        "layout|x": 330,
-                        "layout|y": 0,
+                        "layout|x": 410,
+                        "layout|y": -7.666666999999997,
                         "name": "Taxable",
                         "readOnly": true
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckbox15",
                     "designerId": "96a77fad-6259-4900-a7ef-cacd7f251010"
@@ -673,10 +872,19 @@
                     "userConfig": {
                         "boxLabel": "NHIF",
                         "fieldLabel": null,
-                        "layout|x": 330,
-                        "layout|y": 125,
+                        "layout|x": 410,
+                        "layout|y": 95,
                         "name": "NHIF",
                         "readOnly": true
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckbox16",
                     "designerId": "13decd0f-fbe2-46a9-9411-e2bf9fb7f3ec"
@@ -691,10 +899,19 @@
                     "userConfig": {
                         "boxLabel": "NSSF",
                         "fieldLabel": null,
-                        "layout|x": 330,
-                        "layout|y": 100,
+                        "layout|x": 410,
+                        "layout|y": 70,
                         "name": "NSSF",
                         "readOnly": true
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckbox17",
                     "designerId": "9314a13b-3eab-45a8-a6b0-251697a4cd3a"
@@ -709,10 +926,19 @@
                     "userConfig": {
                         "boxLabel": "Housed",
                         "fieldLabel": null,
-                        "layout|x": 330,
-                        "layout|y": 75,
+                        "layout|x": 410,
+                        "layout|y": 50,
                         "name": "Housed",
                         "readOnly": true
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckbox18",
                     "designerId": "bb8ad2ef-13f6-4147-9010-59ba5a3be385"
@@ -727,10 +953,19 @@
                     "userConfig": {
                         "boxLabel": "Unionisable",
                         "fieldLabel": null,
-                        "layout|x": 330,
-                        "layout|y": 50,
+                        "layout|x": 410,
+                        "layout|y": 30,
                         "name": "Unionisable",
                         "readOnly": true
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckbox19",
                     "designerId": "d0053781-71c4-41b3-bfc4-ec5c2af76584"
@@ -745,10 +980,19 @@
                     "userConfig": {
                         "boxLabel": "Pensionable",
                         "fieldLabel": null,
-                        "layout|x": 330,
-                        "layout|y": 25,
+                        "layout|x": 410,
+                        "layout|y": 10,
                         "name": "Pensionable",
                         "readOnly": true
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "scrollable": "boolean"
                     },
                     "name": "MyCheckbox20",
                     "designerId": "573f218f-f695-4fc6-9d53-5b810a484121"
@@ -762,10 +1006,20 @@
                     "codeClass": null,
                     "userConfig": {
                         "height": 35,
-                        "layout|x": 465,
-                        "layout|y": -3,
+                        "hidden": true,
+                        "layout|x": 550,
+                        "layout|y": 5,
                         "text": "Post By PID",
                         "width": 145
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "hidden": "boolean"
                     },
                     "name": "MyButton43",
                     "designerId": "98c9dd80-1162-4ebf-bf7f-d5c65d28b6e4"
@@ -779,11 +1033,22 @@
                     "codeClass": null,
                     "userConfig": {
                         "height": 35,
+                        "hidden": true,
                         "itemId": "cmdPostByPid",
-                        "layout|x": 1005,
-                        "layout|y": 35,
+                        "layout|x": 760,
+                        "layout|y": 50,
                         "text": "<b>Post By PID</b>",
                         "width": 145
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "hidden": "boolean"
                     },
                     "name": "MyButton44",
                     "designerId": "89180358-6967-4a4d-aad2-5e1d17b77189"
@@ -797,29 +1062,22 @@
                     "codeClass": null,
                     "userConfig": {
                         "height": 35,
-                        "itemId": "cmdClose",
-                        "layout|x": 465,
-                        "layout|y": 95,
-                        "text": "<b>Close</b>",
-                        "width": 145
-                    },
-                    "name": "MyButton45",
-                    "designerId": "42655268-1acf-48cb-8430-a0f643f0fadd"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 35,
+                        "hidden": true,
                         "itemId": "cmdPostByCode",
-                        "layout|x": 465,
-                        "layout|y": 40,
+                        "layout|x": 550,
+                        "layout|y": 45,
                         "text": "<b>Post By Code</b>",
                         "width": 145
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "hidden": "boolean"
                     },
                     "name": "MyButton46",
                     "designerId": "47a03f2d-5062-4659-a705-e9468d401bd2"

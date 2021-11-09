@@ -13,6 +13,14 @@
         "pageSize": 100,
         "storeId": "BankStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "5d004fd6-2ab5-43f4-a6be-b19c56f3bc5e",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getBanks"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy8",
             "designerId": "2f9fb46c-fbfc-4971-bd74-344cc835d8b5",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "banks"
+                        "rootProperty": "banks"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader8",
                     "designerId": "8b63a75a-269b-4f2c-8d10-b3713a09899b"

@@ -12,6 +12,13 @@
         "model": "EmploymentType",
         "storeId": "EmpTypesStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "designerId": "a51cb91e-a37b-4265-9b04-857df1c61748",
     "cn": [
         {
@@ -22,7 +29,12 @@
             },
             "codeClass": null,
             "userConfig": {
+                "idParam": "ID",
                 "url": "data/getDataFunctions.php?task=getEmpType"
+            },
+            "configAlternates": {
+                "url": "string",
+                "idParam": "string"
             },
             "name": "MyAjaxProxy10",
             "designerId": "a9fe437e-3a2b-4a7d-abed-a4703e994dec",
@@ -35,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "empTypes"
+                        "rootProperty": "empTypes"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader10",
                     "designerId": "a3815258-a1e7-46ae-8e83-835e0ce10a21"

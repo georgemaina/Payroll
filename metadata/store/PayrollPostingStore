@@ -13,6 +13,14 @@
         "pageSize": 50,
         "storeId": "PayrollPostingStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "a276985a-900e-4302-9d05-8a5e9e0a24a9",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getPostingDetail"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy21",
             "designerId": "2a36de1f-70f8-4400-bbe5-c0961786641c",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "pstDetail"
+                        "rootProperty": "pstDetail"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader21",
                     "designerId": "3b2f7b55-8f61-49ee-b2b1-bbae2ab69852"

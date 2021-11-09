@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "columnLines": true,
         "designer|userAlias": "nhifreturns",
         "designer|userClassName": "NhifReturns",
         "height": 577,
@@ -14,15 +15,31 @@
         "title": null,
         "width": 885
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean",
+        "columnLines": "boolean"
+    },
     "designerId": "6decd5c5-9512-4d7e-89bf-b131a2b016a1",
+    "viewControllerInstanceId": "425559b5-41ec-4408-97c0-98267d048ecf",
+    "viewModelInstanceId": "d35fef91-f6a0-4ba2-8ba0-8135c26da7e5",
     "cn": [
         {
-            "type": "Ext.grid.View",
+            "type": "Ext.view.Table",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
             "name": "MyGridView17",
             "designerId": "a17718a6-f159-440e-a6b9-7b5134606edf"
         },
@@ -39,92 +56,15 @@
                 "store": "NhifReturnsStore",
                 "width": 360
             },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyPagingToolbar17",
             "designerId": "1f706ea5-73f9-45d3-884a-855b782a4312"
-        },
-        {
-            "type": "Ext.toolbar.Toolbar",
-            "reference": {
-                "name": "dockedItems",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "dock": "top",
-                "height": 34
-            },
-            "name": "MyToolbar6",
-            "designerId": "1054074b-9684-4704-a7c2-b427d5890e07",
-            "cn": [
-                {
-                    "type": "Ext.form.field.ComboBox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "displayField": "month",
-                        "fieldLabel": "Payroll Month",
-                        "itemId": "nhifMonth",
-                        "labelAlign": "right",
-                        "layout|flex": null,
-                        "queryMode": "local",
-                        "store": "PayMonthStore",
-                        "typeAhead": true,
-                        "valueField": "ID",
-                        "width": 294
-                    },
-                    "name": "MyComboBox26",
-                    "designerId": "b81a96a2-e824-4a11-80f1-4412ae7490a4"
-                },
-                {
-                    "type": "Ext.toolbar.Fill",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "layout|flex": null
-                    },
-                    "name": "MyFill1",
-                    "designerId": "fe662c5b-ce81-45df-9901-579b5aefdb2f"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 31,
-                        "layout|flex": null,
-                        "text": "<b>Print</b>",
-                        "width": 164
-                    },
-                    "name": "MyButton56",
-                    "designerId": "cc76b92d-53ba-4ced-bf9f-45e8cced1500"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 23,
-                        "itemId": "cmdExportNhif",
-                        "layout|flex": null,
-                        "text": "<b>Export</b>",
-                        "width": 118
-                    },
-                    "name": "MyButton57",
-                    "designerId": "9c5515e7-3037-44f8-a615-71da6209758e"
-                }
-            ]
         },
         {
             "type": "Ext.grid.column.Column",
@@ -136,6 +76,11 @@
             "userConfig": {
                 "dataIndex": "pid",
                 "text": "Pid"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn123",
             "designerId": "141c1cee-90f3-4b04-9e61-3531e3b07245"
@@ -150,7 +95,13 @@
             "userConfig": {
                 "dataIndex": "empNames",
                 "text": "EmpNames",
-                "width": 176
+                "width": 216
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyColumn124",
             "designerId": "58e76740-5d0f-425b-8bfc-f6d262f9b241"
@@ -166,6 +117,11 @@
                 "dataIndex": "pay_type",
                 "text": "Pay_type"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn125",
             "designerId": "3a7e1bc2-2ce9-4ba4-9bd4-d4ff67247071"
         },
@@ -179,6 +135,11 @@
             "userConfig": {
                 "dataIndex": "Amount",
                 "text": "Amount"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn126",
             "designerId": "3cdccdcd-a201-4864-947b-8c1dd0681194"
@@ -194,6 +155,11 @@
                 "dataIndex": "ID_No",
                 "text": "ID_No"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn127",
             "designerId": "f70858e7-d421-493f-871a-2be874b27183"
         },
@@ -207,6 +173,11 @@
             "userConfig": {
                 "dataIndex": "NHIFNo",
                 "text": "NHIFNo"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn128",
             "designerId": "d05ebe47-8758-44d8-bdcd-4336a4c655b0"
@@ -222,8 +193,133 @@
                 "dataIndex": "payMonth",
                 "text": "PayMonth"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn129",
             "designerId": "94aff204-fa02-4457-afe2-c6224c35a3e0"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 40,
+                "layout": "absolute",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto"
+            },
+            "name": "MyContainer4",
+            "designerId": "d6292881-cf21-4e74-a03b-400f5d2db37d",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "Month",
+                        "fieldLabel": "Payroll Month",
+                        "itemId": "nhifMonth",
+                        "labelAlign": "right",
+                        "labelStyle": "color:green; font-weight:bold;",
+                        "layout|x": 5,
+                        "layout|y": 5,
+                        "queryMode": "local",
+                        "store": "PayMonthStore",
+                        "typeAhead": true,
+                        "valueField": "ID",
+                        "width": 294
+                    },
+                    "configAlternates": {
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "queryMode": "string",
+                        "store": "store",
+                        "typeAhead": "boolean",
+                        "valueField": "datafield",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyComboBox26",
+                    "designerId": "b81a96a2-e824-4a11-80f1-4412ae7490a4"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 31,
+                        "layout|x": 535,
+                        "layout|y": 5,
+                        "text": "<b>Print</b>",
+                        "width": 164
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyButton56",
+                    "designerId": "cc76b92d-53ba-4ced-bf9f-45e8cced1500"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 30,
+                        "itemId": "cmdExportNhif",
+                        "layout|x": 720,
+                        "layout|y": 5,
+                        "text": "<b>Export</b>",
+                        "width": 118
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyButton57",
+                    "designerId": "9c5515e7-3037-44f8-a615-71da6209758e"
+                }
+            ]
         }
     ]
 }

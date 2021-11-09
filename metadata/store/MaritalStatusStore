@@ -12,6 +12,13 @@
         "model": "MaritalStatus",
         "storeId": "MaritalStatusStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "designerId": "4d8c3342-6838-4ad8-b131-9a75ad88aa71",
     "cn": [
         {
@@ -24,6 +31,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getMaritalStatus"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy3",
             "designerId": "10f8bf0c-cf5b-4fce-8788-d050b1f374f1",
             "cn": [
@@ -35,7 +45,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "maritalstatus"
+                        "rootProperty": "maritalstatus"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader3",
                     "designerId": "6ffbdd00-1160-4cae-a68f-263ca65ee449"

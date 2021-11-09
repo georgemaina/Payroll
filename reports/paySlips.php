@@ -435,7 +435,7 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
             $currpos = $currpos + 10;
         }
 
-        echo "dafdafa"$deductions;
+       // echo $deductions;
 
         $sqlED2 = "SELECT p.`pid`,t.`ID`,p.pay_type,p.amount FROM proll_payments p
                     LEFT JOIN `proll_paytypes` t ON p.`pay_type`=t.PayType

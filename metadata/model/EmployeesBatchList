@@ -9,11 +9,15 @@
         "designer|userAlias": "employeesbatchlist",
         "designer|userClassName": "EmployeesBatchList"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "name": "MyModel",
     "designerId": "4687e351-89de-447a-a381-eac0b454dbd5",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -22,11 +26,14 @@
             "userConfig": {
                 "name": "pid"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField275",
             "designerId": "feebb60d-0f88-4f8b-9065-a31b4456958c"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -35,11 +42,14 @@
             "userConfig": {
                 "name": "empNames"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField276",
             "designerId": "844f79db-cbcf-4246-a89b-485a98260cae"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -48,11 +58,14 @@
             "userConfig": {
                 "name": "payType"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField289",
             "designerId": "bf35139e-ce95-41b4-8944-967dc54a2ceb"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -61,11 +74,14 @@
             "userConfig": {
                 "name": "payName"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField290",
             "designerId": "c58b111a-256a-4209-a501-e6e120bb028c"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -73,6 +89,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Amount"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField291",
             "designerId": "6c7c4dc1-36a3-4b7d-8535-3ab42a30e0f9"

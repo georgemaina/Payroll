@@ -15,7 +15,20 @@
         "title": null,
         "width": 423
     },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "10299d89-8f12-4815-8988-ce8a5f4a5b2c",
+    "viewControllerInstanceId": "17f182e9-c55b-4788-9549-561a8d9266a8",
+    "viewModelInstanceId": "8fe65b74-9d05-4cbb-a86a-3a135014e421",
     "cn": [
         {
             "type": "Ext.form.field.Text",
@@ -31,6 +44,15 @@
                 "layout|x": -31,
                 "layout|y": 30,
                 "width": 320
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField90",
             "designerId": "e18ca0d8-926f-4c9d-bbb3-8da3615c287b"
@@ -50,6 +72,15 @@
                 "text": "<b>Preview Report",
                 "width": 105
             },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyButton80",
             "designerId": "0eb7bf46-64b4-4d14-be1d-093a5f6d6549"
         },
@@ -67,6 +98,15 @@
                 "layout|y": 100,
                 "text": "<b>Print All",
                 "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton81",
             "designerId": "37e06c1f-ab3f-4727-970b-e0b2e45d2094"
@@ -86,6 +126,15 @@
                 "text": "<b>Print Report",
                 "width": 115
             },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyButton82",
             "designerId": "1a07c1f3-15af-4ed2-b2de-eaf75e2065bd"
         },
@@ -103,6 +152,15 @@
                 "layout|y": 160,
                 "text": "<b>Close",
                 "width": 150
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton83",
             "designerId": "aaa8719f-717d-4781-846c-f7621c412345"

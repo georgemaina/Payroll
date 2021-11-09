@@ -9,10 +9,14 @@
         "designer|userAlias": "earnings",
         "designer|userClassName": "Earnings"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "0f150173-634a-4700-b076-7cae31b46229",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -22,11 +26,15 @@
                 "name": "PID",
                 "sortType": "asInt"
             },
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string"
+            },
             "name": "MyField154",
             "designerId": "965a2c8f-46d3-48a7-8673-be16245fa7fe"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -35,11 +43,14 @@
             "userConfig": {
                 "name": "EmpNames"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField155",
             "designerId": "0350e6d7-9131-40fb-8f5c-24cfeeee3e8e"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -48,11 +59,14 @@
             "userConfig": {
                 "name": "Category"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField156",
             "designerId": "a0b68bba-566a-469b-a7bc-2c4a13cecb6d"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -61,11 +75,14 @@
             "userConfig": {
                 "name": "PayType"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField157",
             "designerId": "72686d6c-c6fa-4e5b-8fe2-7a600c2afb71"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -74,11 +91,14 @@
             "userConfig": {
                 "name": "Amount"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField158",
             "designerId": "41a6f95d-61c6-4ceb-875b-1f1aac29b4f1"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -87,11 +107,14 @@
             "userConfig": {
                 "name": "Balance"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField159",
             "designerId": "562e4f08-3c25-4c62-9869-62347a3f2642"
         },
         {
-            "type": "Ext.data.association.BelongsTo",
+            "type": "Ext.data.schema.BelongsTo",
             "reference": {
                 "name": "belongsTo",
                 "type": "object"
@@ -99,8 +122,12 @@
             "codeClass": null,
             "userConfig": {
                 "designer|displayName": "belongsToSlipEmpInfo",
-                "model": "SlipEmpInfo",
-                "primaryKey": "pid"
+                "model": "SlipEmpInfo"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "model": "model",
+                "primaryKey": "string"
             },
             "name": "MyBelongsToAssociation",
             "designerId": "76eaf8a1-121c-49cd-a828-04e71451994a"

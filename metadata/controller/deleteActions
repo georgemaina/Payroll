@@ -17,6 +17,10 @@
             "EmpPayments"
         ]
     },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "views": "typedarray"
+    },
     "designerId": "b5741f98-3acc-4c05-a87c-1c10f1932cc4",
     "cn": [
         {
@@ -73,6 +77,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "deleteDepartment",
             "designerId": "ab5fba23-fcfd-487c-9d09-8d97d760dbf7"
         },
@@ -121,6 +130,11 @@
                     "});"
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "init",
             "designerId": "a3340b69-3c55-4ba5-a7b6-50579f5eabeb"
         },
@@ -136,6 +150,11 @@
                 "selector": "departmentsform",
                 "xtype": "departmentsform"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "departmentsform",
             "designerId": "6fc14132-a5b7-4966-bc14-51e27cb9cfb9"
         },
@@ -150,6 +169,11 @@
                 "ref": "paytypesform",
                 "selector": "paytypesform",
                 "xtype": "paytypesform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "paytypesform",
             "designerId": "67ad00d4-5ca7-4f7a-937f-b032e5c81128"
@@ -209,6 +233,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "deletePaytypes",
             "designerId": "94b474db-06cb-41a2-a6de-9c0a61a9f756"
         },
@@ -266,6 +295,11 @@
                     "    });\r",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "deleteRates",
             "designerId": "ec3b9466-206e-4fb3-86dc-6365d81e5532"
@@ -325,6 +359,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "deleteBanks",
             "designerId": "0a3d259a-0951-46ee-83da-e4902891d603"
         },
@@ -340,6 +379,11 @@
                 "selector": "banks",
                 "xtype": "banks"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "banks",
             "designerId": "80d6b58f-c184-498b-9173-1595ec4b1947"
         },
@@ -354,6 +398,11 @@
                 "ref": "bankbranches",
                 "selector": "bankbranches",
                 "xtype": "bankbranches"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "bankbranches",
             "designerId": "c3f320a3-affa-4eea-b1c0-36ef52b0b399"
@@ -413,6 +462,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "deleteBankBranches",
             "designerId": "d20d2a28-b0f3-45fa-a9b1-d6e86efa1a2e"
         },
@@ -428,6 +482,11 @@
                 "selector": "jobtitles",
                 "xtype": "jobtitles"
             },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
             "name": "jobtitles",
             "designerId": "e08baa85-337b-4ad4-bed0-a562aa58ec1c"
         },
@@ -442,6 +501,11 @@
                 "ref": "jobgroups",
                 "selector": "jobgroups",
                 "xtype": "jobgroups"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "jobgroups",
             "designerId": "2cc7573f-de14-4470-a7e8-686a9572b04d"
@@ -501,6 +565,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "deleteJobgroup",
             "designerId": "5c55121f-a123-45ab-8b9a-b4ee6b9e0840"
         },
@@ -559,6 +628,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "deleteJobtitle",
             "designerId": "9047023b-e74d-42df-b9fc-6a17042bd218"
         },
@@ -610,6 +684,11 @@
                     "    });\r",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "deleteBranches",
             "designerId": "c7e37a39-8548-4e2c-a9c0-7c79bfff9faf"
@@ -678,6 +757,11 @@
                     ""
                 ]
             },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
             "name": "deletePayments",
             "designerId": "d62289ac-4070-4ecf-8237-c95bed11656f"
         },
@@ -692,6 +776,11 @@
                 "ref": "emppayments",
                 "selector": "emppayments",
                 "xtype": "emppayments"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
             },
             "name": "emppayments",
             "designerId": "248b6cbc-6cb8-4f52-acc3-18b2affdfefd"

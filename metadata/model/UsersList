@@ -9,10 +9,14 @@
         "designer|userAlias": "userslist",
         "designer|userClassName": "UsersList"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "aba917a6-c4ad-4265-80e6-ced7e367c74c",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "ID"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField222",
             "designerId": "ff215027-7174-4556-872c-215e504e67ca"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -34,11 +41,14 @@
             "userConfig": {
                 "name": "FirstName"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField223",
             "designerId": "b140e82c-2d98-4e0f-822c-b018183dd6bb"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -47,11 +57,14 @@
             "userConfig": {
                 "name": "LastName"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField224",
             "designerId": "f5ca0137-d902-43c4-b64c-8041ee5a3044"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -60,11 +73,14 @@
             "userConfig": {
                 "name": "UserName"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField225",
             "designerId": "d834eb41-2d2b-4091-8c7c-cb795123e62d"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -72,6 +88,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Roles"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField226",
             "designerId": "a88f0ce6-687e-490d-b506-58c60b0df325"

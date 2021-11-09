@@ -12,6 +12,13 @@
         "model": "UsersList",
         "storeId": "UsersListStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "designerId": "e051da3e-d110-4827-a1a4-701ba5ddaef8",
     "cn": [
         {
@@ -24,6 +31,9 @@
             "userConfig": {
                 "url": "data/manageUsers.php?task=getUsersList"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy25",
             "designerId": "8fc53b8d-eecd-412e-86dd-6630944dd1fe",
             "cn": [
@@ -35,7 +45,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "users"
+                        "rootProperty": "users"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader25",
                     "designerId": "afceb0df-a037-428e-9141-8437805fcea8"

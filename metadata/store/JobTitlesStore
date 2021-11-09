@@ -12,6 +12,13 @@
         "model": "JobTitles",
         "storeId": "JobTitlesStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "designerId": "2664c331-7f27-4215-b688-3608ee131d9b",
     "cn": [
         {
@@ -24,6 +31,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getJobTitle"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy6",
             "designerId": "a558fe47-66d7-4a5c-aad3-4fd8db92f62a",
             "cn": [
@@ -35,7 +45,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "jobTitles"
+                        "rootProperty": "jobTitles"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader6",
                     "designerId": "ba296ea4-add7-4035-a84f-d3b61de43ab8"

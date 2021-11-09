@@ -6,13 +6,19 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": false,
+        "designer|userAlias": "nssfreturnsstore",
         "designer|userClassName": "NssfReturnsStore",
         "model": "NssfReturns",
-        "pageSize": 50,
-        "storeId": "NssfReturns"
+        "storeId": "NssfReturnsStore"
     },
-    "designerId": "060a71a0-f95a-45ad-86cf-6bdd694acd31",
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "174e8472-a0ac-4776-9dfe-7551afc0d725",
     "cn": [
         {
             "type": "Ext.data.proxy.Ajax",
@@ -22,10 +28,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "idParam": "ID",
                 "url": "data/getDataFunctions.php?task=getNssfReturns"
             },
+            "configAlternates": {
+                "idParam": "string",
+                "url": "string"
+            },
             "name": "MyAjaxProxy19",
-            "designerId": "054cd42d-e450-46a5-b5f2-c5d66ed08702",
+            "designerId": "ea738c78-979e-4874-a7a9-d7a6286ed06d",
             "cn": [
                 {
                     "type": "Ext.data.reader.Json",
@@ -35,10 +46,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "NssfList"
+                        "rootProperty": "NssfList"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader19",
-                    "designerId": "4ce93151-9cc7-499e-befe-4a23cd1cf901"
+                    "designerId": "e6632a1a-814d-41dd-9abc-3e34b34134a2"
                 }
             ]
         }

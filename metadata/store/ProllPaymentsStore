@@ -13,6 +13,14 @@
         "pageSize": 50,
         "storeId": "ProllPaymentsStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "a28279b6-aa19-45e1-a2c9-7140de591a60",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getProllPayments"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy17",
             "designerId": "8f67e8e7-8cef-4c31-94dc-3742b6bdcc49",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "prollPayments"
+                        "rootProperty": "prollPayments"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader17",
                     "designerId": "75098420-b1c8-4cdd-9b25-a9285169fddf"

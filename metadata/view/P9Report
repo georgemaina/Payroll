@@ -14,7 +14,19 @@
         "title": "P9 Report",
         "width": null
     },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "68c18160-a14a-43f3-9101-2258a86ae981",
+    "viewControllerInstanceId": "1ef43a00-ce52-43f2-9ea8-5020264721b5",
+    "viewModelInstanceId": "45c40bdb-2369-4b18-bee6-081603696cbc",
     "cn": [
         {
             "type": "Ext.form.Label",
@@ -30,6 +42,14 @@
                 "text": "KENYA REVENUE AUTHORITY",
                 "width": 225
             },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyLabel1",
             "designerId": "8c2354da-3e51-4091-80b9-c0c75cb39fba"
         },
@@ -42,9 +62,18 @@
             "codeClass": null,
             "userConfig": {
                 "fieldLabel": "Employers name",
-                "layout|x": 25,
-                "layout|y": 40,
+                "labelWidth": 120,
+                "layout|x": 30,
+                "layout|y": 10,
                 "value": "Display Field"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "scrollable": "boolean",
+                "labelWidth": "number"
             },
             "name": "MyDisplayField22",
             "designerId": "303917be-3290-47f9-966b-9ceadf6693ee"
@@ -58,9 +87,18 @@
             "codeClass": null,
             "userConfig": {
                 "fieldLabel": "Employers name",
-                "layout|x": 25,
-                "layout|y": 90,
+                "labelWidth": 120,
+                "layout|x": 30,
+                "layout|y": 80,
                 "value": "Display Field"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "scrollable": "boolean",
+                "labelWidth": "number"
             },
             "name": "MyDisplayField23",
             "designerId": "a63e6b94-7eaa-408a-aa63-55be56bdd680"
@@ -74,9 +112,16 @@
             "codeClass": null,
             "userConfig": {
                 "fieldLabel": "Employer's Pin",
-                "layout|x": 520,
-                "layout|y": 40,
+                "layout|x": 525,
+                "layout|y": 20,
                 "value": "Display Field"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "scrollable": "boolean"
             },
             "name": "MyDisplayField24",
             "designerId": "0d17dd01-c3d7-4666-8f46-39e03ee7a732"
@@ -90,9 +135,16 @@
             "codeClass": null,
             "userConfig": {
                 "fieldLabel": "Employee's Pin",
-                "layout|x": 520,
-                "layout|y": 85,
+                "layout|x": 525,
+                "layout|y": 70,
                 "value": "Display Field"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "scrollable": "boolean"
             },
             "name": "MyDisplayField25",
             "designerId": "be628c06-66d6-4ad9-9476-07a3d85b70c3"
@@ -106,9 +158,18 @@
             "codeClass": null,
             "userConfig": {
                 "fieldLabel": "Employers name",
-                "layout|x": 25,
-                "layout|y": 65,
+                "labelWidth": 120,
+                "layout|x": 30,
+                "layout|y": 45,
                 "value": "Display Field"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "scrollable": "boolean",
+                "labelWidth": "number"
             },
             "name": "MyDisplayField26",
             "designerId": "810f60b7-6a03-4ed9-801a-d0f607715cc4"
@@ -127,16 +188,27 @@
                 "store": "P9ReportStore",
                 "title": null
             },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyGridPanel18",
             "designerId": "840757c3-6bbc-4ab7-9fff-fac1093ce843",
             "cn": [
                 {
-                    "type": "Ext.grid.View",
+                    "type": "Ext.view.Table",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
                     "name": "MyGridView26",
                     "designerId": "071202e3-8047-403c-a7bd-5ade577ec346"
                 },
@@ -151,6 +223,12 @@
                         "dataIndex": "PID",
                         "text": "Pid",
                         "width": 40
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn199",
                     "designerId": "1472a868-45a6-4551-81af-127be305d73d"
@@ -167,6 +245,12 @@
                         "text": "PayMonth",
                         "width": 62
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn200",
                     "designerId": "5f838aaa-f242-417c-bf1f-5277d23ed288"
                 },
@@ -180,6 +264,11 @@
                     "userConfig": {
                         "dataIndex": "ColumnA",
                         "text": "ColumnA"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn201",
                     "designerId": "e7c22a66-20b9-4cd5-bbb4-84a05896381d"
@@ -195,6 +284,11 @@
                         "dataIndex": "ColumnB",
                         "text": "ColumnB"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn202",
                     "designerId": "bebee2f9-a5de-41cf-a3f0-6194fc32b555"
                 },
@@ -208,6 +302,11 @@
                     "userConfig": {
                         "dataIndex": "ColumnC",
                         "text": "ColumnC"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn203",
                     "designerId": "81b62ee3-dccb-4b42-8405-7c54d4fc5861"
@@ -223,6 +322,11 @@
                         "dataIndex": "ColumnD",
                         "text": "ColumnD"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn204",
                     "designerId": "af32fe07-b5cd-4c4e-97b1-ace44f89dafa"
                 },
@@ -236,6 +340,11 @@
                     "userConfig": {
                         "dataIndex": "ColumnE1",
                         "text": "ColumnE1"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn205",
                     "designerId": "b387bc82-8eca-4215-b29d-588f8e231946"
@@ -251,6 +360,11 @@
                         "dataIndex": "ColumnE2",
                         "text": "ColumnE2"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn206",
                     "designerId": "2a405f01-87f1-437e-9431-49a6ae03c36f"
                 },
@@ -264,6 +378,11 @@
                     "userConfig": {
                         "dataIndex": "ColumnE3",
                         "text": "ColumnE3"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn207",
                     "designerId": "331e24b5-3bc8-4bde-a9e4-366aaed4d4b9"
@@ -279,6 +398,11 @@
                         "dataIndex": "ColumnF",
                         "text": "ColumnF"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn208",
                     "designerId": "661ec8f0-2ab0-40df-9de9-213227476fc5"
                 },
@@ -292,6 +416,11 @@
                     "userConfig": {
                         "dataIndex": "ColumnG",
                         "text": "ColumnG"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn209",
                     "designerId": "9648d387-4b2a-4d87-a3cc-4343dfa58108"
@@ -307,6 +436,11 @@
                         "dataIndex": "ColumnH",
                         "text": "ColumnH"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn210",
                     "designerId": "1f2d9a86-e288-413a-b971-ddb38a6701ab"
                 },
@@ -320,6 +454,11 @@
                     "userConfig": {
                         "dataIndex": "ColumnJ",
                         "text": "ColumnJ"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn211",
                     "designerId": "38f20c61-1873-44c5-8b27-cceb67a578b5"
@@ -335,6 +474,11 @@
                         "dataIndex": "ColumnK",
                         "text": "ColumnK"
                     },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
                     "name": "MyColumn212",
                     "designerId": "d581803e-14bd-44c3-870b-a2efc68820af"
                 },
@@ -348,6 +492,11 @@
                     "userConfig": {
                         "dataIndex": "ColumnL",
                         "text": "ColumnL"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "scrollable": "boolean"
                     },
                     "name": "MyColumn213",
                     "designerId": "40b55f7e-968b-4724-ba34-36b59f68451d"
@@ -364,6 +513,13 @@
                         "dock": "bottom",
                         "store": "P9ReportStore",
                         "width": 360
+                    },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto",
+                        "scrollable": "boolean"
                     },
                     "name": "MyPagingToolbar26",
                     "designerId": "bfc2b1f7-14ab-4e67-a102-d7a894f3a232"

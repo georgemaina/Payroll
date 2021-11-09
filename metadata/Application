@@ -14,23 +14,24 @@
             "ReportsActions"
         ],
         "models": [
-            "ProllLocaldata",
-            "P9Report",
-            "PayrollListingsMainModel",
-            "WelfareContributions",
-            "SaccoContributions"
+            "LoginSession",
+            "PayrollMonths"
         ],
         "name": "PayrollApp",
         "stores": [
-            "LocalDataStore",
-            "P9ReportStore",
-            "PayrollListingsMainStore"
+            "PayMonthsStore",
+            "LoginSessions"
         ],
         "views": [
-            "ReturnsReports",
-            "MyForm1",
-            "EmpPayments"
+            "ImportPayments"
         ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "models": "typedarray",
+        "name": "string",
+        "stores": "typedarray",
+        "views": "typedarray"
     },
     "name": "Application",
     "designerId": "application",
@@ -45,9 +46,26 @@
             "userConfig": {
                 "fn": "launch",
                 "implHandler": [
-                    "//this.getPayrollmain.down('#companyName').setValue('Payroll Already POSTED');\r",
+                    "var loginSess=Ext.data.StoreManager.lookup('LoginSessions');",
+                    "",
+                    "loginSess.load({",
+                    "    callback:function(records, operation, success){",
+                    "       // Ext.Msg.alert('Count',loginSess.getCount());",
+                    "        if(loginSess.getCount()==='' || loginSess.getCount()===0){",
+                    "             Ext.create('PayrollApp.view.LoginMain' , {renderTo: Ext.getBody()});",
+                    "        }else{",
+                    "            Ext.create('PayrollApp.view.PayrollMain' , {renderTo: Ext.getBody()});",
+                    "        }",
+                    "    },",
+                    "    scope:this",
+                    "});",
+                    "",
                     ""
                 ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
             },
             "name": "launch",
             "designerId": "588447a6-285a-47a5-9ab8-670b1b28d736"

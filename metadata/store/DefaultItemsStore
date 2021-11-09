@@ -13,6 +13,14 @@
         "pageSize": 50,
         "storeId": "DefaultItemsStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "9e112965-2c4b-4ae8-b4ab-8d493b72da6f",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=checkLogin"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy33",
             "designerId": "abb91c26-6a36-4871-a06d-8110fce4f685",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "defaultItems"
+                        "rootProperty": "defaultItems"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader33",
                     "designerId": "b2699d91-c99b-4de7-97f9-887018f83c25"

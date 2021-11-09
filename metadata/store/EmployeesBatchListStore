@@ -12,6 +12,13 @@
         "model": "EmployeesBatchList",
         "storeId": "EmployeesBatchListStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "name": "UsersListStore1",
     "designerId": "5f2d34f0-9b8d-467a-b81e-e213d9d5da23",
     "cn": [
@@ -25,6 +32,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getEmployeesBatchlist"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy25",
             "designerId": "978ef943-0737-488e-84f5-b482cbf9edf2",
             "cn": [
@@ -36,7 +46,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "BatchEmployeesList"
+                        "rootProperty": "BatchEmployeesList"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader25",
                     "designerId": "55c81da8-351c-4025-8554-318744ac0b6a"

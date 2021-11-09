@@ -13,7 +13,18 @@
         "title": "Payroll Listings",
         "width": null
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "6de93cb5-6c3f-4fbf-a0e7-68d1ecd1d873",
+    "viewControllerInstanceId": "654046b9-1a7f-4e9d-a148-d0a9e62ca6af",
+    "viewModelInstanceId": "a21ab8f2-a8c9-458c-a711-23d19ec8ae01",
     "cn": [
         {
             "type": "Ext.grid.feature.GroupingSummary",
@@ -27,6 +38,12 @@
                 "enableNoGroups": false,
                 "groupByText": "TOTALS",
                 "hideGroupedHeader": true
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "enableNoGroups": "boolean",
+                "groupByText": "string",
+                "hideGroupedHeader": "boolean"
             },
             "name": "MyGroupingSummaryFeature",
             "designerId": "ad5bdbc9-4b2f-4352-8e77-093533702d77",
@@ -44,6 +61,10 @@
                             "{columnName}: {name}"
                         ]
                     },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
+                    },
                     "name": "tpl29",
                     "designerId": "48d1fa96-e1e2-4d05-a8fd-73c02f07bcad",
                     "cn": [
@@ -60,6 +81,10 @@
                                     " font-weight: bold;"
                                 ]
                             },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "implHandler": "code"
+                            },
                             "name": "scss",
                             "designerId": "39d87a51-c545-4ca4-9aff-c4c4d7eae6e3"
                         }
@@ -68,12 +93,15 @@
             ]
         },
         {
-            "type": "Ext.grid.View",
+            "type": "Ext.view.Table",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
             "name": "MyGridView22",
             "designerId": "bf2e847a-0e8c-4a1b-b5e4-4c8101d68eb4"
         },
@@ -90,73 +118,15 @@
                 "store": "PayrollListingsStore",
                 "width": 360
             },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyPagingToolbar22",
             "designerId": "8d70b9ac-9c4b-4af7-8756-a9a1d628800f"
-        },
-        {
-            "type": "Ext.toolbar.Toolbar",
-            "reference": {
-                "name": "dockedItems",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "dock": "top"
-            },
-            "name": "MyToolbar11",
-            "designerId": "4f871fca-ddec-4f60-8313-d37d3cf09d33",
-            "cn": [
-                {
-                    "type": "Ext.form.field.ComboBox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "displayField": "month",
-                        "fieldLabel": "Payroll Month",
-                        "itemId": "payMonth",
-                        "layout|flex": null,
-                        "minChars": 2,
-                        "queryMode": "local",
-                        "store": "PayMonthStore",
-                        "typeAhead": true,
-                        "valueField": "month",
-                        "width": 323
-                    },
-                    "name": "MyComboBox46",
-                    "designerId": "f69e0f28-416e-43e9-b1cc-c1f2a2f82b56"
-                },
-                {
-                    "type": "Ext.toolbar.Fill",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "layout|flex": null
-                    },
-                    "name": "MyFill6",
-                    "designerId": "e2a6d793-cc67-4f77-b5d7-c8cee2a38bad"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "cmdExportListing",
-                        "layout|flex": null,
-                        "text": "Export to Excel"
-                    },
-                    "name": "MyButton91",
-                    "designerId": "000270d4-3ad9-4d51-a07f-abc1269e29f4"
-                }
-            ]
         },
         {
             "type": "Ext.grid.column.Column",
@@ -168,6 +138,11 @@
             "userConfig": {
                 "dataIndex": "Pid",
                 "text": "Pid"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn160",
             "designerId": "79aa8fc9-5745-4480-bc66-fd2f5dfb75ec"
@@ -183,6 +158,11 @@
                 "dataIndex": "EmpNames",
                 "text": "EmpNames"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn161",
             "designerId": "bef31894-ebc8-48ed-932e-66d0a9fb0d94"
         },
@@ -196,6 +176,11 @@
             "userConfig": {
                 "dataIndex": "JobTitle",
                 "text": "JobTitle"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn162",
             "designerId": "e2e9fd68-526d-4f5d-969b-a5e809514939"
@@ -211,6 +196,11 @@
                 "dataIndex": "EmpBranch",
                 "text": "EmpBranch"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn163",
             "designerId": "d377189d-9a8e-40de-8b4a-9d9370665ab4"
         },
@@ -224,6 +214,11 @@
             "userConfig": {
                 "dataIndex": "PayMonth",
                 "text": "PayMonth"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn164",
             "designerId": "7bfb869a-4ced-469b-ab02-9b4a614c55fb"
@@ -239,6 +234,11 @@
                 "dataIndex": "BasicPay",
                 "text": "BasicPay"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyNumberColumn2",
             "designerId": "1cb01961-16c4-484a-9f12-a342fba085ac"
         },
@@ -250,8 +250,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dataIndex": "SpecialRisk",
+                "dataIndex": "HouseAllowance",
                 "text": "SpecialRisk"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn165",
             "designerId": "42d5bf6f-a694-4320-9e52-4e5ce806c769"
@@ -264,8 +269,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dataIndex": "RiskAllowance",
+                "dataIndex": "CallAllowance",
                 "text": "RiskAllowance"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyNumberColumn3",
             "designerId": "d79a5f81-2d1a-444a-8344-c1a060439532"
@@ -278,8 +288,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dataIndex": "ResponsibilityAllowance",
+                "dataIndex": "Locum",
                 "text": "ResponsibilityAllowance"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn166",
             "designerId": "a742f99c-4523-45be-8ed8-bc7125e75fdf"
@@ -292,8 +307,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dataIndex": "LeaveAllowance",
+                "dataIndex": "NonPractice",
                 "text": "LeaveAllowance"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyNumberColumn4",
             "designerId": "066a4f4a-4808-4c00-a5aa-9b38267e1afa"
@@ -309,6 +329,11 @@
                 "dataIndex": "FieldAllowance",
                 "text": "FieldAllowance"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn167",
             "designerId": "aedce882-fb94-40d3-b688-518947c7502f"
         },
@@ -322,6 +347,11 @@
             "userConfig": {
                 "dataIndex": "HouseAllowance",
                 "text": "HouseAllowance"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyNumberColumn5",
             "designerId": "847df287-bded-4843-b9f1-ffb6685ed5fe"
@@ -337,6 +367,11 @@
                 "dataIndex": "Gratuity",
                 "text": "Gratuity"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyNumberColumn6",
             "designerId": "22bea48d-1e8f-4a61-9c82-d2784df8feec"
         },
@@ -350,6 +385,11 @@
             "userConfig": {
                 "dataIndex": "Medical",
                 "text": "Medical"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyNumberColumn7",
             "designerId": "85885610-3916-4fa6-b47d-65023261e6d4"
@@ -365,6 +405,11 @@
                 "dataIndex": "GrossSalary",
                 "text": "GrossSalary"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyNumberColumn8",
             "designerId": "e11244fc-311b-46f0-aa47-ab6b9ccfee97"
         },
@@ -378,6 +423,11 @@
             "userConfig": {
                 "dataIndex": "PAYE",
                 "text": "PAYE"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyNumberColumn9",
             "designerId": "662b4a4c-2f98-4820-9ccc-8f166733dba5"
@@ -393,6 +443,11 @@
                 "dataIndex": "NSSF",
                 "text": "NSSF"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyNumberColumn10",
             "designerId": "72a3590f-cf20-4b0e-8ee8-4fe6ae04c5a1"
         },
@@ -407,6 +462,11 @@
                 "dataIndex": "NHIF",
                 "text": "NHIF"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyNumberColumn11",
             "designerId": "e5620f79-752b-4885-a185-734631741ee8"
         },
@@ -418,8 +478,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dataIndex": "loans",
+                "dataIndex": "Food",
                 "text": "Loans"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn168",
             "designerId": "c5b47282-73f2-4507-8753-6fc4f28f2d48"
@@ -435,6 +500,11 @@
                 "dataIndex": "Advance",
                 "text": "Advance"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn169",
             "designerId": "b3e23c59-9a75-46b6-9509-228c5a879c9d"
         },
@@ -446,8 +516,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dataIndex": "Insurance",
+                "dataIndex": "Bereavement",
                 "text": "Insurance"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn170",
             "designerId": "ae9c7cba-5aed-40f1-84da-060942eef5b5"
@@ -460,8 +535,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dataIndex": "GratuityB",
+                "dataIndex": "Gratuity",
                 "text": "GratuityB"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyNumberColumn12",
             "designerId": "1ea68959-d58a-4fe7-95b4-b3ebdad1ceea"
@@ -474,8 +554,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dataIndex": "MedicalB",
+                "dataIndex": "Transport",
                 "text": "MedicalB"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyNumberColumn13",
             "designerId": "2f2213f8-c1ec-475d-94d7-11504334738c"
@@ -491,6 +576,11 @@
                 "dataIndex": "Welfare",
                 "text": "Welfare"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyNumberColumn14",
             "designerId": "1420cfea-7f80-47bc-8958-9ff2f17ae98e"
         },
@@ -504,6 +594,11 @@
             "userConfig": {
                 "dataIndex": "Deductions",
                 "text": "Deductions"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyNumberColumn15",
             "designerId": "ac29011b-1d3c-4ca0-b443-19db6074481c"
@@ -519,8 +614,127 @@
                 "dataIndex": "NetPay",
                 "text": "NetPay"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyNumberColumn16",
             "designerId": "4192d69a-4d90-4221-a623-00cc2ae23222"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 44,
+                "layout": "absolute",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto"
+            },
+            "name": "MyContainer7",
+            "designerId": "d5a17427-a4f9-48dc-bf60-00e5e4a444d0",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "month",
+                        "fieldLabel": "Payroll Month",
+                        "itemId": "payMonth",
+                        "layout|x": 5,
+                        "layout|y": 5,
+                        "minChars": 2,
+                        "queryMode": "local",
+                        "store": "PayMonthStore",
+                        "typeAhead": true,
+                        "valueField": "ID",
+                        "width": 323
+                    },
+                    "configAlternates": {
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "minChars": "number",
+                        "queryMode": "string",
+                        "store": "store",
+                        "typeAhead": "boolean",
+                        "valueField": "datafield",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyComboBox46",
+                    "designerId": "f69e0f28-416e-43e9-b1cc-c1f2a2f82b56"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdExportListing",
+                        "layout|x": 965,
+                        "layout|y": 5,
+                        "text": "Export to Excel"
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyButton91",
+                    "designerId": "000270d4-3ad9-4d51-a07f-abc1269e29f4"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdExportListing1",
+                        "layout|x": 830,
+                        "layout|y": 5,
+                        "text": "Preview",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto"
+                    },
+                    "name": "MyButton",
+                    "designerId": "4ed77e97-c2a1-4087-9e30-e6c8bff3afd4"
+                }
+            ]
         }
     ]
 }

@@ -10,12 +10,25 @@
         "designer|userAlias": "trialbalancewindow",
         "designer|userClassName": "TrialBalanceWindow",
         "frame": true,
-        "height": 216,
+        "height": 192,
         "layout": "absolute",
         "title": null,
         "width": 394
     },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "b33d808d-a3ee-4efd-baa2-c9b63e79b027",
+    "viewControllerInstanceId": "578d44d9-b041-45cf-b60d-2cef64be5897",
+    "viewModelInstanceId": "9bb5927c-0f8e-486e-9b81-324726daa666",
     "cn": [
         {
             "type": "Ext.form.field.ComboBox",
@@ -25,17 +38,31 @@
             },
             "codeClass": null,
             "userConfig": {
-                "displayField": "month",
+                "displayField": "Month",
                 "fieldLabel": "Payroll Month",
                 "itemId": "tpayMonth",
                 "labelAlign": "right",
-                "layout|x": 0,
-                "layout|y": 20,
+                "layout|x": -2,
+                "layout|y": 5,
                 "queryMode": "local",
                 "store": "PayMonthStore",
                 "typeAhead": true,
                 "valueField": "ID",
                 "width": 320
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyComboBox29",
             "designerId": "4f7ea9be-6cc0-437f-90e7-90b2806019c8"
@@ -52,11 +79,23 @@
                 "fieldLabel": "Branch",
                 "itemId": "empBranch",
                 "labelAlign": "right",
-                "layout|x": 0,
-                "layout|y": 50,
+                "layout|x": -2,
+                "layout|y": 45,
                 "store": "PayBranchStore",
                 "valueField": "BranchName",
                 "width": 320
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyComboBox30",
             "designerId": "9e61864b-c3b1-4d1b-bbda-68a50b96f922"
@@ -71,10 +110,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdPreviewTrialBalance",
-                "layout|x": 20,
-                "layout|y": 100,
+                "layout|x": 10,
+                "layout|y": 85,
                 "text": "<b>Preview Trial Balance",
-                "width": 150
+                "width": 170
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton62",
             "designerId": "96b4180b-8375-4790-ac8d-bca0321f89e7"
@@ -89,10 +137,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdPrintTrialbalance",
-                "layout|x": 185,
-                "layout|y": 100,
+                "layout|x": 200,
+                "layout|y": 85,
                 "text": "<b>Print Trial Balance",
                 "width": 150
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton63",
             "designerId": "61cd159e-86c0-4606-9181-a18a3df4fd5c"
@@ -107,10 +164,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdClose",
-                "layout|x": 95,
-                "layout|y": 150,
+                "layout|x": 200,
+                "layout|y": 135,
                 "text": "<b>Close",
                 "width": 150
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton64",
             "designerId": "7643b3b2-d3fc-497c-82dd-c0a7209f8256"

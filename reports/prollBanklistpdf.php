@@ -206,7 +206,7 @@ function createInvoiceTitle($db,$bankid,$branchID,$payMonth,$pdf,$page) {
 //    $page->setLineWidth(0.9);
 //    $page->drawLine($leftPos + 12, $topPos - 105, $leftPos + 550, $topPos - 105, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
 
-    $sql = "SELECT DISTINCT p.`PID`, p.`FirstName`, p.`Surname`, p.`LastName`, p.`Account_No`, b.`BankName`, e.`BankBranch` ,p.`ID_No`
+    $sql = "SELECT DISTINCT p.`PID`, p.`FirstName`, p.`Surname`, p.`LastName`, p.`Account_No`, p.`ID_No`
             FROM proll_empregister p
             LEFT JOIN proll_banks b ON b.bankcode=p.bankid
             LEFT JOIN proll_bankbranches e ON e.ID=p.BranchID

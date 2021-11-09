@@ -12,6 +12,13 @@
         "model": "PayCategory",
         "storeId": "PayCategoryStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "designerId": "41b3b8c0-c00e-4a31-b3fe-dc066d66686d",
     "cn": [
         {
@@ -24,6 +31,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getPaycategory"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy12",
             "designerId": "3bada9a6-e2dc-4eb3-9726-97668ee683a6",
             "cn": [
@@ -35,7 +45,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "paycategories"
+                        "rootProperty": "paycategories"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader12",
                     "designerId": "0447906d-bc5f-4e66-89b1-f97d8934d605"

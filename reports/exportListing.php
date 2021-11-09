@@ -75,28 +75,46 @@ $worksheet->write($indexRow, $indexCol++, 'Names', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Job Title', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Branch', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Month', $formatReportHeader);
+
+$worksheet->write($indexRow, $indexCol++, 'HealthCentre', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'AphiaPlus', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'WasichanaWote', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'Global Fund', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'Icop', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'YouthProgram', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'Nilinde', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'Amref', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'PoolAccount', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'TotalContributions', $formatReportHeader);
+
+
 $worksheet->write($indexRow, $indexCol++, 'Basic pay', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'SpecialRisk Allowance', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Risk Allowance', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Responsibility Allowance', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Leave Allowance', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Field Allowance', $formatReportHeader);
+//$worksheet->write($indexRow, $indexCol++, 'SpecialRisk Allowance', $formatReportHeader);
+//$worksheet->write($indexRow, $indexCol++, 'Risk Allowance', $formatReportHeader);
+//$worksheet->write($indexRow, $indexCol++, 'Responsibility Allowance', $formatReportHeader);
+//$worksheet->write($indexRow, $indexCol++, 'Leave Allowance', $formatReportHeader);
+//$worksheet->write($indexRow, $indexCol++, 'Field Allowance', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'House Allowance', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'Transport', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Gratuity', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Medical', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Gross Pay', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'PAYE', $formatReportHeader);
+
 $worksheet->write($indexRow, $indexCol++, 'NSSF', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'NHIF', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'PAYE', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Loans', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Advance', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Insurance', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'Advances', $formatReportHeader);
+
+//$worksheet->write($indexRow, $indexCol++, 'Insurance', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'Sacco', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Helb', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Waumini', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'GratuityB', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Medical', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Welfare', $formatReportHeader);
+
+//$worksheet->write($indexRow, $indexCol++, 'GratuityB', $formatReportHeader);
+//$worksheet->write($indexRow, $indexCol++, 'Medical', $formatReportHeader);
+//$worksheet->write($indexRow, $indexCol++, 'Welfare', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'Other Deductions', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Total Deductions', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'Total Pay', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Net Pay', $formatReportHeader);
 
 $indexRow++;   // Advance to the next row

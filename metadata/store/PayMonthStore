@@ -8,13 +8,21 @@
     "userConfig": {
         "autoLoad": true,
         "data": [
-            "[['January','January'],['February','February'],['March','March'],['April','April'],['May','May'],['June','June'],\r",
-            "['July','July'],['August','August'],['September','September'],['October','October'],['November','November'],['December','December']]"
+            "[['1','January'],['2','February'],['3','March'],['4','April'],['5','May'],['6','June'],",
+            "['7','July'],['8','August'],['9','September'],['10','October'],['11','November'],['12','December']]"
         ],
         "designer|userAlias": "paymonthstore",
         "designer|userClassName": "PayMonthStore",
         "model": "PayrollMonths",
-        "storeId": "MyStore"
+        "storeId": "PayMonthStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "data": "array",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
     },
     "designerId": "9358e6c9-6bbf-4650-9a3c-ae095e47c184"
 }

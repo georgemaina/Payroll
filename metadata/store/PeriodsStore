@@ -1,0 +1,66 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "designer|userAlias": "periodsstore",
+        "designer|userClassName": "PeriodsStore",
+        "model": "Periods",
+        "pageSize": 50,
+        "storeId": "PeriodsStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "autoSync": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "name": "PayrollStatusStore1",
+    "designerId": "34a9c2f8-c335-4598-8337-59de309dfa50",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getPeriods"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy28",
+            "designerId": "465d8d8e-44ac-4b67-945d-ac88cfa30bf8",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "record": null
+                    },
+                    "configAlternates": {
+                        "record": "string",
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader28",
+                    "designerId": "888c05ff-7bfc-4446-938e-7a237e5f2871"
+                }
+            ]
+        }
+    ]
+}

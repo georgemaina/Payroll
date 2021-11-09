@@ -7,7 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "animCollapse": true,
-        "autoScroll": true,
         "closable": true,
         "collapsible": true,
         "designer|userAlias": "reportsmainview",
@@ -17,10 +16,29 @@
         "itemId": "detailPanel",
         "margin": null,
         "padding": " 10 10 0 20",
+        "scrollable": true,
         "title": "Reports Window",
         "width": null
     },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "autoScroll": "boolean",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "html": "object",
+        "itemId": "string",
+        "margin": "auto",
+        "padding": "auto",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "9844f169-05b5-4534-a498-0178c697f818",
+    "viewControllerInstanceId": "cb8fd7de-3b8c-407c-a69b-565f558625dc",
+    "viewModelInstanceId": "5f885a99-3c56-4e9b-8ea1-b70148368db1",
     "cn": [
         {
             "type": "Ext.panel.Tool",
@@ -32,6 +50,11 @@
             "userConfig": {
                 "designer|displayName": "minimize",
                 "type": "minimize"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "type": "string",
+                "scrollable": "boolean"
             },
             "name": "MyTool",
             "designerId": "3b4e9da9-0ffd-4df6-b0ae-b041e3330bbd"
@@ -46,6 +69,11 @@
             "userConfig": {
                 "designer|displayName": "maximize",
                 "type": "maximize"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "type": "string",
+                "scrollable": "boolean"
             },
             "name": "MyTool1",
             "designerId": "2afe78de-7ef0-478b-9b40-a75c6ec15a19"

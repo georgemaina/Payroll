@@ -7,12 +7,25 @@
     "codeClass": null,
     "userConfig": {
         "bodyPadding": 10,
+        "designer|userAlias": "myform1",
         "designer|userClassName": "MyForm1",
         "frame": true,
         "height": 283,
         "title": "Batch Posting",
         "width": 409
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "title": "string",
+        "width": "auto",
+        "designer|userAlias": "string",
+        "scrollable": "boolean"
+    },
     "name": "MyForm1",
-    "designerId": "1a3c993c-209a-4802-af46-960e1df6bd68"
+    "designerId": "1a3c993c-209a-4802-af46-960e1df6bd68",
+    "viewControllerInstanceId": "13d9d986-a2ca-44fb-afad-12a0533b7739",
+    "viewModelInstanceId": "8020abfe-e01b-4397-8e65-f3cdbf3cb049"
 }

@@ -12,6 +12,13 @@
         "model": "GratuityRates",
         "storeId": "GratuityRatesStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
     "designerId": "e96b5656-e149-4316-935c-b7b2a3920505",
     "cn": [
         {
@@ -24,6 +31,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getGratuityRates"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy11",
             "designerId": "f9d48387-5606-4223-9b0f-3221681ca7d8",
             "cn": [
@@ -35,7 +45,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "rates"
+                        "rootProperty": "rates"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader11",
                     "designerId": "35c5bcfd-30d0-4cad-8975-0fecf17b7293"

@@ -2,6 +2,8 @@
 #
 # Definitions for tanzanian clinics
 #
+//error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_COMPILE_ERROR | E_ERROR | E_CORE_ERROR);
 define('IS_TANZANIAN',true); 	// If TRUE use tanzanian modifications, else use standard care2x
 define('PID_PREFIX',00);		 	// Prefix for filenumbers (xx/00/00/01) Ex: 20/00/00/01
 

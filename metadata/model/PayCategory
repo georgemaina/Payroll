@@ -9,10 +9,14 @@
         "designer|userAlias": "paycategory",
         "designer|userClassName": "PayCategory"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "39db9ad1-e576-4f88-8912-ab6ea36416d0",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "ID"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField78",
             "designerId": "2c139d45-e71a-4a95-84c7-12a91268f23f"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -33,6 +40,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "CatName"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField79",
             "designerId": "c2c9a4ed-4cd0-4c33-8a0d-697ab4cd0dce"

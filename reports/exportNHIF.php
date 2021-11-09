@@ -7,7 +7,7 @@
 error_reporting(E_COMPILE_ERROR | E_ERROR | E_CORE_ERROR);
 require_once('roots.php');
 require ($root_path . 'include/inc_environment_global.php');
-require_once 'spreadsheet/Excel/Writer.php';
+require_once 'Spreadsheet/Excel/Writer.php';
 // Lets define some custom colors codes
 define('CUSTOM_DARK_BLUE', 20);
 define('CUSTOM_BLUE', 21);
@@ -67,8 +67,8 @@ $worksheet->write(1, 3, 'Payroll Listings', $formatHeader);
 // Create the header for the data starting @ row 4
 $indexCol = 0;
 $indexRow = 4;
-$worksheet->write($indexRow, $indexCol++, 'PID', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Names', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'LastName', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'FirstName', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'ID No', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'NHIF No', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'Amount', $formatReportHeader);
@@ -77,10 +77,10 @@ $worksheet->write($indexRow, $indexCol++, 'Amount', $formatReportHeader);
 $indexRow++;   // Advance to the next row
 $indexCol = 0; // Start @ column 0
 
-    $payMonth = $_REQUEST[payMonth];
+    $payMonth = $_REQUEST['payMonth'];
     //$pstBranch=$_REQUEST[branch];
     
-   $sql = "SELECT p.`Pid`, p.`emp_names`,p.`pay_type`, p.`amount`,e.ID_no,e.nhif_no FROM proll_payments p inner join proll_empregister e
+   $sql = "SELECT p.`Pid`,e.`LastName`,e.`FirstName`,p.`pay_type`, p.`amount`,e.ID_no,e.nhif_no FROM proll_payments p inner join proll_empregister e
 on p.Pid=e.PID where pay_type ='NHIF' AND payMonth='$payMonth'";
 
 //    if($pmonth<>''){
@@ -93,13 +93,13 @@ on p.Pid=e.PID where pay_type ='NHIF' AND payMonth='$payMonth'";
         $worksheet->write(
             $indexRow,
             $indexCol++,
-            $row['Pid'],
+            $row['LastName'],
             $formatData);
         
          $worksheet->write(
             $indexRow,
             $indexCol++,
-            $row['emp_names'],
+            $row['FirstName'],
             $formatData);
          
         $worksheet->write(

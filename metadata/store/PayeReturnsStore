@@ -6,14 +6,19 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": false,
         "designer|userAlias": "payereturnsstore",
         "designer|userClassName": "PayeReturnsStore",
         "model": "PayeReturns",
-        "pageSize": 50,
-        "storeId": "PayeReturns"
+        "storeId": "PayeReturnsStore"
     },
-    "designerId": "b8fcf6ae-1bbd-4622-badc-998a99715b97",
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "ee3ace53-a711-46af-9d8f-24e13cdc50f9",
     "cn": [
         {
             "type": "Ext.data.proxy.Ajax",
@@ -25,8 +30,11 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getPayeReturns"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy20",
-            "designerId": "4dc1fcd1-d4f7-496f-89e8-b0287c37a763",
+            "designerId": "725d2812-5a01-4271-ad20-e48c7cf5c154",
             "cn": [
                 {
                     "type": "Ext.data.reader.Json",
@@ -36,10 +44,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "PayeList"
+                        "rootProperty": "PayeList"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader20",
-                    "designerId": "3faba282-c38f-4f25-b139-a62addd71e46"
+                    "designerId": "242d7a0c-abc2-46ab-98a5-0535464f4d73"
                 }
             ]
         }

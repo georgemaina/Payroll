@@ -9,10 +9,14 @@
         "designer|userAlias": "paytypes",
         "designer|userClassName": "PayTypes"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "7dd6ec24-ae1d-44fd-91d7-a9415b114f9d",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "ID"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField",
             "designerId": "40869f82-022e-4d1c-9419-684664b3eb57"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -34,11 +41,14 @@
             "userConfig": {
                 "name": "CatID"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField1",
             "designerId": "b314df25-dfce-41d6-aa0f-c63e40417875"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -47,11 +57,14 @@
             "userConfig": {
                 "name": "PayType"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField2",
             "designerId": "5d743b40-e6e8-40c5-a932-48ab391e1792"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -60,11 +73,14 @@
             "userConfig": {
                 "name": "Fixed"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField3",
             "designerId": "1f63db53-2b00-4a48-9feb-d62fc5f12fb5"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -73,11 +89,14 @@
             "userConfig": {
                 "name": "Contribution"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField4",
             "designerId": "fd708d85-428e-423c-946c-950dc6b7a285"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -86,11 +105,14 @@
             "userConfig": {
                 "name": "gl_acc"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField5",
             "designerId": "de13efb6-7fc6-4a3b-8159-b25b051d3bbf"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -99,11 +121,14 @@
             "userConfig": {
                 "name": "gl_desc"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField6",
             "designerId": "477e620b-c80e-4cb5-af83-c78c3abb9b44"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -112,11 +137,14 @@
             "userConfig": {
                 "name": "Posted"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField7",
             "designerId": "9539b799-4a17-4ba7-add3-8f000515b7e7"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -125,11 +153,14 @@
             "userConfig": {
                 "name": "Interest"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField8",
             "designerId": "504de3ff-3c8a-4524-9515-8861c5b9d565"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -138,11 +169,14 @@
             "userConfig": {
                 "name": "InterestCode"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField9",
             "designerId": "009527f2-7dae-4085-b694-e6375e606961"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -151,11 +185,14 @@
             "userConfig": {
                 "name": "InterestName"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField10",
             "designerId": "c405049e-5c50-4663-aa27-ee90886c205e"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -163,6 +200,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Recurrent"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField11",
             "designerId": "68f9b85f-68d6-403b-9164-fa1e14228809"

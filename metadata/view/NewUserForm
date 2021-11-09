@@ -11,14 +11,30 @@
         "designer|userAlias": "newuserform",
         "designer|userClassName": "NewUserForm",
         "frame": true,
-        "height": 250,
+        "height": 274,
         "itemId": "myform1",
         "layout": "absolute",
         "title": null,
         "url": "data/manageUsers.php?task=updateUser",
         "width": 400
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "title": "string",
+        "url": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "80181272-f8f1-420c-ad29-acd93bbfe197",
+    "viewControllerInstanceId": "1627a8ae-8e96-4501-af0a-5d8cc10db732",
+    "viewModelInstanceId": "76b1945f-986b-44d9-9e1c-9230c53d06ef",
     "cn": [
         {
             "type": "Ext.form.field.Text",
@@ -35,7 +51,18 @@
                 "layout|y": 5,
                 "name": "ID",
                 "readOnly": true,
-                "width": 155
+                "width": 165
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "readOnly": "boolean",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField93",
             "designerId": "35be2b85-8604-4019-ab84-a9dc8ed9170e"
@@ -53,10 +80,22 @@
                 "labelAlign": "right",
                 "labelWidth": 120,
                 "layout|x": 5,
-                "layout|y": 30,
+                "layout|y": 40,
                 "name": "FirstName",
                 "tabIndex": 1,
                 "width": 290
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField94",
             "designerId": "1f413c0e-7638-4167-94e2-61167f12db55",
@@ -73,6 +112,10 @@
                         "implHandler": [
                             "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
                         ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
                     },
                     "name": "tpl31",
                     "designerId": "3a1fa67f-17ad-4006-9f7e-413e2a276382"
@@ -92,10 +135,22 @@
                 "labelAlign": "right",
                 "labelWidth": 120,
                 "layout|x": 5,
-                "layout|y": 55,
+                "layout|y": 75,
                 "name": "LastName",
                 "tabIndex": 2,
                 "width": 290
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField95",
             "designerId": "2b330dc1-589e-442d-8c69-f5a965640b82",
@@ -112,6 +167,10 @@
                         "implHandler": [
                             "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
                         ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
                     },
                     "name": "tpl32",
                     "designerId": "7c95df34-6cc2-482b-8549-f741649bfa4e"
@@ -131,10 +190,22 @@
                 "labelAlign": "right",
                 "labelWidth": 120,
                 "layout|x": 5,
-                "layout|y": 80,
+                "layout|y": 110,
                 "name": "UserName",
                 "tabIndex": 3,
                 "width": 290
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField96",
             "designerId": "fd812f39-f21f-458f-9f1f-b14091ba22a9",
@@ -151,6 +222,10 @@
                         "implHandler": [
                             "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
                         ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
                     },
                     "name": "tpl33",
                     "designerId": "aa6cf8da-a396-4b19-8646-612c747a14ee"
@@ -171,12 +246,27 @@
                 "labelAlign": "right",
                 "labelWidth": 120,
                 "layout|x": 5,
-                "layout|y": 105,
+                "layout|y": 145,
                 "name": "password1",
                 "submitValue": false,
                 "tabIndex": 4,
                 "validateBlank": true,
                 "width": 290
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "fieldLabel": "string",
+                "inputType": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "submitValue": "boolean",
+                "tabIndex": "number",
+                "validateBlank": "boolean",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField97",
             "designerId": "e85d26b1-b8fd-43bf-ad87-60464b88aa6e",
@@ -193,6 +283,10 @@
                         "implHandler": [
                             "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
                         ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
                     },
                     "name": "tpl34",
                     "designerId": "c83d145d-5f39-4eb5-aa9c-3a0a89dab025"
@@ -213,12 +307,27 @@
                 "labelAlign": "right",
                 "labelWidth": 120,
                 "layout|x": 5,
-                "layout|y": 130,
+                "layout|y": 180,
                 "name": "password2",
                 "submitValue": false,
                 "tabIndex": 5,
                 "validateBlank": true,
                 "width": 290
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "fieldLabel": "string",
+                "inputType": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "submitValue": "boolean",
+                "tabIndex": "number",
+                "validateBlank": "boolean",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyTextField98",
             "designerId": "de6e5426-d67f-4c46-b7c0-3023a84cdbec",
@@ -236,6 +345,10 @@
                             "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
                         ]
                     },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
+                    },
                     "name": "tpl35",
                     "designerId": "8141f94b-5db1-4ab0-8921-f66c6748be71"
                 }
@@ -252,10 +365,20 @@
                 "height": 40,
                 "itemId": "cmdSaveUser",
                 "layout|x": 65,
-                "layout|y": 170,
+                "layout|y": 225,
                 "tabIndex": 6,
                 "text": "<b>Save</b>",
                 "width": 100
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton96",
             "designerId": "ac629d06-775b-47ff-90f7-a6293fdfaac9"
@@ -270,10 +393,19 @@
             "userConfig": {
                 "height": 40,
                 "itemId": "cmdClose",
-                "layout|x": 250,
-                "layout|y": 170,
+                "layout|x": 260,
+                "layout|y": 225,
                 "text": "<b>Cancel</b>",
                 "width": 100
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton97",
             "designerId": "52ae9fb2-9185-45eb-98c7-cb62ec564b33"
@@ -291,6 +423,14 @@
                 "layout|x": 10,
                 "layout|y": 215,
                 "name": "formStatus"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "hidden": "boolean",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "scrollable": "boolean"
             },
             "name": "MyTextField99",
             "designerId": "dc056830-fd2b-40b2-b29f-cad0fdafae7a"

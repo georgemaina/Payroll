@@ -7,112 +7,60 @@
     "codeClass": null,
     "userConfig": {
         "animCollapse": true,
-        "autoScroll": true,
         "closable": true,
         "collapsible": true,
         "columnLines": true,
         "designer|userAlias": "employeeregister",
         "designer|userClassName": "EmployeeRegister",
-        "height": 693,
+        "manageHeight": false,
         "maxHeight": null,
         "maxWidth": null,
         "minHeight": null,
         "minWidth": null,
+        "scrollable": true,
         "store": "EmpRegisterStore",
         "title": "Employees Register",
         "width": null
     },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "autoScroll": "boolean",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "maxHeight": "number",
+        "maxWidth": "number",
+        "minHeight": "number",
+        "minWidth": "number",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean",
+        "manageHeight": "boolean"
+    },
     "designerId": "97eb3f8b-8dac-4cef-a065-94fc87411fbd",
+    "viewControllerInstanceId": "a73166bd-5cc1-41c4-9cbc-76cd3ab627de",
+    "viewModelInstanceId": "ce182ffe-39c4-45c0-91a4-988b6d82932f",
     "cn": [
         {
-            "type": "Ext.grid.View",
+            "type": "Ext.view.Table",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "autoScroll": false
+                "scrollable": true
+            },
+            "configAlternates": {
+                "autoScroll": "boolean",
+                "scrollable": "boolean"
             },
             "name": "MyGridView2",
             "designerId": "d7f70994-7001-4f00-a06c-d9e8b8a907b0"
-        },
-        {
-            "type": "Ext.toolbar.Toolbar",
-            "reference": {
-                "name": "dockedItems",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "dock": "top"
-            },
-            "name": "MyToolbar2",
-            "designerId": "28d90643-ee10-41a6-82c6-e8c3a8389350",
-            "cn": [
-                {
-                    "type": "Ext.form.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "emptyText": "Search by Pid, Names, Department, Job Title",
-                        "fieldLabel": "",
-                        "layout|flex": null,
-                        "width": 235
-                    },
-                    "name": "MyTextField4",
-                    "designerId": "1329906b-e27b-486e-9e0c-3824905f0510"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "layout|flex": null,
-                        "text": "<b>Search</b>",
-                        "width": 96
-                    },
-                    "name": "MyButton2",
-                    "designerId": "5cdb0b8a-c9db-44f0-a44a-544b3454c621"
-                },
-                {
-                    "type": "Ext.toolbar.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 14,
-                        "layout|flex": null,
-                        "width": 67
-                    },
-                    "name": "MySpacer1",
-                    "designerId": "bcb46765-504c-489c-b1de-8d67435abd92"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "cmdNewEmployee",
-                        "layout|flex": null,
-                        "text": "<b>New Employee</b>",
-                        "width": 92
-                    },
-                    "name": "MyButton3",
-                    "designerId": "0305a5b4-1811-4794-820c-d064b2a9bed1"
-                }
-            ]
         },
         {
             "type": "Ext.toolbar.Paging",
@@ -126,6 +74,13 @@
                 "dock": "bottom",
                 "store": "EmpRegisterStore",
                 "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyPagingToolbar2",
             "designerId": "45199073-e84d-4cab-aeca-7a79e6e334ea"
@@ -141,6 +96,11 @@
                 "dataIndex": "PID",
                 "text": "PID"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn16",
             "designerId": "3fc18526-d768-4e53-af08-b50d04532093"
         },
@@ -154,6 +114,11 @@
             "userConfig": {
                 "dataIndex": "FirstName",
                 "text": "FirstName"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn17",
             "designerId": "faa7b7da-c893-432e-8900-4be3f6725958"
@@ -169,6 +134,11 @@
                 "dataIndex": "LastName",
                 "text": "LastName"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn18",
             "designerId": "074b5d59-badc-4ca2-94cd-df3516abbf40"
         },
@@ -182,6 +152,11 @@
             "userConfig": {
                 "dataIndex": "SurName",
                 "text": "SurName"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn19",
             "designerId": "0815be8a-cff6-4a09-b07f-301ee88e3425"
@@ -197,6 +172,11 @@
                 "dataIndex": "Department",
                 "text": "Department"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn20",
             "designerId": "7805ac4f-b8cd-4d0f-b955-4eeea42ade19"
         },
@@ -210,6 +190,11 @@
             "userConfig": {
                 "dataIndex": "JobTitle",
                 "text": "JobTitle"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn21",
             "designerId": "ee2d0ff6-34dc-4187-91b0-a3b6886cc7ef"
@@ -225,6 +210,11 @@
                 "dataIndex": "Box",
                 "text": "Box"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn22",
             "designerId": "83282faa-d34e-4220-876e-e3a51d5c116c"
         },
@@ -238,6 +228,11 @@
             "userConfig": {
                 "dataIndex": "PostalCode",
                 "text": "PostalCode"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn23",
             "designerId": "65bf3e3a-7ed7-4ffe-a710-a510aec02b6c"
@@ -253,6 +248,11 @@
                 "dataIndex": "Phone",
                 "text": "Phone"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn24",
             "designerId": "0eb598f5-8e11-4161-be68-dbdbae235812"
         },
@@ -266,6 +266,11 @@
             "userConfig": {
                 "dataIndex": "Town",
                 "text": "Town"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn25",
             "designerId": "a5dd4c9d-4d38-40b9-9a7a-589ffb45b9c2"
@@ -281,6 +286,11 @@
                 "dataIndex": "Email",
                 "text": "Email"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn26",
             "designerId": "d39feb34-cc98-479f-b224-b1b9812efaba"
         },
@@ -294,6 +304,11 @@
             "userConfig": {
                 "dataIndex": "ID_No",
                 "text": "ID_No"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn27",
             "designerId": "7d2af161-8071-46df-a232-e6813a29aa10"
@@ -309,6 +324,11 @@
                 "dataIndex": "Pin_No",
                 "text": "Pin_No"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn28",
             "designerId": "657fe414-8029-4a9a-9183-a9c61affd40a"
         },
@@ -322,6 +342,11 @@
             "userConfig": {
                 "dataIndex": "NSSF_No",
                 "text": "NSSF_No"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn29",
             "designerId": "3083613e-4bca-4c7a-a1a9-9f604ab82fae"
@@ -337,6 +362,11 @@
                 "dataIndex": "NHIF_No",
                 "text": "NHIF_No"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn30",
             "designerId": "54f0597e-e0f5-4bf1-b295-ba8f4c0cb105"
         },
@@ -350,6 +380,11 @@
             "userConfig": {
                 "dataIndex": "Account_No",
                 "text": "Account_No"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn31",
             "designerId": "66c7f2cc-192e-4d41-9f0d-7e1373441007"
@@ -365,6 +400,11 @@
                 "dataIndex": "EmpType",
                 "text": "EmpType"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn32",
             "designerId": "25f9bbd3-bf96-474c-9812-1153cab6f61b"
         },
@@ -378,6 +418,11 @@
             "userConfig": {
                 "dataIndex": "AppointDate",
                 "text": "AppointDate"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn33",
             "designerId": "7b191544-e8e4-4af3-aa1d-fc3f5e8574ab"
@@ -393,6 +438,11 @@
                 "dataIndex": "AppointEndDate",
                 "text": "AppointEndDate"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn34",
             "designerId": "8a6c778b-9732-4e9f-82ea-923498b02dda"
         },
@@ -406,6 +456,11 @@
             "userConfig": {
                 "dataIndex": "ConfirmDate",
                 "text": "ConfirmDate"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn35",
             "designerId": "5586befa-445a-4a29-8b22-344d65760bd3"
@@ -421,6 +476,11 @@
                 "dataIndex": "Nationality",
                 "text": "Nationality"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn36",
             "designerId": "d2485509-5bba-4567-8311-6350dbd942c2"
         },
@@ -434,6 +494,11 @@
             "userConfig": {
                 "dataIndex": "MaritalStatus",
                 "text": "MaritalStatus"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn37",
             "designerId": "67e1cb1f-fad8-4f91-95e2-496dc08b71d1"
@@ -449,6 +514,11 @@
                 "dataIndex": "DOB",
                 "text": "DOB"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn38",
             "designerId": "61efd10b-e8f0-40a3-8d1f-20d6fb2dcaf4"
         },
@@ -462,6 +532,11 @@
             "userConfig": {
                 "dataIndex": "Sex",
                 "text": "Sex"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn39",
             "designerId": "44000d84-2dce-4d2b-9d29-e0ebf940d4f7"
@@ -477,6 +552,11 @@
                 "dataIndex": "BankID",
                 "text": "BankID"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn40",
             "designerId": "825ddaf2-10c4-49e5-a8f7-9331e466af17"
         },
@@ -490,6 +570,11 @@
             "userConfig": {
                 "dataIndex": "BranchID",
                 "text": "BranchID"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn41",
             "designerId": "6e0485de-4f6f-452c-8f95-57ff4093dde5"
@@ -505,6 +590,11 @@
                 "dataIndex": "EmpBranch",
                 "text": "EmpBranch"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn42",
             "designerId": "91b87480-a020-4bb3-8e04-74549455ba05"
         },
@@ -518,6 +608,11 @@
             "userConfig": {
                 "dataIndex": "JobGroup",
                 "text": "JobGroup"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn43",
             "designerId": "4000c8ef-d751-402b-aa04-56b7776606d9"
@@ -533,6 +628,11 @@
                 "dataIndex": "Taxable",
                 "text": "Taxable"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn44",
             "designerId": "3baf96ab-e1bf-4842-83ac-b5e40d61404d"
         },
@@ -546,6 +646,11 @@
             "userConfig": {
                 "dataIndex": "Pensionable",
                 "text": "Pensionable"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn45",
             "designerId": "9a362ca2-3575-4212-bb93-383736ad39a3"
@@ -561,6 +666,11 @@
                 "dataIndex": "Unionisable",
                 "text": "Unionisable"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn46",
             "designerId": "81f58720-195c-4747-8665-55d8631a4bd8"
         },
@@ -574,6 +684,11 @@
             "userConfig": {
                 "dataIndex": "Housed",
                 "text": "Housed"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn47",
             "designerId": "fc8596bc-d006-4957-bdfd-4c4501e2c7fc"
@@ -589,6 +704,11 @@
                 "dataIndex": "NSSF",
                 "text": "NSSF"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn48",
             "designerId": "d70334eb-9fce-4fda-af0b-f26f3c8bc0ba"
         },
@@ -602,6 +722,11 @@
             "userConfig": {
                 "dataIndex": "NHIF",
                 "text": "NHIF"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn49",
             "designerId": "603e60c3-278a-46ac-a8a1-0c5193d20210"
@@ -617,6 +742,11 @@
                 "dataIndex": "EmpStatus",
                 "text": "EmpStatus"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn50",
             "designerId": "9f05ef1d-6bfb-4a04-8ea1-499c2450964a"
         },
@@ -630,6 +760,11 @@
             "userConfig": {
                 "dataIndex": "GratuityRates",
                 "text": "GratuityRates"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
             },
             "name": "MyColumn51",
             "designerId": "0b48b750-4638-4ee0-922f-786e32832365"
@@ -645,6 +780,11 @@
                 "dataIndex": "HELB_No",
                 "text": "HELB_No"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn52",
             "designerId": "e73b5320-f1e9-4048-88f4-90f8a4bfd46e"
         },
@@ -659,8 +799,119 @@
                 "dataIndex": "SaccoNo",
                 "text": "SaccoNo"
             },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
             "name": "MyColumn53",
             "designerId": "124bb4de-5c49-41a1-8a5d-0e6cd928716b"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 40,
+                "layout": "absolute",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto"
+            },
+            "name": "MyContainer10",
+            "designerId": "24663d8f-0a82-4f65-ae5f-067c667f239c",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "Search by Pid, Names, Department, Job Title",
+                        "fieldLabel": "",
+                        "itemId": "txtSearchEmployee",
+                        "layout|x": 20,
+                        "layout|y": 5,
+                        "width": 235
+                    },
+                    "configAlternates": {
+                        "emptyText": "string",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "1329906b-e27b-486e-9e0c-3824905f0510"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdSearchEmployee",
+                        "layout|x": 270,
+                        "layout|y": 5,
+                        "text": "<b>Search</b>",
+                        "width": 96
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "5cdb0b8a-c9db-44f0-a44a-544b3454c621"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdNewEmployee",
+                        "layout|x": 415,
+                        "layout|y": 5,
+                        "text": "<b>Add New Employee</b>",
+                        "width": 142
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "0305a5b4-1811-4794-820c-d064b2a9bed1"
+                }
+            ]
         }
     ]
 }

@@ -13,6 +13,14 @@
         "pageSize": 100,
         "storeId": "PayDeptStore"
     },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
     "designerId": "f833c1cc-5b98-449b-802f-41a87698e4ce",
     "cn": [
         {
@@ -25,6 +33,9 @@
             "userConfig": {
                 "url": "data/getDataFunctions.php?task=getPayDepts"
             },
+            "configAlternates": {
+                "url": "string"
+            },
             "name": "MyAjaxProxy5",
             "designerId": "8e77bd7d-14d5-45d4-9b4e-6db2c3adcee6",
             "cn": [
@@ -36,7 +47,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "root": "getDepts"
+                        "rootProperty": "getDepts"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
                     },
                     "name": "MyJsonReader5",
                     "designerId": "c5395609-6739-49ac-a058-8fe44a867443"

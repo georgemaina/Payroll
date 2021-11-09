@@ -9,10 +9,14 @@
         "designer|userAlias": "slipempinfo",
         "designer|userClassName": "SlipEmpInfo"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "d7118c89-23c3-4c0b-b005-bbd0c31817a4",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "pid"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField142",
             "designerId": "08ee6f04-3dad-4998-9a7d-c19da9df5ec2"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -34,11 +41,14 @@
             "userConfig": {
                 "name": "ColNumber"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField143",
             "designerId": "484b0fe4-ba1f-48e5-bcc4-8e7e519d8691"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -47,11 +57,14 @@
             "userConfig": {
                 "name": "companyname"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField144",
             "designerId": "613462fe-cae1-4bb5-8fe0-f9c2f937e8d7"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -60,11 +73,14 @@
             "userConfig": {
                 "name": "empNames"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField145",
             "designerId": "f839bfd6-5e22-486c-883e-4ac207830212"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -73,11 +89,14 @@
             "userConfig": {
                 "name": "period"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField146",
             "designerId": "dd729ad7-c0d5-4430-b49f-ac65e54462c6"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -86,11 +105,14 @@
             "userConfig": {
                 "name": "empBranch"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField147",
             "designerId": "fb9a0cf0-3276-466e-a82e-d39b4fb164f0"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -99,11 +121,14 @@
             "userConfig": {
                 "name": "department"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField148",
             "designerId": "a12e8c25-48ae-46b4-98c7-3182d17bc5a4"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -112,11 +137,14 @@
             "userConfig": {
                 "name": "pin_No"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField149",
             "designerId": "f115f82c-9004-4610-946e-959b5ec9135b"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -125,30 +153,38 @@
             "userConfig": {
                 "name": "GrossPay"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField150",
             "designerId": "a4fd5a18-d7e9-4e95-895a-f29006733947"
         },
         {
-            "type": "Ext.data.association.HasMany",
+            "type": "Ext.data.schema.HasMany",
             "reference": {
                 "name": "hasMany",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "associationKey": null,
-                "autoLoad": true,
                 "designer|displayName": "hasManyEarnings",
-                "foreignKey": "pid",
                 "model": "Earnings",
-                "name": "Earnings",
-                "primaryKey": "pid"
+                "name": "Earnings"
+            },
+            "configAlternates": {
+                "associationKey": "string",
+                "autoLoad": "boolean",
+                "designer|displayName": "string",
+                "foreignKey": "string",
+                "model": "model",
+                "name": "string",
+                "primaryKey": "string"
             },
             "name": "MyHasManyAssociation",
             "designerId": "6ca7123c-f4ad-45f3-8fd1-d04e59890021"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -157,11 +193,14 @@
             "userConfig": {
                 "name": "TaxDeducted"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField151",
             "designerId": "ba478c88-f789-4f05-ab46-d5d0c944d2f3"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -170,11 +209,14 @@
             "userConfig": {
                 "name": "TotalDeduction"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField152",
             "designerId": "55c28dfb-fa01-40d9-82e9-4260cde45355"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -182,6 +224,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "NetPay"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField153",
             "designerId": "1c80716a-1316-464f-819d-742354d68280"

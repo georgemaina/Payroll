@@ -11,13 +11,28 @@
         "designer|userAlias": "newpaymentsform",
         "designer|userClassName": "NewPaymentsForm",
         "frame": true,
-        "height": 310,
+        "height": 282,
         "layout": "absolute",
         "title": null,
         "url": "data/getDataFunctions.php?task=InsertItem",
         "width": 379
     },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "url": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
     "designerId": "86147daf-59aa-421d-9ca2-b44b2ec72711",
+    "viewControllerInstanceId": "cf362b1e-398e-48b2-9045-10af0791e72e",
+    "viewModelInstanceId": "7c591a84-505a-4a52-8d72-b6f5a2d57c26",
     "cn": [
         {
             "type": "Ext.form.field.Text",
@@ -31,9 +46,19 @@
                 "itemId": "pid",
                 "labelAlign": "right",
                 "layout|x": 10,
-                "layout|y": 15,
+                "layout|y": 5,
                 "name": "pid",
                 "tabIndex": 1
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "scrollable": "boolean"
             },
             "name": "MyTextField82",
             "designerId": "ae72b2e2-edea-4290-b33b-cc91c2fb220c"
@@ -50,9 +75,19 @@
                 "itemId": "txtBalance",
                 "labelAlign": "right",
                 "layout|x": 10,
-                "layout|y": 165,
+                "layout|y": 180,
                 "name": "Balance",
                 "tabIndex": 6
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "scrollable": "boolean"
             },
             "name": "MyTextField83",
             "designerId": "88f4292e-5f5c-40cb-985e-19b6f2850569"
@@ -69,9 +104,19 @@
                 "itemId": "txtAmount",
                 "labelAlign": "right",
                 "layout|x": 10,
-                "layout|y": 135,
+                "layout|y": 145,
                 "name": "Amount",
                 "tabIndex": 5
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "scrollable": "boolean"
             },
             "name": "MyTextField84",
             "designerId": "26776e2d-eb54-422e-bb9f-7356e236f670"
@@ -87,9 +132,18 @@
                 "fieldLabel": "Total Time",
                 "labelAlign": "right",
                 "layout|x": 10,
-                "layout|y": 45,
+                "layout|y": 40,
                 "name": "totalTime",
                 "tabIndex": 2
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "tabIndex": "number",
+                "scrollable": "boolean"
             },
             "name": "MyTextField85",
             "designerId": "c174d604-f785-4c66-8ca0-7701ae9cc3bb"
@@ -107,7 +161,7 @@
                 "itemId": "cmbPaymentsTypes",
                 "labelAlign": "right",
                 "layout|x": 10,
-                "layout|y": 105,
+                "layout|y": 110,
                 "minChars": 2,
                 "name": "Payment",
                 "queryMode": "local",
@@ -116,6 +170,23 @@
                 "typeAhead": true,
                 "valueField": "ID",
                 "width": 305
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "minChars": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "tabIndex": "number",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyComboBox15",
             "designerId": "0e22b6d4-ebbc-43fb-8138-1a58e831d252"
@@ -143,6 +214,23 @@
                 "valueField": "ID",
                 "width": 305
             },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "minChars": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "tabIndex": "number",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
             "name": "MyComboBox16",
             "designerId": "6308da51-5be5-4d73-bfbb-3660386a1347"
         },
@@ -156,11 +244,21 @@
             "userConfig": {
                 "height": 45,
                 "itemId": "cmdSaveEmpPayment",
-                "layout|x": 40,
-                "layout|y": 210,
+                "layout|x": 45,
+                "layout|y": 230,
                 "tabIndex": 7,
                 "text": "<b>Save</b>",
                 "width": 105
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton37",
             "designerId": "55637404-80a9-4165-8a88-a642fb47b887"
@@ -175,11 +273,21 @@
             "userConfig": {
                 "height": 45,
                 "itemId": "cmdClose",
-                "layout|x": 225,
-                "layout|y": 210,
+                "layout|x": 235,
+                "layout|y": 230,
                 "tabIndex": 8,
                 "text": "<b>Close</b>",
                 "width": 105
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "tabIndex": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
             },
             "name": "MyButton38",
             "designerId": "7b0a927f-52ac-4bac-95d8-9244f6ae228a"
@@ -197,6 +305,14 @@
                 "layout|x": 105,
                 "layout|y": 265,
                 "name": "formStatus"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "scrollable": "boolean"
             },
             "name": "MyHiddenField",
             "designerId": "d7fe5319-cb42-4654-9aaa-6343559ca6dd"

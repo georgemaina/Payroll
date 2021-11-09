@@ -9,10 +9,14 @@
         "designer|userAlias": "defaultitems",
         "designer|userClassName": "DefaultItems"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "35b26cd2-8d13-432e-9e45-2f0b0ec00d00",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "FirstName"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField271",
             "designerId": "5ee17b06-e7ed-456b-a0de-20d52a27adf8"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -34,11 +41,14 @@
             "userConfig": {
                 "name": "LastName"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField272",
             "designerId": "71f3dbdd-f66b-41c4-82c6-aff3b39ae82f"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -47,11 +57,14 @@
             "userConfig": {
                 "name": "Username"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField273",
             "designerId": "fb9d2b19-8c33-4809-9b23-721e86157b0a"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -59,6 +72,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "CompanyName"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField274",
             "designerId": "092ea90c-6f0e-415c-8013-3750b7893c7a"

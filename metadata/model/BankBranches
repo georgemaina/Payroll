@@ -9,23 +9,30 @@
         "designer|userAlias": "bankbranches",
         "designer|userClassName": "BankBranches"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "82d6148d-2b31-48c1-b379-317145854249",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "ID"
+                "name": "Code"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField72",
             "designerId": "318919a2-41de-4c11-bbaf-f1fc8ae837c1"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -33,6 +40,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "BankBranch"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField73",
             "designerId": "a402b8c7-0805-43f6-8d7e-dc524dcea6f0"

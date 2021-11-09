@@ -7,7 +7,7 @@
 error_reporting(E_COMPILE_ERROR | E_ERROR | E_CORE_ERROR);
 require_once('roots.php');
 require ($root_path . 'include/inc_environment_global.php');
-require_once 'spreadsheet/Excel/Writer.php';
+require_once 'Spreadsheet/Excel/Writer.php';
 // Lets define some custom colors codes
 define('CUSTOM_DARK_BLUE', 20);
 define('CUSTOM_BLUE', 21);
@@ -67,22 +67,25 @@ $worksheet->write(1, 3, 'NSSF Returns', $formatHeader);
 // Create the header for the data starting @ row 4
 $indexCol = 0;
 $indexRow = 4;
-$worksheet->write($indexRow, $indexCol++, 'PID', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Names', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'ID No', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'PAYROLL NUMBER', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'SURNAME', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'OTHER NAMES', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'ID NO', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'KRA PIN', $formatReportHeader);
 $worksheet->write($indexRow, $indexCol++, 'NSSF No', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Self', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Company', $formatReportHeader);
-$worksheet->write($indexRow, $indexCol++, 'Amount', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'GROSS PAY', $formatReportHeader);
+$worksheet->write($indexRow, $indexCol++, 'VOLUNTARY', $formatReportHeader);
+// $worksheet->write($indexRow, $indexCol++, 'Amount', $formatReportHeader);
 
 $indexRow++;   // Advance to the next row
 $indexCol = 0; // Start @ column 0
 
-    $payMonth = $_REQUEST[payMonth];
+    $payMonth = $_REQUEST['payMonth'];
     //$pstBranch=$_REQUEST[branch];
     
-   $sql = "SELECT p.`Pid`, p.`emp_names`,p.`pay_type`, p.`amount` AS Self,'' AS Company,'' AS Amount,e.ID_No,e.NSSF_No,p.payMonth FROM proll_payments p INNER JOIN proll_empregister e
-        ON p.Pid=e.PID WHERE pay_type ='NSSF' AND payMonth='$payMonth'";
+   $sql = "SELECT p.`Pid`,e.`Surname` ,concat(e.`LastName`,' ',e.`FirstName`) as OtherNames,p.`pay_type`, p.`amount` AS gross,
+   '' AS Amount,e.ID_No,e.`Pin_NO`,e.NSSF_No FROM proll_payments p INNER JOIN proll_empregister e
+           ON p.Pid=e.PID WHERE pay_type ='BASIC PAY' AND payMonth='$payMonth'";
 
 //    if($pmonth<>''){
 //        $sql.=" AND payMonth='$pmonth'";
@@ -107,41 +110,40 @@ $indexCol = 0; // Start @ column 0
             $indexCol++,
             $row['Pid'],
             $formatData);
-        
          $worksheet->write(
             $indexRow,
             $indexCol++,
-            $row['emp_names'],
+            $row['Surname'],
             $formatData);
-         
+        $worksheet->write(
+            $indexRow,
+            $indexCol++,
+            $row['OtherNames'],
+            $formatData);
         $worksheet->write(
             $indexRow,
             $indexCol++,
             $row['ID_No'],
             $formatData);
-        
+        $worksheet->write(
+            $indexRow,
+            $indexCol++,
+            '',
+            $formatData);
          $worksheet->write(
             $indexRow,
             $indexCol++,
             $row['NSSF_No'],
             $formatData);
-         
          $worksheet->write(
             $indexRow,
             $indexCol++,
-            $row['Self'],
+            $row['gross'],
             $formatData);
-         
          $worksheet->write(
             $indexRow,
             $indexCol++,
-            $nssfCompany,
-            $formatData);
-         
-         $worksheet->write(
-            $indexRow,
-            $indexCol++,
-            intval($row['Self']+$nssfCompany),
+            '',
             $formatData);
 
          // Advance to the next row

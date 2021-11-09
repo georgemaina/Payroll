@@ -9,10 +9,14 @@
         "designer|userAlias": "payrates",
         "designer|userClassName": "PayRates"
     },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
     "designerId": "843574ca-560c-45d5-84eb-d65bc1a90ace",
     "cn": [
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -21,11 +25,14 @@
             "userConfig": {
                 "name": "ID"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField80",
             "designerId": "d67a8f7e-aa80-4d02-af0b-d7e064d279ff"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -34,11 +41,14 @@
             "userConfig": {
                 "name": "RateName"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField81",
             "designerId": "0cdfc660-d095-4441-ac3a-19c50524e8aa"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -47,11 +57,14 @@
             "userConfig": {
                 "name": "Value"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField82",
             "designerId": "0353c966-4a2b-4cc9-a5f5-a92fa328a772"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -60,11 +73,14 @@
             "userConfig": {
                 "name": "Lower_Limit"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField83",
             "designerId": "0fbe50ee-6f3e-455b-b5fe-5709a92cb2d0"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -73,11 +89,14 @@
             "userConfig": {
                 "name": "Upper_Limit"
             },
+            "configAlternates": {
+                "name": "string"
+            },
             "name": "MyField84",
             "designerId": "1721e594-650a-4806-a2b1-bdb1203b2633"
         },
         {
-            "type": "Ext.data.Field",
+            "type": "Ext.data.field.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
@@ -85,6 +104,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Rate"
+            },
+            "configAlternates": {
+                "name": "string"
             },
             "name": "MyField85",
             "designerId": "8a038376-7114-410e-9447-62b7981051f7"
