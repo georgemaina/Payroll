@@ -16,6 +16,9 @@ $maxSlips = $_REQUEST['slipsNo'];
 $dept = $_REQUEST['deptID'];
 //$month1 = $mnth1;
 //$month2 = $mnth2;
+
+global $nssf;
+global $pension;
 $branch = $_REQUEST['branch'];
 
 class Library_Pdf_Base extends Zend_Pdf {
@@ -278,45 +281,8 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
         $numRows = $result->RecordCount();
 
         $page->setStyle($normalStyle);
-
-//        while ($row = $result->FetchRow()) {
-//            if ($row[3] == 'N.S.S.F') {
-//                $page->drawText("* Less N.S.S.F and Pension", $leftPos + 36, $topPos - $currpos);
-////                $page->drawText($row[4], $leftPos + 180, $topPos - $currpos);
-//                $pdfBase->drawText($page, $row[4], $leftPos + 220, $topPos - $currpos, $leftPos + 220, right);
-//                $page->drawText("* Taxable Pay", $leftPos + 36, $topPos - $currpos);
-////                $page->drawText(intval($row2[3] - $row[4]), 180, $topPos - $currpos);
-//                $pdfBase->drawText($page, intval($row2[3] - $row[4]), $leftPos + 220, $topPos - $currpos, $leftPos + 220, right);
-//                $currpos = $currpos + 10;
-//            }
-//        }
-//        $currpos = $currpos + 5;
-
-
-        $currpos = $currpos + 20;
-
-        $sql = "SELECT a.Pid, a.emp_names,a.pay_type,a.amount,a.Notes FROM proll_payments a
-     WHERE  pid='$pid' AND a.paymonth='$paymonth'and period='$period' AND pay_type IN('N.S.S.F','Pension','N.H.I.F ')";
-        $result = $db->Execute($sql);
-        $numRows = $result->RecordCount();
-        while ($numRows = $result->FetchRow()) {
-            if ($numRows[2]== 'N.S.S.F') {
-                $lable = 'N.S.S.F';
-            } else {
-                $lable = $numRows[2];
-            }
-            $page->drawText('* ' . $lable, $leftPos + 36, $topPos - $currpos+15);
-
-//            $page->drawText(number_format($numRows[3], 2), $leftPos + 180, $topPos - $currpos);
-            $pdfBase->drawText($page, number_format($numRows[3], 2), $leftPos + 220, $topPos - $currpos  +15, $leftPos + 220, right);
-            if($numRows[2]=='N.S.S.F'){
-                $nssf=$numRows[3];
-            }
-            if($numRows[2]=='PENSION'){ 
-                $pension=$numRows[3];
-            }
-            $currpos = $currpos + 10;
-        }
+    
+    $currpos = $currpos + 20;
 
         $pyesql = "select pid,sum(amount) as grosspay from proll_payments where catID IN('Earnings','Benefits')
          and pid='$pid' and paymonth='$paymonth' AND pay_type NOT IN ('PENSION') and period='$period'";
@@ -345,7 +311,7 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
         $pyerow1 = $pyeresult1->FetchRow();
         $txCharged = $pyerow1[0];
         $page->drawText('* Tax Charged', $leftPos + 36, $topPos - $currpos);
-        $pdfBase->drawText($page, number_format($txCharged+1162, 2), $leftPos + 220, $topPos - $currpos, $leftPos + 220, right);
+        $pdfBase->drawText($page, number_format($txCharged, 2), $leftPos + 220, $topPos - $currpos, $leftPos + 220, right);
 //        $page->drawText(number_format($txCharged, 2), $leftPos + 180, $topPos - $currpos);
 
         $currpos = $currpos + 10;
@@ -367,7 +333,7 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
 //        $page->drawText(number_format($txRelief, 2), $leftPos + 180, $topPos - $currpos);
         $currpos = $currpos + 10;
         $page->drawText('* Tax Deducted', $leftPos + 36, $topPos - $currpos);
-        $pdfBase->drawText($page, number_format($txCharged, 2), $leftPos + 220, $topPos - $currpos, $leftPos + 220, right);
+        $pdfBase->drawText($page, number_format($txCharged-$txRelief, 2), $leftPos + 220, $topPos - $currpos, $leftPos + 220, right);
 //        $page->drawText(number_format($txCharged - $txRelief, 2), $leftPos + 180, $topPos - $currpos);
 
         $currpos = $currpos + 10;
@@ -383,33 +349,29 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
         $page->setStyle($normalStyle);
         $currpos = $currpos + 5;
 
-        $sql = "select a.Pid, a.emp_names,c.id,a.pay_type,a.amount,a.Notes,a.balance FROM proll_payments a
-                inner join proll_paytypes b on a.pay_type=b.PayType
-                inner join proll_paycategory c on b.CatID=c.ID
-                where a.catid='Deductions' and amount>0 and pid='$pid' and a.paymonth='$paymonth' and period='$period' ";
+        $currpos = $currpos + 20;
+
+        $sql = "SELECT a.Pid, a.emp_names,a.pay_type,a.amount,a.Notes FROM proll_payments a
+                WHERE  pid='$pid' AND a.paymonth='$paymonth'and period='$period'
+                AND pay_type IN('NSSF','Pension','N.H.I.F ')";
         $result = $db->Execute($sql);
         $numRows = $result->RecordCount();
-
-        while ($row = $result->FetchRow()) {
-            $balance = $row[6] ? $row[6] : "0";
-            if (ucwords(strtolower($row[3])) == 'Nssf') {
+        while ($numRows = $result->FetchRow()) {
+            if ($numRows[2]== 'NSSF') {
                 $lable = 'N.S.S.F';
-            } else if (ucwords(strtolower($row[3])) == 'N.h.i.f') {
-                $lable = 'N.H.I.F';
             } else {
-                $lable = ucwords(strtolower($row[3]));
+                $lable = $numRows[2];
             }
+            $page->drawText('* ' . $lable, $leftPos + 36, $topPos - $currpos+15);
 
-            $page->drawText('* ' . $lable, $leftPos + 36, $topPos - $currpos);
-            $pdfBase->drawText($page, number_format($row[4], 2), $leftPos + 220, $topPos - $currpos, $leftPos + 220, right);
-//            $page->drawText(number_format($row[4], 2), $leftPos + 180, $topPos - $currpos);
-            if (empty($balance) || $balance == 0) {
-                $balance = '';
-            } else {
-                $balance = number_format($balance, 2);
+//            $page->drawText(number_format($numRows[3], 2), $leftPos + 180, $topPos - $currpos);
+            $pdfBase->drawText($page, number_format($numRows[3], 2), $leftPos + 220, $topPos - $currpos  +15, $leftPos + 220, right);
+            if($numRows[2]=='NSSF'){
+               $nssf=$numRows[3];
             }
-            $pdfBase->drawText($page, $balance, $leftPos + 280, $topPos - $currpos, $leftPos + 280, right);
-//            $page->drawText($balance, $leftPos + 260, $topPos - $currpos);
+            if($numRows[2]=='PENSION'){ 
+                $pension=$numRows[3];
+            }
             $currpos = $currpos + 10;
         }
 
@@ -430,30 +392,20 @@ function createPaySlips($paymonth, $spid, $spid2, $maxSlips, $dept, $branch, $pd
         $currpos = $currpos + 10;
            $page->setStyle($normalStyle);
         while ($numRows3 = $request3->FetchRow()) {
-            if (ucwords(strtolower($numRows3['Pay_type'])) == 'N.s.s.f') {
+            if ($numRows3['Pay_type'] == 'N.s.s.f') {
                 $lable = 'N.S.S.F';
             } else {
-                $lable = ucwords(strtolower($numRows3[Pay_type]));
+                $lable = $numRows3['Pay_type'];
             }
             $page->drawText('* ' .$lable, $leftPos + 36, $topPos - $currpos);
-            $pdfBase->drawText($page, number_format($numRows3[Amount],2), $leftPos + 220, $topPos - $currpos, $leftPos + 280, right);
+            $pdfBase->drawText($page, number_format($numRows3['Amount'],2), $leftPos + 220, $topPos - $currpos, $leftPos + 280, right);
 
             $currpos = $currpos + 10;
+            $page->drawText('* NSSF Company', $leftPos + 36, $topPos - $currpos);
+            $pdfBase->drawText($page, number_format($numRows3['Amount'],2), $leftPos + 220, $topPos - $currpos, $leftPos + 280, right);
+            $currpos=$currpos+10;
         }
         
-               $dsqlr = "SELECT * FROM proll_rates";
-        $requestr = $db->Execute($dsqlr);
-            while($numRowsr = $requestr->FetchRow()){
-                if($numRowsr[RateName]=='NSSF Company'){
-                    $nssfCo = $numRowsr[Value];
-                     $page->drawText('* ' .$numRowsr[RateName], $leftPos + 36, $topPos - $currpos);
-                    $pdfBase->drawText($page, number_format($nssfCo,2), $leftPos + 220, $topPos - $currpos, $leftPos + 280, right);
-                    $currpos=$currpos+10;
-//                    $page->drawText('* PENSION', $leftPos + 36, $topPos - $currpos);
-//                    $pdfBase->drawText($page, number_format($pension,2), $leftPos + 220, $topPos - $currpos, $leftPos + 280, right);
-                }
-            }
-           
 //        $page->drawText(nu
         $currpos = $currpos + 20;
         $page->setStyle($headingStyle);

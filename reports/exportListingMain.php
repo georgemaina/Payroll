@@ -55,7 +55,7 @@ $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A1', 'Payroll Listings Main'
 
 $payMonth =$_REQUEST['payMonth'];
 $payBranch=$_REQUEST['empBranch'];
-$period=$_REQUEST['period'];
+$period=$_SESSION['Period'];
 //$period='2020';
 
 $sql = "SELECT l.Pid,EmpNames,l.JobTitle,l.EmpBranch,l.PayMonth,`001` AS BasicPay,`114` AS GrossPay,`016` AS NSSF,`013` AS PAYE
@@ -65,7 +65,7 @@ $sql = "SELECT l.Pid,EmpNames,l.JobTitle,l.EmpBranch,l.PayMonth,`001` AS BasicPa
 if ($payBranch<>'' and $payBranch <> 'null') {
     $sql.=" AND l.EmpBranch='$payBranch'";
 }
-//echo $sql;
+echo $sql;
     $result=$db->Execute($sql);
 $i=3;
     while($row=$result->FetchRow()){

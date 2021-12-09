@@ -1,6 +1,6 @@
 <?php
 # This is the database name
-$dbname='chak_payroll';
+$dbname='amadea_payroll';
 
 # Database user name, default is root or httpd for mysql, or postgres for postgresql
 $dbusername='george';
