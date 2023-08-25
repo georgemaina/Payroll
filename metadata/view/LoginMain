@@ -6,10 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|snapToGrid": 5,
         "designer|userAlias": "loginMain",
         "designer|userClassName": "LoginMain",
-        "layout": "absolute"
+        "layout": "center"
     },
     "configAlternates": {
         "designer|initialView": "boolean",
@@ -32,12 +31,10 @@
             "codeClass": null,
             "userConfig": {
                 "designer|snapToGrid": 5,
-                "height": 220,
+                "height": 289,
                 "layout": "absolute",
-                "layout|x": 500,
-                "layout|y": 300,
                 "title": null,
-                "width": 405
+                "width": 454
             },
             "configAlternates": {
                 "designer|snapToGrid": "number",
@@ -63,8 +60,9 @@
                         "fieldLabel": "Username",
                         "itemId": "login-user",
                         "labelAlign": "right",
-                        "layout|x": 55,
-                        "layout|y": 60,
+                        "labelStyle": "color:green; font-weight:bold;",
+                        "layout|x": 130,
+                        "layout|y": 70,
                         "width": 300
                     },
                     "configAlternates": {
@@ -74,7 +72,8 @@
                         "layout|y": "number",
                         "width": "auto",
                         "scrollable": "boolean",
-                        "labelAlign": "string"
+                        "labelAlign": "string",
+                        "labelStyle": "string"
                     },
                     "name": "MyTextField109",
                     "designerId": "2806441c-958f-4280-b7ea-82f41529ed74"
@@ -91,8 +90,9 @@
                         "inputType": "password",
                         "itemId": "login-pwd",
                         "labelAlign": "right",
-                        "layout|x": 55,
-                        "layout|y": 95,
+                        "labelStyle": "color:green; font-weight:bold;",
+                        "layout|x": 130,
+                        "layout|y": 110,
                         "maxLength": 12,
                         "minHeight": null,
                         "minLength": 6,
@@ -111,7 +111,8 @@
                         "minWidth": "number",
                         "width": "auto",
                         "scrollable": "boolean",
-                        "labelAlign": "string"
+                        "labelAlign": "string",
+                        "labelStyle": "string"
                     },
                     "name": "MyTextField110",
                     "designerId": "a23ee3d2-db4c-4da1-b322-6101ab5f0fdc"
@@ -128,15 +129,16 @@
                         "fieldLabel": "Select a Different Period",
                         "itemId": "login-period",
                         "labelAlign": "right",
+                        "labelStyle": "color:green; font-weight:bold;",
                         "labelWidth": 150,
-                        "layout|x": 5,
-                        "layout|y": 130,
+                        "layout|x": 80,
+                        "layout|y": 150,
                         "minChars": 2,
                         "queryMode": "local",
                         "store": "PeriodsStore",
                         "typeAhead": true,
                         "valueField": "Period",
-                        "width": 270
+                        "width": 350
                     },
                     "configAlternates": {
                         "displayField": "datafield",
@@ -152,7 +154,8 @@
                         "scrollable": "boolean",
                         "labelAlign": "string",
                         "labelWidth": "number",
-                        "width": "auto"
+                        "width": "auto",
+                        "labelStyle": "string"
                     },
                     "name": "MyComboBox33",
                     "designerId": "cd386aac-baf6-4ae1-aba5-3aa7d5beec33"
@@ -166,8 +169,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "cmdLogin",
-                        "layout|x": 150,
-                        "layout|y": 175,
+                        "layout|x": 170,
+                        "layout|y": 210,
                         "text": "<b>Login</b>",
                         "width": 80
                     },
@@ -191,8 +194,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "cmdCancel",
-                        "layout|x": 285,
-                        "layout|y": 180,
+                        "layout|x": 300,
+                        "layout|y": 210,
                         "text": "<b>Cancel</b>",
                         "width": 80
                     },
@@ -215,11 +218,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 40,
+                        "height": 120,
                         "layout|x": 10,
                         "layout|y": 5,
-                        "src": "images/care_logo_mysql.gif",
-                        "width": 120
+                        "src": "images/chmis.png",
+                        "width": 135
                     },
                     "configAlternates": {
                         "height": "auto",
@@ -242,8 +245,8 @@
                     "userConfig": {
                         "fieldLabel": null,
                         "fieldStyle": "font-size: small;font-weight: bold;color: green;",
-                        "layout|x": 130,
-                        "layout|y": 30,
+                        "layout|x": 260,
+                        "layout|y": 15,
                         "value": "Payroll Login"
                     },
                     "configAlternates": {
@@ -256,6 +259,28 @@
                     },
                     "name": "MyDisplayField22",
                     "designerId": "d3702b1f-ddce-4440-a68c-b8bd7eb384cc"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 125,
+                        "layout|y": 245,
+                        "value": "© CHAK CHMIS 2023 All Rights Reserved",
+                        "width": 300
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyDisplayField16",
+                    "designerId": "b6132c8b-076e-4e5b-af9b-3f6007e30021"
                 }
             ]
         }

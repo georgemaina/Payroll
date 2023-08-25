@@ -20,7 +20,8 @@
         "name": "PayrollApp",
         "stores": [
             "PayMonthsStore",
-            "LoginSessions"
+            "LoginSessions",
+            "MyJsonStore"
         ],
         "views": [
             "ImportPayments"
@@ -50,9 +51,9 @@
                     "",
                     "loginSess.load({",
                     "    callback:function(records, operation, success){",
-                    "       // Ext.Msg.alert('Count',loginSess.getCount());",
+                    "        // Ext.Msg.alert('Count',loginSess.getCount());",
                     "        if(loginSess.getCount()==='' || loginSess.getCount()===0){",
-                    "             Ext.create('PayrollApp.view.LoginMain' , {renderTo: Ext.getBody()});",
+                    "            Ext.create('PayrollApp.view.LoginMain' , {renderTo: Ext.getBody()});",
                     "        }else{",
                     "            Ext.create('PayrollApp.view.PayrollMain' , {renderTo: Ext.getBody()});",
                     "        }",

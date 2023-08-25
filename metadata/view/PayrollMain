@@ -39,9 +39,7 @@
                 "layout": "accordion",
                 "layout|region": "west",
                 "scrollable": true,
-                "title": [
-                    "Payroll Menu"
-                ],
+                "title": "Payroll Menu",
                 "width": 239
             },
             "configAlternates": {
@@ -1024,25 +1022,28 @@
             "designerId": "9aa11c96-7d09-49f6-ac4e-66374ab51242"
         },
         {
-            "type": "Ext.container.Container",
+            "type": "Ext.panel.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|snapToGrid": 5,
+                "bodyBorder": true,
+                "container|align": "stretch",
                 "height": 46,
-                "layout": "absolute",
+                "layout": "hbox",
                 "layout|region": "north"
             },
             "configAlternates": {
                 "designer|snapToGrid": "number",
                 "height": "auto",
                 "layout": "string",
-                "layout|region": "string"
+                "layout|region": "string",
+                "bodyBorder": "boolean",
+                "container|align": "string"
             },
-            "name": "MyContainer2",
+            "name": "MyPanel7",
             "designerId": "dfdb85b0-3728-42d6-a24d-a4d73bd41749",
             "cn": [
                 {
@@ -1053,9 +1054,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 32,
-                        "src": "images/care_logo_mysql.gif",
-                        "width": 131
+                        "height": 45,
+                        "src": "images/chmis.png",
+                        "width": 60
                     },
                     "configAlternates": {
                         "height": "auto",
@@ -1068,32 +1069,6 @@
                     "designerId": "7eb78d32-e113-4e92-bed0-6a8d38f309d6"
                 },
                 {
-                    "type": "Ext.form.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "html": "<b>Payroll</b>",
-                        "layout|x": 130,
-                        "layout|y": 20,
-                        "text": "",
-                        "width": 65
-                    },
-                    "configAlternates": {
-                        "html": "string",
-                        "layout|flex": "number",
-                        "text": "string",
-                        "width": "auto",
-                        "scrollable": "boolean",
-                        "layout|x": "number",
-                        "layout|y": "number"
-                    },
-                    "name": "MyLabel",
-                    "designerId": "a070868e-2576-4e89-aa0a-88b1eddc8388"
-                },
-                {
                     "type": "Ext.form.field.Display",
                     "reference": {
                         "name": "items",
@@ -1104,8 +1079,6 @@
                         "fieldLabel": null,
                         "fieldStyle": "font-size: large;font-weight: bold;color: green;",
                         "itemId": "CompanyName",
-                        "layout|x": 200,
-                        "layout|y": 5,
                         "name": "",
                         "value": "JAMII TEKELEZI PAYROLL",
                         "width": 446
@@ -1126,90 +1099,143 @@
                     "designerId": "01c6fe0d-75ab-4f9a-a7eb-88756164617a"
                 },
                 {
-                    "type": "Ext.form.field.Display",
+                    "type": "Ext.panel.Panel",
                     "reference": {
-                        "name": "items",
+                        "name": "dockedItems",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": null,
-                        "itemId": "userName",
-                        "labelWidth": 150,
-                        "layout|x": 995,
-                        "layout|y": 0,
-                        "value": "Logged User",
-                        "width": 205
+                        "container|align": "stretch",
+                        "dock": "right",
+                        "layout": "hbox"
                     },
                     "configAlternates": {
-                        "fieldLabel": "string",
-                        "itemId": "string",
-                        "labelWidth": "number",
-                        "layout|flex": "number",
-                        "width": "auto",
-                        "scrollable": "boolean",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "value": "string"
+                        "container|align": "string",
+                        "dock": "string",
+                        "layout": "string"
                     },
-                    "name": "MyDisplayField2",
-                    "designerId": "bd87e620-9f9d-41d2-b9f6-290d71c9ca02"
+                    "name": "MyPanel8",
+                    "designerId": "0a1e9f98-3416-4b80-9c37-c541fc5c8b0f",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Period",
+                                "fieldStyle": "font-size: 14px;font-weight: bold;color: green;",
+                                "itemId": "Period",
+                                "labelAlign": "right",
+                                "labelStyle": "font-size: 14px;font-weight: bold;color: green;",
+                                "labelWidth": 80,
+                                "width": 205
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number",
+                                "layout|flex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "value": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelAlign": "string"
+                            },
+                            "name": "MyDisplayField15",
+                            "designerId": "fa5df653-dc80-4002-92af-bae59fe2f850"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Logged User",
+                                "fieldStyle": "font-size: 14px;font-weight: bold;color: green;",
+                                "itemId": "userName",
+                                "labelStyle": "font-size: 14px;font-weight: bold;color: green;",
+                                "labelWidth": 150,
+                                "width": 205
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number",
+                                "layout|flex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "value": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyDisplayField2",
+                            "designerId": "bd87e620-9f9d-41d2-b9f6-290d71c9ca02"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "cmdlogout",
+                                "layout|flex": 0,
+                                "text": "<b>Logout</b>",
+                                "width": 129
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "layout|flex": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "layout|x": "number",
+                                "layout|y": "number"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "3847bd1d-1c20-4ad6-a763-3ba1d024696d"
+                        }
+                    ]
                 },
                 {
-                    "type": "Ext.form.field.Display",
+                    "type": "viewcontrollereventbinding",
                     "reference": {
-                        "name": "items",
+                        "name": "listeners",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fieldLabel": null,
-                        "itemId": "Period",
-                        "labelWidth": 150,
-                        "layout|x": 740,
-                        "layout|y": 5,
-                        "value": "Period",
-                        "width": 205
+                        "fn": "onPanelAfterRender",
+                        "implHandler": [
+                            "var period=sessionStorage.getItem(\"Period\");",
+                            "var userName=sessionStorage.getItem(\"User\");",
+                            "",
+                            "component.down('#Period').setValue(period);",
+                            "component.down('#userName').setValue(userName);"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
                     },
                     "configAlternates": {
-                        "fieldLabel": "string",
-                        "itemId": "string",
-                        "labelWidth": "number",
-                        "layout|flex": "number",
-                        "width": "auto",
-                        "scrollable": "boolean",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "value": "string"
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
                     },
-                    "name": "MyDisplayField15",
-                    "designerId": "fa5df653-dc80-4002-92af-bae59fe2f850"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "cmdlogout",
-                        "layout|x": 1205,
-                        "layout|y": 5,
-                        "text": "<b>Logout</b>",
-                        "width": 129
-                    },
-                    "configAlternates": {
-                        "itemId": "string",
-                        "layout|flex": "number",
-                        "text": "string",
-                        "width": "auto",
-                        "scrollable": "boolean",
-                        "layout|x": "number",
-                        "layout|y": "number"
-                    },
-                    "name": "MyButton1",
-                    "designerId": "3847bd1d-1c20-4ad6-a763-3ba1d024696d"
+                    "name": "onPanelAfterRender",
+                    "designerId": "5d393204-adff-4f53-8c38-502e614cb1aa"
                 }
             ]
         }

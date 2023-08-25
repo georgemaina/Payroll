@@ -46,9 +46,6 @@
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "rootProperty": "banks"
-                    },
                     "configAlternates": {
                         "root": "string",
                         "rootProperty": "string"

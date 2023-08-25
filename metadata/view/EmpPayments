@@ -1019,7 +1019,8 @@
                         "designer|uiInterfaceName": "default",
                         "itemId": "paydeductgrid",
                         "minHeight": 400,
-                        "store": "EmpPaymentStore",
+                        "scrollable": "both",
+                        "store": "EmpPaymentsStore",
                         "title": "Employee Payments and Deductions"
                     },
                     "configAlternates": {
@@ -1309,7 +1310,7 @@
                             "userConfig": {
                                 "displayInfo": true,
                                 "dock": "bottom",
-                                "store": "EmpPaymentStore",
+                                "store": "EmpPaymentsStore",
                                 "width": 360
                             },
                             "configAlternates": {
