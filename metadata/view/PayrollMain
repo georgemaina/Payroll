@@ -1005,8 +1005,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|displayName": "contents",
-                "designer|snapToGrid": 10,
-                "layout": "absolute",
+                "layout": "fit",
                 "layout|region": "center",
                 "scrollable": true
             },

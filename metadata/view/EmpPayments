@@ -74,7 +74,6 @@
                         "columnLines": true,
                         "designer|uiInterfaceName": "default-framed",
                         "frame": true,
-                        "height": 700,
                         "itemId": "employeelistGrid",
                         "manageHeight": false,
                         "scrollable": "both",
@@ -469,14 +468,14 @@
             ]
         },
         {
-            "type": "Ext.form.FieldSet",
+            "type": "Ext.container.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "border": 5,
+                "border": true,
                 "frame": true,
                 "layout|flex": 2
             },
@@ -485,7 +484,7 @@
                 "frame": "boolean",
                 "layout|flex": "number"
             },
-            "name": "MyFieldSet7",
+            "name": "MyContainer12",
             "designerId": "0a8eadfe-d35a-4347-b824-704a39740b60",
             "cn": [
                 {
@@ -1018,7 +1017,6 @@
                         "columnLines": true,
                         "designer|uiInterfaceName": "default",
                         "itemId": "paydeductgrid",
-                        "minHeight": 400,
                         "scrollable": "both",
                         "store": "EmpPaymentsStore",
                         "title": "Employee Payments and Deductions"

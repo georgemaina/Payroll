@@ -10,12 +10,11 @@
         "bodyPadding": 10,
         "closable": true,
         "collapsible": true,
-        "designer|snapToGrid": 5,
+        "container|align": "stretch",
         "designer|userAlias": "postpayroll",
         "designer|userClassName": "PostPayroll",
         "frame": true,
-        "height": 585,
-        "layout": "absolute",
+        "layout": "hbox",
         "title": "PAYROLL POSTING",
         "width": null
     },
@@ -32,7 +31,8 @@
         "layout": "string",
         "title": "string",
         "width": "auto",
-        "scrollable": "boolean"
+        "scrollable": "boolean",
+        "container|align": "string"
     },
     "designerId": "f51c3809-678d-4f85-816b-cbe73e6f1259",
     "viewControllerInstanceId": "51155584-5d31-4215-b8f4-151c429c8b78",
@@ -49,12 +49,10 @@
                 "bodyBorder": true,
                 "columnLines": true,
                 "designer|uiInterfaceName": "default",
-                "height": 540,
                 "itemId": "empPostGridSummary",
-                "layout|x": 0,
-                "layout|y": 0,
+                "layout|flex": 0,
                 "store": "PaymentsSummaryStore",
-                "width": 455
+                "width": 466
             },
             "configAlternates": {
                 "columnLines": "boolean",
@@ -67,7 +65,8 @@
                 "width": "auto",
                 "scrollable": "boolean",
                 "bodyBorder": "boolean",
-                "designer|uiInterfaceName": "string"
+                "designer|uiInterfaceName": "string",
+                "layout|flex": "number"
             },
             "name": "MyGridPanel14",
             "designerId": "4094a247-3225-4d8f-8d8e-1f4c0357abcd",
@@ -205,9 +204,7 @@
             "codeClass": null,
             "userConfig": {
                 "columnLines": true,
-                "height": 445,
-                "layout|x": 460,
-                "layout|y": 95,
+                "layout|flex": 1,
                 "store": "ProllPaymentsStore",
                 "title": "Employee Payments Details",
                 "width": null
@@ -220,7 +217,8 @@
                 "store": "store",
                 "title": "string",
                 "width": "auto",
-                "scrollable": "boolean"
+                "scrollable": "boolean",
+                "layout|flex": "number"
             },
             "name": "MyGridPanel15",
             "designerId": "024fc1c6-8fcf-48ac-92c1-e8a4acce936b",
@@ -382,161 +380,197 @@
                     },
                     "name": "MyPagingToolbar16",
                     "designerId": "cc91a632-08a0-4b66-beb7-3c0aefb66022"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "fieldLabel": null,
+                        "fieldStyle": "font-size: medium;font-weight: bold;color: red;",
+                        "itemId": "payrollStatus",
+                        "name": "payrollStatus",
+                        "value": "Payroll Status",
+                        "width": 100
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "value": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "dock": "string"
+                    },
+                    "name": "MyDisplayField18",
+                    "designerId": "c5b36cc5-6f01-4f07-8379-5ff93ee1d439"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "width": 100
+                    },
+                    "configAlternates": {
+                        "dock": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyContainer11",
+                    "designerId": "c4c5f431-e519-4e23-ad4a-aec4ec470c37"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "dock": "top",
+                        "height": 44,
+                        "layout": "hbox",
+                        "width": 100
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "dock": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyContainer2",
+                    "designerId": "32cab56b-29db-481d-af07-30de0486a6ba",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "Month",
+                                "fieldLabel": "<b>Select Payroll Month</b>",
+                                "forceSelection": true,
+                                "itemId": "postMonth",
+                                "labelWidth": 140,
+                                "minChars": 3,
+                                "queryMode": "local",
+                                "store": "PayMonthsStore",
+                                "typeAhead": true,
+                                "valueField": "ID",
+                                "width": 575
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "forceSelection": "boolean",
+                                "itemId": "string",
+                                "labelWidth": "number",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "displayField": "datafield",
+                                "valueField": "datafield",
+                                "minChars": "number",
+                                "queryMode": "string",
+                                "store": "store",
+                                "typeAhead": "boolean"
+                            },
+                            "name": "MyComboBox18",
+                            "designerId": "1368e69e-d474-480c-87a1-7c57bcce95b7"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 40,
+                                "itemId": "cmdPostPayroll",
+                                "text": "<b> POST PAYROLL</B>",
+                                "width": 145
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyButton47",
+                            "designerId": "c3d25f27-6dbe-466c-9c7c-c3b05936df04"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 40,
+                                "itemId": "cmdClose",
+                                "text": "<b>CANCEL</b>",
+                                "width": 170
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyButton48",
+                            "designerId": "35b6ca10-e817-4b67-9748-040672d6a929"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 40,
+                                "itemId": "cmdPreviewPayslip",
+                                "text": "<b>Preview Payslip</b>",
+                                "width": 145
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyButton49",
+                            "designerId": "7525ed72-4f2b-478f-a3d1-ec56d9e53689"
+                        }
+                    ]
                 }
             ]
-        },
-        {
-            "type": "Ext.form.field.ComboBox",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "displayField": "Month",
-                "fieldLabel": "<b>Select Payroll Month</b>",
-                "forceSelection": true,
-                "itemId": "postMonth",
-                "labelWidth": 140,
-                "layout|x": 470,
-                "layout|y": 5,
-                "minChars": 3,
-                "queryMode": "local",
-                "store": "PayMonthsStore",
-                "typeAhead": true,
-                "valueField": "ID",
-                "width": 575
-            },
-            "configAlternates": {
-                "fieldLabel": "string",
-                "forceSelection": "boolean",
-                "itemId": "string",
-                "labelWidth": "number",
-                "layout|x": "number",
-                "layout|y": "number",
-                "width": "auto",
-                "scrollable": "boolean",
-                "displayField": "datafield",
-                "valueField": "datafield",
-                "minChars": "number",
-                "queryMode": "string",
-                "store": "store",
-                "typeAhead": "boolean"
-            },
-            "name": "MyComboBox18",
-            "designerId": "1368e69e-d474-480c-87a1-7c57bcce95b7"
-        },
-        {
-            "type": "Ext.button.Button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "height": 40,
-                "itemId": "cmdPostPayroll",
-                "layout|x": 805,
-                "layout|y": 50,
-                "text": "<b> POST PAYROLL</B>",
-                "width": 145
-            },
-            "configAlternates": {
-                "height": "auto",
-                "itemId": "string",
-                "layout|x": "number",
-                "layout|y": "number",
-                "text": "string",
-                "width": "auto",
-                "scrollable": "boolean"
-            },
-            "name": "MyButton47",
-            "designerId": "c3d25f27-6dbe-466c-9c7c-c3b05936df04"
-        },
-        {
-            "type": "Ext.button.Button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "height": 40,
-                "itemId": "cmdClose",
-                "layout|x": 1110,
-                "layout|y": 50,
-                "text": "<b>CANCEL</b>",
-                "width": 170
-            },
-            "configAlternates": {
-                "height": "auto",
-                "itemId": "string",
-                "layout|x": "number",
-                "layout|y": "number",
-                "text": "string",
-                "width": "auto",
-                "scrollable": "boolean"
-            },
-            "name": "MyButton48",
-            "designerId": "35b6ca10-e817-4b67-9748-040672d6a929"
-        },
-        {
-            "type": "Ext.button.Button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "height": 40,
-                "itemId": "cmdPreviewPayslip",
-                "layout|x": 955,
-                "layout|y": 50,
-                "text": "<b>Preview Payslip</b>",
-                "width": 145
-            },
-            "configAlternates": {
-                "height": "auto",
-                "itemId": "string",
-                "layout|x": "number",
-                "layout|y": "number",
-                "text": "string",
-                "width": "auto",
-                "scrollable": "boolean"
-            },
-            "name": "MyButton49",
-            "designerId": "7525ed72-4f2b-478f-a3d1-ec56d9e53689"
-        },
-        {
-            "type": "Ext.form.field.Display",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fieldLabel": null,
-                "fieldStyle": "font-size: medium;font-weight: bold;color: red;",
-                "itemId": "payrollStatus",
-                "layout|x": 465,
-                "layout|y": 45,
-                "name": "payrollStatus",
-                "value": "Payroll Status",
-                "width": 250
-            },
-            "configAlternates": {
-                "fieldLabel": "string",
-                "fieldStyle": "string",
-                "itemId": "string",
-                "layout|x": "number",
-                "layout|y": "number",
-                "name": "string",
-                "value": "string",
-                "width": "auto",
-                "scrollable": "boolean"
-            },
-            "name": "MyDisplayField18",
-            "designerId": "c5b36cc5-6f01-4f07-8379-5ff93ee1d439"
         }
     ]
 }

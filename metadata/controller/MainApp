@@ -1937,7 +1937,7 @@
                     "    params: {",
                     "        pid: record.get('PID'),",
                     "        payMonth:payMonth,",
-                    "        perod:period",
+                    "        period:period",
                     "",
                     "    },",
                     "    callback: function(records, operation, success) {",

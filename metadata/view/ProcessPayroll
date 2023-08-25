@@ -9,12 +9,12 @@
         "animCollapse": true,
         "closable": true,
         "collapsible": true,
-        "designer|snapToGrid": 5,
+        "container|align": "stretch",
         "designer|userAlias": "processpayroll",
         "designer|userClassName": "ProcessPayroll",
         "frame": true,
         "height": 754,
-        "layout": "absolute",
+        "layout": "hbox",
         "title": "Process Payroll"
     },
     "configAlternates": {
@@ -29,7 +29,8 @@
         "layout": "string",
         "title": "string",
         "width": "auto",
-        "scrollable": "boolean"
+        "scrollable": "boolean",
+        "container|align": "string"
     },
     "designerId": "1f24dd15-0469-4c50-8223-2f826c56f92f",
     "viewControllerInstanceId": "ff0d4c31-1def-4958-b8e6-2283e3832890",
@@ -44,12 +45,10 @@
             "codeClass": null,
             "userConfig": {
                 "columnLines": true,
-                "height": 575,
                 "itemId": "empPayGridSummary",
-                "layout|x": 10,
-                "layout|y": 130,
+                "margin": "0 10 0 0",
                 "store": "PaymentsSummaryStore",
-                "width": 425
+                "width": 515
             },
             "configAlternates": {
                 "columnLines": "boolean",
@@ -60,7 +59,8 @@
                 "store": "store",
                 "title": "string",
                 "width": "auto",
-                "scrollable": "boolean"
+                "scrollable": "boolean",
+                "margin": "auto"
             },
             "name": "MyGridPanel12",
             "designerId": "8a0a2e6f-1a5d-49b1-8cb8-c046e7caf1fd",
@@ -188,7 +188,7 @@
                     "designerId": "257f99c3-7748-446a-8b3d-cf2c740b6b3d"
                 },
                 {
-                    "type": "Ext.container.Container",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "dockedItems",
                         "type": "array"
@@ -197,20 +197,73 @@
                     "userConfig": {
                         "designer|snapToGrid": 5,
                         "dock": "top",
-                        "height": 34,
+                        "height": 178,
                         "layout": "absolute",
-                        "width": 100
+                        "padding": "0 0 0 ",
+                        "width": 420
                     },
                     "configAlternates": {
                         "designer|snapToGrid": "number",
-                        "dock": "string",
                         "height": "auto",
                         "layout": "string",
-                        "width": "auto"
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "title": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "padding": "auto",
+                        "dock": "string"
                     },
-                    "name": "MyContainer",
-                    "designerId": "fc3d5605-e6a2-4c63-a56f-b350f8819143",
+                    "name": "MyFieldSet5",
+                    "designerId": "53207cb1-6191-4231-862f-a57a5f48764c",
                     "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "Month",
+                                "emptyText": "Select the Payroll Month",
+                                "fieldLabel": "Select Payroll Month",
+                                "forceSelection": true,
+                                "itemId": "payMonth",
+                                "labelWidth": 130,
+                                "layout|anchor": "100%",
+                                "layout|x": 5,
+                                "layout|y": 15,
+                                "matchFieldWidth": false,
+                                "name": "payMonth",
+                                "queryMode": "local",
+                                "store": "PayMonthStore",
+                                "typeAhead": true,
+                                "valueField": "ID",
+                                "width": 503
+                            },
+                            "configAlternates": {
+                                "emptyText": "string",
+                                "fieldLabel": "string",
+                                "forceSelection": "boolean",
+                                "itemId": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "matchFieldWidth": "boolean",
+                                "name": "string",
+                                "queryMode": "string",
+                                "typeAhead": "boolean",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "displayField": "datafield",
+                                "store": "store",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox17",
+                            "designerId": "a3251617-aa48-411f-a74b-32513621eda7"
+                        },
                         {
                             "type": "Ext.button.Button",
                             "reference": {
@@ -219,8 +272,171 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|x": 285,
-                                "layout|y": 0,
+                                "height": 35,
+                                "itemId": "cmdUpdateTaxes",
+                                "layout|x": 185,
+                                "layout|y": 95,
+                                "text": "<b>Process Payroll</b>",
+                                "width": 120
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyButton40",
+                            "designerId": "a34c21b4-dc3c-451c-87b2-6de7a818ade1"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 35,
+                                "itemId": "cmdImportPayments",
+                                "layout|x": 5,
+                                "layout|y": 95,
+                                "text": "<b>Import Posted Payments</b>",
+                                "width": 175
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyButton41",
+                            "designerId": "0b4d96c6-0691-4876-87f8-42dd6dd7e518"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 35,
+                                "itemId": "cmdClearImports",
+                                "layout|x": 310,
+                                "layout|y": 95,
+                                "text": "<b>Clear Imported Payments</b>",
+                                "width": 185
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyButton42",
+                            "designerId": "b3d8e6c7-b5e9-4e73-af05-3262016f4505"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "fieldStyle": "font-size: large;font-weight: bold;color: maroon;",
+                                "itemId": "PayrollStatus",
+                                "layout|x": 10,
+                                "layout|y": 50,
+                                "value": "Payroll Status",
+                                "width": 485
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "value": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyDisplayField10",
+                            "designerId": "3ca45f5a-6422-4abe-8357-903db5b709f3"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "fieldStyle": "font-size: large;font-weight: bold;color: green;",
+                                "hidden": true,
+                                "itemId": "prollStatus",
+                                "layout|x": 5,
+                                "layout|y": 65
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "hidden": "boolean",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyTextField87",
+                            "designerId": "3ee83c45-a12c-457b-be67-614abf3df570"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "emptyText": "Search by PID or Names",
+                                "fieldLabel": null,
+                                "layout|x": 5,
+                                "layout|y": 135,
+                                "width": 285
+                            },
+                            "configAlternates": {
+                                "emptyText": "string",
+                                "fieldLabel": "string",
+                                "layout|flex": "number",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "layout|x": "number",
+                                "layout|y": "number"
+                            },
+                            "name": "MyTextField86",
+                            "designerId": "fb4c929b-3089-4a21-a8b8-13ac002359fa"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 290,
+                                "layout|y": 135,
                                 "text": "<b>Search</b>",
                                 "tooltip": null,
                                 "width": 115
@@ -236,32 +452,6 @@
                             },
                             "name": "MyButton39",
                             "designerId": "d0629bc9-9ea4-4036-b090-9f25ab3a86ac"
-                        },
-                        {
-                            "type": "Ext.form.field.Text",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "emptyText": "Search by PID or Names",
-                                "fieldLabel": null,
-                                "layout|x": 0,
-                                "layout|y": -1,
-                                "width": 285
-                            },
-                            "configAlternates": {
-                                "emptyText": "string",
-                                "fieldLabel": "string",
-                                "layout|flex": "number",
-                                "width": "auto",
-                                "scrollable": "boolean",
-                                "layout|x": "number",
-                                "layout|y": "number"
-                            },
-                            "name": "MyTextField86",
-                            "designerId": "fb4c929b-3089-4a21-a8b8-13ac002359fa"
                         }
                     ]
                 }
@@ -278,10 +468,8 @@
                 "columnLines": true,
                 "height": 570,
                 "itemId": "empPayGridDetail",
-                "layout|x": 445,
-                "layout|y": 130,
-                "store": "ProllPaymentsStore",
-                "width": 841
+                "layout|flex": 1,
+                "store": "ProllPaymentsStore"
             },
             "configAlternates": {
                 "columnLines": "boolean",
@@ -292,7 +480,8 @@
                 "store": "store",
                 "title": "string",
                 "width": "auto",
-                "scrollable": "boolean"
+                "scrollable": "boolean",
+                "layout|flex": "number"
             },
             "name": "MyGridPanel13",
             "designerId": "f39d75c8-4896-4a14-ba92-819801a26683",
@@ -433,654 +622,439 @@
                     },
                     "name": "MyColumn112",
                     "designerId": "655d5075-7fd2-4d2c-bd99-c8e63f0f7aa1"
-                }
-            ]
-        },
-        {
-            "type": "Ext.form.FieldSet",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|snapToGrid": 5,
-                "height": 140,
-                "layout": "absolute",
-                "layout|x": 10,
-                "layout|y": -10,
-                "padding": "0 0 0 ",
-                "width": 505
-            },
-            "configAlternates": {
-                "designer|snapToGrid": "number",
-                "height": "auto",
-                "layout": "string",
-                "layout|x": "number",
-                "layout|y": "number",
-                "title": "string",
-                "width": "auto",
-                "scrollable": "boolean",
-                "padding": "auto"
-            },
-            "name": "MyFieldSet5",
-            "designerId": "53207cb1-6191-4231-862f-a57a5f48764c",
-            "cn": [
+                },
                 {
-                    "type": "Ext.form.field.ComboBox",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
-                        "name": "items",
+                        "name": "dockedItems",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "displayField": "Month",
-                        "emptyText": "Select the Payroll Month",
-                        "fieldLabel": "Select Payroll Month",
-                        "forceSelection": true,
-                        "itemId": "payMonth",
-                        "labelWidth": 130,
-                        "layout|anchor": "100%",
-                        "layout|x": 5,
-                        "layout|y": 15,
-                        "matchFieldWidth": false,
-                        "name": "payMonth",
-                        "queryMode": "local",
-                        "store": "PayMonthStore",
-                        "typeAhead": true,
-                        "valueField": "ID",
-                        "width": 503
+                        "designer|snapToGrid": 5,
+                        "dock": "top",
+                        "frame": false,
+                        "height": 130,
+                        "itemId": null,
+                        "layout": "absolute",
+                        "padding": "0 0 0 0",
+                        "width": 100
                     },
                     "configAlternates": {
-                        "emptyText": "string",
-                        "fieldLabel": "string",
-                        "forceSelection": "boolean",
+                        "collapsible": "boolean",
+                        "designer|snapToGrid": "number",
+                        "frame": "boolean",
+                        "height": "auto",
                         "itemId": "string",
-                        "labelWidth": "number",
-                        "layout|anchor": "string",
+                        "layout": "string",
                         "layout|x": "number",
                         "layout|y": "number",
-                        "matchFieldWidth": "boolean",
-                        "name": "string",
-                        "queryMode": "string",
-                        "typeAhead": "boolean",
+                        "title": "string",
                         "width": "auto",
                         "scrollable": "boolean",
-                        "displayField": "datafield",
-                        "store": "store",
-                        "valueField": "datafield"
+                        "padding": "auto",
+                        "dock": "string"
                     },
-                    "name": "MyComboBox17",
-                    "designerId": "a3251617-aa48-411f-a74b-32513621eda7"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 35,
-                        "itemId": "cmdUpdateTaxes",
-                        "layout|x": 185,
-                        "layout|y": 95,
-                        "text": "<b>Process Payroll</b>",
-                        "width": 120
-                    },
-                    "configAlternates": {
-                        "height": "auto",
-                        "itemId": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "text": "string",
-                        "width": "auto",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyButton40",
-                    "designerId": "a34c21b4-dc3c-451c-87b2-6de7a818ade1"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 35,
-                        "itemId": "cmdImportPayments",
-                        "layout|x": 5,
-                        "layout|y": 95,
-                        "text": "<b>Import Posted Payments</b>",
-                        "width": 175
-                    },
-                    "configAlternates": {
-                        "height": "auto",
-                        "itemId": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "text": "string",
-                        "width": "auto",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyButton41",
-                    "designerId": "0b4d96c6-0691-4876-87f8-42dd6dd7e518"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 35,
-                        "itemId": "cmdClearImports",
-                        "layout|x": 310,
-                        "layout|y": 95,
-                        "text": "<b>Clear Imported Payments</b>",
-                        "width": 185
-                    },
-                    "configAlternates": {
-                        "height": "auto",
-                        "itemId": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "text": "string",
-                        "width": "auto",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyButton42",
-                    "designerId": "b3d8e6c7-b5e9-4e73-af05-3262016f4505"
-                },
-                {
-                    "type": "Ext.form.field.Display",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": null,
-                        "fieldStyle": "font-size: large;font-weight: bold;color: maroon;",
-                        "itemId": "PayrollStatus",
-                        "layout|x": 10,
-                        "layout|y": 50,
-                        "value": "Payroll Status",
-                        "width": 485
-                    },
-                    "configAlternates": {
-                        "fieldLabel": "string",
-                        "fieldStyle": "string",
-                        "itemId": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "value": "string",
-                        "width": "auto",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyDisplayField10",
-                    "designerId": "3ca45f5a-6422-4abe-8357-903db5b709f3"
-                },
-                {
-                    "type": "Ext.form.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": null,
-                        "fieldStyle": "font-size: large;font-weight: bold;color: green;",
-                        "hidden": true,
-                        "itemId": "prollStatus",
-                        "layout|x": 5,
-                        "layout|y": 65
-                    },
-                    "configAlternates": {
-                        "fieldLabel": "string",
-                        "fieldStyle": "string",
-                        "hidden": "boolean",
-                        "itemId": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyTextField87",
-                    "designerId": "3ee83c45-a12c-457b-be67-614abf3df570"
-                }
-            ]
-        },
-        {
-            "type": "Ext.form.FieldSet",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|snapToGrid": 5,
-                "frame": false,
-                "height": 130,
-                "itemId": null,
-                "layout": "absolute",
-                "layout|x": 520,
-                "layout|y": 5,
-                "padding": "0 0 0 0"
-            },
-            "configAlternates": {
-                "collapsible": "boolean",
-                "designer|snapToGrid": "number",
-                "frame": "boolean",
-                "height": "auto",
-                "itemId": "string",
-                "layout": "string",
-                "layout|x": "number",
-                "layout|y": "number",
-                "title": "string",
-                "width": "auto",
-                "scrollable": "boolean",
-                "padding": "auto"
-            },
-            "name": "MyFieldSet6",
-            "designerId": "acb42f9c-9d2d-4287-87dc-910c0cbc8d9f",
-            "cn": [
-                {
-                    "type": "Ext.form.field.Display",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "PID",
-                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
-                        "itemId": "pid",
-                        "labelAlign": "right",
-                        "layout|x": -20,
-                        "layout|y": -1,
-                        "name": "PID",
-                        "value": null
-                    },
-                    "configAlternates": {
-                        "fieldLabel": "string",
-                        "fieldStyle": "string",
-                        "itemId": "string",
-                        "labelAlign": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "value": "string",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyDisplayField11",
-                    "designerId": "f27075a1-e686-4c73-8db3-67f250c02505"
-                },
-                {
-                    "type": "Ext.form.field.Display",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Job Group",
-                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
-                        "labelAlign": "right",
-                        "layout|x": -18,
-                        "layout|y": 85,
-                        "name": "JobGroup",
-                        "value": null
-                    },
-                    "configAlternates": {
-                        "fieldLabel": "string",
-                        "fieldStyle": "string",
-                        "labelAlign": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "value": "string",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyDisplayField12",
-                    "designerId": "c5fb32e3-77a5-4268-81ea-8efd0045a979"
-                },
-                {
-                    "type": "Ext.form.field.Display",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Job Title",
-                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
-                        "labelAlign": "right",
-                        "layout|x": -20,
-                        "layout|y": 65,
-                        "name": "JobTitle",
-                        "value": null
-                    },
-                    "configAlternates": {
-                        "fieldLabel": "string",
-                        "fieldStyle": "string",
-                        "labelAlign": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "value": "string",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyDisplayField13",
-                    "designerId": "17d26ed4-336e-4d76-8f8b-f1ee404376be"
-                },
-                {
-                    "type": "Ext.form.field.Display",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Departmant",
-                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
-                        "labelAlign": "right",
-                        "layout|x": -20,
-                        "layout|y": 45,
-                        "name": "Department",
-                        "value": null
-                    },
-                    "configAlternates": {
-                        "fieldLabel": "string",
-                        "fieldStyle": "string",
-                        "labelAlign": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "value": "string",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyDisplayField14",
-                    "designerId": "b330da41-d9b9-4169-8c62-8d3f76f41240"
-                },
-                {
-                    "type": "Ext.form.field.Display",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fieldLabel": "Names",
-                        "fieldStyle": "font-size: small;font-weight: bold;color: green;",
-                        "labelAlign": "right",
-                        "layout|x": -20,
-                        "layout|y": 25,
-                        "name": "FirstName",
-                        "shadow": true,
-                        "value": null
-                    },
-                    "configAlternates": {
-                        "fieldLabel": "string",
-                        "fieldStyle": "string",
-                        "labelAlign": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "shadow": "auto",
-                        "value": "string",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyDisplayField17",
-                    "designerId": "c554708d-43c2-4dd0-ad83-998aeb6a167f"
-                },
-                {
-                    "type": "Ext.form.field.Checkbox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "boxLabel": "Taxable",
-                        "fieldLabel": null,
-                        "layout|x": 410,
-                        "layout|y": -7.666666999999997,
-                        "name": "Taxable",
-                        "readOnly": true
-                    },
-                    "configAlternates": {
-                        "boxLabel": "string",
-                        "fieldLabel": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "readOnly": "boolean",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyCheckbox15",
-                    "designerId": "96a77fad-6259-4900-a7ef-cacd7f251010"
-                },
-                {
-                    "type": "Ext.form.field.Checkbox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "boxLabel": "NHIF",
-                        "fieldLabel": null,
-                        "layout|x": 410,
-                        "layout|y": 95,
-                        "name": "NHIF",
-                        "readOnly": true
-                    },
-                    "configAlternates": {
-                        "boxLabel": "string",
-                        "fieldLabel": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "readOnly": "boolean",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyCheckbox16",
-                    "designerId": "13decd0f-fbe2-46a9-9411-e2bf9fb7f3ec"
-                },
-                {
-                    "type": "Ext.form.field.Checkbox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "boxLabel": "NSSF",
-                        "fieldLabel": null,
-                        "layout|x": 410,
-                        "layout|y": 70,
-                        "name": "NSSF",
-                        "readOnly": true
-                    },
-                    "configAlternates": {
-                        "boxLabel": "string",
-                        "fieldLabel": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "readOnly": "boolean",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyCheckbox17",
-                    "designerId": "9314a13b-3eab-45a8-a6b0-251697a4cd3a"
-                },
-                {
-                    "type": "Ext.form.field.Checkbox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "boxLabel": "Housed",
-                        "fieldLabel": null,
-                        "layout|x": 410,
-                        "layout|y": 50,
-                        "name": "Housed",
-                        "readOnly": true
-                    },
-                    "configAlternates": {
-                        "boxLabel": "string",
-                        "fieldLabel": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "readOnly": "boolean",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyCheckbox18",
-                    "designerId": "bb8ad2ef-13f6-4147-9010-59ba5a3be385"
-                },
-                {
-                    "type": "Ext.form.field.Checkbox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "boxLabel": "Unionisable",
-                        "fieldLabel": null,
-                        "layout|x": 410,
-                        "layout|y": 30,
-                        "name": "Unionisable",
-                        "readOnly": true
-                    },
-                    "configAlternates": {
-                        "boxLabel": "string",
-                        "fieldLabel": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "readOnly": "boolean",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyCheckbox19",
-                    "designerId": "d0053781-71c4-41b3-bfc4-ec5c2af76584"
-                },
-                {
-                    "type": "Ext.form.field.Checkbox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "boxLabel": "Pensionable",
-                        "fieldLabel": null,
-                        "layout|x": 410,
-                        "layout|y": 10,
-                        "name": "Pensionable",
-                        "readOnly": true
-                    },
-                    "configAlternates": {
-                        "boxLabel": "string",
-                        "fieldLabel": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "name": "string",
-                        "readOnly": "boolean",
-                        "scrollable": "boolean"
-                    },
-                    "name": "MyCheckbox20",
-                    "designerId": "573f218f-f695-4fc6-9d53-5b810a484121"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 35,
-                        "hidden": true,
-                        "layout|x": 550,
-                        "layout|y": 5,
-                        "text": "Post By PID",
-                        "width": 145
-                    },
-                    "configAlternates": {
-                        "height": "auto",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "text": "string",
-                        "width": "auto",
-                        "scrollable": "boolean",
-                        "hidden": "boolean"
-                    },
-                    "name": "MyButton43",
-                    "designerId": "98c9dd80-1162-4ebf-bf7f-d5c65d28b6e4"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 35,
-                        "hidden": true,
-                        "itemId": "cmdPostByPid",
-                        "layout|x": 760,
-                        "layout|y": 50,
-                        "text": "<b>Post By PID</b>",
-                        "width": 145
-                    },
-                    "configAlternates": {
-                        "height": "auto",
-                        "itemId": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "text": "string",
-                        "width": "auto",
-                        "scrollable": "boolean",
-                        "hidden": "boolean"
-                    },
-                    "name": "MyButton44",
-                    "designerId": "89180358-6967-4a4d-aad2-5e1d17b77189"
-                },
-                {
-                    "type": "Ext.button.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 35,
-                        "hidden": true,
-                        "itemId": "cmdPostByCode",
-                        "layout|x": 550,
-                        "layout|y": 45,
-                        "text": "<b>Post By Code</b>",
-                        "width": 145
-                    },
-                    "configAlternates": {
-                        "height": "auto",
-                        "itemId": "string",
-                        "layout|x": "number",
-                        "layout|y": "number",
-                        "text": "string",
-                        "width": "auto",
-                        "scrollable": "boolean",
-                        "hidden": "boolean"
-                    },
-                    "name": "MyButton46",
-                    "designerId": "47a03f2d-5062-4659-a705-e9468d401bd2"
+                    "name": "MyFieldSet6",
+                    "designerId": "acb42f9c-9d2d-4287-87dc-910c0cbc8d9f",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "PID",
+                                "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                                "itemId": "pid",
+                                "labelAlign": "right",
+                                "layout|x": -20,
+                                "layout|y": -1,
+                                "name": "PID",
+                                "value": null
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "itemId": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "value": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyDisplayField11",
+                            "designerId": "f27075a1-e686-4c73-8db3-67f250c02505"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Job Group",
+                                "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                                "labelAlign": "right",
+                                "layout|x": -18,
+                                "layout|y": 85,
+                                "name": "JobGroup",
+                                "value": null
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "value": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyDisplayField12",
+                            "designerId": "c5fb32e3-77a5-4268-81ea-8efd0045a979"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Job Title",
+                                "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                                "labelAlign": "right",
+                                "layout|x": -20,
+                                "layout|y": 65,
+                                "name": "JobTitle",
+                                "value": null
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "value": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyDisplayField13",
+                            "designerId": "17d26ed4-336e-4d76-8f8b-f1ee404376be"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Departmant",
+                                "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                                "labelAlign": "right",
+                                "layout|x": -20,
+                                "layout|y": 45,
+                                "name": "Department",
+                                "value": null
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "value": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyDisplayField14",
+                            "designerId": "b330da41-d9b9-4169-8c62-8d3f76f41240"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Names",
+                                "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                                "labelAlign": "right",
+                                "layout|x": -20,
+                                "layout|y": 25,
+                                "name": "FirstName",
+                                "shadow": true,
+                                "value": null
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "shadow": "auto",
+                                "value": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyDisplayField17",
+                            "designerId": "c554708d-43c2-4dd0-ad83-998aeb6a167f"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Taxable",
+                                "fieldLabel": null,
+                                "layout|x": 410,
+                                "layout|y": -7.666666999999997,
+                                "name": "Taxable",
+                                "readOnly": true
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "readOnly": "boolean",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox15",
+                            "designerId": "96a77fad-6259-4900-a7ef-cacd7f251010"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "NHIF",
+                                "fieldLabel": null,
+                                "layout|x": 410,
+                                "layout|y": 95,
+                                "name": "NHIF",
+                                "readOnly": true
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "readOnly": "boolean",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox16",
+                            "designerId": "13decd0f-fbe2-46a9-9411-e2bf9fb7f3ec"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "NSSF",
+                                "fieldLabel": null,
+                                "layout|x": 410,
+                                "layout|y": 70,
+                                "name": "NSSF",
+                                "readOnly": true
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "readOnly": "boolean",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox17",
+                            "designerId": "9314a13b-3eab-45a8-a6b0-251697a4cd3a"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Housed",
+                                "fieldLabel": null,
+                                "layout|x": 410,
+                                "layout|y": 50,
+                                "name": "Housed",
+                                "readOnly": true
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "readOnly": "boolean",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox18",
+                            "designerId": "bb8ad2ef-13f6-4147-9010-59ba5a3be385"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Unionisable",
+                                "fieldLabel": null,
+                                "layout|x": 410,
+                                "layout|y": 30,
+                                "name": "Unionisable",
+                                "readOnly": true
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "readOnly": "boolean",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox19",
+                            "designerId": "d0053781-71c4-41b3-bfc4-ec5c2af76584"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Pensionable",
+                                "fieldLabel": null,
+                                "layout|x": 410,
+                                "layout|y": 10,
+                                "name": "Pensionable",
+                                "readOnly": true
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "readOnly": "boolean",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox20",
+                            "designerId": "573f218f-f695-4fc6-9d53-5b810a484121"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 35,
+                                "hidden": true,
+                                "layout|x": 550,
+                                "layout|y": 5,
+                                "text": "Post By PID",
+                                "width": 145
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyButton43",
+                            "designerId": "98c9dd80-1162-4ebf-bf7f-d5c65d28b6e4"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 35,
+                                "hidden": true,
+                                "itemId": "cmdPostByPid",
+                                "layout|x": 760,
+                                "layout|y": 50,
+                                "text": "<b>Post By PID</b>",
+                                "width": 145
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyButton44",
+                            "designerId": "89180358-6967-4a4d-aad2-5e1d17b77189"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 35,
+                                "hidden": true,
+                                "itemId": "cmdPostByCode",
+                                "layout|x": 550,
+                                "layout|y": 45,
+                                "text": "<b>Post By Code</b>",
+                                "width": 145
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyButton46",
+                            "designerId": "47a03f2d-5062-4659-a705-e9468d401bd2"
+                        }
+                    ]
                 }
             ]
         }

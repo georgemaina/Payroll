@@ -1,5 +1,7 @@
 <?php
-    error_reporting(E_COMPILE_ERROR | E_ERROR | E_CORE_ERROR);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 require ('roots.php');
 require ($root_path . 'include/inc_environment_global.php');
 $pid = $_REQUEST['pid'];
@@ -159,7 +161,7 @@ function createInvoiceTitle($db,$bankid,$branchID,$payMonth,$pdf,$page) {
     $result=$db->Execute($sqlb);
     $row=$result->FetchRow();
     
-    $page->drawText($row[BankName].' '.$branchID, $leftPos + 240, $topPos - 80);
+    $page->drawText($row['BankName'].' '.$branchID, $leftPos + 240, $topPos - 80);
 
     $topPos=$topPos-40;
     $page->drawText('Emp No:', $leftPos + 12, $topPos - 60);
@@ -228,10 +230,10 @@ function createInvoiceTitle($db,$bankid,$branchID,$payMonth,$pdf,$page) {
         $sumRows = $result2->FetchRow();
         
         $amount=  $sumRows[1];
-        $pdfBase->drawText($page, "Ksh ".number_format($amount,2), $leftPos + 520, $topPos - $currpoint,$leftPos + 520,right);
+        $pdfBase->drawText($page, "Ksh ".number_format($amount,2), $leftPos + 520, $topPos - $currpoint,$leftPos + 520);
         
         if($amount==0){
-            $sql1="Insert into proll_empregister_inactive(pid) values( $row[PID])";
+            $sql1="Insert into proll_empregister_inactive(pid) values( $row['PID'])";
             $db->Execute($sql1);
 //            echo $sql1;
         }
@@ -252,7 +254,7 @@ function createInvoiceTitle($db,$bankid,$branchID,$payMonth,$pdf,$page) {
     $page->setStyle($totalStyle);
     $page->drawText('TOTAL', $leftPos + 400, $topPos - 84);
     //$page->drawText("Ksh ".number_format($total,2), $leftPos + 400, $topPos - 10);
-    $pdfBase->drawText($page, "Ksh ".number_format($total,2), $leftPos + 520, $topPos - 84,$leftPos + 520,right);
+    $pdfBase->drawText($page, "Ksh ".number_format($total,2), $leftPos + 520, $topPos - 84,$leftPos + 520);
 
     $dataStyle = new Zend_Pdf_Style ();
     $dataStyle->setFillColor(new Zend_Pdf_Color_RGB(0.1, 0.1, 0.1));

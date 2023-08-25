@@ -1,9 +1,11 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require ('roots.php');
 require ($root_path . 'include/inc_environment_global.php');
-$pmonth = $_REQUEST[pmonth];
-$ptype = $_REQUEST[ptype];
+$pmonth = $_REQUEST['pmonth'];
+$ptype = $_REQUEST['ptype'];
 
 createStatement($db, $pmonth,$ptype);
 
@@ -30,7 +32,7 @@ function createStatement($db, $pmonth,$ptype) {
     $topPos = $pageHeight - 10;
     $leftPos = 36;
     $config_type = 'main_info_%';
-    $sql = "SELECT * FROM care_ke_invoice";
+    $sql = "SELECT * FROM `proll_company`";
     $global_result = $db->Execute($sql);
     if ($global_result) {
         while ($data_result = $global_result->FetchRow()) {
@@ -38,8 +40,8 @@ function createStatement($db, $pmonth,$ptype) {
             $address = $data_result ['Address'];
             $town = $data_result ['Town'];
             $postal = $data_result ['Postal'];
-            $tel = $data_result ['Tel'];
-            $invoice_no = $data_result ['new_bill_nr'];
+            $tel = $data_result ['Phone'];
+            //$invoice_no = $data_result ['new_bill_nr'];
         }
         $global_config_ok = 1;
     } else {
@@ -123,10 +125,10 @@ function createStatement($db, $pmonth,$ptype) {
 //            $page->drawRectangle($leftPos + 32, $topPos - 30, $leftPos + 500, $topPos - 148, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
             $page->drawRectangle($leftPos + 32, $topPos - 20, $leftPos + 500, $topPos - 800, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
         }
-        $total = intval($row[total] + $total);
+        $total = intval($row['total'] + $total);
      
-        $page->drawText($row[ID], $leftPos + 12, $topPos - $currpoint);
-        $page->drawText($row[pay_type], $leftPos + 30, $topPos - $currpoint);
+        $page->drawText($row['ID'], $leftPos + 12, $topPos - $currpoint);
+        $page->drawText($row['pay_type'], $leftPos + 30, $topPos - $currpoint);
         $page->drawText(trim($row['emp_names']), $leftPos + 200, $topPos - $currpoint);
         $page->drawText($row['amount'], $leftPos + 380, $topPos - $currpoint);
         
